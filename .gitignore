@@ -1,0 +1,13 @@
+
+# Ignore maven target directories
+*/target/**
+
+# Ignore Netbeans configuration files
+
+
+# Eclipse configuration and bin files
+.project
+.settings
+.classpath
+target
+bin
