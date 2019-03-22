@@ -19,12 +19,9 @@
                 <configuration>
                     <displayName>Sweranker</displayName>
                     <description>The server side</description>
-                    <earSourceDirectory>src/main/resources</earSourceDirectory>
                     <generateApplicationXml>true</generateApplicationXml>
-                    <version>8</version>
-                    <filtering>true</filtering>
-                    <generateModuleId>true</generateModuleId>
                     <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <version>8</version>
 
                     <archive>
                         <manifest>
@@ -39,4 +36,14 @@
             </plugin>
         </plugins>
     </build>
+    
+    
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>sweranker-persistence</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+    
 </project>
