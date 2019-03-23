@@ -4,7 +4,7 @@
     
     <groupId>pt.sweranker.cmg</groupId>
     <artifactId>sweranker-parent</artifactId>
-    <version>1</version>
+    <version>1.0</version>
     <packaging>pom</packaging>
     
     <developers>
@@ -21,6 +21,7 @@
     
     <modules>
         <module>sweranker-persistence</module>
+        <module>sweranker-data-access</module>
     </modules>
     
     <profiles>
@@ -203,6 +204,11 @@
                 <groupId>org.eclipse.persistence</groupId>
                 <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
                 <version>${eclipse-link-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.weld</groupId>
+                <artifactId>weld-osgi-bundle</artifactId> <!-- Loaded this osgi artifact because it is provided by Glassfish -->
+                <version>${weld-osgi-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
