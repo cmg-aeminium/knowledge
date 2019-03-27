@@ -4,7 +4,8 @@
     
         <jta-data-source>jdbc/sweranker</jta-data-source>
         
-        <class>pt.sweranker.cmg.persistence.KnowledgeArea</class>
+        <class>pt.sweranker.cmg.persistence.knowledgeareas.KnowledgeArea</class>
+        <class>pt.sweranker.cmg.persistence.knowledgeareas.KnowledgeAreaTranslation</class>
         
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>

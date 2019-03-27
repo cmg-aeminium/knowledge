@@ -22,6 +22,8 @@
     <modules>
         <module>sweranker-persistence</module>
         <module>sweranker-data-access</module>
+        <module>sweranker-application</module>
+        <module>sweranker-rest</module>
     </modules>
     
     <profiles>

@@ -47,7 +47,7 @@ public interface CrudDAO<T> {
      * @param id
      * @return the found entity instance or null if the entity does not exist
      */
-    T find(Long id);
+    T findById(Long id);
 
     /**
      * Retrieves the full list of Entities of its type with no restrictions.

@@ -5,7 +5,7 @@
  *
  * All rights reserved.
  */
-package pt.sweranker.cmg.persistence;
+package pt.sweranker.cmg.persistence.knowledgeareas;
 
 import java.io.Serializable;
 import javax.persistence.Column;
@@ -24,12 +24,6 @@ public class KnowledgeArea implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "name", nullable = false, length = 50)
-    private String name;
-
-    @Column(name = "description", nullable = false, length = 2000)
-    private String description;
-
     @Column(name = "image", nullable = true)
     private String image;
 
@@ -39,22 +33,6 @@ public class KnowledgeArea implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getImage() {

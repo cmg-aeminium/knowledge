@@ -68,7 +68,7 @@ public abstract class JPACrudDAO<T> implements CrudDAO<T> {
     }
 
     @Override
-    public T find(Long id) {
+    public T findById(Long id) {
         if (id == null || id <= 0) {
             return null;
         }
