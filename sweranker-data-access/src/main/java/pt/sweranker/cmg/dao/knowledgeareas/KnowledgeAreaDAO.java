@@ -1,10 +1,8 @@
 package pt.sweranker.cmg.dao.knowledgeareas;
 
-import javax.ejb.Local;
 import pt.sweranker.cmg.persistence.Language;
 import pt.sweranker.cmg.persistence.knowledgeareas.KnowledgeAreaTranslation;
 
-@Local
 public interface KnowledgeAreaDAO {
 
     /**

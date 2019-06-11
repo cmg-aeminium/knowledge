@@ -23,7 +23,7 @@
         <module>sweranker-persistence</module>
         <module>sweranker-data-access</module>
         <module>sweranker-application</module>
-        <module>sweranker-rest</module>
+        <module>sweranker-api</module>
     </modules>
     
     <profiles>
@@ -131,6 +131,14 @@
                     <version>${ejb-plugin-version}</version>
                     <configuration>
                         <ejbVersion>${ejb-spec-version}</ejbVersion>
+                        
+                        <archive>
+                            <addMavenDescriptor>false</addMavenDescriptor>
+                            <manifest>
+                                <addClasspath>true</addClasspath>
+                            </manifest>
+                        </archive>
+                        
                     </configuration>
                 </plugin>
                 
@@ -144,6 +152,11 @@
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                         <attachClasses>true</attachClasses>
                         <classesClassifier>classes</classesClassifier>
+                        
+                        <archive>
+                            <addMavenDescriptor>false</addMavenDescriptor>
+                        </archive>
+                        
                     </configuration>
                 </plugin>
                 
@@ -211,6 +224,11 @@
                 <groupId>org.jboss.weld</groupId>
                 <artifactId>weld-osgi-bundle</artifactId> <!-- Loaded this osgi artifact because it is provided by Glassfish -->
                 <version>${weld-osgi-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jersey.media</groupId>
+                <artifactId>jersey-media-json-jackson</artifactId>
+                <version>${jersey-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
