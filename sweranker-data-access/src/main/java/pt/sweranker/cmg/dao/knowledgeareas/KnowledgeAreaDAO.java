@@ -15,4 +15,12 @@ public interface KnowledgeAreaDAO {
      */
     KnowledgeAreaTranslation findById(Long id, Language language);
 
+    /**
+     * 
+     * @param id
+     * @param language
+     * @return
+     */
+    KnowledgeAreaTranslation findByIdAndLanguage(Long id, Language language);
+
 }

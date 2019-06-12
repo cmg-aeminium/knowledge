@@ -4,6 +4,7 @@ import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import pt.sweranker.cmg.dao.knowledgeareas.KnowledgeAreaDAO;
@@ -20,10 +21,11 @@ public class KnowledgeAreaResource {
     private KnowledgeAreaDAO knowledgeAreaDAO;
 
     @GET
+    @Path("{id}")
     @Produces(MediaType.TEXT_PLAIN)
-    public String getIt() {
+    public String getIt(@PathParam("id") Long id) {
 
-        KnowledgeAreaTranslation ka = knowledgeAreaDAO.findById(1L, null);
+        KnowledgeAreaTranslation ka = knowledgeAreaDAO.findByIdAndLanguage(id, null);
 
         return ka.getTranslatedName() + " - " + ka.getTranslatedDescription();
     }

@@ -3,6 +3,7 @@ package pt.sweranker.cmg.dao.knowledgeareas;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
@@ -39,6 +40,20 @@ public class JPAKnowledgeAreaDAO extends JPACrudDAO<KnowledgeArea> implements Kn
             .where(whereClauses.toArray(new Predicate[whereClauses.size()]));
 
         return getEntityManager().createQuery(query).getResultList().get(0);
+    }
+
+    @Override
+    public KnowledgeAreaTranslation findByIdAndLanguage(Long id, Language language) {
+
+        if (language == null) {
+            language = Language.DEFAULT_LANGUAGE;
+        }
+
+        TypedQuery<KnowledgeAreaTranslation> query = getEntityManager().createNamedQuery("KnowledgeAreaTranslations.findByIdAndLanguage", KnowledgeAreaTranslation.class);
+        query.setParameter("id", id);
+        query.setParameter("language", language);
+
+        return query.getResultList().get(0);
     }
 
 }
