@@ -33,8 +33,12 @@ import pt.sweranker.cmg.persistence.Language;
     name = "KnowledgeAreaTranslations.findByIdAndLanguage",
     query = "SELECT kat FROM KnowledgeAreaTranslations kat INNER JOIN FETCH kat.knowledgeArea ka WHERE kat.knowledgeArea.id = :id AND kat.language = :language",
     hints = {
-        @QueryHint(name = QueryHints.CACHE_USAGE, value = CacheUsage.CheckCacheThenDatabase),
-        @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE_SIZE, value = "2")
+        @QueryHint(name = QueryHints.CACHE_USAGE, value = CacheUsage.NoCache),
+        //        @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE, value = HintValues.FALSE),
+        @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE_SIZE, value = "1"), // this value is simply not respected
+        //        @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE_EXPIRY, value = "10000"),
+        @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE_TYPE, value = "FULL")
+
     })
 public class KnowledgeAreaTranslation implements Serializable {
 
