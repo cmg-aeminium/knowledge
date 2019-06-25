@@ -39,7 +39,7 @@ public class KnowledgeAreaResource {
 
         KnowledgeAreaTranslation ka = knowledgeAreaDAO.findByIdAndLanguage(id, null);
 
-        ka.getKnowledgeArea().setImage(newName);
+        ka.setTranslatedName(newName);
 
         return ka.getTranslatedName() + " - " + ka.getTranslatedDescription();
     }

@@ -18,7 +18,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.QueryHint;
-import org.eclipse.persistence.config.CacheUsage;
 import org.eclipse.persistence.config.QueryHints;
 import pt.sweranker.cmg.persistence.Language;
 
@@ -33,9 +32,9 @@ import pt.sweranker.cmg.persistence.Language;
     name = "KnowledgeAreaTranslations.findByIdAndLanguage",
     query = "SELECT kat FROM KnowledgeAreaTranslations kat INNER JOIN FETCH kat.knowledgeArea ka WHERE kat.knowledgeArea.id = :id AND kat.language = :language",
     hints = {
-        @QueryHint(name = QueryHints.CACHE_USAGE, value = CacheUsage.NoCache),
+        //        @QueryHint(name = QueryHints.CACHE_USAGE, value = CacheUsage.DoNotCheckCache),
         //        @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE, value = HintValues.FALSE),
-        @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE_SIZE, value = "1"), // this value is simply not respected
+        //        @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE_SIZE, value = "1"), // this value is simply not respected
         //        @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE_EXPIRY, value = "10000"),
         @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE_TYPE, value = "FULL")
 
