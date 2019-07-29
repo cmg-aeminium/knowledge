@@ -53,7 +53,7 @@ public abstract class JPACrudDAO<T> implements CrudDAO<T> {
         if (entity != null) {
             // If this happens to be an Injected entity, then saving requires an extra step. This is rare, but most User types are injected via authentication, so...
             if (entity instanceof TargetInstanceProxy<?>) {
-                getEntityManager().merge(((TargetInstanceProxy<?>) entity).getTargetInstance());
+                getEntityManager().merge(((TargetInstanceProxy<?>) entity).weld_getTargetInstance());
             } else {
                 getEntityManager().merge(entity);
             }

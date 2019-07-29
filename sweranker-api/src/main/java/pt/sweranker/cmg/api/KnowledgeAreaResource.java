@@ -10,7 +10,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import pt.sweranker.cmg.dao.knowledgeareas.KnowledgeAreaDAO;
-import pt.sweranker.cmg.persistence.knowledgeareas.KnowledgeAreaTranslation;
 
 /**
  * Root resource (exposed at "myresource" path)
@@ -27,7 +26,7 @@ public class KnowledgeAreaResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String getIt(@PathParam("id") Long id) {
 
-        KnowledgeAreaTranslation ka = knowledgeAreaDAO.findByIdAndLanguage(id, null);
+        var ka = knowledgeAreaDAO.findByIdAndLanguage(id, null);
 
         return ka.getTranslatedName() + " - " + ka.getTranslatedDescription();
     }
@@ -37,7 +36,7 @@ public class KnowledgeAreaResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String updateIt(@PathParam("id") Long id, @QueryParam("name") @DefaultValue("Meh") String newName) {
 
-        KnowledgeAreaTranslation ka = knowledgeAreaDAO.findByIdAndLanguage(id, null);
+        var ka = knowledgeAreaDAO.findByIdAndLanguage(id, null);
 
         ka.setTranslatedName(newName);
 
