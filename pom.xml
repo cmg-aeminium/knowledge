@@ -179,6 +179,12 @@
                     </configuration>
                 </plugin>
                 
+                <plugin>
+                	<groupId>org.apache.maven.plugins</groupId>
+                	<artifactId>maven-jar-plugin</artifactId>
+                	<version>${jar-plugin-version}</version>
+                </plugin>
+                
                 <!-- Maven EAR Plugin exceptionally defined here as whole -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -240,6 +246,11 @@
             <dependency>
                 <groupId>org.eclipse.persistence</groupId>
                 <artifactId>eclipselink</artifactId>
+                <version>${eclipse-link-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.persistence</groupId>
+                <artifactId>org.eclipse.persistence.core</artifactId>
                 <version>${eclipse-link-version}</version>
             </dependency>
             <dependency>
