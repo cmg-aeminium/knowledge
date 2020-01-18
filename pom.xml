@@ -185,22 +185,12 @@
                     </configuration>
                 </plugin>
                 
-<<<<<<< HEAD
-=======
                 <plugin>
                 	<groupId>org.apache.maven.plugins</groupId>
                 	<artifactId>maven-jar-plugin</artifactId>
                 	<version>${jar-plugin-version}</version>
                 </plugin>
                 
-                <!-- Maven EAR Plugin exceptionally defined here as whole -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-ear-plugin</artifactId>
-                    <version>${ear-plugin-version}</version>
-                </plugin>
-                
->>>>>>> branch 'master' of https://github.com/CarlosMOGoncalves/sweranker-server.git
                 <!-- Surefire plugin used for testing -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -239,8 +229,6 @@
         </pluginManagement>
     </build>
     
-    
-<<<<<<< HEAD
     <dependencies>
         <dependency>
          <groupId>jakarta.platform</groupId>
@@ -282,46 +270,4 @@
         </dependency>
     </dependencies>
         
-=======
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>javax</groupId>
-                <artifactId>javaee-api</artifactId>
-                <version>${javaee-api-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.persistence</groupId>
-                <artifactId>javax.persistence</artifactId>
-                <version>${jpa-spec-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.persistence</groupId>
-                <artifactId>eclipselink</artifactId>
-                <version>${eclipse-link-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.persistence</groupId>
-                <artifactId>org.eclipse.persistence.core</artifactId>
-                <version>${eclipse-link-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.persistence</groupId>
-                <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-                <version>${eclipse-link-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.weld</groupId>
-                <artifactId>weld-osgi-bundle</artifactId> <!-- Loaded this osgi artifact because it is provided by Glassfish -->
-                <version>${weld-osgi-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.glassfish.jersey.media</groupId>
-                <artifactId>jersey-media-json-jackson</artifactId>
-                <version>${jersey-version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-    
->>>>>>> branch 'master' of https://github.com/CarlosMOGoncalves/sweranker-server.git
 </project>

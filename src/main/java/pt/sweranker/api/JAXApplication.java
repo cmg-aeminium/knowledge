@@ -1,13 +1,10 @@
-/*
- * Copyright (c) 2019  Fashion Concierge
- * All rights reserved.
- */
-package pt.sweranker.cmg.api;
+package pt.sweranker.api;
 
 import java.util.HashSet;
 import java.util.Set;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
+import pt.sweranker.api.resources.knowledgeareas.KnowledgeAreaResource;
 
 /**
  * @author Carlos Manuel

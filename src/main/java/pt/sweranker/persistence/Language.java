@@ -5,7 +5,7 @@
  *
  * All rights reserved.
  */
-package pt.sweranker.cmg.persistence;
+package pt.sweranker.persistence;
 
 /**
  * @author Carlos Gonçalves

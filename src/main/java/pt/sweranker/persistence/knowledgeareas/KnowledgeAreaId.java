@@ -5,14 +5,14 @@
  *
  * All rights reserved.
  */
-package pt.sweranker.cmg.persistence.knowledgeareas;
+package pt.sweranker.persistence.knowledgeareas;
 
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import pt.sweranker.cmg.persistence.Language;
+import pt.sweranker.persistence.Language;
 
 /**
  * @author Carlos Gonçalves

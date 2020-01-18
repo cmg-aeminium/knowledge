@@ -2,7 +2,7 @@
  * Copyright (c) 2019  Fashion Concierge
  * All rights reserved.
  */
-package pt.sweranker.cmg.dao;
+package pt.sweranker.dao;
 
 import java.util.List;
 import javax.persistence.EntityManager;

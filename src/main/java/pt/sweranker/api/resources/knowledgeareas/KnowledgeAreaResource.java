@@ -1,4 +1,4 @@
-package pt.sweranker.cmg.api;
+package pt.sweranker.api.resources.knowledgeareas;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -9,7 +9,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
-import pt.sweranker.cmg.dao.knowledgeareas.KnowledgeAreaDAO;
+import pt.sweranker.dao.knowledgeareas.KnowledgeAreaDAO;
 
 /**
  * Root resource (exposed at "myresource" path)

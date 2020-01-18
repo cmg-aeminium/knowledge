@@ -1,4 +1,4 @@
-package pt.sweranker.cmg.dao.knowledgeareas;
+package pt.sweranker.dao.knowledgeareas;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,11 +8,11 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
-import pt.sweranker.cmg.dao.JPACrudDAO;
-import pt.sweranker.cmg.persistence.Language;
-import pt.sweranker.cmg.persistence.knowledgeareas.KnowledgeArea;
-import pt.sweranker.cmg.persistence.knowledgeareas.KnowledgeAreaTranslation;
-import pt.sweranker.cmg.persistence.knowledgeareas.KnowledgeAreaTranslation_;
+import pt.sweranker.dao.JPACrudDAO;
+import pt.sweranker.persistence.Language;
+import pt.sweranker.persistence.knowledgeareas.KnowledgeArea;
+import pt.sweranker.persistence.knowledgeareas.KnowledgeAreaTranslation;
+import pt.sweranker.persistence.knowledgeareas.KnowledgeAreaTranslation_;
 
 @Stateless
 public class JPAKnowledgeAreaDAO extends JPACrudDAO<KnowledgeArea> implements KnowledgeAreaDAO {

@@ -1,7 +1,7 @@
-package pt.sweranker.cmg.dao.knowledgeareas;
+package pt.sweranker.dao.knowledgeareas;
 
-import pt.sweranker.cmg.persistence.Language;
-import pt.sweranker.cmg.persistence.knowledgeareas.KnowledgeAreaTranslation;
+import pt.sweranker.persistence.Language;
+import pt.sweranker.persistence.knowledgeareas.KnowledgeAreaTranslation;
 
 public interface KnowledgeAreaDAO {
 
