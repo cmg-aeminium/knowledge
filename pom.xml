@@ -3,9 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     
     <groupId>pt.sweranker.cmg</groupId>
-    <artifactId>sweranker-parent</artifactId>
+    <artifactId>sweranker</artifactId>
     <version>1.0</version>
-    <packaging>pom</packaging>
+    
+    <packaging>war</packaging>
     
     <developers>
         <developer>
@@ -24,7 +25,6 @@
             <id>payara-patched-externals</id>
             <name>Payara Patched Externals</name>
             <url>https://raw.github.com/payara/Payara_PatchedProjects/master</url>
-            <!--<url>file:///opt/PayaraDev/Payara_PatchedProjects</url>-->
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -34,12 +34,6 @@
         </repository>
     </repositories>
     
-    <modules>
-        <module>sweranker-persistence</module>
-        <module>sweranker-data-access</module>
-        <module>sweranker-application</module>
-        <module>sweranker-api</module>
-    </modules>
     
     <profiles>
         <profile>
@@ -59,10 +53,36 @@
                 <skipTests>false</skipTests>
             </properties>
         </profile>
+        <profile>
+            <id>debug</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>fish.payara.maven.plugins</groupId>
+                        <artifactId>payara-micro-maven-plugin</artifactId>
+                        <version>${payara-micro-plugin-version}</version>
+
+                        <configuration>
+                            <useUberJar>true</useUberJar>
+                            <javaCommandLineOptions>
+                                <option>
+                                    <value>-Xdebug</value>
+                                </option>
+                                <option>
+                                    <key>-Xrunjdwp:transport</key>
+                                    <value>dt_socket,server=y,suspend=y,address=5005</value>
+                                </option>
+                            </javaCommandLineOptions>
+                        </configuration>
+
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
     
     <prerequisites>
-        <maven>3.6.1</maven>
+        <maven>3.6.3</maven>
     </prerequisites>
     
     <properties>
@@ -71,6 +91,9 @@
         
         <!--JAVA version -->
         <java-version>11</java-version>
+        
+        <!-- Payara Version -->
+        <payaraVersion>5.194</payaraVersion>
         
         <!-- Maven plugin versions -->
         <ejb-plugin-version>3.0.1</ejb-plugin-version>
@@ -88,7 +111,8 @@
         <versions-plugin-version>2.7</versions-plugin-version>
         
         <!-- JAVA EE API, SPEC and IMPLEMENTATION versions -->
-        <javaee-api-version>8.0</javaee-api-version>
+        <jakartaee-version>8.0.0</jakartaee-version>
+        <microprofile-version>3.2</microprofile-version>
         <javaee-ws-rs-version>2.1</javaee-ws-rs-version>
         <jpa-spec-version>2.2.0</jpa-spec-version>
         <eclipse-link-version>2.7.4.payara-p2</eclipse-link-version>
@@ -112,7 +136,6 @@
                     <artifactId>maven-clean-plugin</artifactId>
                     <version>${clean-plugin-version}</version>
                 </plugin>
-                
                 
                 <!-- Maven Compiler Plugin , for JARs -->
                 <plugin>
@@ -143,23 +166,6 @@
                     <version>${resources-plugin-version}</version>
                 </plugin>
                 
-                <!-- Maven EJB Plugin, for EJBs -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-ejb-plugin</artifactId>
-                    <version>${ejb-plugin-version}</version>
-                    <configuration>
-                        <ejbVersion>${ejb-spec-version}</ejbVersion>
-                        
-                        <archive>
-                            <addMavenDescriptor>false</addMavenDescriptor>
-                            <manifest>
-                                <addClasspath>true</addClasspath>
-                            </manifest>
-                        </archive>
-                        
-                    </configuration>
-                </plugin>
                 
                 <!-- Maven WAR Plugin, for WARs -->
                 <plugin>
@@ -177,13 +183,6 @@
                         </archive>
                         
                     </configuration>
-                </plugin>
-                
-                <!-- Maven EAR Plugin exceptionally defined here as whole -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-ear-plugin</artifactId>
-                    <version>${ear-plugin-version}</version>
                 </plugin>
                 
                 <!-- Surefire plugin used for testing -->
@@ -225,39 +224,45 @@
     </build>
     
     
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>javax</groupId>
-                <artifactId>javaee-api</artifactId>
-                <version>${javaee-api-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.persistence</groupId>
-                <artifactId>javax.persistence</artifactId>
-                <version>${jpa-spec-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.persistence</groupId>
-                <artifactId>eclipselink</artifactId>
-                <version>${eclipse-link-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.persistence</groupId>
-                <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-                <version>${eclipse-link-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.weld</groupId>
-                <artifactId>weld-osgi-bundle</artifactId> <!-- Loaded this osgi artifact because it is provided by Glassfish -->
-                <version>${weld-osgi-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.glassfish.jersey.media</groupId>
-                <artifactId>jersey-media-json-jackson</artifactId>
-                <version>${jersey-version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-    
+    <dependencies>
+        <dependency>
+         <groupId>jakarta.platform</groupId>
+         <artifactId>jakarta.jakartaee-api</artifactId>
+         <version>${jakartaee-version}</version>
+         <scope>provided</scope>
+     </dependency>
+     <dependency>
+         <groupId>org.eclipse.microprofile</groupId>
+         <artifactId>microprofile</artifactId>
+         <version>${microprofile-version}</version>
+         <type>pom</type>
+         <scope>provided</scope>
+     </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>javax.persistence</artifactId>
+            <version>${jpa-spec-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>eclipselink</artifactId>
+            <version>${eclipse-link-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+            <version>${eclipse-link-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.weld</groupId>
+            <artifactId>weld-osgi-bundle</artifactId> <!-- Loaded this osgi artifact because it is provided by Glassfish -->
+            <version>${weld-osgi-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+            <version>${jersey-version}</version>
+        </dependency>
+    </dependencies>
+        
 </project>
