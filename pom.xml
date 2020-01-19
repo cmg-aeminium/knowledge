@@ -93,7 +93,10 @@
         <java-version>11</java-version>
         
         <!-- Payara Version -->
-        <payaraVersion>5.194</payaraVersion>
+        <payara-micro-maven-plugin>1.0.6</payara-micro-maven-plugin>
+        <payara-micro-version>5.194</payara-micro-version>
+        
+        <domain.dir>${user.home}/modules/productcreation/domain</domain.dir>
         
         <!-- Maven plugin versions -->
         <ejb-plugin-version>3.0.1</ejb-plugin-version>
@@ -124,6 +127,7 @@
         
         
         <!-- Library versions -->
+        <postresql-version>42.2.8</postresql-version>
     
     </properties>
     
@@ -227,6 +231,64 @@
             
             </plugins>
         </pluginManagement>
+        
+		<plugins>
+		
+		    <!-- Payara Micro bundle execution will configure the Uber JAR -->
+		  <plugin>
+		      <groupId>fish.payara.maven.plugins</groupId>
+		      <artifactId>payara-micro-maven-plugin</artifactId>
+		      <version>${payara-micro-maven-plugin}</version>
+		
+		      <!-- An execution must be defined because it is not a default plugin -->
+		       <executions>
+		
+		           <execution>
+		               <id>BUNDLE</id>
+		               <goals>
+		                   <goal>bundle</goal>
+		               </goals>
+		               <configuration>
+		                   <payaraVersion>${payara-micro-version}</payaraVersion>
+		                   <systemProperties>
+		                       <property>
+		                           <name>payaramicro.port</name>
+		                           <value>50000</value>
+		                       </property>
+		                       <property>
+		                           <name>payaramicro.rootDir</name>
+		                           <value>${domain.dir}</value>
+		                       </property>
+		                       <property>
+		                           <name>database.user</name>
+		                           <value>postgres</value>
+		                       </property>
+		                       <property>
+		                           <name>database.password</name>
+		                           <value>admin</value>
+		                       </property>
+		                       <property>
+		                           <name>database.host</name>
+		                           <value>localhost</value>
+		                       </property>
+		                       <property>
+		                           <name>database.name</name>
+		                           <value>sweranker</value>
+		                       </property>
+		                       <property>
+		                           <name>datasource.javaclass</name>
+		                           <value>org.postgresql.ds.PGSimpleDataSource</value>
+		                       </property>
+		                   </systemProperties>
+		                   <appendSystemProperties>true</appendSystemProperties>
+		               </configuration>
+		           </execution>
+		
+		       </executions>
+		   </plugin>
+		   
+		</plugins>
+        
     </build>
     
     <dependencies>
@@ -267,6 +329,12 @@
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-json-jackson</artifactId>
             <version>${jersey-version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postresql-version}</version>
         </dependency>
     </dependencies>
         
