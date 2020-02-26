@@ -66,6 +66,10 @@ public class KnowledgeAreaTranslation implements Serializable {
         this.knowledgeArea = knowledgeArea;
     }
 
+    public Long getId() {
+        return this.knowledgeArea.getId();
+    }
+
     public Language getLanguage() {
         return language;
     }
