@@ -7,15 +7,15 @@
         <class>pt.sweranker.persistence.knowledgeareas.KnowledgeAreaTranslation</class>
         
         <properties>
-            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <!-- property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/-->
             
-            <property name="javax.persistence.schema-generation.create-source" value="metadata"/>
-            <property name="javax.persistence.schema-generation.drop-source" value="metadata"/>
+            <!-- property name="javax.persistence.schema-generation.create-source" value="metadata"/-->
+            <!-- property name="javax.persistence.schema-generation.drop-source" value="metadata"/-->
             
-            <property name="javax.persistence.schema-generation.create-script-source" value="META-INF/sql/create-schema.sql"/>
-            <property name="javax.persistence.schema-generation.drop-script-source" value="META-INF/sql/drop-schema.sql"/>
+            <!-- property name="javax.persistence.schema-generation.create-script-source" value="META-INF/sql/create-schema.sql"/-->
+            <!-- property name="javax.persistence.schema-generation.drop-script-source" value="META-INF/sql/drop-schema.sql"/-->
             
-            <property name="javax.persistence.sql-load-script-source" value="META-INF/sql/init-data.sql"/>
+            <!-- property name="javax.persistence.sql-load-script-source" value="META-INF/sql/init-data.sql"/-->
             
             <property name="eclipselink.logging.level.sql" value="FINE"/>
             <property name="eclipselink.logging.parameters" value="true"/>
