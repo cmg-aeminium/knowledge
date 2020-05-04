@@ -16,7 +16,7 @@ import javax.sql.DataSource;
     user = "${database.user}",
     password = "${database.password}",
     serverName = "${database.host}",
-    portNumber = 5445, //port must always be an integer
+    portNumber = 5432, //port must always be an integer
     databaseName = "${database.name}",
     properties = {"stringtype=unspecified", "fish.payara.log-jdbc-calls=true"})
 public class DatasourceProvider {
