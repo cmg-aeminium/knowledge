@@ -1,6 +1,6 @@
-/*
- * Copyright (c) 2019  Fashion Concierge
- * All rights reserved.
+/**
+ * Copyright (c) 2020  Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
+ * Likely open-source, so copy at will, bugs will be yours as well.
  */
 package pt.sweranker.dao;
 
@@ -16,7 +16,7 @@ import org.jboss.weld.interceptor.util.proxy.TargetInstanceProxy;
 /**
  * @author Carlos Manuel
  */
-public abstract class JPACrudDAO<T> implements CrudDAO<T> {
+public abstract class JPACrudDAO<T> {
 
     private final Class<T> entityClass;
 
@@ -31,14 +31,24 @@ public abstract class JPACrudDAO<T> implements CrudDAO<T> {
         return em;
     }
 
-    @Override
+    /**
+     * Persists an entity into the system.
+     *
+     * @param entity
+     */
     public void create(T entity) {
         if (entity != null) {
             create(entity, false);
         }
     }
 
-    @Override
+    /**
+     * Persists an entity into the system with the possibility to force or not the changes into the
+     * persistence context
+     *
+     * @param entity
+     * @param flush true if forcing is needed, false otherwise
+     */
     public void create(T entity, boolean flush) {
         if (entity != null) {
             getEntityManager().persist(entity);
@@ -48,7 +58,11 @@ public abstract class JPACrudDAO<T> implements CrudDAO<T> {
         }
     }
 
-    @Override
+    /**
+     * Edits an Entity
+     *
+     * @param entity
+     */
     public void edit(T entity) {
         if (entity != null) {
             // If this happens to be an Injected entity, then saving requires an extra step. This is rare, but most User types are injected via authentication, so...
@@ -60,14 +74,23 @@ public abstract class JPACrudDAO<T> implements CrudDAO<T> {
         }
     }
 
-    @Override
+    /**
+     * Removes an entity from the database
+     *
+     * @param entity
+     */
     public void remove(T entity) {
         if (entity != null) {
             getEntityManager().remove(getEntityManager().merge(entity));
         }
     }
 
-    @Override
+    /**
+     * Retrieves and entity by its numeric ID.
+     *
+     * @param id
+     * @return the found entity instance or null if the entity does not exist
+     */
     public T findById(Long id) {
         if (id == null || id <= 0) {
             return null;
@@ -76,7 +99,11 @@ public abstract class JPACrudDAO<T> implements CrudDAO<T> {
         return getEntityManager().find(entityClass, id);
     }
 
-    @Override
+    /**
+     * Retrieves the full list of Entities of its type with no restrictions.
+     *
+     * @return a list of the results (empty if none was found)
+     */
     public List<T> findAll() {
         CriteriaQuery<T> cq = getEntityManager().getCriteriaBuilder().createQuery(entityClass);
         CriteriaBuilder cb = getEntityManager().getCriteriaBuilder();
@@ -89,7 +116,11 @@ public abstract class JPACrudDAO<T> implements CrudDAO<T> {
         return getEntityManager().createQuery(cq).getResultList();
     }
 
-    @Override
+    /**
+     * Retrieves the total number of Entities of its type with no restrictions.
+     *
+     * @return a list of the results (empty if none was found)
+     */
     public Long count() {
         CriteriaQuery<Long> cq = getEntityManager().getCriteriaBuilder().createQuery(Long.class);
         Root<T> rt = cq.from(entityClass);

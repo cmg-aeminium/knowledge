@@ -94,7 +94,7 @@
         
         <!-- Payara Version -->
         <payara-micro-maven-plugin>1.0.6</payara-micro-maven-plugin>
-        <payara-micro-version>5.194</payara-micro-version>
+        <payara-micro-version>5.201</payara-micro-version>
         
         <!--domain.dir>${user.home}/modules/productcreation/domain</domain.dir-->
         
