@@ -93,7 +93,7 @@
         <java-version>11</java-version>
         
         <!-- Payara Version -->
-        <payara-micro-maven-plugin>1.0.7</payara-micro-maven-plugin>
+        <payara-micro-plugin-version>1.0.7</payara-micro-plugin-version>
         <payara-micro-version>5.201</payara-micro-version>
         
         <!--domain.dir>${user.home}/modules/productcreation/domain</domain.dir-->
@@ -116,10 +116,7 @@
         <!-- JAVA EE API, SPEC and IMPLEMENTATION versions -->
         <jakartaee-version>8.0.0</jakartaee-version>
         <microprofile-version>3.2</microprofile-version>
-        <javaee-ws-rs-version>2.1</javaee-ws-rs-version>
-        <jpa-spec-version>2.2.0</jpa-spec-version>
         <eclipse-link-version>2.7.4.payara-p2</eclipse-link-version>
-        <ejb-spec-version>3.2</ejb-spec-version>
         <jersey-version>2.27</jersey-version>
         <jaxrs-jackson-version>2.9.7</jaxrs-jackson-version>
         <weld-osgi-version>3.1.0.Final</weld-osgi-version>
@@ -237,7 +234,7 @@
 		  <plugin>
 		      <groupId>fish.payara.maven.plugins</groupId>
 		      <artifactId>payara-micro-maven-plugin</artifactId>
-		      <version>${payara-micro-maven-plugin}</version>
+		      <version>${payara-micro-plugin-version}</version>
 		
 		      <!-- An execution must be defined because it is not a default plugin -->
 		       <executions>
@@ -306,11 +303,6 @@
 	     </dependency>
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
-            <artifactId>javax.persistence</artifactId>
-            <version>${jpa-spec-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
             <artifactId>eclipselink</artifactId>
             <version>${eclipse-link-version}</version>
         </dependency>
@@ -323,11 +315,6 @@
             <groupId>org.jboss.weld</groupId>
             <artifactId>weld-osgi-bundle</artifactId> <!-- Loaded this osgi artifact because it is provided by Glassfish -->
             <version>${weld-osgi-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.media</groupId>
-            <artifactId>jersey-media-json-jackson</artifactId>
-            <version>${jersey-version}</version>
         </dependency>
         
         <dependency>

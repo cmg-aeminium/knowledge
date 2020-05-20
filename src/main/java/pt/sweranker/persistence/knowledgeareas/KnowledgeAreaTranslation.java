@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 
+ * Copyright (c) 2019
  * 
  * Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  *
@@ -29,13 +29,9 @@ import pt.sweranker.persistence.Language;
 @Entity(name = "KnowledgeAreaTranslations")
 @IdClass(KnowledgeAreaId.class)
 @NamedQuery(
-    name = "KnowledgeAreaTranslations.findByIdAndLanguage",
+    name = "KnowledgeAreaTranslation.findByIdAndLanguage",
     query = "SELECT kat FROM KnowledgeAreaTranslations kat INNER JOIN FETCH kat.knowledgeArea ka WHERE kat.knowledgeArea.id = :id AND kat.language = :language",
     hints = {
-        //        @QueryHint(name = QueryHints.CACHE_USAGE, value = CacheUsage.DoNotCheckCache),
-        //        @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE, value = HintValues.FALSE),
-        //        @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE_SIZE, value = "1"), // this value is simply not respected
-        //        @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE_EXPIRY, value = "10000"),
         @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE_TYPE, value = "FULL")
 
     })

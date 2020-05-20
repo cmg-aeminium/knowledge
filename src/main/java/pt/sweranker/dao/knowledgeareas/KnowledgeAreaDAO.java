@@ -23,7 +23,7 @@ public class KnowledgeAreaDAO extends JPACrudDAO<KnowledgeAreaTranslation> {
     @Override
     public KnowledgeAreaTranslation findById(Long id) {
 
-        TypedQuery<KnowledgeAreaTranslation> query = getEntityManager().createNamedQuery("KnowledgeAreaTranslations.findByIdAndLanguage", KnowledgeAreaTranslation.class);
+        TypedQuery<KnowledgeAreaTranslation> query = getEntityManager().createNamedQuery("KnowledgeAreaTranslation.findByIdAndLanguage", KnowledgeAreaTranslation.class);
         query.setParameter("id", id);
         query.setParameter("language", Language.DEFAULT_LANGUAGE);
 
@@ -44,7 +44,7 @@ public class KnowledgeAreaDAO extends JPACrudDAO<KnowledgeAreaTranslation> {
             language = Language.DEFAULT_LANGUAGE;
         }
 
-        TypedQuery<KnowledgeAreaTranslation> query = getEntityManager().createNamedQuery("KnowledgeAreaTranslations.findByIdAndLanguage", KnowledgeAreaTranslation.class);
+        TypedQuery<KnowledgeAreaTranslation> query = getEntityManager().createNamedQuery("KnowledgeAreaTranslation.findByIdAndLanguage", KnowledgeAreaTranslation.class);
         query.setParameter("id", id);
         query.setParameter("language", language);
 

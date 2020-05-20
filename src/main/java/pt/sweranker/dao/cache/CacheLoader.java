@@ -12,6 +12,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceUnit;
 import javax.persistence.TypedQuery;
 import pt.sweranker.persistence.Language;
+import pt.sweranker.persistence.knowledgeareas.KnowledgeArea;
 import pt.sweranker.persistence.knowledgeareas.KnowledgeAreaTranslation;
 
 /**
@@ -29,12 +30,16 @@ public class CacheLoader {
 
         EntityManager database = entitiyManagerFactory.createEntityManager();
 
-        for (long i = 1; i <= 15; i++) {
-            TypedQuery<KnowledgeAreaTranslation> query = database.createNamedQuery("KnowledgeAreaTranslations.findByIdAndLanguage", KnowledgeAreaTranslation.class);
-            query.setParameter("id", i);
-            query.setParameter("language", Language.PT_PT);
+        TypedQuery<KnowledgeArea> query = database.createNamedQuery("KnowledgeArea.findAll", KnowledgeArea.class);
+        var knowledgeAreas = query.getResultList();
 
-            query.getResultList();
+        for (KnowledgeArea ka : knowledgeAreas) {
+
+            TypedQuery<KnowledgeAreaTranslation> kaquery = database.createNamedQuery("KnowledgeAreaTranslation.findByIdAndLanguage", KnowledgeAreaTranslation.class);
+            kaquery.setParameter("id", ka.getId());
+            kaquery.setParameter("language", Language.PT_PT);
+
+            kaquery.getResultList();
         }
 
         database.close();

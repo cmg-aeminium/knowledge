@@ -13,8 +13,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 @Entity(name = "KnowledgeAreas")
+@NamedQuery(name = "KnowledgeArea.findAll", query = "SELECT ka FROM KnowledgeAreas ka")
 public class KnowledgeArea implements Serializable {
 
     private static final long serialVersionUID = 4341439068096536870L;
