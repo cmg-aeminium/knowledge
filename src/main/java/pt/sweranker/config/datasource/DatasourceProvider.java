@@ -18,7 +18,9 @@ import javax.sql.DataSource;
     serverName = "${database.host}",
     portNumber = 5432, //port must always be an integer
     databaseName = "${database.name}",
-    properties = {"stringtype=unspecified", "fish.payara.log-jdbc-calls=true"})
+    properties = {"stringtype=unspecified", "fish.payara.log-jdbc-calls=true"},
+    initialPoolSize = 1,
+    maxPoolSize = 5)
 public class DatasourceProvider {
 
     @Resource(lookup = "java:global/SwerankerDataSource")
