@@ -123,7 +123,7 @@
         
         
         <!-- Library versions -->
-        <postresql-version>42.2.8</postresql-version>
+        <postresql-version>42.2.13</postresql-version>
     
     </properties>
     
@@ -225,6 +225,22 @@
                     <version>${versions-plugin-version}</version>
                 </plugin>
             
+				<plugin>
+					<groupId>fish.payara.maven.plugins</groupId>
+					<artifactId>payara-micro-maven-plugin</artifactId>
+					<version>${payara-micro-plugin-version}</version>
+					<configuration>
+						<javaCommandLineOptions>
+							<option>
+								<value>-Xms2G</value>
+							</option>
+							<option>
+								<value>-Xmx2G</value>
+							</option>
+						</javaCommandLineOptions>
+					</configuration>
+				</plugin>
+            
             </plugins>
         </pluginManagement>
         
@@ -234,7 +250,6 @@
 		  <plugin>
 		      <groupId>fish.payara.maven.plugins</groupId>
 		      <artifactId>payara-micro-maven-plugin</artifactId>
-		      <version>${payara-micro-plugin-version}</version>
 		
 		      <!-- An execution must be defined because it is not a default plugin -->
 		       <executions>
