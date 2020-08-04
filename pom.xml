@@ -114,16 +114,10 @@
         <versions-plugin-version>2.7</versions-plugin-version>
         
         <!-- JAVA EE API, SPEC and IMPLEMENTATION versions -->
-        <jakartaee-version>8.0.0</jakartaee-version>
-        <microprofile-version>3.2</microprofile-version>
-        <eclipse-link-version>2.7.4.payara-p2</eclipse-link-version>
-        <jersey-version>2.27</jersey-version>
-        <jaxrs-jackson-version>2.9.7</jaxrs-jackson-version>
-        <weld-osgi-version>3.1.0.Final</weld-osgi-version>
-        
+        <payara-version>5.2020.3</payara-version>
         
         <!-- Library versions -->
-        <postresql-version>42.2.13</postresql-version>
+        <postresql-version>42.2.14</postresql-version>
     
     </properties>
     
@@ -223,6 +217,9 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>versions-maven-plugin</artifactId>
                     <version>${versions-plugin-version}</version>
+                    <configuration>
+                    	<processDependencyManagement>false</processDependencyManagement>
+                    </configuration>
                 </plugin>
             
 				<plugin>
@@ -260,7 +257,7 @@
 		                   <goal>bundle</goal>
 		               </goals>
 		               <configuration>
-		                   <payaraVersion>${payara-micro-version}</payaraVersion>
+		                   <payaraVersion>${payara-version}</payaraVersion>
 		                   <systemProperties>
 		                       <property>
 		                           <name>payaramicro.port</name>
@@ -302,34 +299,44 @@
         
     </build>
     
+    <dependencyManagement>
+	    <dependencies>
+	        <dependency>
+	            <groupId>fish.payara.api</groupId>
+	            <artifactId>payara-bom</artifactId>
+	            <version>${payara-version}</version>
+	            <type>pom</type>
+	            <scope>import</scope>
+	        </dependency>
+	    </dependencies>
+	</dependencyManagement>
+    
     <dependencies>
         <dependency>
 	         <groupId>jakarta.platform</groupId>
 	         <artifactId>jakarta.jakartaee-api</artifactId>
-	         <version>${jakartaee-version}</version>
 	         <scope>provided</scope>
 	     </dependency>
 	     <dependency>
 	         <groupId>org.eclipse.microprofile</groupId>
 	         <artifactId>microprofile</artifactId>
-	         <version>${microprofile-version}</version>
 	         <type>pom</type>
 	         <scope>provided</scope>
 	     </dependency>
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
-            <artifactId>eclipselink</artifactId>
-            <version>${eclipse-link-version}</version>
+            <artifactId>org.eclipse.persistence.core</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-            <version>${eclipse-link-version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.weld</groupId>
             <artifactId>weld-osgi-bundle</artifactId> <!-- Loaded this osgi artifact because it is provided by Glassfish -->
-            <version>${weld-osgi-version}</version>
+            <scope>provided</scope>
         </dependency>
         
         <dependency>
