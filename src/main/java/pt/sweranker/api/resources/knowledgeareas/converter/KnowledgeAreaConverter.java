@@ -5,19 +5,16 @@
 package pt.sweranker.api.resources.knowledgeareas.converter;
 
 import java.time.LocalDateTime;
-import javax.enterprise.context.RequestScoped;
-import javax.transaction.Transactional;
-import javax.transaction.Transactional.TxType;
+import javax.ejb.Stateless;
 import pt.sweranker.api.resources.knowledgeareas.dto.response.DetailedKnowledgeAreaDTO;
 import pt.sweranker.persistence.knowledgeareas.KnowledgeAreaTranslation;
 
 /**
  * @author Carlos Manuel
  */
-@RequestScoped
+@Stateless
 public class KnowledgeAreaConverter {
 
-    @Transactional(value = TxType.SUPPORTS)
     public DetailedKnowledgeAreaDTO toDetailedKnowledgeAreaDTO(KnowledgeAreaTranslation knowledgeArea) {
 
         DetailedKnowledgeAreaDTO dto = new DetailedKnowledgeAreaDTO();
