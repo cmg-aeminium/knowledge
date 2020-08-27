@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2019
- * 
+ *
  * Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  *
  * All rights reserved.
@@ -23,7 +23,7 @@ import pt.sweranker.persistence.Language;
 
 /**
  * Knowledge Area Translation
- * 
+ *
  * @author Carlos Gonçalves
  */
 @Entity(name = "KnowledgeAreaTranslations")
@@ -48,11 +48,11 @@ public class KnowledgeAreaTranslation implements Serializable {
     @Enumerated(EnumType.STRING)
     private Language language;
 
-    @Column(name = "translatedName", length = 300)
-    private String translatedName;
+    @Column(name = "name", length = 300)
+    private String name;
 
-    @Column(name = "translatedDescription", length = 2000)
-    private String translatedDescription;
+    @Column(name = "description", length = 2000)
+    private String description;
 
     public KnowledgeArea getKnowledgeArea() {
         return knowledgeArea;
@@ -75,19 +75,19 @@ public class KnowledgeAreaTranslation implements Serializable {
     }
 
     public String getTranslatedName() {
-        return translatedName;
+        return name;
     }
 
     public void setTranslatedName(String translatedName) {
-        this.translatedName = translatedName;
+        this.name = translatedName;
     }
 
     public String getTranslatedDescription() {
-        return translatedDescription;
+        return description;
     }
 
     public void setTranslatedDescription(String translatedDescription) {
-        this.translatedDescription = translatedDescription;
+        this.description = translatedDescription;
     }
 
 }

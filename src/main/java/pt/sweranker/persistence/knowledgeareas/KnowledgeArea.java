@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2019
- * 
+ *
  * Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  *
  * All rights reserved.
@@ -14,6 +14,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.SequenceGenerator;
 
 @Entity(name = "KnowledgeAreas")
 @NamedQuery(name = "KnowledgeArea.findAll", query = "SELECT ka FROM KnowledgeAreas ka")
@@ -22,7 +23,11 @@ public class KnowledgeArea implements Serializable {
     private static final long serialVersionUID = 4341439068096536870L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "KNOWLEDGEAREA_SEQUENCE")
+    @SequenceGenerator(name = "KNOWLEDGEAREA_SEQUENCE",
+        sequenceName = "knowledgearea_id_seq",
+        initialValue = 1,
+        allocationSize = 1)
     @Column(name = "id")
     private Long id;
 
