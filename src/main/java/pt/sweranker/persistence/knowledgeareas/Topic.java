@@ -5,11 +5,14 @@
 package pt.sweranker.persistence.knowledgeareas;
 
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  * @author Carlos Gonçalves
@@ -23,15 +26,25 @@ public class Topic implements Serializable {
     private static final long serialVersionUID = 6025578077962121721L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "TOPIC_SEQUENCE")
-    @SequenceGenerator(name = "TOPIC_SEQUENCE",
-        sequenceName = "topic_id_seq",
-        initialValue = 1,
-        allocationSize = 1)
     private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "knowledgeareaid", referencedColumnName = "id")
+    private KnowledgeArea knowledgeArea;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "topic", fetch = FetchType.LAZY)
+    private List<TopicTranslation> translations;
 
     public Long getId() {
         return id;
+    }
+
+    public List<TopicTranslation> getTranslations() {
+        return translations;
+    }
+
+    public void setTranslations(List<TopicTranslation> translations) {
+        this.translations = translations;
     }
 
 }

@@ -24,14 +24,15 @@ CREATE TABLE KnowledgeAreaTranslations (
 );
 
 
-CREATE SEQUENCE topic_id_seq INCREMENT 1;    
 CREATE TABLE Topics(
-	 id SMALLINT NOT NULL PRIMARY KEY DEFAULT nextval('topic_id_seq')
+	id SMALLINT NOT NULL PRIMARY KEY,
+	knowledgeareaid SMALLINT NOT NULL REFERENCES KnowledgeAreas(id) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 
 CREATE TABLE TopicTranslations (
     topicId SMALLINT NOT NULL REFERENCES Topics(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
 	language language_type NOT NULL,
 	name text NOT NULL,
-	description text NOT NULL
+	description text NOT NULL,
+	PRIMARY KEY(topicId, language)
 );
