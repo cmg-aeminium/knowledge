@@ -4,9 +4,14 @@
  */
 package pt.sweranker.api.resources.topics;
 
+import javax.ejb.Stateless;
+import javax.ws.rs.Path;
+
 /**
  * @author Carlos Gonçalves
  */
+@Path("topics")
+@Stateless
 public class TopicResource {
 
 }
