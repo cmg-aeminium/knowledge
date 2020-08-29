@@ -73,6 +73,89 @@ insert into Topics(id,knowledgeareaid) values (18, 3);
 insert into Topics(id,knowledgeareaid) values (19, 3);
 insert into Topics(id,knowledgeareaid) values (20, 3);
 
+insert into Topics(id,knowledgeareaid) values (21, 4);
+insert into Topics(id,knowledgeareaid) values (22, 4);
+insert into Topics(id,knowledgeareaid) values (23, 4);
+insert into Topics(id,knowledgeareaid) values (24, 4);
+insert into Topics(id,knowledgeareaid) values (25, 4);
+insert into Topics(id,knowledgeareaid) values (26, 4);
+
+insert into Topics(id,knowledgeareaid) values (27, 5);
+insert into Topics(id,knowledgeareaid) values (28, 5);
+insert into Topics(id,knowledgeareaid) values (29, 5);
+insert into Topics(id,knowledgeareaid) values (30, 5);
+insert into Topics(id,knowledgeareaid) values (31, 5);
+
+insert into Topics(id,knowledgeareaid) values (32, 6);
+insert into Topics(id,knowledgeareaid) values (33, 6);
+insert into Topics(id,knowledgeareaid) values (34, 6);
+insert into Topics(id,knowledgeareaid) values (35, 6);
+insert into Topics(id,knowledgeareaid) values (36, 6);
+insert into Topics(id,knowledgeareaid) values (37, 6);
+insert into Topics(id,knowledgeareaid) values (38, 6);
+
+insert into Topics(id,knowledgeareaid) values (39, 7);
+insert into Topics(id,knowledgeareaid) values (40, 7);
+insert into Topics(id,knowledgeareaid) values (41, 7);
+insert into Topics(id,knowledgeareaid) values (42, 7);
+insert into Topics(id,knowledgeareaid) values (43, 7);
+insert into Topics(id,knowledgeareaid) values (44, 7);
+insert into Topics(id,knowledgeareaid) values (45, 7);
+
+insert into Topics(id,knowledgeareaid) values (46, 8);
+insert into Topics(id,knowledgeareaid) values (47, 8);
+insert into Topics(id,knowledgeareaid) values (48, 8);
+insert into Topics(id,knowledgeareaid) values (49, 8);
+insert into Topics(id,knowledgeareaid) values (50, 8);
+
+insert into Topics(id,knowledgeareaid) values (51, 9);
+insert into Topics(id,knowledgeareaid) values (52, 9);
+insert into Topics(id,knowledgeareaid) values (53, 9);
+insert into Topics(id,knowledgeareaid) values (54, 9);
+
+insert into Topics(id,knowledgeareaid) values (55, 10);
+insert into Topics(id,knowledgeareaid) values (56, 10);
+insert into Topics(id,knowledgeareaid) values (57, 10);
+insert into Topics(id,knowledgeareaid) values (58, 10);
+
+insert into Topics(id,knowledgeareaid) values (59, 11);
+insert into Topics(id,knowledgeareaid) values (60, 11);
+insert into Topics(id,knowledgeareaid) values (61, 11);
+
+insert into Topics(id,knowledgeareaid) values (34, 6);
+insert into Topics(id,knowledgeareaid) values (35, 6);
+insert into Topics(id,knowledgeareaid) values (36, 6);
+insert into Topics(id,knowledgeareaid) values (37, 6);
+insert into Topics(id,knowledgeareaid) values (38, 6);
+insert into Topics(id,knowledgeareaid) values (32, 6);
+insert into Topics(id,knowledgeareaid) values (33, 6);
+insert into Topics(id,knowledgeareaid) values (34, 6);
+insert into Topics(id,knowledgeareaid) values (35, 6);
+insert into Topics(id,knowledgeareaid) values (36, 6);
+insert into Topics(id,knowledgeareaid) values (37, 6);
+insert into Topics(id,knowledgeareaid) values (38, 6);
+insert into Topics(id,knowledgeareaid) values (32, 6);
+insert into Topics(id,knowledgeareaid) values (33, 6);
+insert into Topics(id,knowledgeareaid) values (34, 6);
+insert into Topics(id,knowledgeareaid) values (35, 6);
+insert into Topics(id,knowledgeareaid) values (36, 6);
+insert into Topics(id,knowledgeareaid) values (37, 6);
+insert into Topics(id,knowledgeareaid) values (38, 6);
+insert into Topics(id,knowledgeareaid) values (32, 6);
+insert into Topics(id,knowledgeareaid) values (33, 6);
+insert into Topics(id,knowledgeareaid) values (34, 6);
+insert into Topics(id,knowledgeareaid) values (35, 6);
+insert into Topics(id,knowledgeareaid) values (36, 6);
+insert into Topics(id,knowledgeareaid) values (37, 6);
+insert into Topics(id,knowledgeareaid) values (38, 6);
+insert into Topics(id,knowledgeareaid) values (32, 6);
+insert into Topics(id,knowledgeareaid) values (33, 6);
+insert into Topics(id,knowledgeareaid) values (34, 6);
+insert into Topics(id,knowledgeareaid) values (35, 6);
+insert into Topics(id,knowledgeareaid) values (36, 6);
+insert into Topics(id,knowledgeareaid) values (37, 6);
+insert into Topics(id,knowledgeareaid) values (38, 6);
+
 
 
 
@@ -99,12 +182,100 @@ insert into TopicTranslations(topicId, language, name, description) values (18,'
 insert into TopicTranslations(topicId, language, name, description) values (19,'PT_PT', 'Tecnologias de Construção', 'Sobre como desenhar e usar APIs;\n\nproblemas típicos de paradigmas orientados aos objectos (como polimorfismo e reflexão);\n\ntipos parametrizados e genéricos;\n\nassertions, programação por interfaces e programação defensiva;\n\ntratamento de erros;\n\nmodelos executáveis (criação de um programa compilando um modelo executável de uma linguagem de modelação);\n\nprogramação baseada em estados e baseada em tabelas;\n\nconfiguração em runtime e internacionalização;\n\nprocessamento de gramáticas de linguagens;\n\nprimitivas de concorrência (semáforos, mutexes, monitores, etc.);\n\nmiddleware (software que providencia serviços entre a camada do SO e a camada aplicacional);\n\nprogramação para sistemas distribuídos;\n\nconstrução de sistemas heterogéneos (como Processadores de Sinais Digitais ou Sistemas Embebidos);\n\nanálise de performance e tuning (escolhas de arquitecturas, estruturas de dados ou selecção de algoritmos);\n\nstandards de plataformas (por exemplo J2EE vs J2SE);\n\ntest-driven development.' );
 insert into TopicTranslations(topicId, language, name, description) values (20,'PT_PT', 'Ferramentas de Construção de Software', 'Sobre todo o tipo de ferramentas (tipicamente também software) que ajudam à construção de software tais como IDEs (ambientes de desenvolvimento integrado como Eclipse, Netbeans, Visual Studio, etc);\n\nconstrutores de Interfaces Gráficas (actualmente também parte de IDEs modernos);\n\nferramentas de Testes Unitários e ainda ferramentas de profiling de código, análise de performance e slicing.' );
 
-insert into Topics(id,knowledgeareaid, language, name, description) values (21, 4, 'PT_PT',  );
-insert into Topics(id,knowledgeareaid, language, name, description) values (22, 4, 'PT_PT',  );
-insert into Topics(id,knowledgeareaid, language, name, description) values (23, 4, 'PT_PT',  );
-insert into Topics(id,knowledgeareaid, language, name, description) values (24, 4, 'PT_PT',  );
-insert into Topics(id,knowledgeareaid, language, name, description) values (25, 4, 'PT_PT',  );
-insert into Topics(id,knowledgeareaid, language, name, description) values (26, 4, 'PT_PT',  );
-insert into Topics(id,knowledgeareaid, language, name, description) values (27, 4, 'PT_PT',  );
-insert into Topics(id,knowledgeareaid, language, name, description) values (28, 4, 'PT_PT',  );
-insert into Topics(id,knowledgeareaid, language, name, description) values (29, 4, 'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (21,'PT_PT', 'Fundamentos do Teste de Software','Sobre os conceitos fundamentais de teste;\n\ndistinção entre falta, falha, erro e defeito;\n\nescolha de casos de teste;\n\neficácia e objectivos do teste;\n\nteste para descoberta de defeitos;\n\nlimites teóricos e práticos dos testes;\n\ncenários de teste impraticáveis e o relacionamento do teste com as outras actividades do ciclo de vida do software.' );
+insert into TopicTranslations(topicId, language, name, description) values (22,'PT_PT', 'Níveis de Teste', 'Sobre os diferentes níveis a que um software pode ser testado;\n\nquanto ao alvo do teste (testes unitários vs testes de integração vs testes do sistema);\n\nquanto ao objectivo do teste (testes de aceitação,  testes de instalação, testes alfa e beta;\n\ntestes de confiabilidade, testes de regressão, testes de performance, testes de segurança, testes de stress, testes back-to-back, testes de recuperação, testes de interface, testes de configuração e testes de usabilidade).' );
+insert into TopicTranslations(topicId, language, name, description) values (23,'PT_PT', 'Técnicas de Teste' , 'Sobre as diferentes técnicas usadas para encontrar o maior número de falhas possíveis;\n\ntécnicas baseadas na Intuição do Engenheiro (ad hoc e testes exploratórios);\n\ntécnicas baseadas no domínio do input (particionamento equivalente, teste combinatório, teste de valores-limite, testes aleatórios);\n\ntécnicas baseadas em código (testes baseados nos fluxos de controlo do código, testes do fluxo de dados);\n\ntécnicas baseadas nas falhas (error guessing, testes de mutação);\n\ntécnicas baseadas no uso (teste ao típico perfil operacional, heurísticas de observação do utilizador);\n\ntécnicas baseadas em modelos (tabelas de decisão, máquinas de estado;\n\nespecificações formais, modelos de workflow);\n\ntécnicas baseadas na natureza da aplicação (aplicação web vs aplicação mobile, etc.);\n\ncombinação das técnicas descritas.');
+insert into TopicTranslations(topicId, language, name, description) values (24,'PT_PT', 'Métricas Relacionadas com o Teste', 'Sobre as diferentes métricas usadas para avaliar a qualidade dos testes;\n\nmétricas de avaliação do programa (métricas de tamanho, falhas típicas para esse tipo de software, densidade das falhas, avaliação da confiabilidade, modelos de crescimento da confiabilidade);\n\nmétricas de avaliação dos testes realizados (cobertura total de testes, introdução de falhas, resultados das mutações).' );
+insert into TopicTranslations(topicId, language, name, description) values (25,'PT_PT', 'Processo de Teste' , 'Sobre a forma de organizar as actividades, estratégias e técnicas de teste num processo controlado;\n\nconsiderações práticas (criação de guias de teste, organizadores do processo, criação de documentação de testes, test-driven development, criação de uma equipa de testes independente ou interna, estivativas de esforço e teste, definição de terminação de um testes, reutilização de testes e utilização de um padrão de testes);\n\nactividades de teste ( planeamento de teste, geração de casos de teste, desenvolvimento de ambientes de treino, execução sistemática de testes, avaliação do resultado dos mesmos, registo dos resultados ao longo do tempo, rastreamento de defeitos).');
+insert into TopicTranslations(topicId, language, name, description) values (26,'PT_PT', 'Ferramentas de Teste de Software' , 'Sobre as ferramentas, tipicamente também software, que servem de auxilio à escolha realização e avaliação de testes.' );
+
+insert into TopicTranslations(topicId, language, name, description) values (27,'PT_PT', 'Fundamentos da Manutenção de Software','Sobre os conceitos básicos, terminologia e definições de manutenção de software;\n\no papel específico de um engenheiro responsável por manutenção de software;\n\nas necessidades de manutenção (corrigir falhas, melhorar o desenho do software, adaptar a novos ambientes, etc.);\n\ncustos de manutenção do software;\n\nevolução do software como uma das finalidades de manutenção;\n\nas diferentes categorias de manutenção (correctiva, adaptativa, perfectiva e preventiva).' );
+insert into TopicTranslations(topicId, language, name, description) values (28,'PT_PT', 'Problemas-chave da Manutenção de Software', 'Sobre os principais problemas que um responsável pela manutenção de software enfrenta tais como questões técnicas (compreensão limitada do software em questão, testes a um sistema em manutenção, análise de impacto da manutenção proposta, grau de modificabilidade de um sistema em produção);\n\nquestões relacionadas com a gestão do processo de manutenção (alinhar o processo de manutenção de um software com os objectivos da organização responsável, gerir e motivar responsáveis pela manutenção, outsourcing de manutenção);\n\nestimativas de custo de manutenção;\n\nmétricas de manutenção.' );
+insert into TopicTranslations(topicId, language, name, description) values (29,'PT_PT', 'Processo de Manutenção', 'Sobre um ciclo de vida de uma fase de manutenção (analisar problemas, implementar as modificações, aprovar, descontinuar o produto, migrar, etc.);\n\nas actividades exclusivas de um engenheiro responsável pela manutenção (análise do estado do software, tarefas de suporte, planeamento da manutenção em termos de prazos e âmbito da manutenção, gestão da configuração do software em manutenção, garantir a qualidade do software em manutenção).');
+insert into TopicTranslations(topicId, language, name, description) values (30,'PT_PT', 'Técnicas de Manutenção', 'Sobre as técnicas utilizadas para manter e/ou actualizar um software com sucesso;\n\ncompreensão do código do software;\n\ntécnicas de alteração sistemática do software (como refactoring);\n\ntécnicas de engenharia reversa de um software;\n\ntécnicas de migração de software;\n\ntécnicas e políticas de descontinuação de software.' );
+insert into TopicTranslations(topicId, language, name, description) values (31,'PT_PT', 'Ferramentas de Manutenção de Software', 'Sobre as ferramentas que auxiliam à manutenção de software, tais como ferramentas de corte (slicing) de software (que isolam as partes a modificar), analisadores estáticos e dinâmicos de código;\n\nanalisadores de fluxos de dados e de dependências e ainda ferramentas de auxílio à engenharia reversa.');
+
+insert into TopicTranslations(topicId, language, name, description) values (32,'PT_PT', 'Gestão do processo de Gestão de Configurações', 'Sobre como organizar uma gestão de configurações;\n\nquais as restrições impostas ao processo;\n\nsobre o planeamento típico de um processo de gestão de configurações (quem é o responsável, qual a calendarização do projecto, quais as ferramentas a ser usadas, que configurações providenciar a terceiros, as interacções potenciais entre o software a ser controlado e externos);\n\ndocumentação das configurações e sua gestão e utilização do mesmo como guidelines numa organização;\n\ngarantia da aplicação correcta da configurações da organização seja através da aplicação de métricas, ferramentas próprias ou simples auditorias.' );
+insert into TopicTranslations(topicId, language, name, description) values (33,'PT_PT', 'Identificação de Configurações de Software', 'obre a identificação das entidades a serem sujeitas a controlo de configurações, quais os relacionamentos entre si, como definir o seu versionamento, regras de criação de uma baseline, políticas de integração de um item de software (um ficheiro, código-fonte, recursos visuais, etc) no controlo de configurações;\n\nutilização e gestão de software libraries.' );
+insert into TopicTranslations(topicId, language, name, description) values (34,'PT_PT', 'Controlo de Configurações de Software', 'Sobre o controlo do fluxo normal de um processo de gestão de alterações na configuração do software, como requisição de alteração (vulgo change request), avaliação e aceitação/rejeição da alteração proposta;\n\nimplementação da alteração e seu rastreamento e por fim autorizações de desvio (da funcionalidade a alterar) ou renúncia (idem).');
+insert into TopicTranslations(topicId, language, name, description) values (35,'PT_PT', 'Registo de Estado da Configuração de Software', 'Sobre o registo e relato da evolução do estado das configurações de software ao longo do tempo;\n\ncomo capturar o estado de itens de software a cada momento e como reportá-los à organização.');
+insert into TopicTranslations(topicId, language, name, description) values (36,'PT_PT', 'Auditoria de Configurações de Software', 'Sobre o processo de escrutinar as configurações de software de modo a garantir que o seu funcionamento está alinhado com os requisitos especificado (como um todo ou a nível de determinada baseline), a arquitectura/desenho planeada e se está alinhado com a documentação.' );
+insert into TopicTranslations(topicId, language, name, description) values (37,'PT_PT', 'Gestão de Lançamento e Entrega de Software', 'Sobre como organizar a entrega de uma ou mais versões de software;\n\ncomo executar um processo de build de software (empacotamento, distribuição de diferentes versões em simultâneo, diferentes ambientes de produção;\n\na entrega de um produto de software completo (quanto efectuar a entrega com base no estado do software, quais os restantes artefactos entregáveis – como documentação e notas de entrega).' );
+insert into TopicTranslations(topicId, language, name, description) values (38,'PT_PT', 'Ferramentas de Gestão de Configurações de Software', 'Sobre os tipos de ferramentas utilizados para suportarem a eficaz gestão de configurações, tais como ferramentas de controlo de versões, ferramentas de build, ferramentas de suporte a problemas de clientes, ferramentas de controlo de workspaces para equipas de desenvolvimento, ferramentas de issue-tracking, etc.' );
+
+insert into TopicTranslations(topicId, language, name, description) values (39,'PT_PT', 'Inicialização e Definição de Âmbito', 'Sobre como determinar e negociar requisitos de software;\n\nanálise de viabilidade (avaliação da capacidade de realizar os requisitos com base em todas as restrições a que está sujeito - como custos, tecnologias, recursos humanos, políticas, etc.);\n\nprocessos de revisão de requisitos (quais as regras acordadas com stakeholders para fazer eventuais alterações aos requisitos).');
+insert into TopicTranslations(topicId, language, name, description) values (40,'PT_PT', 'Planeamento do Projecto de Software', 'Sobre como planear um projecto de software;\n\nqual o modelo de ciclo de vida de software a usar (tal como cascata, espiral ou métodos ágeis) e que ferramentas a usar para garantir a sua aplicação;\n\nescolha dos artefactos entregáveis (documentação, software instalável, etc.);\n\nestimação de custos, esforço e temporização;\n\nalocação de recursos humanos a tarefas;\n\ngestão de risco (identificação, análise de impacto, prioritização de factores de risco, desenvolvimento de estratégias de atenuação de risco, etc.);\n\ngestão da qualidade (definição de métricas de qualidade, garantir a aplicação de controlo de qualidade durante o projecto).');
+insert into TopicTranslations(topicId, language, name, description) values (41,'PT_PT', 'Execução do Projecto de Software', 'Sobre a aplicação do planeamento ao desenvolvimento do projecto;\n\naplicação dos termos contratados com o receptor do software (o cliente);\n\naplicação das medições e métricas planeadas;\n\nmonitorizar e adaptar os planos consoante a evolução do projecto e em alguns casos abandonar o mesmo;\n\norganização e desenvolvimento de relatórios sobre o progresso.');
+insert into TopicTranslations(topicId, language, name, description) values (42,'PT_PT', 'Revisão e Avaliação', 'Sobre o acompanhamento e avaliação periódica do projecto quanto aos objectivos e satisfação do cliente;\n\ndeterminar a satisfação do cliente quanto aos requisitos;\n\navaliação e revisão da performance dos métodos, ferramentas e recursos aplicados no projecto.');
+insert into TopicTranslations(topicId, language, name, description) values (43,'PT_PT', 'Término do Projecto', 'Sobre a finalização do projecto na sua totalidade ou numa milestone;\n\ndeterminar a âmbito de “término” quer a nível total ou parcial (e.g. um número pré-acordado de requisitos implementados pode ser um término de fase assim como todos os requisitos acordados e a respectiva documentação pode ser o término total);\n\nas actividades de término de projecto (como o arquivamento de documentação, por quanto tempo manter documentação, actualização de estados de projecto, elaborar documentos de “Lições aprendidas”, etc.).');
+insert into TopicTranslations(topicId, language, name, description) values (44,'PT_PT', 'Medições de Engenharia de Software', 'Sobre a aplicação de medições ao nível do projecto, processos e produtos de trabalho;\n\nestabelecimento e incentivo de medições (quais as medições, qual o âmbito, aplicação das medições pelas equipas, etc.);\n\nplaneamento de processos de medições;\n\naplicação de medições nos processos com todos os dados relevantes coleccionados e documentação das mesmas;\n\navaliação das medições e aplicação de correcções ou melhoramentos se necessário.');
+insert into TopicTranslations(topicId, language, name, description) values (45,'PT_PT', 'Ferramentas de Gestão de Engenharia de Software', 'Sobre as ferramentas usadas para auxílio à gestão de um projecto de software (planeamento e acompanhamento do estado de projecto, ferramentas de gestão de risco, ferramentas de comunicação e ferramentas de medição). Estas são também tipicamente software.' );
+
+insert into TopicTranslations(topicId, language, name, description) values (46,'PT_PT', 'Definição de Processo de Software', 'Sobre a definição daquilo que é um processo de software e o que o compõe;\n\ninputs requeridos, actividades de trabalho transformativas e os outputs gerados;\n\ndecomposição do processo em unidades de trabalho;\n\ncargos e competências;\n\ntécnicas, ferramentas e notações;\n\ngestão de processos de software, a sua eficiência para um projecto e os impactos que advenham da sua troca por outro.'  );
+insert into TopicTranslations(topicId, language, name, description) values (47,'PT_PT', 'Ciclos de Vida de Software', 'Sobre as diferentes categorias de modelos de ciclos de vida do desenvolvimento de software;\n\ncategorias de processos de software, tais com processos primários (para desenvolvimento, operação e manutenção de software), processos de suporte (para gestão das configurações, controlo de qualidade, verificação e validação), processos organizacionais (treino, gestão de infra-estruturas, gestão de portefolio, etc.), processos inter-projectos (transversais a vários projectos);\n\nmodelos de ciclo de vida do software (modelos preditivos ou lineares como o modelo cascata vs modelos iterativos como o modelo espirar vs modelos ágeis de desenvolvimento como scrum);\n\nadaptação de processos de software existentes às necessidades do projecto, organização ou desenvolvimentos tecnológicos.' );
+insert into TopicTranslations(topicId, language, name, description) values (48,'PT_PT', 'Avaliação e Melhoramento de Processos de Software', 'Sobre o acompanhamento do desempenho dos processos e a sua potencial alteração de modo a melhor responderem às necessidades específicas do projecto ou organização;\n\nos diferentes modelos e métodos (qualitativos que são sujeitos ao julgamento especializado ou quantitativos que são realizados com base em métricas);\n\nmodelos de melhoria iterativa de processos (como por exemplo o Plan-Do-Check-Act);\n\nsistemas de avaliação e pontuação de processos.');
+insert into TopicTranslations(topicId, language, name, description) values (49,'PT_PT', 'Medidas para Processos de Software', 'Sobre as diferentes medidas e técnicas de medição usadas para os processos de software;\n\nmedidas de determinação da eficiência de um processo (como medidas de esforço, horas-homem, dias-homem, custos monetários do processo ou fase de processo) ou do produto em si;\n\na qualidade das medidas a usar para processos e produtos;\n\nrecurso a software com modelos de análise de processos que permitem testar vários parâmetros dos processos usados e determinar possíveis pontos de melhoria;\n\ntécnicas de medição de processos quantitativas (medição directa de número de defeitos, horas-homem, entre outras e respectiva análise por métodos estatísticos) e técnicas qualitativas (como questionários ou entrevistas).');
+insert into TopicTranslations(topicId, language, name, description) values (50,'PT_PT', 'Ferramentas de Processos de Engenharia de Software', 'Sobre todo o tipo de ferramentas relacionadas com os processos de software, com por exemplo diagramas de BPMN, folhas de cálculo, diagramas de UML ou até software de gestão de projectos.');
+
+insert into TopicTranslations(topicId, language, name, description) values (51,'PT_PT', 'Modelação', 'Sobre os princípios gerais de modelação de software, sendo estes “Modelar o essencial”, “Providenciar uma perspectiva sobre o problema” e “Permitir a comunicação eficaz”;\n\nas propriedades de modelos (completude, consistência e exactidão) e expressão de modelos (conceito de entidade e relacionamento e os seus significados de acordo como tipo de modelo);\n\na sintaxe e a semântica das linguagens de modelação (textuais ou gráficas);\n\nos conceitos de pré-condição, pós-condição e invariantes.');
+insert into TopicTranslations(topicId, language, name, description) values (52,'PT_PT', 'Tipos de Modelos', 'Sobre os diferentes tipos de modelos usados para software;\n\nmodelos de informação (que identificam e definem um conjunto de conceitos, propriedades, relacionamentos e restrições em entidades de dados);\n\nmodelos comportamentais (identificam e definem as funções do software a ser modelado, os exemplos comuns são máquinas de estado, modelos de controlo de fluxo e modelos de fluxos de dados);\n\nmodelos estruturais (definem a composição lógica ou física das suas diferentes partes, exemplos disso são os diagramas de classe, de objectos e de packages).');
+insert into TopicTranslations(topicId, language, name, description) values (53,'PT_PT', 'Análise de Modelos', 'Sobre as técnicas de inspecção crítica de modelos pelo engenheiro;\n\nanálise de completude;\n\nanálise de consistência;\n\nanálise de exactidão;\n\nrastreamento entre requisitos, modelos e funcionalidade implementada;\n\nanálise de interacção entre modelos e funcionalidade.');
+insert into TopicTranslations(topicId, language, name, description) values (54,'PT_PT', 'Métodos de Engenharia de Software', 'Sobre as abordagens organizadas e sistemáticas ao desenvolvimento de software para um computador alvo;\n\nMétodos Heurísticos, que são baseados na experiência e largamente praticados pela indústria (tais como métodos de Análise Estruturada que tratam o software como um conjunto hierárquico de funções, métodos de Modelação de Dados que se focam na forma e relacionamento dos dados para organizações cujo princial activo é precisamente os dados e por fim Métodos Orientados aos Objectos, cujo software é um conjunto de objectos que representam o mundo real, encapsulam dados e têm comportamento);\n\nMétodos Formais que utilizam uma notação matemática rigorosa que permite definir, refinar, derivar e verficar software;\n\nMétodos de Prototipagem cuja finalidade é desenvolver uma pequena parte ou parte incompleta do software (normalmente a menos bem compreendida) de modo a poder refiná-la com recurso a input crítico do protótipo;\n\nMétodos Ágeis de desenvolvimento, caracterizados por desenvolvimentos iterativos curtos com alta participação de elementos da equipa (métodos como Extreme Programming, scrum ou Cristal Clear).' );
+                                                                            
+insert into TopicTranslations(topicId, language, name, description) values (55,'PT_PT', 'Fundamentos da Qualidade de Software', 'Sobre os princípios gerais do que define qualidade para os stakeholders;\n\na instalação de uma cultura e uma ética de trabalho orientada à qualidade;\n\no valor de desenvolver software de qualidade e o impacto que isso tem  nos custos do mesmo;\n\ncaracterísticas e modelos de qualidade a nível de processos e do produto em si;\n\ntécnicas de melhoramento de qualidade (como Plan-Do-Check-Act, kaizen ou Quality Function Deployment);\n\nconceitos de software para sistemas críticos e o impacto que a qualidade tem nestes sistemas.');
+insert into TopicTranslations(topicId, language, name, description) values (56,'PT_PT', 'Processos de Gestão de Qualidade de Software', 'Sobre os processos que asseguram que produtos de software, serviços e modelos de ciclo de vida respondem aos objectivos  organizacionais de qualidade e satisfação de stakeholders;\n\na garantia de qualidade de software (vulgo Quality Assurance);\n\nverificação e validação da qualidade;\n\nrevisão e auditoria de processos e produtos de software.');
+insert into TopicTranslations(topicId, language, name, description) values (57,'PT_PT', 'Considerações Práticas', 'Sobre os problemas práticos que têm um impacto na qualidade do software: o modo como os requisitos influenciam a gestão da qualidade, tais como o tipo de segurança do sistema, o ambiente físico, o orçamento do projecto, o grau de dependência do mesmo (software crítico implica um processo de qualidade elevado);\n\nos diferentes tipos de defeitos do software (erro computacional, erro humano, defeito, falta e falha);\n\nas técnicas de gestão da qualidade do software, como técnicas estáticas (análise de código-fonte, análise de design, métodos formais, etc.), técnicas dinâmicas (execução de código, simulação, debugging), teste de software executado por individuos fora da equipa de desenvolvimento para verificar a conformidade do software à sua especificação;\n\nmedição da qualidade do software (com recurso a métricas de qualidade, análise estatística, análise de tendência, etc.) com a finalidade de ter uma vista geral sobre a qualidade do produto e sobre as partes problemáticas do mesmo.' );
+insert into TopicTranslations(topicId, language, name, description) values (58,'PT_PT', 'Ferramentas de Qualidade de Software', 'Sobre as ferramentas de auxílio aos processos de qualidade de software, tais como ferramentas de análise estática de sintaxe e semântica de código (tal como compiladores, Java Mission Control, etc) e ferramentas de análise dinâmica de código (como debuggers).' );
+                                                                            
+insert into TopicTranslations(topicId, language, name, description) values (59,'PT_PT', 'Profissionalismo', 'Sobre a aderência do engenheiro a códigos de ética, conduta profissional e práticas standard estabelecidas pela sua comunidade profissional;\n\nacreditação, certificação e licenciamento;\n\ncódigos de ética e conduta profissional definidos pela sua comunidade profissional (como o código de ética da ACM e IEEE);\n\nas sociedades profissionais e a sua função (por exemplo a IEEE ou a Ordem dos Engenheiros);\n\nos Standards de Engenharia de Software (por exemplo os múltiplos standards da IEEE para Engenharia de Software);\n\no impacto económico do software;\n\nos variados tipos de contratos de trabalho e características;\n\nas questões legais (como marcas registadas, propriedade intelectual, uso justo, cibercrime, direitos de cópia);\n\na criação de documentação e os seus trâmites;\n\nnegociações (de requisitos, funcionalidades, contratos, etc.).');
+insert into TopicTranslations(topicId, language, name, description) values (60,'PT_PT', 'Dinâmica de Grupo e Psicologia', 'Sobre as questões relacionadas com trabalho em equipa e diferentes grupos de individuos como clientes ou colaboradores;\n\nquestões relacionadas com trabalho em grupo (honestidades intelectual, admissão de ignorância, admissão de erros, adaptabilidade);\n\nos factores que afectam a cognição pessoal (volume de dados, complexidade de problemas, incapacidade de exprimir os problemas, incapacidade de consultar com outros, etc.);\n\ncomo lidar com problemas complexos (trabalho em equipa, decomposição de problemas, etc.);\n\ncomo interagir com stakeholders;\n\nlidar com incerteza e ambiguidade nos problemas de desenvolvimento;\n\nlidar com problemas de multiculturalismo de equipas ou clientes.');
+insert into TopicTranslations(topicId, language, name, description) values (61,'PT_PT', 'Habilidades de Comunicação', 'Sobre as capacidades de comunicação orais e de escrita do engenheiro;\n\nleitura de material técnico, compreensão e resumo;\n\nhabilidades de escrita de documentos relevantes aos processos de software (requisitos, documentação de software, contratos, etc.);\n\ncomunicação eficaz com equipas ou grupos;\n\nhabilidades de criar e executar apresentações (de ideias, de produtos, pitches, etc.).');
+
+insert into TopicTranslations(topicId, language, name, description) values (62,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (63,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (64,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (65,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (66,'PT_PT',  );
+                                                                            
+insert into TopicTranslations(topicId, language, name, description) values (67,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (68,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (69,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (70,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (71,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (72,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (73,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (74,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (75,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (76,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (77,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (78,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (79,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (80,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (81,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (82,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (83,'PT_PT',  );
+                                                                            
+insert into TopicTranslations(topicId, language, name, description) values (84,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (85,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (86,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (87,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (88,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (89,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (90,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (91,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (92,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (93,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (94,'PT_PT',  );
+                                                                            
+insert into TopicTranslations(topicId, language, name, description) values (95,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (96,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (97,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (98,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (99,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (100,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (101,'PT_PT',  );
+
+insert into TopicTranslations(topicId, language, name, description) values (102,'PT_PT',  );
+
+
+
