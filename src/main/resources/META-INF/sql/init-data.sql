@@ -122,39 +122,54 @@ insert into Topics(id,knowledgeareaid) values (59, 11);
 insert into Topics(id,knowledgeareaid) values (60, 11);
 insert into Topics(id,knowledgeareaid) values (61, 11);
 
-insert into Topics(id,knowledgeareaid) values (34, 6);
-insert into Topics(id,knowledgeareaid) values (35, 6);
-insert into Topics(id,knowledgeareaid) values (36, 6);
-insert into Topics(id,knowledgeareaid) values (37, 6);
-insert into Topics(id,knowledgeareaid) values (38, 6);
-insert into Topics(id,knowledgeareaid) values (32, 6);
-insert into Topics(id,knowledgeareaid) values (33, 6);
-insert into Topics(id,knowledgeareaid) values (34, 6);
-insert into Topics(id,knowledgeareaid) values (35, 6);
-insert into Topics(id,knowledgeareaid) values (36, 6);
-insert into Topics(id,knowledgeareaid) values (37, 6);
-insert into Topics(id,knowledgeareaid) values (38, 6);
-insert into Topics(id,knowledgeareaid) values (32, 6);
-insert into Topics(id,knowledgeareaid) values (33, 6);
-insert into Topics(id,knowledgeareaid) values (34, 6);
-insert into Topics(id,knowledgeareaid) values (35, 6);
-insert into Topics(id,knowledgeareaid) values (36, 6);
-insert into Topics(id,knowledgeareaid) values (37, 6);
-insert into Topics(id,knowledgeareaid) values (38, 6);
-insert into Topics(id,knowledgeareaid) values (32, 6);
-insert into Topics(id,knowledgeareaid) values (33, 6);
-insert into Topics(id,knowledgeareaid) values (34, 6);
-insert into Topics(id,knowledgeareaid) values (35, 6);
-insert into Topics(id,knowledgeareaid) values (36, 6);
-insert into Topics(id,knowledgeareaid) values (37, 6);
-insert into Topics(id,knowledgeareaid) values (38, 6);
-insert into Topics(id,knowledgeareaid) values (32, 6);
-insert into Topics(id,knowledgeareaid) values (33, 6);
-insert into Topics(id,knowledgeareaid) values (34, 6);
-insert into Topics(id,knowledgeareaid) values (35, 6);
-insert into Topics(id,knowledgeareaid) values (36, 6);
-insert into Topics(id,knowledgeareaid) values (37, 6);
-insert into Topics(id,knowledgeareaid) values (38, 6);
+insert into Topics(id,knowledgeareaid) values (62, 12);
+insert into Topics(id,knowledgeareaid) values (63, 12);
+insert into Topics(id,knowledgeareaid) values (64, 12);
+insert into Topics(id,knowledgeareaid) values (65, 12);
+insert into Topics(id,knowledgeareaid) values (66, 12);
+
+insert into Topics(id,knowledgeareaid) values (67, 13);
+insert into Topics(id,knowledgeareaid) values (68, 13);
+insert into Topics(id,knowledgeareaid) values (69, 13);
+insert into Topics(id,knowledgeareaid) values (70, 13);
+insert into Topics(id,knowledgeareaid) values (71, 13);
+insert into Topics(id,knowledgeareaid) values (72, 13);
+insert into Topics(id,knowledgeareaid) values (73, 13);
+insert into Topics(id,knowledgeareaid) values (74, 13);
+insert into Topics(id,knowledgeareaid) values (75, 13);
+insert into Topics(id,knowledgeareaid) values (76, 13);
+insert into Topics(id,knowledgeareaid) values (77, 13);
+insert into Topics(id,knowledgeareaid) values (78, 13);
+insert into Topics(id,knowledgeareaid) values (79, 13);
+insert into Topics(id,knowledgeareaid) values (80, 13);
+insert into Topics(id,knowledgeareaid) values (81, 13);
+insert into Topics(id,knowledgeareaid) values (82, 13);
+insert into Topics(id,knowledgeareaid) values (83, 13);
+
+insert into Topics(id,knowledgeareaid) values (84, 14);
+insert into Topics(id,knowledgeareaid) values (85, 14);
+insert into Topics(id,knowledgeareaid) values (86, 14);
+insert into Topics(id,knowledgeareaid) values (87, 14);
+insert into Topics(id,knowledgeareaid) values (88, 14);
+insert into Topics(id,knowledgeareaid) values (89, 14);
+insert into Topics(id,knowledgeareaid) values (90, 14);
+insert into Topics(id,knowledgeareaid) values (91, 14);
+insert into Topics(id,knowledgeareaid) values (92, 14);
+insert into Topics(id,knowledgeareaid) values (93, 14);
+insert into Topics(id,knowledgeareaid) values (94, 14);
+
+insert into Topics(id,knowledgeareaid) values (95 , 15);
+insert into Topics(id,knowledgeareaid) values (96 , 15);
+insert into Topics(id,knowledgeareaid) values (97 , 15);
+insert into Topics(id,knowledgeareaid) values (98 , 15);
+insert into Topics(id,knowledgeareaid) values (99 , 15);
+insert into Topics(id,knowledgeareaid) values (100, 15);
+insert into Topics(id,knowledgeareaid) values (101, 15);
+
+insert into Topics(id,knowledgeareaid) values (102, 16);
+
+
+
 
 
 
@@ -231,51 +246,51 @@ insert into TopicTranslations(topicId, language, name, description) values (59,'
 insert into TopicTranslations(topicId, language, name, description) values (60,'PT_PT', 'Dinâmica de Grupo e Psicologia', 'Sobre as questões relacionadas com trabalho em equipa e diferentes grupos de individuos como clientes ou colaboradores;\n\nquestões relacionadas com trabalho em grupo (honestidades intelectual, admissão de ignorância, admissão de erros, adaptabilidade);\n\nos factores que afectam a cognição pessoal (volume de dados, complexidade de problemas, incapacidade de exprimir os problemas, incapacidade de consultar com outros, etc.);\n\ncomo lidar com problemas complexos (trabalho em equipa, decomposição de problemas, etc.);\n\ncomo interagir com stakeholders;\n\nlidar com incerteza e ambiguidade nos problemas de desenvolvimento;\n\nlidar com problemas de multiculturalismo de equipas ou clientes.');
 insert into TopicTranslations(topicId, language, name, description) values (61,'PT_PT', 'Habilidades de Comunicação', 'Sobre as capacidades de comunicação orais e de escrita do engenheiro;\n\nleitura de material técnico, compreensão e resumo;\n\nhabilidades de escrita de documentos relevantes aos processos de software (requisitos, documentação de software, contratos, etc.);\n\ncomunicação eficaz com equipas ou grupos;\n\nhabilidades de criar e executar apresentações (de ideias, de produtos, pitches, etc.).');
 
-insert into TopicTranslations(topicId, language, name, description) values (62,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (63,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (64,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (65,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (66,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (62,'PT_PT', 'Fundamentos de Economia', 'Sobre os conceitos base de Economia;\n\nfinanças e contabilidade;\n\ncontrolo de custos;\n\ncash flow;\n\nprocessos de tomada de decisões (orientada à Economia);\n\nconceito de valorização;\n\ninflação e depreciação;\n\ntaxação (impostos);\n\nvalor temporal do dinheiro (a oscilação do valor do dinheiro ao longo do tempo);\n\neficiência económica;\n\neficácia;\n\ndefinição de produtividade.' );
+insert into TopicTranslations(topicId, language, name, description) values (63,'PT_PT', 'Economia de Ciclos de Vida', 'Sobre os conceitos económicos aplicados à actividade do software ao longo do seu ciclo de vida;\n\nconceitos de produto, projecto, programa, portefolio, ciclo de vida de um produto, ciclo de vida de um projecto, propostas e tipos de propostas;\n\ndecisões de investimento;\n\nhorizonte de planeamento (sobre os custos económicos relacionados com investimentos num determinado prazo, como o tempo de vida de um produto de sotware e o seu impacto económico numa empresa);\n\nconceito de preço e estabelecimento de políticas de preços;\n\nconceito de custo e gestão de custos;\n\nmedição de performance económica;\n\ngestão do valor ganho (técnica económica que permite um controlo eficaz de custos comparando o valor já criado com o orçamento projectado e com o custo calendarizado até esse momento);\n\ndecisões de terminação de um produto baseadas em economia;\n\ndecisões de troca (troca de um software antiquado por um novo em vez de o manter) ou descontinuação (de um produto ou de actividade como um todo).');
+insert into TopicTranslations(topicId, language, name, description) values (64,'PT_PT', 'Risco e Incerteza', 'Sobre os conceitos de objectivo económico, estimativas e planeamento;\n\ntécnicas de estimação (como analogias, estimação por partes, métodos estatísticos, etc.);\n\nreagir a incerteza (como utilizar estimativas de diversos âmbitos, adiar decisões finais, etc.);\n\ntécnicas de prioritização;\n\ntécnicas de tomada decisões sob risco (como árvores de decisão, análise de Monte Carlo, etc.);\n\ntécnicas de tomada de decisões sob incerteza (como Regra de Laplace, Regra de Hurwicz, etc.).');
+insert into TopicTranslations(topicId, language, name, description) values (65,'PT_PT', 'Métodos de Análise Económica', 'Sobre os diferentes métodos de análise ecónomica aplicáveis dependendo do tipo de organização, finalidade ou objectivos do software: análise de decisão de organizações com fins lucrativos;\n\nmínimo rácio de retorno aceitável (critério de escolha de investimentos baseado num retorno percentual mínimo);\n\nretorno de investimento (rácio entre o valor ganho relativamente ao investido);\n\nretorno do capital aplicado;\n\nanálise custo-benefício;\n\nanálise custo-efectividade;\n\nanálise de break-even (igualdade entre custos e rendimentos);\n\ncaso de negócio (apresentação estruturada e consolidada sobre uma proposta de negócio a partir de diferentes perspectivas de decisão como custos, benefícios, risco, etc.);\n\navaliação a multiplos atributos (a nível de outras propriedades que não simplesmente dinheiro);\n\nanálise de optimização.');
+insert into TopicTranslations(topicId, language, name, description) values (66,'PT_PT', 'Considerações Práticas', 'O princípio do “Suficientemente Bom” (quando o custo de adicionar uma nova funcionalidade - ou investir em algo não essencial - não pode ser medido este princípio é um indicador de quando o estado desta funcionalidade é suficientemente boa para ser entregue);\n\nmercados sem fricção (sempre que existem entraves a uma competição perfeita, sejam custos de transporte, estabelecimentos, proteccionismo e, particularmente no software, não-neutralidade de internet ou limitação de venda de aplicações em lojas especificas);\n\necossistemas (quando as qualidades ou atributos de um produto são melhoradas devido à existência de terceiros que de alguma forma interagem com  produto, como por exemplo, uma aplicação que é integrada ou configurada à medida por uma empresa externa);\n\noffshoring (o desenvolvimento de uma actividade económica fora do território de operação da organização por razões de custos ou de défices de qualidade) e outsourcing (a execução de tarefas para uma organização por uma entidade externa quando essas actividades poderiam ser feitas pela organização).');
                                                                             
-insert into TopicTranslations(topicId, language, name, description) values (67,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (68,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (69,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (70,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (71,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (72,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (73,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (74,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (75,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (76,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (77,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (78,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (79,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (80,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (81,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (82,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (83,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (67,'PT_PT', 'Técnicas de Resolução de Problemas', 'Sobre a definição de resolução de problemas;\n\nformulação de problemas reais;\n\nanálises de problemas;\n\ndesenhar uma estratégia de procura de soluções;\n\nresolução de problemas com recurso a programas de computadores.' );
+insert into TopicTranslations(topicId, language, name, description) values (68,'PT_PT', 'Abstracção' ,'Sobre os conceitos inerentes à abstracção - genericamente definida como “o processo e o resultado da generalização através da redução da informação a um conceito, um problema ou um fenómeno observável de modo a permitir o foco no panorâma geral;\n\nos níveis de abstracção;\n\nconceito de encapsulamento;\n\nhierarquia de abstracções.');
+insert into TopicTranslations(topicId, language, name, description) values (69,'PT_PT', 'Fundamentos de Programação' ,'Sobre os conceitos-base de programação – a criação de programas de computador com recurso a código;\n\no processo de programação (desenho, escrita, teste, debug e manutenção);\n\nas características dos diferentes paradigmas de programação (não-estruturada, estruturada, procedimental, imperativa, orientada aos objectos, funcional, orientada aos aspectos, etc).');
+insert into TopicTranslations(topicId, language, name, description) values (70,'PT_PT', 'Bases de Linguagens de Programação' ,'Sobre as linguagens em que é possível escrever código com a finalidade de criar programas para um computador;\n\na sintaxe e semântica de uma linguagem;\n\nlinguagens de baixo nível, linguagens de alto nível;\n\ndiferenças entre linguagens declarativas e imperativas.');
+insert into TopicTranslations(topicId, language, name, description) values (71,'PT_PT', 'Técnicas e Ferramentas de Debugging' ,'Sobre o processo de encontrar e corrigir problemas no software escrito;\n\nos diferentes tipos de erros (de sintaxe, erros lógicos, erros de dados, etc.);\n\ntécnicas de debugging (um passo de cada vez, recurso a breakpoints, recurso a pontos de observação, etc.);\n\nferramentas de debugging (como debuggers ou ferramentas de análise de código estático).');
+insert into TopicTranslations(topicId, language, name, description) values (72,'PT_PT', 'Estruturas e Representação de Dados' ,'Sobre a organização e formas de expressão de dados para uso por programas;\n\ntipos de estruturas de dados (listas, filas, pilhas, tabelas, tabelas de hash, etc.);\n\nas diferentes operações em diferentes estruturas de dados (CRUD – create,read,update e delete, operações de encontro de elementos, travessia, ordenação).');
+insert into TopicTranslations(topicId, language, name, description) values (73,'PT_PT', 'Algoritmos e Complexidade' ,'Sobre a escrita organizada de programas em algoritmos – uma estratégia definida numa série de passos com vista à resolução de um problema;\n\nos atributos de algoritmos (modularidade, funcionalidade, robustez, simplicidade, etc.);\n\nanálise de algoritmos (análise do pior caso, análise do caso médio, notação Big-O,etc.);\n\nestratégias de design de algoritmos (força-bruta, divide and conquer, algoritmos gulosos, programação dinâmica, etc.);\n\nestratégias de análise de algoritmos (contagem de passos, análise assimptótica, análise probabilística, etc.).');
+insert into TopicTranslations(topicId, language, name, description) values (74,'PT_PT', 'Conceitos Básicos de um Sistema' ,'Sobre a definição de um sistema;\n\nas propriedades de um sistema;\n\npropriedades emergentes de um sistema;\n\nengenharia de sistemas e bases sobre um sistema de computadores.');
+insert into TopicTranslations(topicId, language, name, description) values (75,'PT_PT', 'Organização de um Computador' ,'Sobre os quatro níveis em que se divide a organização de um computador (as macro-arquitecturas, micro-arquitecturas, circuitos lógicos e dispositivos);\n\nsistemas digitais (baseados em sinais e código binário);\n\nlógica digital (as operações sobre números binários como AND, OR, etc.);\n\na expressão de dados binários num computador;\n\na unidade de processamento central e o seu funcionamento (CPU);\n\na organização de memória;\n\no funcionamento de dispositivos de I/O.');
+insert into TopicTranslations(topicId, language, name, description) values (76,'PT_PT', 'Bases de Compiladores','Sobre o que é um compilador;\n\nas diferenças entre compiladores e interpretadores;\n\no processo de compilação.' );
+insert into TopicTranslations(topicId, language, name, description) values (77,'PT_PT', 'Bases de Sistemas Operativos' ,'Sobre os conceitos de um sistemas operativo;\n\nas tarefas de um sistemas operativo;\n\nos diferentes tipos de sistemas operativos (batch, sistemas em time-sharing, sistemas em tempo real, sistemas operativos distribuídos, sistemas embebidos, sistema operativo de servidor, sistema operativo móvel, sistema operativo de computador pessoal, etc.).');
+insert into TopicTranslations(topicId, language, name, description) values (78,'PT_PT', 'Bases de Dados e Gestão de Dados' ,'Sobre os conceitos de uma base de dados;\n\nentidade e esquema;\n\nos diferentes sistemas de gestão de bases de dados (Oracle, MS SQL Server, Postgre, etc.);\n\nlinguagem de interpelação de bases de dados – como SQL – as suas características e como a usar;\n\norganização e manipulação de um sistema de gestão de bases de dados;\n\nmineração de dados (a descoberta de padrões e relações pouco óbvias entre os dados).');
+insert into TopicTranslations(topicId, language, name, description) values (79,'PT_PT', 'Bases de Comunicação em Redes', 'Sobre os diferentes tipos de redes (rede pessoal, rede local, wide area network, internet, etc.);\n\nos conceitos básicos de redes (os seus componentes e as diferentes funções destes);\n\nos protocolos e standards de redes (pilha OSI e seus componentes como TCP/IP, UDP, Bluetooth, etc.);\n\na Internet;\n\na Internet das Coisas;\n\nredes virtuais privadas (vulgo VPN).');
+insert into TopicTranslations(topicId, language, name, description) values (80,'PT_PT', 'Computação Paralela e Distribuída' , 'Sobre os conceitos básicos sobre o que é computação paralela e computação distribuída;\n\nas diferenças entre estes dois paradigmas;\n\nmodelos de computação paralela (memória partilhada, passagem de mensagens, etc.);\n\nos principais problemas na computação distribuída.');
+insert into TopicTranslations(topicId, language, name, description) values (81,'PT_PT', 'Factores Básicos de Utilização Humana' , 'Sobre os problemas típicos que advêm da utilização de software pelos utilizadores humanos;\n\nconsiderações sobre o I/O (como mostrar o output a utilizadores, qual o formato mais adequado, qual a maneira mais agradável de apresentar, etc.);\n\nmensagens de erro (como explicar claramente o que aconteceu e como resolver, qual o tipo de linguagem, etc.);\n\nrobustez de software (como o software tolera o uso incorrecto por pessoas, como recuperar de maneira a não desincentivar o uso por pessoas, etc.).');
+insert into TopicTranslations(topicId, language, name, description) values (82,'PT_PT', 'Factores Básicos de Desenvolvimento por Humanos' , 'Sobre os problemas comuns que advêm de o software ser construído e mantido por humanos e como a sua escrita afecta estas actividades;\n\ncomo estruturar o código para facilitar compreensão;\n\ncomo escrever comentários que facilitem o trabalho dos responsáveis presentes e futuros do software.');
+insert into TopicTranslations(topicId, language, name, description) values (83,'PT_PT', 'Desenvolvimento e Manutenção Segura' , 'Sobre as práticas e regras seguidas com a finalidade de tornar o software mais seguro em todas as suas fases, quer a nível de requisitos, como construção e teste.');
                                                                             
-insert into TopicTranslations(topicId, language, name, description) values (84,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (85,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (86,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (87,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (88,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (89,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (90,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (91,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (92,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (93,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (94,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (84,'PT_PT','Conjuntos, Relacionamentos e Funções' ,'Sobre os conceitos matemáticos e lógicos sobre os conjuntos (colecção de elementos), as suas propriedades e as suas operações (intesecção, união, produto cartesiano, etc.);\n\nsobre relacionamentos (associações entre dois conjuntos de informação);\n\nsobre funções matemáticas (uma relação de comportamento conhecido que exprime o mapeamento entre elementos de domínios).' );
+insert into TopicTranslations(topicId, language, name, description) values (85,'PT_PT','Lógica Básica' , 'Sobre a lógica proposicional, a sua terminologia e leis (variáveis Booleanas, operações booleanas, Leis de Identidade, Leis Distributivas, Leis de De Morgan, etc.): a lógica de Predicados, as suas propriedades, terminologia e leis.');
+insert into TopicTranslations(topicId, language, name, description) values (86,'PT_PT','Técnicas de Prova' ,'Sobre os argumentos que estabelecem rigorosamente a verdade de uma afirmação;\n\nos métodos de prova de um teorema (provas por contradição, provas por indução, etc.).' );
+insert into TopicTranslations(topicId, language, name, description) values (87,'PT_PT','Bases da Contagem' ,'Sobre as acções que permitem encontrar o número de elementos num conjunto finito de elementos e suas regras (regra da soma, regra do produto, etc.) e princípios;\n\nprincípio da inclusão-exclusão;\n\ndefinição de recursividade, aleatoriedade, probabilidade, permutação e combinação.' );
+insert into TopicTranslations(topicId, language, name, description) values (88,'PT_PT','Grafos e Árvores' , 'Sobre os diferentes tipos de grafos (grafos direccionados, grafos não-direccionados, etc.), a sua terminologia (vértices, nós, peso, arestas, etc.) e operações (travessia, conexões, etc.);\n\nos diferentes tipos de árvores, as suas propriedades e operações (travessias, adições, etc.).' );
+insert into TopicTranslations(topicId, language, name, description) values (89,'PT_PT','Probabilidade Discreta' ,'Sobre a descrição matemática da aleatoriedade a sua terminologia, propriedades e operações.' );
+insert into TopicTranslations(topicId, language, name, description) values (90,'PT_PT','Máquinas de Estado Finitas' , 'Sobre as máquinas de estados finitos (a abstracção matemática composta por um número finito de estados e as transições entre estes), a sua terminologia e operações.');
+insert into TopicTranslations(topicId, language, name, description) values (91,'PT_PT','Gramáticas' , 'Sobre as gramáticas de linguagens formais, a sua terminologia (vocabulário, frase, terminais, símbolo, etc.);\n\nos tipos de gramáticas existentes (gramática livre de contexto, gramática sensível ao contexto, etc.).');
+insert into TopicTranslations(topicId, language, name, description) values (92,'PT_PT','Precisão numérica, exactidão e erros' , 'Sobre os problemas que recorrem na representação de números;\n\no carácter finito da precisão de representação de números num computador;\n\ntécnicas de arredondamentos;\n\nalgarismos significativos;\n\ntipos de erros (relativos, absolutos).');
+insert into TopicTranslations(topicId, language, name, description) values (93,'PT_PT','Teoria dos Números' ,'Sobre os números;\n\nos tipos de números (inteiro, racional, real, complexo, imaginário etc.);\n\nterminologia e operações (divisão, mod, módulo);\n\nos números primos, a sua utilidade a sua aplicação (como criptografia).' );
+insert into TopicTranslations(topicId, language, name, description) values (94,'PT_PT','Estruturas Algébricas' ,'Sobre as estruturas algébricas (definidas como conjuntos sujeitos a algumas operações e que satisfaçam um número de axiomas);\n\nsobre grupos, as suas propriedades (associação, identidade, fecho, etc.) e tipos (monóide, subgrupo);\n\nanéis (um conjunto com duas operações binárias - normalmente adição e multiplicação - onde cada operação combina dois elementos para formar um terceiro).' );
                                                                             
-insert into TopicTranslations(topicId, language, name, description) values (95,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (96,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (97,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (98,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (99,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (100,'PT_PT',  );
-insert into TopicTranslations(topicId, language, name, description) values (101,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (95 ,'PT_PT','Métodos Empíricos e Técnicas Experimentais' ,'Sobre como propôr soluções ou modelos de solução e realizar experiências para resolver problemas;\n\ncriação de experiências controladas (formular hipóteses, criar pré-condições, observar variáveis, relacionamento entre resultados, etc.);\n\nestudo observacional com recurso a contextualização;\n\nestudo retrospectivo, também conhecido como estudo histórico (análise de  dados históricos com a finalidade de encontrar relacionamentos entre dados e prever eventos futuros.' );
+insert into TopicTranslations(topicId, language, name, description) values (96 ,'PT_PT','Análise Estatística' ,'Sobre a capacidade de atingir resultados generalizaveis através do estudo de uma população limitada de amostras de resultados prévios (i.e. com recurso a estatística);\n\nos conceitos estatísticos de amostra, população, unidade de análise, variável aleatória, evento, distribuição de variáveis, estimação, tipos de estimativas, propriedades de estimadores e testes de hipóteses estatísticas;\n\ncorrelação e regressão.' );
+insert into TopicTranslations(topicId, language, name, description) values (97 ,'PT_PT','Medição' ,'Sobre a problemática da medição no software e as suas diferenças fundamentais para outros atributos de medição mais simples;\n\nos conceitos de níveis (ou escalas) de medição (nominal, ordinal, intervalar e por rácios);\n\nmedidas directas versus medidas indirectas;\n\nconfiabilidade e validade de uma medida;\n\navaliação de confiabilidade de medidas.' );
+insert into TopicTranslations(topicId, language, name, description) values (98 ,'PT_PT','Desenho de Engenharia' ,'Sobre os desafios que a elaboração de uma solução estruturada para um problema de engenharia representam para o engenheiro, sendo que o desenho neste caso não tem nada que ver com o seu conceito tradicional - a representação gráfica - mas sim com o planeamento ou arquitectura de uma solução para um problema, o seu processo e as suas fases (definição de um problema, obtenção de informação pertinente, geração de múltiplas soluções, análise e selecção de uma solução, implementação da solução).' );
+insert into TopicTranslations(topicId, language, name, description) values (99 ,'PT_PT','Modelação, Simulação e Prototipagem' ,'Sobre os conceitos e técnicas de modelação (o processo de representação de parte ou totalidade de um sistema recorrendo a abstracções) e os seus diferentes tipos (icónico, analógico e simbólico);\n\no conceito de simulação (condução de experiências em modelos com a finalidade de melhorar a compreensão sobre o mesmo) e a sua construção;\n\no conceito de protótipo (uma representação inicial, parcial ou incompleta de um sistema) e a sua utilização.' );
+insert into TopicTranslations(topicId, language, name, description) values (100,'PT_PT','Standards' ,'Sobre o conceito de standard (requisito, especificação, guia ou característica que deve ser observado por engenheiros de modo que produtos, processos e materiais tem níveis aceitáveis de qualidade);\n\nos diferentes tipos de standards existentes;\n\na conformidade mensurável com standards;\n\nas diferentes entidades que produzem standards internacionais de engenharia.' );
+insert into TopicTranslations(topicId, language, name, description) values (101,'PT_PT','Análise de Causa' ,'Sobre o processo de investigação e identificação de como e porque aconteceu um evento indesejável e sua causa de raíz (i.e. o que deu origem ao evento);\n\nas principais técnicas para conduzir este tipo de análise (métodos de revisão, diagramas de estado presente vs estado desejável, revisão por terceiros, árvores de falha, etc.);\n\nas ferramentas de auxílio à análise (diagramas de causa-efeito, histogramas, diagramas de Pareto, etc.).' );
 
-insert into TopicTranslations(topicId, language, name, description) values (102,'PT_PT',  );
+insert into TopicTranslations(topicId, language, name, description) values (102,'PT_PT','Nenhuma das Áreas do Conhecimento', 'Para qualquer tópico do programa que não encaixa em qualquer das Áreas do Conhecimento.' );
 
 
 

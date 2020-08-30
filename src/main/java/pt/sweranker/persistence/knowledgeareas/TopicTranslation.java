@@ -27,6 +27,9 @@ import pt.sweranker.persistence.Language;
         @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE_TYPE, value = "FULL")
 
     })
+@NamedQuery(
+    name = "TopicTranslations.findByKnowledgeArea",
+    query = "SELECT tp FROM TopicTranslations tp INNER JOIN FETCH tp.topic t WHERE t.knowledgeArea = :ka AND tp.language = :language")
 public class TopicTranslation {
 
     @Id

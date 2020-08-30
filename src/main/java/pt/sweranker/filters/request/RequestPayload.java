@@ -17,8 +17,8 @@ public class RequestPayload implements Serializable {
      */
     private static final long serialVersionUID = 2643263275423254609L;
 
-    private Language selectedLanguage;
-    private ClientApplicationData appData;
+    public Language selectedLanguage;
+    public ClientApplicationData appData;
 
     public Language getSelectedLanguage() {
         return selectedLanguage;

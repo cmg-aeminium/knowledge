@@ -4,16 +4,15 @@
  */
 package pt.sweranker.api.resources.knowledgeareas.dto.response;
 
-import java.time.LocalDateTime;
+import javax.json.bind.annotation.JsonbPropertyOrder;
+import javax.json.bind.config.PropertyOrderStrategy;
 
 /**
  * @author Carlos Gonçalves
  */
-public class DetailedKnowledgeAreaDTO {
-
+@JsonbPropertyOrder(PropertyOrderStrategy.ANY)
+public class TopicDTO {
     public Long id;
-    public String image;
     public String name;
     public String description;
-    public LocalDateTime now;
 }
