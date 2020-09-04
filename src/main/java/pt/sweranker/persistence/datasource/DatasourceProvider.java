@@ -1,4 +1,4 @@
-package pt.sweranker.config.datasource;
+package pt.sweranker.persistence.datasource;
 
 import javax.annotation.Resource;
 import javax.annotation.sql.DataSourceDefinition;
