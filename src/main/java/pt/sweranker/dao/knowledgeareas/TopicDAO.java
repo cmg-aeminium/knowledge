@@ -8,9 +8,9 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.TypedQuery;
 import pt.sweranker.dao.JPACrudDAO;
-import pt.sweranker.persistence.Language;
-import pt.sweranker.persistence.knowledgeareas.KnowledgeArea;
-import pt.sweranker.persistence.knowledgeareas.TopicTranslation;
+import pt.sweranker.persistence.entities.Language;
+import pt.sweranker.persistence.entities.knowledgeareas.KnowledgeArea;
+import pt.sweranker.persistence.entities.knowledgeareas.TopicTranslation;
 
 /**
  * @author Carlos Gonçalves

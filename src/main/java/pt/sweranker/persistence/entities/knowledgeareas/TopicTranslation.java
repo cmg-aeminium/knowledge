@@ -2,7 +2,7 @@
  * Copyright (c) 2020  Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.sweranker.persistence.knowledgeareas;
+package pt.sweranker.persistence.entities.knowledgeareas;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,7 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.QueryHint;
 import org.eclipse.persistence.config.QueryHints;
-import pt.sweranker.persistence.Language;
+import pt.sweranker.persistence.entities.Language;
 
 /**
  * @author Carlos Gonçalves

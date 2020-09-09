@@ -3,8 +3,8 @@ package pt.sweranker.dao.knowledgeareas;
 import javax.ejb.Stateless;
 import javax.persistence.TypedQuery;
 import pt.sweranker.dao.JPACrudDAO;
-import pt.sweranker.persistence.Language;
-import pt.sweranker.persistence.knowledgeareas.KnowledgeAreaTranslation;
+import pt.sweranker.persistence.entities.Language;
+import pt.sweranker.persistence.entities.knowledgeareas.KnowledgeAreaTranslation;
 
 @Stateless
 public class KnowledgeAreaDAO extends JPACrudDAO<KnowledgeAreaTranslation> {

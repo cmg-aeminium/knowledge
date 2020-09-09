@@ -16,7 +16,7 @@ import pt.sweranker.dao.knowledgeareas.KnowledgeAreaDAO;
 import pt.sweranker.dao.knowledgeareas.TopicDAO;
 import pt.sweranker.filters.request.RequestData;
 import pt.sweranker.filters.request.RequestPayload;
-import pt.sweranker.persistence.knowledgeareas.KnowledgeAreaTranslation;
+import pt.sweranker.persistence.entities.knowledgeareas.KnowledgeAreaTranslation;
 
 @Path("knowledgreareas")
 @Stateless

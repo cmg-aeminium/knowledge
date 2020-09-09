@@ -11,9 +11,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceUnit;
 import javax.persistence.TypedQuery;
-import pt.sweranker.persistence.Language;
-import pt.sweranker.persistence.knowledgeareas.KnowledgeArea;
-import pt.sweranker.persistence.knowledgeareas.KnowledgeAreaTranslation;
+import pt.sweranker.persistence.entities.Language;
+import pt.sweranker.persistence.entities.knowledgeareas.KnowledgeArea;
+import pt.sweranker.persistence.entities.knowledgeareas.KnowledgeAreaTranslation;
 
 /**
  * @author Carlos Manuel

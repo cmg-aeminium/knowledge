@@ -7,7 +7,7 @@ package pt.sweranker.filters.request;
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Observes;
 import javax.enterprise.inject.Produces;
-import pt.sweranker.persistence.Language;
+import pt.sweranker.persistence.entities.Language;
 
 /**
  * @author Carlos Gonçalves

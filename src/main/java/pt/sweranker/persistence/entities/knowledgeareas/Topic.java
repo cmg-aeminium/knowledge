@@ -2,7 +2,7 @@
  * Copyright (c) 2020  Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.sweranker.persistence.knowledgeareas;
+package pt.sweranker.persistence.entities.knowledgeareas;
 
 import java.io.Serializable;
 import java.util.List;

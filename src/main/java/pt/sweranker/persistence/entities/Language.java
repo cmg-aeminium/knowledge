@@ -5,7 +5,7 @@
  *
  * All rights reserved.
  */
-package pt.sweranker.persistence;
+package pt.sweranker.persistence.entities;
 
 import java.util.HashMap;
 import java.util.Locale;

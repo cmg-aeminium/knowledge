@@ -5,7 +5,7 @@
  *
  * All rights reserved.
  */
-package pt.sweranker.persistence.knowledgeareas;
+package pt.sweranker.persistence.entities.knowledgeareas;
 
 import java.io.Serializable;
 import javax.persistence.Column;

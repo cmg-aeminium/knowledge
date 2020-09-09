@@ -5,7 +5,7 @@
 package pt.sweranker.filters.request;
 
 import java.io.Serializable;
-import pt.sweranker.persistence.Language;
+import pt.sweranker.persistence.entities.Language;
 
 /**
  * @author Carlos Gonçalves

@@ -168,12 +168,6 @@ insert into Topics(id,knowledgeareaid) values (101, 15);
 
 insert into Topics(id,knowledgeareaid) values (102, 16);
 
-
-
-
-
-
-
 insert into TopicTranslations(topicId, language, name, description) values (1 ,'PT_PT', 'Fundamentos de Requisitos de Software', 'Sobre a defininição do que é um requisito;\n\na diferença entre um requisito do produto e um requisito do processo;\n\na diferença entre requisitos funcionais e não-funcionais;\n\nrequisitos inter-dependentes;\n\ncomo classificar quantitativamente requisitos;\n\ndiferença entre requisitos de sistema e de software.' );
 insert into TopicTranslations(topicId, language, name, description) values (2 ,'PT_PT', 'Processo de Requisitos', 'Sobre a natureza contínua do processo de requisitos e a sua natureza moldável ao contexto do projecto ou organização;\n\nos diferentes actores do processos (frequentemente conhecidos como “stakeholders”);\n\ncomo gerir um processo de requisitos e como avaliar a sua qualidade e ainda como o melhorar.');
 insert into TopicTranslations(topicId, language, name, description) values (3 ,'PT_PT', 'Levantamento de Requisitos', 'Sobre a origem dos requisitos (como Conhecimento próprio do Domínio, stakeholders, regras do negócio, etc.) e as técnicas para os coleccionar eficazmente (tais como entrevistas, cenários, protótipos, reuniões, etc.).');

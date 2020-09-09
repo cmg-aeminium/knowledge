@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import javax.ejb.Stateless;
 import pt.sweranker.api.resources.knowledgeareas.dto.response.TopicDTO;
-import pt.sweranker.persistence.knowledgeareas.TopicTranslation;
+import pt.sweranker.persistence.entities.knowledgeareas.TopicTranslation;
 
 /**
  * @author Carlos Gonçalves

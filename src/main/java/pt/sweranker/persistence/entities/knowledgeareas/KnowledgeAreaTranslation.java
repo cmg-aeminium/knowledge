@@ -5,7 +5,7 @@
  *
  * All rights reserved.
  */
-package pt.sweranker.persistence.knowledgeareas;
+package pt.sweranker.persistence.entities.knowledgeareas;
 
 import java.io.Serializable;
 import javax.persistence.Column;
@@ -19,7 +19,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.QueryHint;
 import org.eclipse.persistence.config.QueryHints;
-import pt.sweranker.persistence.Language;
+import pt.sweranker.persistence.entities.Language;
 
 /**
  * Knowledge Area Translation
