@@ -209,6 +209,13 @@
                     </configuration>
                 </plugin>
                 
+                <!-- Useful for the Versions plugin -->
+				<plugin>
+				    <groupId>org.apache.maven.plugins</groupId>
+				    <artifactId>maven-enforcer-plugin</artifactId>
+				    <version>${enforcer-plugin-version}</version>
+				</plugin>
+                
                 <!-- This plugin is useful to check newer versions of dependencies or plugins, please check the goals here "https://www.mojohaus.org/versions-maven-plugin/plugin-info.html" -->
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
@@ -219,28 +226,6 @@
                     </configuration>
                 </plugin>
                 
-                <!-- Useful for the Versions plugin -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>${enforcer-plugin-version}</version>
-                    <executions>
-                        <execution>
-                            <id>enforce-maven</id>
-                            <goals>
-                                <goal>enforce</goal>
-                            </goals>
-                            <configuration>
-                                <rules>
-                                    <requireMavenVersion>
-                                        <version>${maven-required-version}</version>
-                                    </requireMavenVersion>
-                                </rules>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-            
 				<plugin>
 					<groupId>fish.payara.maven.plugins</groupId>
 					<artifactId>payara-micro-maven-plugin</artifactId>
@@ -262,57 +247,80 @@
         
 		<plugins>
 		
-		    <!-- Payara Micro bundle execution will configure the Uber JAR -->
-		  <plugin>
-		      <groupId>fish.payara.maven.plugins</groupId>
-		      <artifactId>payara-micro-maven-plugin</artifactId>
+			<!-- Useful for the Versions plugin -->
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-enforcer-plugin</artifactId>
+			    <executions>
+			        <execution>
+			            <id>enforce-maven</id>
+			            <goals>
+			                <goal>enforce</goal>
+			            </goals>
+			            <configuration>
+			                <rules>
+			                    <requireMavenVersion>
+			                        <version>${maven-required-version}</version>
+			                    </requireMavenVersion>
+			                    <requireJavaVersion>
+			                    	<version>${java-version}</version>
+			                    	<message>Minimum JDK supported version is ${java-version}</message>
+			                    </requireJavaVersion>
+			                </rules>
+			            </configuration>
+			        </execution>
+			    </executions>
+			</plugin>
 		
-		      <!-- An execution must be defined because it is not a default plugin -->
-		       <executions>
-		
-		           <execution>
-		               <id>BUNDLE</id>
-		               <goals>
-		                   <goal>bundle</goal>
-		               </goals>
-		               <configuration>
-		                   <payaraVersion>${payara-version}</payaraVersion>
-		                   <systemProperties>
-		                       <property>
-		                           <name>payaramicro.port</name>
-		                           <value>50000</value>
-		                       </property>
-		                       <property>
-		                           <name>payaramicro.rootDir</name>
-		                           <value>${domain.dir}</value>
-		                       </property>
-		                       <property>
-		                           <name>database.user</name>
-		                           <value>postgres</value>
-		                       </property>
-		                       <property>
-		                           <name>database.password</name>
-		                           <value>admin</value>
-		                       </property>
-		                       <property>
-		                           <name>database.host</name>
-		                           <value>localhost</value>
-		                       </property>
-		                       <property>
-		                           <name>database.name</name>
-		                           <value>sweranker</value>
-		                       </property>
-		                       <property>
-		                           <name>datasource.javaclass</name>
-		                           <value>org.postgresql.ds.PGSimpleDataSource</value>
-		                       </property>
-		                   </systemProperties>
-		                   <appendSystemProperties>true</appendSystemProperties>
-		               </configuration>
-		           </execution>
-		
-		       </executions>
-		   </plugin>
+			<!-- Payara Micro bundle execution will configure the Uber JAR -->
+			<plugin>
+				<groupId>fish.payara.maven.plugins</groupId>
+				<artifactId>payara-micro-maven-plugin</artifactId>
+				
+				<!-- An execution must be defined because it is not a default plugin -->
+				<executions>
+					<execution>
+					    <id>BUNDLE</id>
+					    <goals>
+					        <goal>bundle</goal>
+					    </goals>
+					    <configuration>
+					        <payaraVersion>${payara-version}</payaraVersion>
+					        <systemProperties>
+					            <property>
+					                <name>payaramicro.port</name>
+					                <value>50000</value>
+					            </property>
+					            <property>
+					                <name>payaramicro.rootDir</name>
+					                <value>${domain.dir}</value>
+					            </property>
+					            <property>
+					                <name>database.user</name>
+					                <value>postgres</value>
+					            </property>
+					            <property>
+					                <name>database.password</name>
+					                <value>admin</value>
+					            </property>
+					            <property>
+					                <name>database.host</name>
+					                <value>localhost</value>
+					            </property>
+					            <property>
+					                <name>database.name</name>
+					                <value>sweranker</value>
+					            </property>
+					            <property>
+					                <name>datasource.javaclass</name>
+					                <value>org.postgresql.ds.PGSimpleDataSource</value>
+					            </property>
+					        </systemProperties>
+					        <appendSystemProperties>true</appendSystemProperties>
+					    </configuration>
+					</execution>
+				</executions>
+			</plugin>
 		   
 		</plugins>
         
