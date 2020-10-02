@@ -13,6 +13,9 @@ import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
+import javax.persistence.QueryHint;
+import org.eclipse.persistence.config.QueryHints;
 import pt.sweranker.persistence.entities.Language;
 
 /**
@@ -20,6 +23,12 @@ import pt.sweranker.persistence.entities.Language;
  */
 @Entity(name = "DegreeTranslations")
 @IdClass(value = DegreeId.class)
+@NamedQuery(name = "DegreeTranslation.findByIdAndLanguage",
+    query = "SELECT d FROM DegreeTranslations d INNER JOIN FETCH d.degree dg WHERE dg.id = :id AND d.language = :language",
+    hints = {
+        @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE_TYPE, value = "FULL")
+
+    })
 public class DegreeTranslation implements Serializable {
 
     /**
@@ -41,5 +50,25 @@ public class DegreeTranslation implements Serializable {
 
     @Column(name = "description", nullable = false)
     private String description;
+
+    public Long getId() {
+        return degree.getId();
+    }
+
+    public Degree getDegree() {
+        return degree;
+    }
+
+    public Language getLanguage() {
+        return language;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 
 }

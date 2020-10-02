@@ -38,4 +38,24 @@ public class Degree implements Serializable {
     @Column(name = "year", nullable = false)
     private int year;
 
+    public Long getId() {
+        return id;
+    }
+
+    public String getAcronym() {
+        return acronym;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public University getUniversity() {
+        return university;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
 }

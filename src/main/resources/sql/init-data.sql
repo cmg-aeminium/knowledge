@@ -287,4 +287,58 @@ insert into TopicTranslations(topicId, language, name, description) values (101,
 insert into TopicTranslations(topicId, language, name, description) values (102,'PT_PT','Nenhuma das Áreas do Conhecimento', 'Para qualquer tópico do programa que não encaixa em qualquer das Áreas do Conhecimento.' );
 
 
+insert into Degrees(id, acronym, image, university, year) values (1, 'MIEIC', 'http://images.com/mieic_up.jpeg' , 'U_PORTO', 2017);
+insert into Degrees(id, acronym, image, university, year) values (2, 'LEI + MEI', 'http://images.com/miei_um.jpeg' , 'U_COIMBRA', 2017);
+insert into Degrees(id, acronym, image, university, year) values (3, 'LEIC + MEIC', 'http://images.com/meic_ist.jpeg' , 'IST', 2017);
+insert into Degrees(id, acronym, image, university, year) values (4, 'LEI + MEI', 'http://images.com/mei_uav.jpeg' , 'U_AVEIRO', 2017);
+insert into Degrees(id, acronym, image, university, year) values (5, 'MIEI', 'http://images.com/miei_um.jpeg' , 'U_MINHO', 2017);
+
+insert into DegreeTranslations(degreeId, language, name, description) values (1, 'PT_PT' , 'Mestrado Integrado em Engenharia Informática e Computação', 'O ensino da Engenharia Informática e Computação foi concebido na FEUP como requerendo um ciclo de formação e aprendizagem completo de cinco anos integrados, correspondendo aos 1º e 2º ciclos da implementação do Processo de Bolonha e conferindo de imediato o grau de Mestre.\n\nNo final dos três primeiros anos (1º ciclo) do MIEIC os alunos estarão providos de uma sólida formação de base, abrangendo as competências científicas e de engenharia essenciais, mas também os conhecimentos fundamentais de banda larga nas diversas áreas da informática, embora sem qualquer especialização. Este primeiro degrau é visto sobretudo como possibilitador de mobilidade de e para outras escolas nacionais e europeias.\n\nNo final dos cinco anos do curso os diplomados terão uma formação avançada em Engenharia Informática e Computação, podendo ter escolhido uma área de especialização ou manter um leque mais alargado de interesses, mercê de uma ampla oferta de opções, configurável individualmente, contida no plano de estudos. As possíveis especializações incluem actualmente:\n\n- Engenharia de Software e Sistemas de Informação (2 sub-áreas com estes nomes)\n\n-Redes e Tecnologias de Informação (sub-áreas de Tecnologias da Internet e de Infra-estruturas Informáticas)\n\n-Sistemas Inteligentes e Multimédia (2 sub-áreas com estes nomes)');
+insert into DegreeTranslations(degreeId, language, name, description) values (2, 'PT_PT' , 'Licenciatura em Engenharia Informatica e Mestrado em Engenharia Informática', 'O curso de licenciatura em Engenharia Informática tem como objectivo principal fornecer aos futuros licenciados os princípios básicos, teorias, métodos e práticas da Engenharia Informática e da Computação de forma a que possam dominar todos os conceitos para a sua intervenção na sociedade ou complementar a sua formação com o 2º ciclo seguindo a vida prática ou a carreira científica. Para a concretização deste objectivo geral, o ciclo de estudos pretende conciliar os seguintes objectivos específicos: instrumentais, sistémicas e interpessoais.\n\n
+    - No plano instrumental, procura-se que os licenciados em Engenharia Informática adquiram competências para articular de forma harmoniosa a complementaridade entre análise e síntese, que interiorizem as dinâmicas da resolução de problemas, que apreendam as lógicas e as práticas da gestão de informação e que perspectivem o exercício dessas competências segundo abordagens de planeamento organizacional centradas na construção de valor para o cliente e na transformação da complexidade em desempenho.\n
+    - Ao nível sistémico, procura-se, reforçar a sua autonomia e capacidade para aprender, a sua adaptabilidade a situações novas, o seu sentido projectivo na aplicação dos saberes e competências e a sua aculturação para a qualidade e a excelência.\n
+    - Finalmente, ao nível interpessoal, procura-se que os estudantes adquiram outro tipo de competências, que contribuam para o desenvolvimento da vertente pessoal e cívica, da capacidade de adquirir conhecimentos autonomamente, de sentido crítico e de responsabilidade, de gestão de informação, de trabalho em grupo e em equipas interdisciplinares, da aprendizagem colectiva e o sentido de corpo na construção de sucesso, etc.\n\nO Mestrado em Engenharia Informática (MEI) propõe quatro áreas de especialização de acordo com as últimas recomendações curriculares da Association for Computer Machinery (ACM) e do Institute for Electrical and Electronic Engineers (IEEE):\n
+        - Comunicações, Serviços e Infra-estrtuturas\n
+        - Sistemas Inteligentes\n
+        - Sistemas de Informação\n
+        - Engenharia de Software.\n\nPropõe-se assim a criação de especializações para dar resposta às necessidades do mercado, tanto a nível da indústria e serviços, como a nível da investigação, ambicionando um impacto internacional a médio prazo.');
+insert into DegreeTranslations(degreeId, language, name, description) values (3, 'PT_PT' , 'Licenciatura em Engenharia Informatica e de Computadores e Mestrado em Engenharia Informática e de Computadores', 'A licenciatura em Engenharia Informática e de Computadores (LEIC) é uma das maiores licenciaturas do Técnico e tem já provas dadas de sucesso no mercado de emprego, tanto a nível nacional como internacional. Os diplomados da LEIC são reconhecidos como profissionais competentes com conhecimentos sólidos a nível da engenharia informática e fácil adaptabilidade à evolução constante das tecnologias de informação.\n\nNo final da LEIC o aluno poderá especializar-se numa das áreas oferecidas no  Mestrado em Engenharia Informática e Computadores do Técnico, num outro curso afim, ou ainda entrar no mercado de trabalho.\n\nO Mestrado em Eng. Informática e de Computadores está alicerçado na forte formação de base dada pelo primeiro ciclo, oferece especializações atractivas para os alunos e para o mercado servindo ainda como base para os alunos que pretendam ingressar num Programa de Doutoramento, e cria uma base sólida para a intervenção do Departamento de Engenharia Informática do IST na formação ao longo da vida, que representará uma componente cada vez mais importante do mercado da educação avançada.\n\nNo final do Mestrado em Engenharia Informática e de Computadores os alunos poderão entrar no mercado de trabalho. Tendo em conta as especializações acima indicadas, os alunos têm uma gama alargada de competências profissionais específicas, das quais se destacam:\n
+        - Análise e projecto de sistemas complexos\n
+        - Técnicas de gestão de projecto de sistemas\n
+        - Modelação e uso de dados em sistemas informáticos\n
+        - Desenvolvimento de aplicações em sistemas distribuídos\n
+        - Gestão, configuração e operação de sistemas de computadores\n
+        - Técnicas avançadas de resolução de problemas\n
+        - Projecto de sistemas adaptáveis, para resolução de problemas complexos\n
+        - Projecto de sistemas que interajam com seres humanos usando interfaces naturais\n
+        - Controlo e robótica\n
+        - Modelação e controlo de sistemas industriais\n
+        - Técnicas genéricas de optimização\n\nOs empregadores típicos para engenheiros que tenham efectuado o curso de Mestrado em Engenharia Informática e de Computadores no IST, campus da Alameda, são os seguintes: empresas de serviços da área da banca e seguros, empresas fornecedoras de serviços informáticos, empresas de telecomunicações, empresas de desenvolvimento de software.');
+insert into DegreeTranslations(degreeId, language, name, description) values (4, 'PT_PT' , 'Licenciatura em Engenharia Informatica + Mestrado em Engenharia Informática', 'A Licenciatura em Engenharia Informática da Universidade de Aveiro tem por finalidade fornecer uma formação sólida em engenharia informática, área que se tem vindo a revelar como o principal motor de desenvolvimento nas economias avançadas.\n\nMais concretamente, esta licenciatura pretende fornecer as seguintes competências:\n
+- Compreender e utilizar metodologias de desenvolvimento de software em projectos de pequena e larga escala.\n
+- Planear e escrever programas correctos, robustos, eficientes, bem organizados e bem documentados.\n
+- Compreender e utilizar modelos e abstracções na concepção, implementação e utilização de sistemas computacionais e de informação.\n
+- Entender os aspectos fundamentais em arquitectura de computadores e sistemas operativos, e a sua importância no desenvolvimento e execução de aplicações informáticas.\n
+- Aplicar conhecimento nas áreas de cálculo, probabilidades, estatística e matemática discreta em problemas da área da informática.\n
+- Aplicar técnicas de avaliação e gestão de qualidade em projectos de Engenharia Informática.\n
+- Comunicar eficazmente e saber trabalhar em equipas multidisciplinares.\n
+- Reconhecer a necessidade de, e ter a capacidade para, se envolver activamente num processo contínuo de aprendizagem ao longo da vida.\n\nOs objectivos do Mestrado em Engenharia Informática estão alinhados com esta estratégia e com as necessidades do mercado, procurando-se:\n
+- Dotar o tecido empresarial da região, nacional e internacional de quadros superiores habilitados;\n
+- omentar uma formação avançada centrada em inovação, desenvolvimento e investigação em engenharia informática');
+insert into DegreeTranslations(degreeId, language, name, description) values (5, 'PT_PT' , 'Mestrado Integrado em Engenharia Informática', 'O Mestrado Integrado em Engenharia Informática (MiEI) é um curso integrado do primeiro e segundo
+        ciclo de estudos do ensino superior, ministrado na Universidade do Minho, com a duração de 5 anos lectivos, 10 semestres lectivos,
+        a 40 semanas de estudo a tempo inteiro por ano e a um total de 300 ECTS.\n\nO MiEI tem por objectivo preparar engenheiros
+        informáticos, aptos em todas as fases actualmente reconhecidas no rigoroso processo de análise, concepção e implementação
+        de soluções informáticas. Os seus licenciados devem adquirir durante o curso grande experiência teórica e prática
+        na análise de sistemas de software, na especificação dos requisitos desses mesmos sistemas, nas técnicas de
+        construção de protótipos e em todas as fases da sua instalação, na gestão de projectos informáticos, no teste,
+        instalação e manutenção de aplicações informáticas, e, consequentemente, dos sistemas ou redes que as suportam.\n\n
+        O MiEI tem como objectivo básico providenciar durante o curso aos seus alunos a perícia e o conhecimento
+        (teórico e prático) necessários para:\n
+        - a análise e especificação de requisitos de sistemas de software a implementar;\n
+        - a aplicação de técnicas de construção de protótipos;\n
+        - o projecto, concepção, desenvolvimento, teste e manutenção de aplicações informáticas;\n
+        - a implementação de redes de comunicação por computador e infra-estruturas de suporte;\n
+        - a gestão e implementação de projectos informáticos, incluindo o projecto e implementação de sistemas de computação.\n\nComo futuros engenheiros deverão, também, ter sempre a preocupação do rigor, quer na execução quer na gestão do projecto, avaliando a sua qualidade, custos e impacto económico, bem como nas preocupações de implementação dos seus produtos nas organizações destino.');
+        
 
