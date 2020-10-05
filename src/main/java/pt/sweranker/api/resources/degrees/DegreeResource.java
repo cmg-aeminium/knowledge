@@ -7,6 +7,7 @@ package pt.sweranker.api.resources.degrees;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import javax.validation.Valid;
 import javax.ws.rs.BeanParam;
 import javax.ws.rs.GET;
@@ -18,7 +19,8 @@ import javax.ws.rs.core.Response;
 import pt.sweranker.api.resources.degrees.converters.DegreeConverter;
 import pt.sweranker.api.resources.degrees.dto.request.DegreeSearchFilter;
 import pt.sweranker.dao.degrees.DegreeDAO;
-import pt.sweranker.persistence.entities.Language;
+import pt.sweranker.filters.request.RequestContextData;
+import pt.sweranker.filters.request.RequestData;
 import pt.sweranker.persistence.entities.degrees.DegreeTranslation;
 
 /**
@@ -27,6 +29,10 @@ import pt.sweranker.persistence.entities.degrees.DegreeTranslation;
 @Path("degrees")
 @Stateless
 public class DegreeResource {
+
+    @Inject
+    @RequestData
+    private RequestContextData requestData;
 
     @EJB
     private DegreeDAO degreeDAO;
@@ -37,7 +43,7 @@ public class DegreeResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll(@Valid @BeanParam DegreeSearchFilter filter) {
-        List<DegreeTranslation> degrees = degreeDAO.findFiltered(degreeConverter.toDegreeFilterCriteria(filter, Language.PT_PT));
+        List<DegreeTranslation> degrees = degreeDAO.findFiltered(degreeConverter.toDegreeFilterCriteria(filter));
         return Response.ok(degreeConverter.toDegreeDTOs(degrees)).build();
     }
 

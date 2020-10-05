@@ -14,8 +14,8 @@ import pt.sweranker.api.resources.knowledgeareas.converter.KnowledgeAreaConverte
 import pt.sweranker.api.resources.knowledgeareas.converter.TopicConverter;
 import pt.sweranker.dao.knowledgeareas.KnowledgeAreaDAO;
 import pt.sweranker.dao.knowledgeareas.TopicDAO;
+import pt.sweranker.filters.request.RequestContextData;
 import pt.sweranker.filters.request.RequestData;
-import pt.sweranker.filters.request.RequestPayload;
 import pt.sweranker.persistence.entities.knowledgeareas.KnowledgeAreaTranslation;
 
 @Path("knowledgreareas")
@@ -36,14 +36,14 @@ public class KnowledgeAreaResource {
 
     @Inject
     @RequestData
-    private RequestPayload requestData;
+    private RequestContextData requestData;
 
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getKnoledgeArea(@PathParam("id") Long id) {
+    public Response getKnowledgeArea(@PathParam("id") Long id) {
 
-        KnowledgeAreaTranslation ka = knowledgeAreaDAO.findById(id, requestData.selectedLanguage);
+        KnowledgeAreaTranslation ka = knowledgeAreaDAO.findById(id, requestData.getSelectedLanguage());
 
         return Response.ok(knowledgeAreaConverter.toDetailedKnowledgeAreaDTO(ka)).build();
     }
@@ -59,7 +59,7 @@ public class KnowledgeAreaResource {
             return Response.status(Status.BAD_REQUEST).build();
         }
 
-        var topics = topicDAO.findTopicsOfKnowledgeArea(knowledgeArea.getKnowledgeArea(), requestData.selectedLanguage);
+        var topics = topicDAO.findTopicsOfKnowledgeArea(knowledgeArea.getKnowledgeArea(), requestData.getSelectedLanguage());
 
         return Response.ok(topicConverter.toTopicDTOs(topics)).build();
     }

@@ -4,32 +4,38 @@
  */
 package pt.sweranker.filters.request;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Observes;
 import javax.enterprise.inject.Produces;
 import pt.sweranker.persistence.entities.Language;
 
 /**
+ * This is both an Observer and a Producer.
+ * It observes events with different origins that will fill a Request Data object
+ * that has a set of variables usable during a request.
+ *
  * @author Carlos Gonçalves
  */
 @RequestScoped
 public class RequestDataProducer {
 
-    private RequestPayload rpd = new RequestPayload();
+    @Produces
+    @RequestData
+    @RequestScoped
+    private RequestContextData requestContextData;
+
+    @PostConstruct
+    public void initContextDate() {
+        this.requestContextData = new RequestContextData();
+    }
 
     public void observeLanguage(@Observes @RequestData Language language) {
-        this.rpd.setSelectedLanguage(language);
+        requestContextData.setSelectedLanguage(language);
     }
 
     public void observeAppData(@Observes @RequestData ClientApplicationData appData) {
-        this.rpd.setAppData(appData);
-    }
-
-    @Produces
-    @RequestScoped
-    @RequestData
-    public RequestPayload getKA() {
-        return this.rpd;
+        requestContextData.setAppData(appData);
     }
 
 }
