@@ -2,7 +2,7 @@
  * Copyright (c) 2020  Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.sweranker.api.resources.degrees.dto;
+package pt.sweranker.api.resources.degrees.dto.response;
 
 import pt.sweranker.persistence.entities.degrees.University;
 

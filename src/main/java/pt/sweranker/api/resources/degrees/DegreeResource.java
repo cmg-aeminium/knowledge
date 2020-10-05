@@ -4,8 +4,11 @@
  */
 package pt.sweranker.api.resources.degrees;
 
+import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.validation.Valid;
+import javax.ws.rs.BeanParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -13,7 +16,9 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import pt.sweranker.api.resources.degrees.converters.DegreeConverter;
+import pt.sweranker.api.resources.degrees.dto.request.DegreeSearchFilter;
 import pt.sweranker.dao.degrees.DegreeDAO;
+import pt.sweranker.persistence.entities.Language;
 import pt.sweranker.persistence.entities.degrees.DegreeTranslation;
 
 /**
@@ -30,9 +35,16 @@ public class DegreeResource {
     private DegreeConverter degreeConverter;
 
     @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAll(@Valid @BeanParam DegreeSearchFilter filter) {
+        List<DegreeTranslation> degrees = degreeDAO.findFiltered(degreeConverter.toDegreeFilterCriteria(filter, Language.PT_PT));
+        return Response.ok(degreeConverter.toDegreeDTOs(degrees)).build();
+    }
+
+    @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getKnoledgeArea(@PathParam("id") Long id) {
+    public Response getDegree(@PathParam("id") Long id) {
 
         DegreeTranslation degree = degreeDAO.findById(id);
 
