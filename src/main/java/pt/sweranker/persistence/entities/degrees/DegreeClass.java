@@ -24,9 +24,15 @@ public class DegreeClass {
     private Integer semester;
 
     @Column(name = "ects", nullable = false)
-    private Integer etcs;
+    private Integer ects;
 
     @Column(name = "isoptional", nullable = false)
     private Boolean isOptional;
+
+    @Column(name = "degree", nullable = false)
+    private Degree degree;
+    //    @OneToMany
+    //    @JoinColumn(name = "knowledgeareaid", referencedColumnName = "id")
+    //    private Set<String> classTopics;
 
 }
