@@ -111,10 +111,10 @@
         <maven-required-version>3.6.3</maven-required-version>
         
         <!-- JAVA EE API, SPEC and IMPLEMENTATION versions -->
-        <payara-version>5.2020.4</payara-version>
+        <payara-version>5.2020.7</payara-version>
         
         <!-- Library versions -->
-        <postresql-version>42.2.16</postresql-version>
+        <postresql-version>42.2.18</postresql-version>
     
     </properties>
     
