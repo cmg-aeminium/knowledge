@@ -1,4 +1,4 @@
-package pt.sweranker.filters.request;
+package pt.sweranker.api.filters.request;
 
 public class ClientApplicationData {
 

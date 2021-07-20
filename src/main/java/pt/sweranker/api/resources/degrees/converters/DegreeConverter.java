@@ -8,11 +8,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import pt.sweranker.api.filters.request.RequestContextData;
+import pt.sweranker.api.filters.request.RequestData;
 import pt.sweranker.api.resources.degrees.dto.request.DegreeSearchFilter;
 import pt.sweranker.api.resources.degrees.dto.response.DegreeDTO;
 import pt.sweranker.dao.degrees.DegreeDAO.DegreeFilterCriteria;
-import pt.sweranker.filters.request.RequestContextData;
-import pt.sweranker.filters.request.RequestData;
 import pt.sweranker.persistence.entities.degrees.DegreeTranslation;
 
 /**

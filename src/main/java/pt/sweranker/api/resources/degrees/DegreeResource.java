@@ -16,11 +16,11 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import pt.sweranker.api.filters.request.RequestContextData;
+import pt.sweranker.api.filters.request.RequestData;
 import pt.sweranker.api.resources.degrees.converters.DegreeConverter;
 import pt.sweranker.api.resources.degrees.dto.request.DegreeSearchFilter;
 import pt.sweranker.dao.degrees.DegreeDAO;
-import pt.sweranker.filters.request.RequestContextData;
-import pt.sweranker.filters.request.RequestData;
 import pt.sweranker.persistence.entities.degrees.DegreeTranslation;
 
 /**

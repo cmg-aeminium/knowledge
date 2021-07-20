@@ -10,12 +10,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
+import pt.sweranker.api.filters.request.RequestContextData;
+import pt.sweranker.api.filters.request.RequestData;
 import pt.sweranker.api.resources.knowledgeareas.converter.KnowledgeAreaConverter;
 import pt.sweranker.api.resources.knowledgeareas.converter.TopicConverter;
 import pt.sweranker.dao.knowledgeareas.KnowledgeAreaDAO;
 import pt.sweranker.dao.knowledgeareas.TopicDAO;
-import pt.sweranker.filters.request.RequestContextData;
-import pt.sweranker.filters.request.RequestData;
 import pt.sweranker.persistence.entities.knowledgeareas.KnowledgeAreaTranslation;
 
 @Path("knowledgreareas")

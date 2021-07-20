@@ -32,6 +32,17 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>payara-nexus-artifacts</id>
+            <name>Payara Nexus Artifacts</name>
+            <url>https://nexus.payara.fish/repository/payara-artifacts</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
     </repositories>
     
     
@@ -96,7 +107,6 @@
         <!-- Maven plugin versions -->
         <ejb-plugin-version>3.0.1</ejb-plugin-version>
         <war-plugin-version>3.2.3</war-plugin-version>
-        <ear-plugin-version>3.0.1</ear-plugin-version>
         <clean-plugin-version>3.1.0</clean-plugin-version>
         <compiler-plugin-version>3.8.1</compiler-plugin-version>
         <deploy-plugin-version>3.0.0-M1</deploy-plugin-version>
@@ -108,13 +118,13 @@
         <jar-plugin-version>3.2.0</jar-plugin-version>
         <versions-plugin-version>2.7</versions-plugin-version>
         <enforcer-plugin-version>3.0.0-M3</enforcer-plugin-version>
-        <maven-required-version>3.6.3</maven-required-version>
+        <maven-required-version>3.8.1</maven-required-version>
         
         <!-- JAVA EE API, SPEC and IMPLEMENTATION versions -->
-        <payara-version>5.2020.4</payara-version>
+        <payara-version>5.2021.4</payara-version>
         
         <!-- Library versions -->
-        <postresql-version>42.2.16</postresql-version>
+        <postresql-version>42.2.23</postresql-version>
     
     </properties>
     
@@ -349,6 +359,11 @@
 	         <artifactId>microprofile</artifactId>
 	         <type>pom</type>
 	         <scope>provided</scope>
+	     </dependency>
+	     <dependency>
+	         <groupId>org.eclipse.microprofile.health</groupId>
+	         <artifactId>microprofile-health-api</artifactId>
+	         <scope>compile</scope>
 	     </dependency>
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
