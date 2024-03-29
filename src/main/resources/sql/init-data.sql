@@ -489,6 +489,9 @@ INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES 
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (70, 'PT_PT', 'Dissertação' , 'Trabalho individual de investigação e desenvolvimento, conducente à elaboração de uma dissertação de natureza científica sobre um tema da área de conhecimento do curso, ou visando a integração e aplicação à resolução de problemas complexos de engenharia de conhecimentos, competências e atitudes adquiridos ao longo do curso.');
 
 
+-- Degree Classes
+-- Universidade de Coimbra
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (71, 1, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (71, 'PT_PT', 'Análise Matemática' , 'Dotar os alunos dos conhecimentos básicos de Cálculo Diferencial e Integral para funções reais de uma variável real. Saber resolver equações diferenciais e aplicar os conhecimentos obtidos na modelação e resolução de problemas.');
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (72, 1, 1, 6, false, 2);
@@ -619,6 +622,10 @@ INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) 
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (133, 5, 1, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (133, 'PT_PT', 'Web Semântica' , 'O objectivo principal da cadeira de Web Semântica é que o aluno adquira um conjunto de competências: - Capacidade de construção e gestão de ontologias\n - Capacidade de representar uma ontologia numa linguagem da Web Semântica (RDF, RDFa, RDFs e OWL)\n - Capacidade para utilizar triple stores, SPARQL, Pesquisa Semântica e os mecanismos de raciocínio\n - Capacidade de aplicação e uso de ontologias representadas através de linguagens da Web Semântica, em aplicações para a Internet ou Intranets\n - Capacidade de especificação, design e desenvolvimento de sistemas/aplicações para a Web Semântica\n - Capacidade de reutilização de ontologias disponibilizadas na Internet');
 
+-- Degree Classes
+-- Instituto Superior Técnico
+
+-- IST 1st year
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (134, 1, 1, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (134, 'PT_PT', 'Álgebra Linear' , 'Formação básica em Álgebra Linear. Domínio das seguintes matérias: espaços vectoriais, transformações lineares, espaços euclideanos, valores e vectores próprios.');
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (135, 1, 1, 6, false, 3);
@@ -637,6 +644,8 @@ INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES 
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (141, 'PT_PT', 'Lógica para Programação' , 'Com a frequência da disciplina pretende-se que os alunos tenham conhecimento sobre os componentes de uma lógica, sejam capazes de desenvolver provas no sistema dedutivo, sejam capazes de utilizar o formalismo semântico, sejam capazes de relacionar o sistema dedutivo e o sistema semântico e provar propriedades sobre estas relações. Deverão obter noções sobre o raciocínio automático e ser capazes de desenvolver programas utilizando o paradigma da programação em lógica.');
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (143, 1, 2, 7.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (143, 'PT_PT', 'Matemática Discreta' , 'Desenvolver o raciocínio matemático rigoroso. Dominar os conceitos e instrumentos matemáticos necessários para a análise de procedimentos e algoritmos, quer quanto à sua correcção, quer quanto à sua eficiência.');
+
+-- IST 2nd year
 
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (143, 2, 1, 7.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (143, 'PT_PT', 'Análise Complexa e Equações Diferenciais' , 'Formação básica em: funções de uma variável complexa, equações diferenciais ordinárias, métodos de análise de Fourier com aplicação à resolução de equações diferenciais parciais.');
@@ -659,6 +668,8 @@ INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) 
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (152, 2, 4.5, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (152, 'Teoria da Computação', 'Matemática' , 'Entender e saber utilizar os conceitos de máquina de Turing, computação e recurso computacional. Compreender e aprofundar os conceitos de "tarefa" algorítmica e de "tarefa" não algorítmica. Conhecer os limites para "tarefas" algorítmicas. Entender a computação como conceito físico-matemático e não como conceito puramente matemático. Experimentar conceitos e técnicas em ambientes computacionais interactivos.');
 
+-- IST 3rd year
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (153, 3, 1, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (153, 'PT_PT', 'Bases de Dados' , 'A disciplina faz uma introdução à concepção e análise de bases de dados. O curso foca no modelo relacional, cobrindo o desenho lógico das bases de dados (desenho do esquema) e sua implementação, bem como os sistemas de gestão de transações. Alguns aspectos dos sistemas de bases de dados paralelas e distribuídas, gestão de informação não estruturada e semiestruturada serão também abordados. A disciplina tem como objectivo expor os alunos aos conceitos básicos necessários no desenho e concepção de um sistema de gestão de base de dados, assim como questões práticas da sua realização no âmbito de um projecto em equipa.');
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (154, 3, 1, 4.5, false, 3);
@@ -680,1082 +691,512 @@ INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) 
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (162, 3, 2, 7.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (162, 'PT_PT', 'Sistemas Distribuídos' , 'Analisar as arquitecturas e as tecnologias que permitem desenvolver aplicações distribuídas que possam garantir requisitos não funcionais como a reconfigurabilidade, a segurança, a tolerância a faltas e a escalabilidade. Aquisição de conhecimentos que permitam desenvolver uma aplicação com uma arquitectura distribuída. Programar aplicações distribuídas. Interpretar requisitos de segurança formulando políticas e concretizando mecanismos seguros no código da aplicação. Análise de requisitos de fiabilidade e disponibilidade e introdução de mecanismos de tolerância a faltas.');
 
+-- IST 4th year
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (163, 4, 1, 7.5, true, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (163, 'PT_PT', 'Arquitecturas de Software' , 'Formar nos métodos, técnicas e linguagens do desenho de software de qualidade utilizando as abordagens de arquitecturas de software e padrões de desenho. Estudar os métodos e as técnicas da passagem do espaço do problema para o espaço da solução de modo a garantir a rastreabilidade entre os requisitos do sistema e o seu desenho. Ler, avaliar e escrever arquitecturas de software.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (164, 4, 1, 7.5, true, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (164, 'PT_PT', 'Especificação de Software' , 'Aprender técnicas formais para especificação de requisitos e desenvolvimento de software. Entender a importância e aprender métodos para a verificação da correcção de programas. Utilização de ferramentas automáticas para verificação programas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (165, 4, 1, 7.5, true, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (165, 'PT_PT', 'Gestão de Projectos Informáticos' , '>Os objectivos de aprendizagem de Gestão de Projectos Informáticos são alinhados com  os da disciplina “IS 2010.4 IS Project Management” do currículo “ACM/AIS IS 2010 Curriculum Guidelines”');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (166, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (166, 'PT_PT', 'Administração e Gestão de Infra-estruturas de IT' , 'Os estudantes devem ser capazes de: 1.	Compreender as diferenças e semelhanças entre os componentes fundamentais de uma solução de infra-estrutura informática 2.	Compreender a forma como os componentes de uma infra-estrutura informática devem estar organizados em diferentes ambientes organizacionais 3.	Compreender os princípios subjacentes à virtualização de serviços informáticos 4.	Configurar uma solução de infra-estrutura informática de pequena dimensão, incluindo servidores, armazenamento de dados, rede, dispositivos de segurança e clientes 5.	Compreender a arquitectura e compromissos envolvidos no desenho e gestão de uma solução de infra-estrutura informática em ambientes organizacionais de larga escala 6.	Compreender o papel de ambientes de gestão e controlo de serviços na gestão de infra-estruturas informáticas de grande escala 7.	Compreender as oportunidades que as infra-estruturas de aprovisionamento dinâmico, como as plataformas de computação em nuvem, criam para as organizações 8.  Analisar e avaliar as implicações para o desenho de infra-estruturas informáticas das soluções existentes de segurança e de continuidade de negócio 9.	Minimizar o impacte das soluções de infra-estruturas informáticas no ambiente e no consumo de recursos');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (167, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (167, 'PT_PT', 'Engenharia e Tecnologia de Processos de Negócio' , 'A disciplina de Engenharia e Tecnologia de Processos de Negócio tem como objectivo introduzir conceitos, técnicas e ferramentas associados à gestão de processos de negócio (Business Process Management, BPM). Será dada enfâse ao ciclo de vida do BPM e à sua gestão no plano da engenharia. Os temas incluem a identificação, documentação, modelação, verificação e melhoria dos processos de negócio de uma organização através de técnicas de análise, desenho e automação de processos.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (168, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (168, 'PT_PT', 'Fundamentos de Sistemas de Informação' , 'Os objectivos de aprendizagem de Fundamentos dos Sistemas de Informação são os da disciplina “IS 2010.1 Foundations of Information Systems” do currículo “ACM/AIS IS 2010 Curriculum Guidelines”: 1.	Fornecer uma abordagem sociotécnica aos sistemas de informação organizacionais; entender como e porquê os sistemas de informação são hoje usados nas organizações 2.	Explicar a relações entre os componentes de tecnologia, de pessoas e organizacionais dos sistemas de informação empresariais 3.	Conhecer os principais componentes de tecnologia dos sistemas de informação 4.	Entender como as empresas utilizam os sistemas de informação para suportar as suas actividades e criar vantagens competitivas 5.	Entender como os sistemas de informação permitem criar novas formas de comércio entre indivíduos, organizações e governos 6.	Conhecer as novas tecnologias que permitem novas formas de comunicação, colaboração e parcerias 7.	Entender como os sistemas de informação permitem criar relações com clientes e fornecedores, e como são utilizados para reforçar as estruturas organizacionais e os processos de negócio 8.	Entender como os sistemas de informação podem suportar a tomada de decisão nos diferentes níveis e funções das organizações 9.	Compreender como as organizações desenvolvem e adquirem tecnologias e sistemas de informação 10.	Compreender o valor dos investimentos em sistemas de informação, bem como aprender a preparar um plano de negócios para um novo sistema de informação, incluindo a estimativa de custos e benefícios 11.	Mitigar os riscos, bem como planear e recuperar de desastres 12.	Entender como garantir a segurança dos sistemas de informação, tendo em conta tanto aspetos tecnológicos como humanos 13.	Avaliar as questões éticas dos sistemas de informação, e o impacto dos sistemas de informação na fraude e no crime');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (169, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (169, 'PT_PT', 'Desenvolvimento de Aplicações Distribuídas' , 'Perceber os problemas de nível sistema subjacentes à concepção edesenvolvimento de aplicações em redes de grandes escala (ex.: na Internet). Conhecer as soluções existentes no âmbito das plataformas de suporte à execução das aplicações antes referidas com ênfase na arquitectura, modelos de comunicação, escalabilidade, desempenho e segurança. Especificar, conceber, analisar e implementar aplicações distribuídas em redes de grande escala assim como as respectivas plataformas de suporte à sua execução.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (170, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (170, 'PT_PT', 'Segurança Informática em Redes e Sistemas' , 'O objectivo desta cadeira é fornecer ao aluno um conjunto de conceitos, metodologias e ferramentas de segurança informática que lhe permita abordar o tema face a um conjunto de tecnologias alargado, tais como: redes locais, redes pessoais, redes globais, desenvolvimento de código seguro, sistemas operativos, sistemas distribuídos e protocolos de comunicação.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (171, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (171, 'PT_PT', 'Animação e Visualização Tridimensional' , 'Esta UC introduz e discute o estado de arte das técnicas de concepção e desenvolvimento de aplicações gráficas 3D, com preocupações ao nível do tempo-real, da interactividade e do realismo, através da utilização das APIs gráficas OpenGL e WebGL. Inclui o desenvolvimento de uma aplicação gráfica 3D imersiva num dispositivo móvel recorrendo a um par de óculos de Realidade Virtual de baixo-custo, os Google Carboard. A cadeira também aborda os avanços mais recentes na tecnologia de GPU e suas aplicações à simulação e jogos de computador. Após a frequência desta disciplina, os alunos devem saber descrever e justificar métodos, procedimentos e técnicas elementares utilizados em sistemas de Ambientes Virtuais Interactivos e Tempo-Real, identificando os termos, conceitos e princípios básicos subjacentes.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (172, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (172, 'PT_PT', 'Concepção Centrada no Utilizador' , 'Apreender os princípios norteantes e as metodologias da concepção centrada no utilizador de sistemas interactivos. Apreender a necessidade do conhecimento dos utilizadores e suas necessidades e seu envolvimento na construção de sistemas interactivos. Adaptar estes conhecimentos a metodologias de desenvolvimento centrado no utilizador. Aplicar modelos de avaliação de acordo com a fase de projecto. Realizar um projecto de um sistema interactivo com base nos conhecimentos adquiridos e com envolvimento dos utilizadores a vários níveis.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (173, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (173, 'PT_PT', 'Visualização de Informação' , 'O objectivo é dar aos alunos os conhecimentos da área de visualização de dados e informação que lhes permitam conceber e executar visualizações de grande impacto como veículo privilegiado para transmitir informação quantitativa e qualitativa. Será introduzida a área de Visualização de Informação após o que será ensinada uma metodologia para a análise de domínio e concepção de visualizações eficazes. Conhecida esta, serão discutidos os vários tipos de variáveis (contínuas, nominais, rácio, etc.), dados (tabulares, redes, texto, etc.) e padrões a visualizar. Em seguida serão descritos os vários factores fisiologicos e psicológicos (memória, processamento visual, etc.) relevantes para a criação de uma boa visualização. Estudaremos os tipos de visualização de informação mais comuns e adequados para vários tipos de informação (grafos, séries temporais, etc.) e as técnicas de interacção possíveis (focus+context, overview+detail, panning+zoom, brushing). Uma vez introduzida a área, as tarefas nela desempenhadas, e os problemas encontrados, veremos quais as abordagens mais correctas para avaliar aplicações de Visualização de Informação.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (174, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (174, 'PT_PT', 'Língua Natural' , 'Conhecer os conceitos básicos, principais formalismos, técnicas e algoritmos, bases de conhecimento e corpora envolvidos na área do Processamento da Língua Natural. Perceber quais são as grandes tarefas envolvidas no processamento de uma frase, parágrafo ou texto e entender as dificuldades de cada uma destas tarefas. Conhecer as principais aplicações da área e ser capaz de identificar a tecnologia envolvida. Compreender as tarefas que são realizáveis com as tecnologias actuais.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (175, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (175, 'PT_PT', 'Procura e Planeamento' , 'Aprofundar os temas da procura de soluções para problemas complexos e do planeamento de acções. Reconhecer os diferentes tipos de problemas a resolver. Dominar as principais metodologias e estratégias de procura. Perceber que metodologia e estratégia aplicar para cada tipo de problema. Ser capaz de resolver problemas razoavelmente complexos. Compreender a especificidade do problema do planeamento de acções e porque necessita de uma abordagem mais potente. Estudar os fundamentos e abordagens do planeamento de acções e ser capaz de resolver problemas simples de planeamento.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (176, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (176, 'PT_PT', 'Sistemas de Apoio à Decisão' , 'Introduzir os conceitos fundamentais da descoberta de informação a partir de grandes quantidades de dados Tornar os alunos hábeis na criação de sistemas capazes de descobrir informação escondida através da aplicação de técnicas de data mining. Tornar os alunos hábeis na avaliação da informação descoberta, em particular na comparação dos diferentes modelos descobertos.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (177, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (177, 'PT_PT', 'Algoritmos para Lógica Computacional' , 'A Lógica é um dos pilares da Ciência da Computação (Computer Science, CS), encontrando aplicação em todas as áreas de CS. Exemplos concretos incluem as bases de dados, os sistemas de informação inteligentes, a inteligência artificial, mas também a especificação, validação e verificação de software, hardware e redes. O objectivo desta unidade curricular é proporcionar formacão avançada em abordagens para resolver problemas computacionais relacionados com Lógica. Os estudantes ficam capacitados para analisar, modelar e resolver problemas computacionalmente difíceis usando Lógica. Adicionalmente, obtém formação nos aspectos de engenharia essenciais na construção de software para problemas de Lógica: funcionamento e implementação de um sistema dedutivo e técnicas algorítmicas e estruturas de dados fundamentais para a implementação de ferramentas baseadas em Lógica.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (178, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (178, 'PT_PT', 'Computabilidade e Complexidade' , 'Caracterizar classes computacionais, identificar conjuntos completos, distinguir complexidade uniforme de não uniforme e executar reduções; estudar problemas em aberto em complexidade computacional.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (179, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (179, 'PT_PT', 'Redes Complexas' , 'Esta disciplina tem como objecto de estudo as redes complexas, com foco nos algoritmos, modelos e aplicações quer para redes artificiais quer para redes reais, tais como redes sociais, redes de informação, a Internet, e redes biológicas. Os grafos inerentes a estas redes partilham algumas características recorrentes: grande dimensão; esparsos; scale-free; small-world and clustering effect; comunidades; etc. Neste contexto, interessa tanto o desenvolvimento de algoritmos e estruturas de dados escaláveis para que seja possível um análise efectiva destas redes complexas, como a elaboração de modelos teóricos capazes de descrever os padrões encontrados empiricamente. As aplicações são inúmeras, indo desde motores de pesquisa, difusão de informação na internet, nas redes sociais, nos blogs, ao marketing viral, tolerância das redes a eventos destrutivos, fenómenos epidemiológicos em redes, biologia computacional, com ligações às ciências sociais, à física e à economia.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (180, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (180, 'PT_PT', 'Análise e Integração de Dados' , 'A disciplina de Análise e Integração de Dados pretende ensinar aos alunos os conceitos mais importantes de integração de dados sobre duas perspectivas diferentes: virtual, onde as fontes de dados podem ser consultadas através de uma arquitectura de mediação; e wharehoused, onde um repositório de dados materializado  (denominado armazém de dados ou data warehouse) é preenchido com dados provenientes das fontes. Adicionalmente, a disciplina ensinará as técnicas que podem ser utilizadas para explorar a informação: OLAP e reporting numa arquitectura wharehoused, e sistemas de mash-up numa arquitectura virtual.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (181, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (181, 'PT_PT', 'Processamento e Recuperação de Informação' , 'A disciplina de Processamento e Recuperação de Informação visa proporcionar uma introdução completa e actualizada aos conceitos-chave, tecnologias, e mecanismos de processamento de dados utilizados nas áreas da Recuperação de Informação (IR), Filtragem de Informação (IF), e Extração de Informação (IE). Os alunos da disciplina aprenderão os conceitos teóricos fundamentais nestas áreas, adquirindo as competências teóricas e práticas necessárias para: Projectar soluções modernas para o processamento, gestão e interrogação de grandes volumes de informação não estruturada ou semi-estruturada; Classificar e agrupar automaticamente conjuntos de recursos (e.g., grandes conjuntos de documentos de texto) através de características descritivas;Conceber sistemas para a recuperação e filtragem da informação relevante existem em grandes colecções, com base em termos chave, com base em exemplos, ou com base em perfis dos utilizadores; Conceber sistemas para a extração de informação desde documentos de texto, ou desde a Web; Avaliar comparativamente diferentes sistemas para a extracção, filtragem e recuperação de informação relevante');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (182, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (182, 'PT_PT', 'Ciber Segurança Forense' , 'O objectivo do curso é o estudo das técnicas e metodologias forenses aplicadas às evidencias digitais. Durante o cursos os alunos apreenderão as diferentes fases da metodologia forense bem como a sua aplicação à recolha e tratamento de evidências digitais em diferentes meios, nomeadamente evidências recolhidas da rede, da memória volátil e persistente dos sistema de informação e dos sistemas activos de gestão da rede e ainda da memória de dispositivos móveis. Serão ainda abordados alguns aspectos legais relevantes para o processo de recolha e tratamento de dados de forma a permitir a produção prova em tribunal.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (183, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (183, 'PT_PT', 'Segurança em Software' , 'Compreender os problemas de segurança em software mais comuns e as suas causas fundamentais. Conhecer orientações, técnicas e ferramentas para a sua prevenção ou detecção, e os melhores princípios que estão por detrás destas técnicas.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (184, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (184, 'PT_PT', 'Computação Gráfica para Jogos' , 'Computação gráfica para jogos cobre aspectos teóricos e práticos do desenvolvimento de motores gráficos para videojogos (game engines). Aborda os diferentes subsistemas presentes num motor de jogo, incluindo, entre outros, subsistemas de rasterização, animação de personagens, e físicos, e discute a articulação necessária entre os vários subsistemas para suportar o desenvolvimento de jogabilidade. Após a frequência desta disciplina, os alunos deverão compreender como funciona um motor gráfico moderno e serem capazes de desenvolver os seus próprios motores gráficos para jogos.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (185, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (185, 'PT_PT', 'Design de Jogos' , 'Esta disciplina permite ao aluno adquirir capacidades para concepção de uma experiência de jogo e desenvolvimento de protótipos que realizem essa experiência. As capacidades são desenvolvidas fomentando a discussão sobre o que é um jogo, quais são os seus constituintes e qual a relação do jogo com os seus jogadores (tendo em conta as suas diferenças). O aluno desenvolve o seu trabalho com base em documentos de design e construção de protótipos.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (186, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (186, 'PT_PT', 'Inteligência Artificial para Jogos' , 'Reconhecer as diferenças entre a IA tradicional e aplicação de técnicas de IA ao desenvolvimento de Jogos de Computador, onde outros factores como a jogabilidade são mais importantes que a inteligência do adversário. Conhecer os problemas práticos do desenvolvimento de IA para Jogos de Computador, bem como as diferentes vertentes das técnicas aplicadas em Jogos de Computador comerciais.Saber desenhar e construir um sistema de IA para um jogo de computador, qualquer que seja o seu estilo: acção, desporto, estratégia, narrativa, etc');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (187, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (187, 'PT_PT', 'Bioinformática' , 'A Bioinformática desenvolve métodos computacionais e algoritmos para o processamento de dados biológicos e utiliza modelação matemática e estatística para definir hipóteses testáveis sobre entidades e processos biológicos. Esta disciplina introdutória pretende familiarizar os alunos com as metodologias computacionais e matemáticas que estão na base de muitas das abordagens que suportam os novos desenvolvimentos desta área. Adicionalmente, pretende-se desenvolver o espírito crítico através da leitura e análise de publicações cientificas relevantes à disciplina. A componente prática da disciplina pretende dotar os alunos da capacidade de desenvolvimento de ferramentas de software para o tratamento e integração de dados biológicos e clínicos.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (188, 4, 1,7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (188, 'PT_PT', 'Aplicações para Sistemas Embebidos' , 'Dotar os alunos de conhecimentos sobre sistemas embebidos e sistemas de tempo real com ênfase na concepção, desenvolvimento e teste de aplicações. Abordar a especificidade dos sistemas embebidos no que se refere às arquitecturas hardware, barramentos, redes de comunicação e interfaces ciber-físicas. Estudar arquitecturas de software, sistemas operativos multitarefa e políticas de escalonamento de tempo-real. Analisar formas de optimização de programas por forma a melhorar o desempenho, o consumo e o custo dos sistemas. Introduzir metodologias de desenho de sistemas e de análise de requisitos. Estudo de casos e domínios aplicacionais: identificação e acesso a serviços baseados em meios electrónicos (smart cards) e biométricos, sensores em dispositivos pessoais (smartphones).');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (189, 4, 1, 6, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (189, 'PT_PT', 'Projecto de Sistemas Digitais' , 'Fornecer aos alunos as competências para: Projectar de modo estruturado sistemas electrónicos digitais de complexidade média. Compreender e aplicar as técnicas fundamentais de síntese e optimização a nível arquitectural. Simular e sintetizar sistemas digitais utilizando linguagens de especificação de hardware. Compreender e utilizar as funcionalidades das ferramentas de projecto assistido por computador. Implementar sistemas digitais utilizando dispositivos lógicos programáveis (FPGAs e PLDs).');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (190, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (190, 'PT_PT', 'Controlo e Decisão Inteligente' , 'Fornecer uma perspectiva moderna do controlo de sistemas de alto nível, especialmente o controlo e decisão baseados em técnicas inteligentes (soft computing). Dotar os alunos de conhecimentos da teoria, projecto e aplicação de técnicas de soft computing, dando especial ênfase a sistemas fuzzy, redes neuronais, e a algoritmos de optimização genéticos e inspirados em agentes biológicos. As técnicas utilizadas deverão ser aplicadas sinergeticamente em problemas de modelação, controlo, classificação, decisão e optimização, em sistemas complexos de grande escala.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (191, 4, 1, 6, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (191, 'PT_PT', 'Processamento de Imagem e Visão' , 'Este curso introduz métodos de análise de imagem e de percepção do mundo através de câmaras. O curso inclui: filtragem, segmentação, reconhecimento de objectos, detecção e seguimento, autolocalização da câmara, reconstrução de cenas 3D.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (192, 4, 1, 7.5, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (192, 'PT_PT', 'Robôs Sociais e Interacção Pessoa Robô' , 'Desenvolver mecanismos de inteligência artificial em robôs que forneçam a plataformas robóticas a capacidade de interagir com humanos de uma forma social. Ser capaz de integrar e avaliar aspectos como intencionalidade, credibilidade, emoções e colaboração na interacção entre humanos e robôs.');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (193, 4, 1, 6, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (193, 'PT_PT', 'Sistemas Autónomos' , 'Abordam-se os conceitos fundamentais envolvidos em sistemas compostos por diversos agentes físicos com diversos graus de autonomia (sensores, processadores, actuadores, robots) distribuídos espacialmente. Descrevem-se métodos de mapeamento e representação de mapas. Introduzem-se os conceitos e métodos fundamentais de auto-localização na presença de incertezas na observação e no modelo do movimento. Apresentam-se métodos de integração da informação proveniente de vários sensores, para posicionamento e representação do mapa do mundo onde os sensores estão situados, bem como métodos para a resolução de problemas em sistemas cooperativos, incluindo a percepção cooperativa e a atribuição, planeamento e coordenação de tarefas. Termina-se com uma perspectiva integradora dos vários módulos ensinados.');
 
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (194, 4, 1, 6, true, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (194, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (195, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (196, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (197, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (198, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (199, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (200, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (201, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (202, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (203, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (204, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (205, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (206, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (207, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (208, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (209, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (210, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (211, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (212, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (213, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (214, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (215, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (215, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (216, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (217, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (218, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (219, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (220, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (221, 4, 1, 6, true, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (222, 4, 1, 6, true, 3);
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (166, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (166, 'PT_PT', 'Administração e Gestão de Infra-estruturas de IT','Os estudantes devem ser capazes de:
+        1.	Compreender as diferenças e semelhanças entre os componentes fundamentais de uma solução de infra-estrutura informática
+        2.	Compreender a forma como os componentes de uma infra-estrutura informática devem estar organizados em diferentes ambientes organizacionais
+        3.	Compreender os princípios subjacentes à virtualização de serviços informáticos
+        4.	Configurar uma solução de infra-estrutura informática de pequena dimensão, incluindo servidores, armazenamento de dados, rede, dispositivos de segurança e clientes
+        5.	Compreender a arquitectura e compromissos envolvidos no desenho e gestão de uma solução de infra-estrutura informática em ambientes organizacionais de larga escala
+        6.	Compreender o papel de ambientes de gestão e controlo de serviços na gestão de infra-estruturas informáticas de grande escala
+        7.	Compreender as oportunidades que as infra-estruturas de aprovisionamento dinâmico, como as plataformas de computação em nuvem, criam para as organizações
+        8.  Analisar e avaliar as implicações para o desenho de infra-estruturas informáticas das soluções existentes de segurança e de continuidade de negócio
+        9.	Minimizar o impacte das soluções de infra-estruturas informáticas no ambiente e no consumo de recursos');
+        
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (167, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (167, 'PT_PT', 'Engenharia e Tecnologia de Processos de Negócio','A disciplina de Engenharia e Tecnologia de Processos de Negócio tem como objectivo
+        introduzir conceitos, técnicas e ferramentas associados à gestão de processos de negócio (Business Process Management, BPM).
+        Será dada enfâse ao ciclo de vida do BPM e à sua gestão no plano da engenharia. Os temas incluem a identificação, documentação,
+        modelação, verificação e melhoria dos processos de negócio de uma organização através de técnicas de análise, desenho e
+        automação de processos.');
 
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (223, 5, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (224, 5, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (225, 5, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (226, 5, 1, 6, false, 3);
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (168, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (168, 'PT_PT', 'Fundamentos de Sistemas de Informação','Os objectivos de aprendizagem de Fundamentos dos Sistemas de Informação são os da disciplina
+        “IS 2010.1 Foundations of Information Systems” do currículo “ACM/AIS IS 2010 Curriculum Guidelines”:
+        1.	Fornecer uma abordagem sociotécnica aos sistemas de informação organizacionais; entender como e porquê os sistemas de informação são hoje usados nas organizações
+        2.	Explicar a relações entre os componentes de tecnologia, de pessoas e organizacionais dos sistemas de informação empresariais
+        3.	Conhecer os principais componentes de tecnologia dos sistemas de informação
+        4.	Entender como as empresas utilizam os sistemas de informação para suportar as suas actividades e criar vantagens competitivas
+        5.	Entender como os sistemas de informação permitem criar novas formas de comércio entre indivíduos, organizações e governos
+        6.	Conhecer as novas tecnologias que permitem novas formas de comunicação, colaboração e parcerias
+        7.	Entender como os sistemas de informação permitem criar relações com clientes e fornecedores, e como são utilizados para reforçar as estruturas organizacionais e os processos de negócio
+        8.	Entender como os sistemas de informação podem suportar a tomada de decisão nos diferentes níveis e funções das organizações
+        9.	Compreender como as organizações desenvolvem e adquirem tecnologias e sistemas de informação
+        10.	Compreender o valor dos investimentos em sistemas de informação, bem como aprender a preparar um plano de negócios para um novo sistema de informação, incluindo a estimativa de custos e benefícios
+        11.	Mitigar os riscos, bem como planear e recuperar de desastres
+        12.	Entender como garantir a segurança dos sistemas de informação, tendo em conta tanto aspetos tecnológicos como humanos
+        13.	Avaliar as questões éticas dos sistemas de informação, e o impacto dos sistemas de informação na fraude e no crime');
+        
+        
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (169, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (169, 'PT_PT', 'Desenvolvimento de Aplicações Distribuídas','Perceber os problemas de nível sistema subjacentes à concepção e
+        desenvolvimento de aplicações em redes de grandes escala (ex.: na Internet). Conhecer as soluções existentes no
+        âmbito das plataformas de suporte à execução das aplicações antes referidas com ênfase na arquitectura,
+        modelos de comunicação, escalabilidade, desempenho e segurança. Especificar, conceber, analisar e implementar
+        aplicações distribuídas em redes de grande escala assim como as respectivas plataformas de suporte à sua execução.');  
+        
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (170, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (170, 'PT_PT', 'Segurança Informática em Redes e Sistemas','O objectivo desta cadeira é fornecer ao aluno um conjunto de conceitos,
+        metodologias e ferramentas de segurança informática que lhe permita abordar o tema face a um conjunto de tecnologias
+        alargado, tais como: redes locais, redes pessoais, redes globais, desenvolvimento de código seguro, sistemas operativos,
+        sistemas distribuídos e protocolos de comunicação.');
+        
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (171, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (171, 'PT_PT', 'Animação e Visualização Tridimensional','Esta UC introduz e discute o estado de arte das técnicas de
+        concepção e desenvolvimento de aplicações gráficas 3D, com preocupações ao nível do tempo-real, da interactividade
+        e do realismo, através da utilização das APIs gráficas OpenGL e WebGL. Inclui o desenvolvimento de uma aplicação
+        gráfica 3D imersiva num dispositivo móvel recorrendo a um par de óculos de Realidade Virtual de baixo-custo,
+        os Google Carboard. A cadeira também aborda os avanços mais recentes na tecnologia de GPU e suas
+        aplicações à simulação e jogos de computador. Após a frequência desta disciplina, os alunos devem saber
+        descrever e justificar métodos, procedimentos e técnicas elementares utilizados em sistemas de Ambientes
+        Virtuais Interactivos e Tempo-Real, identificando os termos, conceitos e princípios básicos subjacentes.');
+        
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (172, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (172, 'PT_PT', 'Concepção Centrada no Utilizador','Apreender os princípios norteantes e as metodologias da
+        concepção centrada no utilizador de sistemas interactivos. Apreender a necessidade do conhecimento dos
+        utilizadores e suas necessidades e seu envolvimento na construção de sistemas interactivos. Adaptar
+        estes conhecimentos a metodologias de desenvolvimento centrado no utilizador. Aplicar modelos de
+        avaliação de acordo com a fase de projecto. Realizar um projecto de um sistema interactivo com base
+        nos conhecimentos adquiridos e com envolvimento dos utilizadores a vários níveis.');
+        
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (173, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (173, 'PT_PT', 'Visualização de Informação','O objectivo é dar aos alunos os conhecimentos da área
+        de visualização de dados e informação que lhes permitam conceber e executar visualizações de grande impacto
+        como veículo privilegiado para transmitir informação quantitativa e qualitativa. Será introduzida a área
+        de Visualização de Informação após o que será ensinada uma metodologia para a análise de domínio e concepção
+        de visualizações eficazes. Conhecida esta, serão discutidos os vários tipos de variáveis (contínuas,
+        nominais, rácio, etc.), dados (tabulares, redes, texto, etc.) e padrões a visualizar. Em seguida serão
+        descritos os vários factores fisiologicos e psicológicos (memória, processamento visual, etc.) relevantes
+        para a criação de uma boa visualização. Estudaremos os tipos de visualização de informação mais comuns e
+        adequados para vários tipos de informação (grafos, séries temporais, etc.) e as técnicas de interacção
+        possíveis (focus+context, overview+detail, panning+zoom, brushing). Uma vez introduzida a área, as
+        tarefas nela desempenhadas, e os problemas encontrados, veremos quais as abordagens mais correctas para
+        avaliar aplicações de Visualização de Informação.');
 
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (149, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (150, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (151, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (152, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (153, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (154, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (155, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (156, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (157, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (158, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (159, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (160, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (161, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (162, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (163, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (164, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (165, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (166, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (167, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (168, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (169, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (170, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (171, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (172, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (173, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (174, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (175, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (176, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (177, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (178, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (179, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (180, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (181, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (182, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (183, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (184, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (185, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (186, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (187, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (188, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (189, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (190, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (191, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (192, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (193, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (194, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (195, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (196, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (197, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (198, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (199, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (200, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (201, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (202, 1, 1, 6, false, 2);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (203, 1, 1, 6, false, 2);
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (174, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (174, 'PT_PT', 'Língua Natural','Conhecer os conceitos básicos, principais formalismos, técnicas e algoritmos,
+        bases de conhecimento e corpora envolvidos na área do Processamento da Língua Natural.
+        Perceber quais são as grandes tarefas envolvidas no processamento de uma frase, parágrafo ou texto e entender
+        as dificuldades de cada uma destas tarefas. Conhecer as principais aplicações da área e ser capaz de identificar
+        a tecnologia envolvida. Compreender as tarefas que são realizáveis com as tecnologias actuais.');
 
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (175, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (175, 'PT_PT', 'Procura e Planeamento','Aprofundar os temas da procura de soluções para problemas complexos e do planeamento de acções.
+        Reconhecer os diferentes tipos de problemas a resolver.
+        Dominar as principais metodologias e estratégias de procura.
+        Perceber que metodologia e estratégia aplicar para cada tipo de problema.
+        Ser capaz de resolver problemas razoavelmente complexos.
+        Compreender a especificidade do problema do planeamento de acções e porque necessita de uma abordagem mais potente.
+        Estudar os fundamentos e abordagens do planeamento de acções e ser capaz de resolver problemas simples de planeamento.');
 
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (204, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (205, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (206, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (207, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (208, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (209, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (210, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (211, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (212, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (213, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (214, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (215, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (216, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (217, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (218, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (219, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (220, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (221, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (222, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (223, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (224, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (225, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (226, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (227, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (228, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (229, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (230, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (231, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (232, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (233, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (234, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (235, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (236, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (237, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (238, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (239, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (240, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (241, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (242, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (243, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (244, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (245, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (246, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (247, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (248, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (249, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (250, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (251, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (252, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (253, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (254, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (255, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (256, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (257, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (258, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (259, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (260, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (261, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (262, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (263, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (264, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (265, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (266, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (267, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (268, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (269, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (270, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (271, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (272, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (273, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (274, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (275, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (276, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (277, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (278, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (279, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (280, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (281, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (282, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (283, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (284, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (285, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (286, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (287, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (288, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (289, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (290, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (291, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (292, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (293, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (294, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (295, 1, 1, 6, false, 3);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (296, 1, 1, 6, false, 3);
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (176, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (176, 'PT_PT', 'Sistemas de Apoio à Decisão','Introduzir os conceitos fundamentais da descoberta de informação a partir de grandes
+        quantidades de dados Tornar os alunos hábeis na criação de sistemas capazes de descobrir informação escondida através
+        da aplicação de técnicas de data mining. Tornar os alunos hábeis na avaliação da informação descoberta, em particular
+        na comparação dos diferentes modelos descobertos.');
 
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (297, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (298, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (299, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (300, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (301, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (302, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (303, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (304, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (305, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (306, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (307, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (308, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (309, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (311, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (312, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (313, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (314, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (315, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (316, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (317, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (318, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (319, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (320, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (321, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (322, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (323, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (324, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (325, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (326, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (327, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (328, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (329, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (330, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (331, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (332, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (333, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (334, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (335, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (336, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (337, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (338, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (339, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (340, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (341, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (342, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (343, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (344, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (345, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (346, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (347, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (348, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (349, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (350, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (351, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (352, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (353, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (354, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (355, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (356, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (357, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (358, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (359, 1, 1, 6, false, 4);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (360, 1, 1, 6, false, 4);
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (177, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (177, 'PT_PT', 'Algoritmos para Lógica Computacional','A Lógica é um dos pilares da Ciência da Computação (Computer Science, CS),
+        encontrando aplicação em todas as áreas de CS. Exemplos concretos incluem as bases de dados, os sistemas de informação inteligentes,
+        a inteligência artificial, mas também a especificação, validação e verificação de software, hardware e redes. O objectivo
+        desta unidade curricular é proporcionar formacão avançada em abordagens para resolver problemas computacionais relacionados
+        com Lógica. Os estudantes ficam capacitados para analisar, modelar e resolver problemas computacionalmente difíceis usando
+        Lógica. Adicionalmente, obtém formação nos aspectos de engenharia essenciais na construção de software para problemas de
+        Lógica: funcionamento e implementação de um sistema dedutivo e técnicas algorítmicas e estruturas de dados fundamentais
+        para a implementação de ferramentas baseadas em Lógica.');
 
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (361, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (362, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (363, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (364, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (365, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (366, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (367, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (368, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (369, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (370, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (371, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (372, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (373, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (374, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (375, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (376, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (377, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (378, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (379, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (380, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (381, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (382, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (383, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (384, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (385, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (386, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (387, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (388, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (389, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (390, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (391, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (392, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (393, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (393, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (394, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (395, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (396, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (397, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (398, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (399, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (400, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (401, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (402, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (403, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (404, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (405, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (406, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (407, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (408, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (409, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (410, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (411, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (412, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (413, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (414, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (415, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (416, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (417, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (418, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (419, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (420, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (421, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (422, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (423, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (424, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (425, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (426, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (427, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (428, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (429, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (430, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (431, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (432, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (433, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (434, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (435, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (436, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (437, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (438, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (439, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (440, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (441, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (442, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (443, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (444, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (445, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (446, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (447, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (448, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (449, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (450, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (451, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (452, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (453, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (454, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (455, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (456, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (457, 1, 1, 6, false, 5);
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (458, 1, 1, 6, false, 5);
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (178, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (178, 'PT_PT', 'Computabilidade e Complexidade','Caracterizar classes computacionais, identificar conjuntos completos, distinguir complexidade uniforme de não uniforme e executar reduções; estudar problemas em aberto em complexidade computacional.');
 
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (179, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (179, 'PT_PT', 'Redes Complexas','Esta disciplina tem como objecto de estudo as redes complexas,
+        com foco nos algoritmos, modelos e aplicações quer para redes artificiais quer para redes reais, tais como redes
+        sociais, redes de informação, a Internet, e redes biológicas. Os grafos inerentes a estas redes partilham algumas
+        características recorrentes: grande dimensão; esparsos; scale-free; small-world and clustering effect;
+        comunidades; etc. Neste contexto, interessa tanto o desenvolvimento de algoritmos e estruturas de dados
+        escaláveis para que seja possível um análise efectiva destas redes complexas, como a elaboração de modelos
+        teóricos capazes de descrever os padrões encontrados empiricamente. As aplicações são inúmeras, indo desde
+        motores de pesquisa, difusão de informação na internet, nas redes sociais, nos blogs, ao marketing viral,
+        tolerância das redes a eventos destrutivos, fenómenos epidemiológicos em redes, biologia computacional,
+        com ligações às ciências sociais, à física e à economia.');
 
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (180, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (180, 'PT_PT', 'Análise e Integração de Dados','A disciplina de Análise e Integração de Dados pretende ensinar aos alunos
+        os conceitos mais importantes de integração de dados sobre duas perspectivas diferentes: virtual, onde as fontes de dados
+        podem ser consultadas através de uma arquitectura de mediação; e wharehoused, onde um repositório de dados materializado
+        (denominado armazém de dados ou data warehouse) é preenchido com dados provenientes das fontes. Adicionalmente, a disciplina
+        ensinará as técnicas que podem ser utilizadas para explorar a informação: OLAP e reporting numa arquitectura wharehoused,
+        e sistemas de mash-up numa arquitectura virtual.');
 
--- Degree Class Translations
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (181, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (181, 'PT_PT', 'Processamento e Recuperação de Informação','A disciplina de Processamento e Recuperação de Informação visa proporcionar
+        uma introdução completa e actualizada aos conceitos-chave, tecnologias, e mecanismos de processamento de dados utilizados
+        nas áreas da Recuperação de Informação (IR), Filtragem de Informação (IF), e Extração de Informação (IE).
+        Os alunos da disciplina aprenderão os conceitos teóricos fundamentais nestas áreas, adquirindo as competências
+        teóricas e práticas necessárias para: Projectar soluções modernas para o processamento, gestão e interrogação
+        de grandes volumes de informação não estruturada ou semi-estruturada;
+        Classificar e agrupar automaticamente conjuntos de recursos (e.g., grandes conjuntos de documentos de texto)
+        através de características descritivas;Conceber sistemas para a recuperação e filtragem da informação
+        relevante existem em grandes colecções, com base em termos chave, com base em exemplos, ou com base em perfis dos
+        utilizadores; Conceber sistemas para a extração de informação desde documentos de texto, ou desde a Web;
+        Avaliar comparativamente diferentes sistemas para a extracção, filtragem e recuperação de informação relevante.');
 
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (182, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (182, 'PT_PT', 'Segurança em Software','Compreender os problemas de segurança em software mais comuns e as suas causas fundamentais.
+        Conhecer orientações, técnicas e ferramentas para a sua prevenção ou detecção, e os melhores princípios que estão por detrás destas técnicas.');
 
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática' , '');
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (183, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (183, 'PT_PT', 'Ciber Segurança Forense','O objectivo do curso é o estudo das técnicas e metodologias forenses
+        aplicadas às evidencias digitais. Durante o cursos os alunos apreenderão as diferentes fases da metodologia forense bem
+        como a sua aplicação à recolha e tratamento de evidências digitais em diferentes meios, nomeadamente evidências recolhidas
+        da rede, da memória volátil e persistente dos sistema de informação e dos sistemas activos de gestão da rede e ainda
+        da memória de dispositivos móveis. Serão ainda abordados alguns aspectos legais relevantes para o processo de recolha
+        e tratamento de dados de forma a permitir a produção prova em tribunal.');
+        
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (184, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (184, 'PT_PT', 'Computação Gráfica para Jogos','Computação gráfica para jogos cobre aspectos teóricos e práticos
+        do desenvolvimento de motores gráficos para videojogos (game engines). Aborda os diferentes subsistemas presentes
+        num motor de jogo, incluindo, entre outros, subsistemas de rasterização, animação de personagens, e físicos, e
+        discute a articulação necessária entre os vários subsistemas para suportar o desenvolvimento de jogabilidade.
+        Após a frequência desta disciplina, os alunos deverão compreender como funciona um motor gráfico moderno e
+        serem capazes de desenvolver os seus próprios motores gráficos para jogos.');
 
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (185, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (185, 'PT_PT', 'Design de Jogos','Esta disciplina permite ao aluno adquirir capacidades para concepção
+        de uma experiência de jogo e desenvolvimento de protótipos que realizem essa experiência. As capacidades são
+        desenvolvidas fomentando a discussão sobre o que é um jogo, quais são os seus constituintes e qual a relação
+        do jogo com os seus jogadores (tendo em conta as suas diferenças). O aluno desenvolve o seu trabalho com base
+        em documentos de design e construção de protótipos.');
 
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (186, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (186, 'PT_PT', 'Inteligência Artificial para Jogos','Reconhecer as diferenças entre a IA tradicional e aplicação de técnicas de IA ao
+        desenvolvimento de Jogos de Computador, onde outros factores como a jogabilidade são mais importantes que a inteligência do adversário.
+        Conhecer os problemas práticos do desenvolvimento de IA para Jogos de Computador, bem como as diferentes vertentes das
+        técnicas aplicadas em Jogos de Computador comerciais.Saber desenhar e construir um sistema de IA para um jogo de
+        computador, qualquer que seja o seu estilo: acção, desporto, estratégia, narrativa, etc.');
 
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (187, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (187, 'PT_PT', 'Bioinformática','A Bioinformática desenvolve métodos computacionais e algoritmos para o
+        processamento de dados biológicos e utiliza modelação matemática e estatística para definir hipóteses testáveis sobre
+        entidades e processos biológicos. Esta disciplina introdutória pretende familiarizar os alunos com as metodologias
+        computacionais e matemáticas que estão na base de muitas das abordagens que suportam os novos desenvolvimentos
+        desta área. Adicionalmente, pretende-se desenvolver o espírito crítico através da leitura e análise de publicações
+        cientificas relevantes à disciplina. A componente prática da disciplina pretende dotar os alunos da capacidade
+        de desenvolvimento de ferramentas de software para o tratamento e integração de dados biológicos e clínicos.');
 
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (188, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (188, 'PT_PT', 'Aplicações para Sistemas Embebidos','Dotar os alunos de conhecimentos sobre sistemas embebidos e sistemas de
+        tempo real com ênfase na concepção, desenvolvimento e teste de aplicações. Abordar a especificidade dos sistemas
+        embebidos no que se refere às arquitecturas hardware, barramentos, redes de comunicação e interfaces ciber-físicas.
+        Estudar arquitecturas de software, sistemas operativos multitarefa e políticas de escalonamento de tempo-real.
+        Analisar formas de optimização de programas por forma a melhorar o desempenho, o consumo e o custo dos sistemas.
+        Introduzir metodologias de desenho de sistemas e de análise de requisitos. Estudo de casos e domínios aplicacionais:
+        identificação e acesso a serviços baseados em meios electrónicos (smart cards) e biométricos, sensores
+        em dispositivos pessoais (smartphones).');
 
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (189, 4, 1, 6, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (189, 'PT_PT', 'Projecto de Sistemas Digitais','Fornecer aos alunos as competências para: Projectar de modo estruturado sistemas electrónicos
+        digitais de complexidade média. Compreender e aplicar as técnicas fundamentais de síntese e optimização a nível arquitectural.
+        Simular e sintetizar sistemas digitais utilizando linguagens de especificação de hardware. Compreender e utilizar as funcionalidades
+        das ferramentas de projecto assistido por computador. Implementar sistemas digitais utilizando dispositivos lógicos programáveis (FPGAs e PLDs).');
 
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (190, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (190, 'PT_PT', 'Controlo e Decisão Inteligente','Fornecer uma perspectiva moderna do controlo de sistemas de alto nível,
+        especialmente o controlo e decisão baseados em técnicas inteligentes (soft computing). Dotar os alunos de conhecimentos
+        da teoria, projecto e aplicação de técnicas de soft computing, dando especial ênfase a sistemas fuzzy, redes neuronais,
+        e a algoritmos de optimização genéticos e inspirados em agentes biológicos. As técnicas utilizadas deverão ser aplicadas
+        sinergeticamente em problemas de modelação, controlo, classificação, decisão e optimização, em sistemas complexos de
+        grande escala.');
 
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (191, 4, 1, 6, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (191, 'PT_PT', 'Processamento de Imagem e Visão','Este curso introduz métodos de análise de imagem e de percepção do mundo
+        através de câmaras. O curso inclui: filtragem, segmentação, reconhecimento de objectos, detecção e seguimento,
+        autolocalização da câmara, reconstrução de cenas 3D.');
 
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (192, 4, 1, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (192, 'PT_PT', 'Robôs Sociais e Interacção Pessoa-Robô','Desenvolver mecanismos de inteligência artificial em robôs que forneçam a
+        plataformas robóticas a capacidade de interagir com humanos de uma forma social. Ser capaz de integrar e avaliar aspectos
+        como intencionalidade, credibilidade, emoções e colaboração na interacção entre humanos e robôs.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (193, 4, 1, 6, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (193, 'PT_PT', 'Sistemas Autónomos','Abordam-se os conceitos fundamentais envolvidos em sistemas compostos
+        por diversos agentes físicos com diversos graus de autonomia (sensores, processadores, actuadores, robots)
+        distribuídos espacialmente. Descrevem-se métodos de mapeamento e representação de mapas. Introduzem-se os conceitos
+        e métodos fundamentais de auto-localização na presença de incertezas na observação e no modelo do movimento.
+        Apresentam-se métodos de integração da informação proveniente de vários sensores, para posicionamento e
+        representação do mapa do mundo onde os sensores estão situados, bem como métodos para a resolução de problemas
+        em sistemas cooperativos, incluindo a percepção cooperativa e a atribuição, planeamento e coordenação de tarefas.
+        Termina-se com uma perspectiva integradora dos vários módulos ensinados.');      
+              
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (194, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (194, 'PT_PT', 'Programação Avançada' , 'Dominar técnicas avançadas de programação e os problemas mais adequados
+        para a sua aplicação. Compreender as limitações das actuais linguagens de programação e saber colmatar essas limitações.
+        Ser capaz de antecipar o impacto da utilização de técnicas avançadas no funcionamento, facilidade de desenvolvimento e
+        facilidade de manutenção de um programa. Compreender a capacidade de reflexão das linguagens de programação nas vertentes
+        de introspecção e intercessão e nos tempos de compilação, carregamento, e execução. Compreender a diferença entre
+        programação e meta-programação e a utilidade de modelos de código. Compreender meta-classes, protocolos de meta-objecto,
+        e as suas capacidades de intercessão. Compreender a programação orientada a aspectos e a sua aplicação a requisitos
+        transversais. Compreender a abstracção linguística, os avaliadores, e os avaliadores meta-circulares. Ser capaz de dotar
+        avaliadores de mecanismos de meta-programação, de avaliação atrasada, e de avaliação não-determinística.');
+        
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (195, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (195, 'PT_PT', 'Teste e Validação de Software','O tamanho e a complexidade de programas de software tem vindo a crescer,
+        sendo por isso cada vez mais importante conseguir validar a correcção dos programas. Um dos custos principais no
+        desenvolvimento de software é a sua validação. Existem várias técnicas de validação, sendo a técnica de teste de
+        software uma das técnicas mais utilizadas. A UC de Teste e Validação de Software (TVS) oferece formação avançada nas
+        técnicas de teste de software, incluindo técnicas manuais, semi-automáticas e automáticas. A UC de TVS oferece também
+        formação sobre técnicas adicionais de validação de software, incluindo a análise estática e a verificação de modelos.
+        A UC proporciona também contacto com ferramentas académicas e industriais de validação de software.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (196, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (196, 'PT_PT', 'Arquitectura Empresarial','1. Compreender o ciclo de vida da engenharia empresarial, incluindo a governação e os processos de transformação organizacionais.
+        2. Compreender as teorias fundamentais subjacentes engenharia empresarial.
+        3. Compreender e aplicar os princípios de arquitectura empresarial.
+        4. Compreender e usar as linguagens de modelação de arquitectura empresarial, nomeadamente o ArchiMate e o DEMO.
+        5. Compreender e utilizar modelos e molduras de referência das organizações por indústria.
+        6. Compreender e aplicar as técnicas de alinhamento empresarial
+        7. Analisar casos de estudos de organizações reais.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (197, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (197, 'PT_PT', 'Organização e Gestão da Função Informática','Os objectivos de aprendizagem estão alinhados com:
+        1. Compreender as diversas funções e atividades na área de sistemas de informação (SI) incluindo
+        o papel da gestão da informática e do director de SI, a estrutura da gestão dos SI dentro de uma
+        organização, e a gestão dos profissionais de SI.
+        2. Ver uma organização pelo ponto de vista da administração de topo para decidir como os SI devem
+        suportar os processos de negócio, quer os principais, quer os de suporte, quer os de gestão
+        de clientes e fornecedores.
+        3. Compreender os conceitos de economia da informação ao nível da organização.
+        4. Perceber como os SI representam uma importante fonte de vantagem competitiva para as organizações.
+        5. Estruturar as actividades relacionadas com os SI para maximizar o valor dos SI dentro e
+        fora das organizações.
+        6. Compreender as tecnologias de informação existentes e emergentes, as funções dos SI, e o
+        seu impacto sobre as operações da organização.
+        7. Avaliar as questões e os desafios associados com a incorporação dos SI numa organização.
+        8. Entender como as decisões estratégicas são feitas sobre a aquisição de SI, incluindo a capacidade
+        de avaliar as diferentes opções de fornecimento.
+        9. Aplicar informação às necessidades de diferentes indústrias e áreas. 10. Compreender o papel
+        do controlo e as frameworks de gestão de serviços de informática pela perspectiva da gestão
+        dos SI numa organização.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (198, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (198, 'PT_PT', 'Administração de Dados e Sistemas de Informação','A unidade curricular de Administração de Dados em Sistemas de Informação
+        tem como objectivo dar aos alunos as competências necessárias para gerir, optimizar e usar eficazmente sistemas
+        modernos para a gestão de grandes volumes de dados. Os alunos devem ser capazes de:\n
+        1. compreender os mecanismos internos de um Sistema de Gestão de Bases de Dados (SGBD) relacional, nomeadamente a
+        gestão de armazenamento, a indexação, o processamento e optimização de interrogações, a gestão de transacções,
+        do controlo de concorrência e gestão de recuperação\n
+        2. compreender as tarefas envolvidas na administração de bases de dados\n
+        3. optimizar o acesso à informação em bases de dados que armazenam grandes quantidades de dados\n
+        4. adquirir conhecimento básico sobre as várias arquitecturas de bases de dados paralelas e distribuídas,
+        incluindo sistemas convencionais (SQL) e não convencionais (NoSQL).');        
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (199, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (199, 'PT_PT', 'Computação em Nuvem e Virtualização','Deter uma perspectiva integradora da computação em nuvem e da virtualização,
+        e da sua conjugação e síntese, no desenho dos sistemas modernos na computação distribuída em larga escala, com as suas tecnologias,
+        mecanismos e algoritmos subjacentes. Compreender uma abordagem vertical às diversas tecnologias de virtualização e da computação
+        em nuvem, que oferecem às aplicações e serviços maior flexibilidade, melhor utilização de recursos e eficiência económica,
+        e maior escalabilidade e adaptabilidade. Ser capaz de desenvolver aplicações e sistemas, escaláveis e fiáveis, para
+        computação em nuvem, sobre as infra-estruturas e plataformas de virtualização, e modelos aplicacionais adoptados.
+        Ser capaz de avaliar escolhas, soluções, e compromissos envolvidos no desenvolvimento, uso e gestão de infra-estruturas
+        de virtualização para computação em nuvem.');
+        
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (200, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (200, 'PT_PT', 'Integração Empresarial','A disciplina de Integração de Sistemas Empresariais tem por objectivo
+        fornecer uma visão abrangente dos conceitos, metodologias e tecnologias de integração, compreendendo desde a integração de
+        aplicações e serviços até à integração de processos inter-organizacionais. A temática da disciplina está posicionada na
+        interface crítica entre as infra-estruturas tecnológicas e os processos de negócio, visando fazer compreender a ligação
+        e as dependências entre ambos. Permitirá ainda transmitir uma visão de como é possível desenvolver uma infra-estrutura
+        aplicacional distribuída e integrada.');
+       
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (201, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (201, 'PT_PT', 'Computação Móvel e Ubíqua','Perceber os desafios e problemas subjacentes à concepção e
+        desenvolvimento de software de suporte (middleware e sistema operativo) a aplicações em ambientes com entidades
+        móveis e ubíquas (pessoas, hardware, software). Especificar, conceber, analisar e implementar sistemas
+        (middleware móvel/ubíquo e sistema operativo) de suporte à mobilidade/ubiquidade de hardware e software
+        assim como dos seus utilizadores.');        
+ 
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (202, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (202, 'PT_PT', 'Sistemas de Elevada Confiabilidade','Fornecer uma perspectiva integrada dos aspectos de confiança no funcionamento no sentido lato, cobrindo não só falhas acidentais, mas também falhas maliciosas e intrusões, combinando as facetas de tolerância a faltas e de segurança no desenvolvimento de sistemas.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (203, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (203, 'PT_PT', 'Comunicação Visual Interactiva','O objectivo é dar aos alunos os conhecimentos e competências
+        necessários para a comunicação eficaz de conceitos, tendências e informação com base em aplicações gráficas interactivas.
+        Serão descritas as especificidades dos vários tipos de dados que podem ser usados para comunicar, e a melhor forma de
+        os usar e combinar para esse fim. Posteriormente, serão ensinadas técnicas de extracção de metadados e descritores
+        relevantes dos vários media, com ênfase em imagens, permitindo assim a sua mais eficiente manipulação e utilização.
+        A indexação e recuperação dos media com base nesses metadados e descritores será o objecto de estudo seguinte.
+        Já na posse dos dados num formato fácil de manipular, os alunos adquirirão competências relacionadas com a sua
+        representação visual, e a sua exploração em ferramentas interactivas. Finalmente, será abordada a questão de qual
+        a melhor forma de apresentar os conceitos, tendências e informação revelados na aplicação interactiva com a
+        criação de apresentações multimédia públicas, maximizando o seu impacto e a quantidade de informação transmitida
+        e retida pela audiência.');
+        
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (204, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (204, 'PT_PT', 'Programação 3D','Esta unidade curricular introduz e discute a aplicação das leis da
+        Física na geração de imagens 3D de Alta Fidelidade (Fotorealismo), com especial enfoque na simulação do processo
+        físico de Transporte de Luz e a correspondente interacção com a matéria. Para além das técnicas baseadas em Ray-Tracing,
+        a cadeira inclui ainda o desenvolvimento de uma aplicação gráfica 3D interactiva com efeitos fotorealistas,
+        baseada no motor de jogo Unity 3D, através do uso das suas bibliotecas de Assets e de shaders.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (205, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (205, 'PT_PT', 'Produção de Conteúdos Multimédia','Conhecer os vários tipos de informação multimédia e como os manipular
+        para a produção de conteúdos. Reconhecer as características de um processo de Produção de Conteúdos Multimédia. Entender os
+        constrangimentos tecnológicos que se colocam na Produção, nomeadamente nos aspectos de captura, codificação, processamento
+        e visualização dos vários media. Conhecer os vários tipos de ferramentas de autoria disponíveis. Produzir conteúdos
+        Multimédia; Conhecer os vários contextos em que o multimédia por ser consumido, com ênfase em aspectos de rede (requisitos
+        de largura de banda, tempo de latência, sincronização, etc.) e dispositivos móveis. Introduzir algumas formas avançadas
+        de utilização de multimédia como a modelação procedimental, arte generativa e realidade aumentada. Aplicar métodos
+        eficientes de pesquisa de informação multimédia baseada no conteúdo.');
+        
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (206, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (206, 'PT_PT', 'Agentes Autónomos e Sistemas Multi-Agente','Adquirir noções gerais de agentes e sistemas multi-agente; saber identificar e
+        classificar agentes e ambientes, de acordo com diferentes propriedades. Saber desenvolver sistemas complexos e
+        de diferentes áreas de aplicação, usando uma metodologia orientada a agentes. Saber especificar uma sociedade de
+        agentes para a resolução de um problema concreto. Ter a capacidade de conceber agentes com arquitecturas reactivas,
+        deliberativas e híbridas. Ter a capacidade de criar sociedades de agentes que comunicam, de uma forma prática,
+        usando linguagens e plataformas adequadas.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (207, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (207, 'PT_PT', 'Aprendizagem e Decisão Inteligente','Reconhecer os principais desafios envolvidos no desenvolvimento de sistemas
+        inteligentes em cenários com incerteza e/ou adversariais. Conhecer e aplicar as principais técnicas de
+        planeamento e aprendizagem neste tipo de cenários');        
+        
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (208, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (208, 'PT_PT', 'Representação do Conhecimento e Raciocínio','Conhecer as várias famílias de representação de conhecimento e de raciocínio avançadas
+        (para além da Lógica Clássica de Primeira Ordem).Compreender como representar conhecimento em cada uma dessas famílias e
+        as formas de raciocínio sobre o mesmo oferecidas por cada uma. Conhecer as vantagens, limitações e fragilidades de cada
+        uma dessas famílias tanto do ponto de vista da representação como do raciocínio. Ser capaz de efectuar as escolhas adequadas
+        de sistema dado um problema concreto de representação e raciocínio. Ser capaz de construir bases de conhecimento segundo
+        cada uma das famílias. Ser capaz de representar e resolver problemas razoavelmente complexos de representação e raciocínio.
+        Ser capaz de representar grandes quantidades de conhecimento e conseguir a sua partilha entre vários sistemas.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (209, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (209, 'PT_PT', 'Algoritmos Avançados','Compreender os modelos, técnicas, e formas de programação de algoritmos paralelos.
+        Analisar e conceber algoritmos paralelos. Compreender os fundamentos da computação distribuída.');
+        
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (210, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (210, 'PT_PT', 'Computação Paralela e Distribuída','O objectivo desta unidade curricular é portanto a formação
+        avançada em técnicas de desenvolvimento e análise de algoritmos com particular foco em estruturas de dados avançadas
+        para indexação e compressão, algoritmos randomizados, algoritmos de aproximação, algoritmos para processamento
+        online e em tempo real, e estruturas de dados e algoritmos distribuídos e com acesso a memória externa.
+        Esta unidade curricular seguirá uma abordagem baseda na resolução de problemas em que as técnicas de desenho
+        e análise das estruturas de dados e algoritmos serão motivadas e exploradas de forma intuitiva e construtiva.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (211, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (211, 'PT_PT', 'Linguagens de Programação','Compreensão da história e evolução das linguagens e paradigmas de programação.
+        Domínio das conceitos fundamentais de ligação, âmbito, duração, tipo, fluxo de controle, abstracção de dados, abstracção de controle,
+        e excepções. Avaliação das semelhanças e diferenças entre as várias linguagens de programação. Compreensão das alternativas no
+        desenho e implementação de linguagens, por exemplo, execução por compilação vs interpretação, âmbito léxico vs dinâmico,
+        tipificação estática vs dinâmica, modelo de referências vs modelo de valores, memória gerida manualmente vs automaticamente,
+        etc. Compreensão das diferenças entre os paradigmas imperativo, funcional, lógico e orientado a objectos.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (212, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (212, 'PT_PT', 'Criptografia e Protocolos de Segurança','Conhecer os sistemas e protocolos criptográficos em uso, desenvolver protocolos para resolução de problemas específicos e perspectivar desenvolvimentos futuros.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (213, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (213, 'PT_PT', 'Metodologia de Desenvolvimento de Jogos','Dar ao alunos uma visão geral das diferentes metodologias e tecnologias envolvida
+        no desenvolvimento de videojogos discutindo as principais questões de cada uma delas. Dotar os alunos de ferramentas e técnicas
+        para desenvolver interfaces de videojogos tendo especial atenção aos modos de controlo usados. Dotar os alunos de capacidade
+        de reflecção sobre a jogabilidade e a experiência do jogador seguindo uma perspectiva de modelação conceptual juntamente
+        com uma perspectiva empírica de realização de testes com jogadores. Salientar processos de exploração da experiência
+        na perspectiva do jogador.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (214, 4, 2, 6, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (214, 'PT_PT', 'Processamento da Fala','Pretende-se que os alunos dominem os princípios e técnicas básicas da codificação, síntese e reconhecimento de fala.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (215, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (215, 'PT_PT', 'Tecnologias de Informação em Saúde','O objectivo geral da disciplina é o de dotar os alunos com os
+        princípios e conceitos fundamentais relativos à utilização das tecnologias de informação em saúde. Os alunos adquirem
+        competências essenciais e familiarizar-se-ão com as potencialidades do uso das tecnologias de informação na
+        investigação em biomedicina e no papel crucial que hoje representam nas várias vertentes da prestação de cuidados de saúde.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (216, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (216, 'PT_PT', 'Ambientes Inteligentes','Compreenderão o conceito de “Ambiente Inteligente” e terão noção das múltiplas áreas em
+        que pode ser aplicado; reconhecerão a importância de dispor de ambientes sensíveis e reactivos que reagem adequadamente à presença
+        de pessoas e das suas preferências; terão sido introduzidos a diferentes tecnologias que podem ser aplicadas neste domínio e
+        estarão cientes dos principais desafios que se colocam relativamente ao consumo de energia, comunicação, segurança, fiabilidade,
+        interface com sensores e actuadores e interacção com as pessoas; terão adquirido conhecimentos sobre três áreas aplicacionais
+        específicas: casas inteligentes/domótica e edifícios inteligentes, redes de sensores e actuadores sem fios, e sistemas
+        inteligentes de mobilidade; conhecerão diferentes estratégias de gestão da energia, no domínio da automação de
+        habitações e de edifícios, sendo dada ênfase aos requisitos dos utilizadores e às suas preferências; terão a
+        capacidade de definir os requisitos e abordar a implementação de um sistema que monitoriza um ambiente e
+        reage a diferentes ocorrências, em conformidade com o perfil das pessoas presentes.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (217, 4, 2, 6, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (217, 'PT_PT', 'Arquitecturas Avançadas de Computadores','O objectivo principal da disciplina de Arquitecturas Avançadas de Computadores
+        é criar competências para analisar e desenvolver sistemas de computadores. A análise envolve os modernos processadores
+        de uso geral com estruturas super-escalares, e os sistemas hierárquicos de memória com suporte para memória
+        virtual gerida pelos sistemas operativos. Na componente de desenvolvimento, o objectivo da disciplina é
+        fornecer ferramentas de projecto e teste de processadores RISC associados aos sistemas de memória.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (218, 4, 2, 6, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (218, 'PT_PT', 'Co-Projecto Hardware/Software','Compreender os conceitos e as técnicas de projecto a nível de sistema de
+        sistemas embebidos com componentes de hardware e software. Modelar, simular e sintetizar sistemas digitais usando
+        métodos e ferramentas a nível de sistema. Descrever exemplos de aplicações e sistemas desenvolvidos usando uma
+        abordagem de co-projecto. Projectar e implementar sistemas hardware / software de média complexidade utilizando FPGAs.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (219, 4, 2, 6, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (219, 'PT_PT', 'Processamento Digital de Sinais','O principal objectivo desta disciplina é o de fornecer aos alunos
+        os principais conceitos e as ferramentas fundamentais para o processamento de sinais em tempo discreto. A disciplina
+        de Processamento Digital de Sinais tem uma forte componente prática, apresentando exemplos ilustrativos dos conceitos
+        teóricos e a sua aplicação em situações reais.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (220, 4, 2, 6, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (220, 'PT_PT', 'Sistemas Embebidos em Rede','Analisar, especificar, conceber e realizar redes de sensores e
+        actuadores nos seus aspectos fundamentais: Transdução, Computação e Comunicações.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (221, 4, 2, 6, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (221, 'PT_PT', 'Robótica','Introduzir os conceitos fundamentais de robots manipuladores e robots móveis:
+        cinemática, dinâmica, cinemática diferencial, planeamento de caminhos e trajectórias, controlo. Apresentação de
+        diversos tipos de sensores úteis em robótica, seu princípio de funcionamento e modelo de observação. Noções de
+        controlo de formações. Linguagens de programação e interfaces de operação de robots.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (222, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (222, 'PT_PT', 'Robótica Avançada para Ambientes Industriais','Introdução dos conceitos fundamentais relacionados com robótica
+        avançada em ambientes industriais, incorporada em sistemas de produção, através de uma combinação teórica e
+        laboratorial. Os conceitos teóricos fornecidos são aplicados a uma Célula Flexível de Produção. Pretende-se
+        assim estudar métodos de modelação e análise de sistemas robóticos de produção, técnicas de simulação para
+        este tipo de sistemas e metodologias de planeamento de tarefas (operações), bem como alocação de recursos
+        e tarefas');
+ 
+-- IST 5th year
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (1000, 5, 1, 12, FALSE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1000, 'PT_PT', 'Projecto de Mestrado em Engenharia Informática e de Computadores','Desenvolvimento de um trabalho de projecto de natureza integradora, na área da engenharia informática.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (1000, 5, 1, 1.5, FALSE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1000, 'PT_PT', 'Portfolio Pessoal 1','Desenvolver nos estudantes competências comportamentais de trabalho em equipa,
+        de capacidade de expressão oral e escrita, de línguas e experiências internacionais e de experiência da realidade das empresas e
+        do mundo do trabalho, através da prática de actividades extra-curriculares.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (1000, 5, 2, 1.5, FALSE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1000, 'PT_PT', 'Portfolio Pessoal 2','Desenvolver nos estudantes competências comportamentais de trabalho em equipa,
+        de capacidade de expressão oral e escrita, de línguas e experiências internacionais e de experiência da realidade das empresas e
+        do mundo do trabalho, através da prática de actividades extra-curriculares.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (1000, 5, 2, 30, FALSE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1000, 'PT_PT', 'Dissertação - Mestrado em Engenharia Informática e de Computadores','Escrita de uma tese de Mestrado na área da Engenharia Informática');
+        
+-- Degree Classes
+-- Instituto Superior Técnico
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (1000, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1000, 'PT_PT', 'Programação','');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (1000, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1000, 'PT_PT', 'Programação','');
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (1000, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1000, 'PT_PT', 'Programação','');
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (166, 4, 2, 7.5, TRUE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (166, 'PT_PT', 'Programação','');
