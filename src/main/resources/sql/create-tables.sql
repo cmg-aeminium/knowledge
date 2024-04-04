@@ -1,8 +1,8 @@
-CREATE DATABASE sweranker
-    WITH 
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    CONNECTION LIMIT = -1;
+--CREATE DATABASE sweranker
+--    WITH 
+--    OWNER = postgres
+--    ENCODING = 'UTF8'
+--    CONNECTION LIMIT = -1;
     
 
 CREATE TYPE language_type AS ENUM (
@@ -17,7 +17,7 @@ CREATE TABLE KnowledgeAreas (
 );
 
 CREATE TABLE KnowledgeAreaTranslations (
-    knowledgeAreaId SMALLINT NOT NULL REFERENCES KnowledgeAreas(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+    knowledgeArea SMALLINT NOT NULL REFERENCES KnowledgeAreas(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
 	language language_type NOT NULL,
 	name text NOT NULL,
 	description text NOT NULL
@@ -34,7 +34,7 @@ CREATE TABLE TopicTranslations (
 	language language_type NOT NULL,
 	name text NOT NULL,
 	description text NOT NULL,
-	PRIMARY KEY(topicId, language)
+	PRIMARY KEY(topic, language)
 );
 
 CREATE SEQUENCE country_id_seq INCREMENT 1;
@@ -54,30 +54,56 @@ CREATE TABLE CountryTranslations (
 CREATE SEQUENCE school_id_seq INCREMENT 1;    
 CREATE TABLE Schools (
 	id SMALLINT NOT NULL PRIMARY KEY DEFAULT nextval('school_id_seq'),
-	name text NOT NULL,
-	country NOT NULL REFERENCES Countries(id) ON UPDATE NO ACTION ON DELETE NO ACTION
-)
-
-CREATE TYPE university_type AS ENUM(
-	'U_PORTO',
-	'U_MINHO',
-	'U_COIMBRA',
-	'IST',
-	'U_AVEIRO'
+	name TEXT NOT NULL,
+	country SMALLINT NOT NULL REFERENCES Countries(id) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 
+CREATE SEQUENCE degree_id_seq INCREMENT 1; 
 CREATE TABLE Degrees (
-	id SMALLINT NOT NULL PRIMARY KEY,
+	id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('degree_id_seq'),
 	acronym text NOT NULL,
 	image text NOT NULL,
-	university university_type NOT NULL,
-	year smallint NOT NULL
+	school SMALLINT NOT NULL REFERENCES Schools(id) ON UPDATE NO ACTION ON DELETE NO ACTION ,
+	year SMALLINT NOT NULL
 );
 
 CREATE TABLE DegreeTranslations (
-	degreeId SMALLINT NOT NULL REFERENCES Degrees(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	degree BIGINT NOT NULL REFERENCES Degrees(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
 	language language_type NOT NULL,
 	name text NOT NULL,
 	description text NOT NULL,
-	PRIMARY KEY(degreeId, language)
+	PRIMARY KEY(degree, language)
 );
+
+CREATE SEQUENCE degreeclass_id_seq INCREMENT 1;   
+CREATE TABLE DegreeClasses (
+	id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('degreeclass_id_seq'),
+	year SMALLINT NOT NULL,
+	semester SMALLINT NULL,
+	ects SMALLINT NULL,
+	isOptional BOOLEAN NOT NULL DEFAULT 'FALSE',
+	degree BIGINT NOT NULL REFERENCES Degrees(id) ON UPDATE NO ACTION ON DELETE NO ACTION
+);
+
+CREATE TABLE DegreeClassTranslations (
+	degreeClass BIGINT NOT NULL  REFERENCES DegreeClasses(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	language language_type NOT NULL,
+	name text NOT NULL,
+	description text NOT NULL,
+	PRIMARY KEY(degreeClass, language)
+);
+
+CREATE SEQUENCE degreeclasstopic_id_seq INCREMENT 1;   
+CREATE TABLE DegreeClassTopics (
+	id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('degreeclasstopic_id_seq'),
+	degreeClass BIGINT NOT NULL REFERENCES DegreeClasses(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	ordering SMALLINT NULL
+);
+
+CREATE TABLE DegreeClassTopicTranslations (
+	degreeClassTopic BIGINT NOT NULL REFERENCES DegreeClassTopics(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	language language_type NOT NULL,
+	description text NOT NULL,
+	PRIMARY KEY(degreeClassTopic, language)
+);
+
