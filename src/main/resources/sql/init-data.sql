@@ -1,4 +1,719 @@
-INSERT INTO KnowledgeAreas(id, image) VALUES (1 ,'http://www.images.com/ka_so ftware_requirements');
+INSERT INTO Countries (id, alpha2code) VALUES (1, 'AF');
+INSERT INTO Countries (id, alpha2code) VALUES (2, 'AL');
+INSERT INTO Countries (id, alpha2code) VALUES (3, 'DZ');
+INSERT INTO Countries (id, alpha2code) VALUES (4, 'AS');
+INSERT INTO Countries (id, alpha2code) VALUES (5, 'AD');
+INSERT INTO Countries (id, alpha2code) VALUES (6, 'AO');
+INSERT INTO Countries (id, alpha2code) VALUES (7, 'AI');
+INSERT INTO Countries (id, alpha2code) VALUES (8, 'AQ');
+INSERT INTO Countries (id, alpha2code) VALUES (9, 'AG');
+INSERT INTO Countries (id, alpha2code) VALUES (10, 'AR');
+INSERT INTO Countries (id, alpha2code) VALUES (11, 'AM');
+INSERT INTO Countries (id, alpha2code) VALUES (12, 'AW');
+INSERT INTO Countries (id, alpha2code) VALUES (13, 'AU');
+INSERT INTO Countries (id, alpha2code) VALUES (14, 'AT');
+INSERT INTO Countries (id, alpha2code) VALUES (15, 'AZ');
+INSERT INTO Countries (id, alpha2code) VALUES (16, 'BS');
+INSERT INTO Countries (id, alpha2code) VALUES (17, 'BH');
+INSERT INTO Countries (id, alpha2code) VALUES (18, 'BD');
+INSERT INTO Countries (id, alpha2code) VALUES (19, 'BB');
+INSERT INTO Countries (id, alpha2code) VALUES (20, 'BY');
+INSERT INTO Countries (id, alpha2code) VALUES (21, 'BE');
+INSERT INTO Countries (id, alpha2code) VALUES (22, 'BZ');
+INSERT INTO Countries (id, alpha2code) VALUES (23, 'BJ');
+INSERT INTO Countries (id, alpha2code) VALUES (24, 'BM');
+INSERT INTO Countries (id, alpha2code) VALUES (25, 'BT');
+INSERT INTO Countries (id, alpha2code) VALUES (26, 'BA');
+INSERT INTO Countries (id, alpha2code) VALUES (27, 'BW');
+INSERT INTO Countries (id, alpha2code) VALUES (28, 'BV');
+INSERT INTO Countries (id, alpha2code) VALUES (29, 'BR');
+INSERT INTO Countries (id, alpha2code) VALUES (30, 'IO');
+INSERT INTO Countries (id, alpha2code) VALUES (31, 'BN');
+INSERT INTO Countries (id, alpha2code) VALUES (32, 'BG');
+INSERT INTO Countries (id, alpha2code) VALUES (33, 'BF');
+INSERT INTO Countries (id, alpha2code) VALUES (34, 'BI');
+INSERT INTO Countries (id, alpha2code) VALUES (35, 'KH');
+INSERT INTO Countries (id, alpha2code) VALUES (36, 'CM');
+INSERT INTO Countries (id, alpha2code) VALUES (37, 'CA');
+INSERT INTO Countries (id, alpha2code) VALUES (38, 'CV');
+INSERT INTO Countries (id, alpha2code) VALUES (39, 'KY');
+INSERT INTO Countries (id, alpha2code) VALUES (40, 'CF');
+INSERT INTO Countries (id, alpha2code) VALUES (41, 'TD');
+INSERT INTO Countries (id, alpha2code) VALUES (42, 'CL');
+INSERT INTO Countries (id, alpha2code) VALUES (43, 'CN');
+INSERT INTO Countries (id, alpha2code) VALUES (44, 'CX');
+INSERT INTO Countries (id, alpha2code) VALUES (45, 'CC');
+INSERT INTO Countries (id, alpha2code) VALUES (46, 'CO');
+INSERT INTO Countries (id, alpha2code) VALUES (47, 'KM');
+INSERT INTO Countries (id, alpha2code) VALUES (48, 'CG');
+INSERT INTO Countries (id, alpha2code) VALUES (49, 'CK');
+INSERT INTO Countries (id, alpha2code) VALUES (50, 'CR');
+INSERT INTO Countries (id, alpha2code) VALUES (51, 'HR');
+INSERT INTO Countries (id, alpha2code) VALUES (52, 'CU');
+INSERT INTO Countries (id, alpha2code) VALUES (53, 'CY');
+INSERT INTO Countries (id, alpha2code) VALUES (54, 'CZ');
+INSERT INTO Countries (id, alpha2code) VALUES (55, 'DK');
+INSERT INTO Countries (id, alpha2code) VALUES (56, 'DJ');
+INSERT INTO Countries (id, alpha2code) VALUES (57, 'DM');
+INSERT INTO Countries (id, alpha2code) VALUES (58, 'DO');
+INSERT INTO Countries (id, alpha2code) VALUES (59, 'EC');
+INSERT INTO Countries (id, alpha2code) VALUES (60, 'EG');
+INSERT INTO Countries (id, alpha2code) VALUES (61, 'SV');
+INSERT INTO Countries (id, alpha2code) VALUES (62, 'GQ');
+INSERT INTO Countries (id, alpha2code) VALUES (63, 'ER');
+INSERT INTO Countries (id, alpha2code) VALUES (64, 'EE');
+INSERT INTO Countries (id, alpha2code) VALUES (65, 'ET');
+INSERT INTO Countries (id, alpha2code) VALUES (66, 'FK');
+INSERT INTO Countries (id, alpha2code) VALUES (67, 'FO');
+INSERT INTO Countries (id, alpha2code) VALUES (68, 'FJ');
+INSERT INTO Countries (id, alpha2code) VALUES (69, 'FI');
+INSERT INTO Countries (id, alpha2code) VALUES (70, 'FR');
+INSERT INTO Countries (id, alpha2code) VALUES (71, 'GF');
+INSERT INTO Countries (id, alpha2code) VALUES (72, 'PF');
+INSERT INTO Countries (id, alpha2code) VALUES (73, 'TF');
+INSERT INTO Countries (id, alpha2code) VALUES (74, 'GA');
+INSERT INTO Countries (id, alpha2code) VALUES (75, 'GM');
+INSERT INTO Countries (id, alpha2code) VALUES (76, 'GE');
+INSERT INTO Countries (id, alpha2code) VALUES (77, 'DE');
+INSERT INTO Countries (id, alpha2code) VALUES (78, 'GH');
+INSERT INTO Countries (id, alpha2code) VALUES (79, 'GI');
+INSERT INTO Countries (id, alpha2code) VALUES (80, 'GR');
+INSERT INTO Countries (id, alpha2code) VALUES (81, 'GL');
+INSERT INTO Countries (id, alpha2code) VALUES (82, 'GD');
+INSERT INTO Countries (id, alpha2code) VALUES (83, 'GP');
+INSERT INTO Countries (id, alpha2code) VALUES (84, 'GU');
+INSERT INTO Countries (id, alpha2code) VALUES (85, 'GT');
+INSERT INTO Countries (id, alpha2code) VALUES (86, 'GG');
+INSERT INTO Countries (id, alpha2code) VALUES (87, 'GN');
+INSERT INTO Countries (id, alpha2code) VALUES (88, 'GW');
+INSERT INTO Countries (id, alpha2code) VALUES (89, 'GY');
+INSERT INTO Countries (id, alpha2code) VALUES (90, 'HT');
+INSERT INTO Countries (id, alpha2code) VALUES (91, 'HM');
+INSERT INTO Countries (id, alpha2code) VALUES (92, 'VA');
+INSERT INTO Countries (id, alpha2code) VALUES (93, 'HN');
+INSERT INTO Countries (id, alpha2code) VALUES (94, 'HK');
+INSERT INTO Countries (id, alpha2code) VALUES (95, 'HU');
+INSERT INTO Countries (id, alpha2code) VALUES (96, 'IS');
+INSERT INTO Countries (id, alpha2code) VALUES (97, 'IN');
+INSERT INTO Countries (id, alpha2code) VALUES (98, 'ID');
+INSERT INTO Countries (id, alpha2code) VALUES (99, 'IR');
+INSERT INTO Countries (id, alpha2code) VALUES (100, 'IQ');
+INSERT INTO Countries (id, alpha2code) VALUES (101, 'IE');
+INSERT INTO Countries (id, alpha2code) VALUES (102, 'IM');
+INSERT INTO Countries (id, alpha2code) VALUES (103, 'IL');
+INSERT INTO Countries (id, alpha2code) VALUES (104, 'IT');
+INSERT INTO Countries (id, alpha2code) VALUES (105, 'JM');
+INSERT INTO Countries (id, alpha2code) VALUES (106, 'JP');
+INSERT INTO Countries (id, alpha2code) VALUES (107, 'JE');
+INSERT INTO Countries (id, alpha2code) VALUES (108, 'JO');
+INSERT INTO Countries (id, alpha2code) VALUES (109, 'KZ');
+INSERT INTO Countries (id, alpha2code) VALUES (110, 'KE');
+INSERT INTO Countries (id, alpha2code) VALUES (111, 'KI');
+INSERT INTO Countries (id, alpha2code) VALUES (112, 'KW');
+INSERT INTO Countries (id, alpha2code) VALUES (113, 'KG');
+INSERT INTO Countries (id, alpha2code) VALUES (114, 'LA');
+INSERT INTO Countries (id, alpha2code) VALUES (115, 'LV');
+INSERT INTO Countries (id, alpha2code) VALUES (116, 'LB');
+INSERT INTO Countries (id, alpha2code) VALUES (117, 'LS');
+INSERT INTO Countries (id, alpha2code) VALUES (118, 'LR');
+INSERT INTO Countries (id, alpha2code) VALUES (119, 'LY');
+INSERT INTO Countries (id, alpha2code) VALUES (120, 'LI');
+INSERT INTO Countries (id, alpha2code) VALUES (121, 'LT');
+INSERT INTO Countries (id, alpha2code) VALUES (122, 'LU');
+INSERT INTO Countries (id, alpha2code) VALUES (123, 'MO');
+INSERT INTO Countries (id, alpha2code) VALUES (124, 'MG');
+INSERT INTO Countries (id, alpha2code) VALUES (125, 'MW');
+INSERT INTO Countries (id, alpha2code) VALUES (126, 'MY');
+INSERT INTO Countries (id, alpha2code) VALUES (127, 'MV');
+INSERT INTO Countries (id, alpha2code) VALUES (128, 'ML');
+INSERT INTO Countries (id, alpha2code) VALUES (129, 'MT');
+INSERT INTO Countries (id, alpha2code) VALUES (130, 'MH');
+INSERT INTO Countries (id, alpha2code) VALUES (131, 'MQ');
+INSERT INTO Countries (id, alpha2code) VALUES (132, 'MR');
+INSERT INTO Countries (id, alpha2code) VALUES (133, 'MU');
+INSERT INTO Countries (id, alpha2code) VALUES (134, 'YT');
+INSERT INTO Countries (id, alpha2code) VALUES (135, 'MX');
+INSERT INTO Countries (id, alpha2code) VALUES (136, 'MC');
+INSERT INTO Countries (id, alpha2code) VALUES (137, 'MN');
+INSERT INTO Countries (id, alpha2code) VALUES (138, 'ME');
+INSERT INTO Countries (id, alpha2code) VALUES (139, 'MS');
+INSERT INTO Countries (id, alpha2code) VALUES (140, 'MA');
+INSERT INTO Countries (id, alpha2code) VALUES (141, 'MZ');
+INSERT INTO Countries (id, alpha2code) VALUES (142, 'MM');
+INSERT INTO Countries (id, alpha2code) VALUES (143, 'NA');
+INSERT INTO Countries (id, alpha2code) VALUES (144, 'NR');
+INSERT INTO Countries (id, alpha2code) VALUES (145, 'NP');
+INSERT INTO Countries (id, alpha2code) VALUES (146, 'NL');
+INSERT INTO Countries (id, alpha2code) VALUES (147, 'NC');
+INSERT INTO Countries (id, alpha2code) VALUES (148, 'NZ');
+INSERT INTO Countries (id, alpha2code) VALUES (149, 'NI');
+INSERT INTO Countries (id, alpha2code) VALUES (150, 'NE');
+INSERT INTO Countries (id, alpha2code) VALUES (151, 'NG');
+INSERT INTO Countries (id, alpha2code) VALUES (152, 'NU');
+INSERT INTO Countries (id, alpha2code) VALUES (153, 'NF');
+INSERT INTO Countries (id, alpha2code) VALUES (154, 'MP');
+INSERT INTO Countries (id, alpha2code) VALUES (155, 'NO');
+INSERT INTO Countries (id, alpha2code) VALUES (156, 'OM');
+INSERT INTO Countries (id, alpha2code) VALUES (157, 'PK');
+INSERT INTO Countries (id, alpha2code) VALUES (158, 'PW');
+INSERT INTO Countries (id, alpha2code) VALUES (159, 'PA');
+INSERT INTO Countries (id, alpha2code) VALUES (160, 'PG');
+INSERT INTO Countries (id, alpha2code) VALUES (161, 'PY');
+INSERT INTO Countries (id, alpha2code) VALUES (162, 'PE');
+INSERT INTO Countries (id, alpha2code) VALUES (163, 'PH');
+INSERT INTO Countries (id, alpha2code) VALUES (164, 'PN');
+INSERT INTO Countries (id, alpha2code) VALUES (165, 'PL');
+INSERT INTO Countries (id, alpha2code) VALUES (166, 'PT');
+INSERT INTO Countries (id, alpha2code) VALUES (167, 'PR');
+INSERT INTO Countries (id, alpha2code) VALUES (168, 'QA');
+INSERT INTO Countries (id, alpha2code) VALUES (169, 'RO');
+INSERT INTO Countries (id, alpha2code) VALUES (170, 'RU');
+INSERT INTO Countries (id, alpha2code) VALUES (171, 'RW');
+INSERT INTO Countries (id, alpha2code) VALUES (172, 'KN');
+INSERT INTO Countries (id, alpha2code) VALUES (173, 'LC');
+INSERT INTO Countries (id, alpha2code) VALUES (174, 'MF');
+INSERT INTO Countries (id, alpha2code) VALUES (175, 'PM');
+INSERT INTO Countries (id, alpha2code) VALUES (176, 'VC');
+INSERT INTO Countries (id, alpha2code) VALUES (177, 'WS');
+INSERT INTO Countries (id, alpha2code) VALUES (178, 'SM');
+INSERT INTO Countries (id, alpha2code) VALUES (179, 'ST');
+INSERT INTO Countries (id, alpha2code) VALUES (180, 'SA');
+INSERT INTO Countries (id, alpha2code) VALUES (181, 'SN');
+INSERT INTO Countries (id, alpha2code) VALUES (182, 'RS');
+INSERT INTO Countries (id, alpha2code) VALUES (183, 'SC');
+INSERT INTO Countries (id, alpha2code) VALUES (184, 'SL');
+INSERT INTO Countries (id, alpha2code) VALUES (185, 'SG');
+INSERT INTO Countries (id, alpha2code) VALUES (186, 'SX');
+INSERT INTO Countries (id, alpha2code) VALUES (187, 'SK');
+INSERT INTO Countries (id, alpha2code) VALUES (188, 'SI');
+INSERT INTO Countries (id, alpha2code) VALUES (189, 'SB');
+INSERT INTO Countries (id, alpha2code) VALUES (190, 'SO');
+INSERT INTO Countries (id, alpha2code) VALUES (191, 'ZA');
+INSERT INTO Countries (id, alpha2code) VALUES (192, 'GS');
+INSERT INTO Countries (id, alpha2code) VALUES (193, 'SS');
+INSERT INTO Countries (id, alpha2code) VALUES (194, 'ES');
+INSERT INTO Countries (id, alpha2code) VALUES (195, 'LK');
+INSERT INTO Countries (id, alpha2code) VALUES (196, 'PS');
+INSERT INTO Countries (id, alpha2code) VALUES (197, 'SD');
+INSERT INTO Countries (id, alpha2code) VALUES (198, 'SR');
+INSERT INTO Countries (id, alpha2code) VALUES (199, 'SJ'); 
+INSERT INTO Countries (id, alpha2code) VALUES (200, 'SZ'); 
+INSERT INTO Countries (id, alpha2code) VALUES (201, 'SE');
+INSERT INTO Countries (id, alpha2code) VALUES (202, 'CH');
+INSERT INTO Countries (id, alpha2code) VALUES (203, 'SY');
+INSERT INTO Countries (id, alpha2code) VALUES (204, 'TW');
+INSERT INTO Countries (id, alpha2code) VALUES (205, 'TJ');
+INSERT INTO Countries (id, alpha2code) VALUES (206, 'TZ'); 
+INSERT INTO Countries (id, alpha2code) VALUES (207, 'TH');
+INSERT INTO Countries (id, alpha2code) VALUES (208, 'TL');
+INSERT INTO Countries (id, alpha2code) VALUES (209, 'MK'); 
+INSERT INTO Countries (id, alpha2code) VALUES (210, 'TG');
+INSERT INTO Countries (id, alpha2code) VALUES (211, 'TK');
+INSERT INTO Countries (id, alpha2code) VALUES (212, 'TO');
+INSERT INTO Countries (id, alpha2code) VALUES (213, 'TT');
+INSERT INTO Countries (id, alpha2code) VALUES (214, 'TN');
+INSERT INTO Countries (id, alpha2code) VALUES (215, 'TR');
+INSERT INTO Countries (id, alpha2code) VALUES (216, 'TM');
+INSERT INTO Countries (id, alpha2code) VALUES (217, 'TC');
+INSERT INTO Countries (id, alpha2code) VALUES (218, 'TV');
+INSERT INTO Countries (id, alpha2code) VALUES (219, 'UG');
+INSERT INTO Countries (id, alpha2code) VALUES (220, 'UA');
+INSERT INTO Countries (id, alpha2code) VALUES (221, 'AE');
+INSERT INTO Countries (id, alpha2code) VALUES (222, 'GB');
+INSERT INTO Countries (id, alpha2code) VALUES (223, 'US');
+INSERT INTO Countries (id, alpha2code) VALUES (224, 'UM');
+INSERT INTO Countries (id, alpha2code) VALUES (225, 'UY');
+INSERT INTO Countries (id, alpha2code) VALUES (226, 'UZ');
+INSERT INTO Countries (id, alpha2code) VALUES (227, 'VU');
+INSERT INTO Countries (id, alpha2code) VALUES (228, 'VE'); 
+INSERT INTO Countries (id, alpha2code) VALUES (229, 'VN');
+INSERT INTO Countries (id, alpha2code) VALUES (230, 'VG');
+INSERT INTO Countries (id, alpha2code) VALUES (231, 'VI');
+INSERT INTO Countries (id, alpha2code) VALUES (232, 'WF');
+INSERT INTO Countries (id, alpha2code) VALUES (233, 'EH');
+INSERT INTO Countries (id, alpha2code) VALUES (234, 'YE');
+INSERT INTO Countries (id, alpha2code) VALUES (235, 'ZM');
+INSERT INTO Countries (id, alpha2code) VALUES (236, 'ZW');
+
+
+
+INSERT INTO CountryTranslations (country, language, name) VALUES (1, 'EN_UK', 'Afghanistan');
+INSERT INTO CountryTranslations (country, language, name) VALUES (2, 'EN_UK', 'Albania');
+INSERT INTO CountryTranslations (country, language, name) VALUES (3, 'EN_UK', 'Algeria');
+INSERT INTO CountryTranslations (country, language, name) VALUES (4, 'EN_UK', 'American Samoa');
+INSERT INTO CountryTranslations (country, language, name) VALUES (5, 'EN_UK', 'Andorra');
+INSERT INTO CountryTranslations (country, language, name) VALUES (6, 'EN_UK', 'Angola');
+INSERT INTO CountryTranslations (country, language, name) VALUES (7, 'EN_UK', 'Anguilla');
+INSERT INTO CountryTranslations (country, language, name) VALUES (8, 'EN_UK', 'Antarctica');
+INSERT INTO CountryTranslations (country, language, name) VALUES (9, 'EN_UK', 'Antigua and Barbuda');
+INSERT INTO CountryTranslations (country, language, name) VALUES (10, 'EN_UK', 'Argentina');
+INSERT INTO CountryTranslations (country, language, name) VALUES (11, 'EN_UK', 'Armenia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (12, 'EN_UK', 'Aruba');
+INSERT INTO CountryTranslations (country, language, name) VALUES (13, 'EN_UK', 'Australia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (14, 'EN_UK', 'Austria');
+INSERT INTO CountryTranslations (country, language, name) VALUES (15, 'EN_UK', 'Azerbaijan');
+INSERT INTO CountryTranslations (country, language, name) VALUES (16, 'EN_UK', 'Bahamas');
+INSERT INTO CountryTranslations (country, language, name) VALUES (17, 'EN_UK', 'Bahrain');
+INSERT INTO CountryTranslations (country, language, name) VALUES (18, 'EN_UK', 'Bangladesh');
+INSERT INTO CountryTranslations (country, language, name) VALUES (19, 'EN_UK', 'Barbados');
+INSERT INTO CountryTranslations (country, language, name) VALUES (20, 'EN_UK', 'Belarus');
+INSERT INTO CountryTranslations (country, language, name) VALUES (21, 'EN_UK', 'Belgium');
+INSERT INTO CountryTranslations (country, language, name) VALUES (22, 'EN_UK', 'Belize');
+INSERT INTO CountryTranslations (country, language, name) VALUES (23, 'EN_UK', 'Benin');
+INSERT INTO CountryTranslations (country, language, name) VALUES (24, 'EN_UK', 'Bermuda');
+INSERT INTO CountryTranslations (country, language, name) VALUES (25, 'EN_UK', 'Bhutan');
+INSERT INTO CountryTranslations (country, language, name) VALUES (26, 'EN_UK', 'Bosnia and Herzegovina');
+INSERT INTO CountryTranslations (country, language, name) VALUES (27, 'EN_UK', 'Botswana');
+INSERT INTO CountryTranslations (country, language, name) VALUES (28, 'EN_UK', 'Bouvet Island');
+INSERT INTO CountryTranslations (country, language, name) VALUES (29, 'EN_UK', 'Brazil');
+INSERT INTO CountryTranslations (country, language, name) VALUES (30, 'EN_UK', 'British Indian Ocean Territory');
+INSERT INTO CountryTranslations (country, language, name) VALUES (31, 'EN_UK', 'Brunei Darussalam');
+INSERT INTO CountryTranslations (country, language, name) VALUES (32, 'EN_UK', 'Bulgaria');
+INSERT INTO CountryTranslations (country, language, name) VALUES (33, 'EN_UK', 'Burkina Faso');
+INSERT INTO CountryTranslations (country, language, name) VALUES (34, 'EN_UK', 'Burundi');
+INSERT INTO CountryTranslations (country, language, name) VALUES (35, 'EN_UK', 'Cambodia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (36, 'EN_UK', 'Cameroon');
+INSERT INTO CountryTranslations (country, language, name) VALUES (37, 'EN_UK', 'Canada');
+INSERT INTO CountryTranslations (country, language, name) VALUES (38, 'EN_UK', 'Cape Verde');
+INSERT INTO CountryTranslations (country, language, name) VALUES (39, 'EN_UK', 'Cayman Islands');
+INSERT INTO CountryTranslations (country, language, name) VALUES (40, 'EN_UK', 'Central African Republic');
+INSERT INTO CountryTranslations (country, language, name) VALUES (41, 'EN_UK', 'Chad');
+INSERT INTO CountryTranslations (country, language, name) VALUES (42, 'EN_UK', 'Chile');
+INSERT INTO CountryTranslations (country, language, name) VALUES (43, 'EN_UK', 'China');
+INSERT INTO CountryTranslations (country, language, name) VALUES (44, 'EN_UK', 'Christmas Island');
+INSERT INTO CountryTranslations (country, language, name) VALUES (45, 'EN_UK', 'Cocos (Keeling) Islands');
+INSERT INTO CountryTranslations (country, language, name) VALUES (46, 'EN_UK', 'Colombia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (47, 'EN_UK', 'Comoros');
+INSERT INTO CountryTranslations (country, language, name) VALUES (48, 'EN_UK', 'Congo');
+INSERT INTO CountryTranslations (country, language, name) VALUES (49, 'EN_UK', 'Cook Islands');
+INSERT INTO CountryTranslations (country, language, name) VALUES (50, 'EN_UK', 'Costa Rica');
+INSERT INTO CountryTranslations (country, language, name) VALUES (51, 'EN_UK', 'Croatia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (52, 'EN_UK', 'Cuba');
+INSERT INTO CountryTranslations (country, language, name) VALUES (53, 'EN_UK', 'Cyprus');
+INSERT INTO CountryTranslations (country, language, name) VALUES (54, 'EN_UK', 'Czech Republic');
+INSERT INTO CountryTranslations (country, language, name) VALUES (55, 'EN_UK', 'Denmark');
+INSERT INTO CountryTranslations (country, language, name) VALUES (56, 'EN_UK', 'Djibouti');
+INSERT INTO CountryTranslations (country, language, name) VALUES (57, 'EN_UK', 'Dominica');
+INSERT INTO CountryTranslations (country, language, name) VALUES (58, 'EN_UK', 'Dominican Republic');
+INSERT INTO CountryTranslations (country, language, name) VALUES (59, 'EN_UK', 'Ecuador');
+INSERT INTO CountryTranslations (country, language, name) VALUES (60, 'EN_UK', 'Egypt');
+INSERT INTO CountryTranslations (country, language, name) VALUES (61, 'EN_UK', 'El Salvador');
+INSERT INTO CountryTranslations (country, language, name) VALUES (62, 'EN_UK', 'Equatorial Guinea');
+INSERT INTO CountryTranslations (country, language, name) VALUES (63, 'EN_UK', 'Eritrea');
+INSERT INTO CountryTranslations (country, language, name) VALUES (64, 'EN_UK', 'Estonia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (65, 'EN_UK', 'Ethiopia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (66, 'EN_UK', 'Falkland Islands (Malvinas)');
+INSERT INTO CountryTranslations (country, language, name) VALUES (67, 'EN_UK', 'Faroe Islands');
+INSERT INTO CountryTranslations (country, language, name) VALUES (68, 'EN_UK', 'Fiji');
+INSERT INTO CountryTranslations (country, language, name) VALUES (69, 'EN_UK', 'Finland');
+INSERT INTO CountryTranslations (country, language, name) VALUES (70, 'EN_UK', 'France');
+INSERT INTO CountryTranslations (country, language, name) VALUES (71, 'EN_UK', 'French Guiana');
+INSERT INTO CountryTranslations (country, language, name) VALUES (72, 'EN_UK', 'French Polynesia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (73, 'EN_UK', 'French Southern Territories');
+INSERT INTO CountryTranslations (country, language, name) VALUES (74, 'EN_UK', 'Gabon');
+INSERT INTO CountryTranslations (country, language, name) VALUES (75, 'EN_UK', 'Gambia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (76, 'EN_UK', 'Georgia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (77, 'EN_UK', 'Germany');
+INSERT INTO CountryTranslations (country, language, name) VALUES (78, 'EN_UK', 'Ghana');
+INSERT INTO CountryTranslations (country, language, name) VALUES (79, 'EN_UK', 'Gibraltar');
+INSERT INTO CountryTranslations (country, language, name) VALUES (80, 'EN_UK', 'Greece');
+INSERT INTO CountryTranslations (country, language, name) VALUES (81, 'EN_UK', 'Greenland');
+INSERT INTO CountryTranslations (country, language, name) VALUES (82, 'EN_UK', 'Grenada');
+INSERT INTO CountryTranslations (country, language, name) VALUES (83, 'EN_UK', 'Guadeloupe');
+INSERT INTO CountryTranslations (country, language, name) VALUES (84, 'EN_UK', 'Guam');
+INSERT INTO CountryTranslations (country, language, name) VALUES (85, 'EN_UK', 'Guatemala');
+INSERT INTO CountryTranslations (country, language, name) VALUES (86, 'EN_UK', 'Guernsey');
+INSERT INTO CountryTranslations (country, language, name) VALUES (87, 'EN_UK', 'Guinea');
+INSERT INTO CountryTranslations (country, language, name) VALUES (88, 'EN_UK', 'Guinea-Bissau');
+INSERT INTO CountryTranslations (country, language, name) VALUES (89, 'EN_UK', 'Guyana');
+INSERT INTO CountryTranslations (country, language, name) VALUES (90, 'EN_UK', 'Haiti');
+INSERT INTO CountryTranslations (country, language, name) VALUES (91, 'EN_UK', 'Heard Island and McDonald Islands');
+INSERT INTO CountryTranslations (country, language, name) VALUES (92, 'EN_UK', 'Holy See (Vatican City State)');
+INSERT INTO CountryTranslations (country, language, name) VALUES (93, 'EN_UK', 'Honduras');
+INSERT INTO CountryTranslations (country, language, name) VALUES (94, 'EN_UK', 'Hong Kong');
+INSERT INTO CountryTranslations (country, language, name) VALUES (95, 'EN_UK', 'Hungary');
+INSERT INTO CountryTranslations (country, language, name) VALUES (96, 'EN_UK', 'Iceland');
+INSERT INTO CountryTranslations (country, language, name) VALUES (97, 'EN_UK', 'India');
+INSERT INTO CountryTranslations (country, language, name) VALUES (98, 'EN_UK', 'Indonesia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (99, 'EN_UK', 'Iran');
+INSERT INTO CountryTranslations (country, language, name) VALUES (100, 'EN_UK', 'Iraq');
+INSERT INTO CountryTranslations (country, language, name) VALUES (101, 'EN_UK', 'Ireland');
+INSERT INTO CountryTranslations (country, language, name) VALUES (102, 'EN_UK', 'Isle of Man');
+INSERT INTO CountryTranslations (country, language, name) VALUES (103, 'EN_UK', 'Israel');
+INSERT INTO CountryTranslations (country, language, name) VALUES (104, 'EN_UK', 'Italy');
+INSERT INTO CountryTranslations (country, language, name) VALUES (105, 'EN_UK', 'Jamaica');
+INSERT INTO CountryTranslations (country, language, name) VALUES (106, 'EN_UK', 'Japan');
+INSERT INTO CountryTranslations (country, language, name) VALUES (107, 'EN_UK', 'Jersey');
+INSERT INTO CountryTranslations (country, language, name) VALUES (108, 'EN_UK', 'Jordan');
+INSERT INTO CountryTranslations (country, language, name) VALUES (109, 'EN_UK', 'Kazakhstan');
+INSERT INTO CountryTranslations (country, language, name) VALUES (110, 'EN_UK', 'Kenya');
+INSERT INTO CountryTranslations (country, language, name) VALUES (111, 'EN_UK', 'Kiribati');
+INSERT INTO CountryTranslations (country, language, name) VALUES (112, 'EN_UK', 'Kuwait');
+INSERT INTO CountryTranslations (country, language, name) VALUES (113, 'EN_UK', 'Kyrgyzstan');
+INSERT INTO CountryTranslations (country, language, name) VALUES (114, 'EN_UK', 'Lao Peoples Democratic Republic');
+INSERT INTO CountryTranslations (country, language, name) VALUES (115, 'EN_UK', 'Latvia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (116, 'EN_UK', 'Lebanon');
+INSERT INTO CountryTranslations (country, language, name) VALUES (117, 'EN_UK', 'Lesotho');
+INSERT INTO CountryTranslations (country, language, name) VALUES (118, 'EN_UK', 'Liberia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (119, 'EN_UK', 'Libya');
+INSERT INTO CountryTranslations (country, language, name) VALUES (120, 'EN_UK', 'Liechtenstein');
+INSERT INTO CountryTranslations (country, language, name) VALUES (121, 'EN_UK', 'Lithuania');
+INSERT INTO CountryTranslations (country, language, name) VALUES (122, 'EN_UK', 'Luxembourg');
+INSERT INTO CountryTranslations (country, language, name) VALUES (123, 'EN_UK', 'Macao');
+INSERT INTO CountryTranslations (country, language, name) VALUES (124, 'EN_UK', 'Madagascar');
+INSERT INTO CountryTranslations (country, language, name) VALUES (125, 'EN_UK', 'Malawi');
+INSERT INTO CountryTranslations (country, language, name) VALUES (126, 'EN_UK', 'Malaysia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (127, 'EN_UK', 'Maldives');
+INSERT INTO CountryTranslations (country, language, name) VALUES (128, 'EN_UK', 'Mali');
+INSERT INTO CountryTranslations (country, language, name) VALUES (129, 'EN_UK', 'Malta');
+INSERT INTO CountryTranslations (country, language, name) VALUES (130, 'EN_UK', 'Marshall Islands');
+INSERT INTO CountryTranslations (country, language, name) VALUES (131, 'EN_UK', 'Martinique');
+INSERT INTO CountryTranslations (country, language, name) VALUES (132, 'EN_UK', 'Mauritania');
+INSERT INTO CountryTranslations (country, language, name) VALUES (133, 'EN_UK', 'Mauritius');
+INSERT INTO CountryTranslations (country, language, name) VALUES (134, 'EN_UK', 'Mayotte');
+INSERT INTO CountryTranslations (country, language, name) VALUES (135, 'EN_UK', 'Mexico');
+INSERT INTO CountryTranslations (country, language, name) VALUES (136, 'EN_UK', 'Monaco');
+INSERT INTO CountryTranslations (country, language, name) VALUES (137, 'EN_UK', 'Mongolia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (138, 'EN_UK', 'Montenegro');
+INSERT INTO CountryTranslations (country, language, name) VALUES (139, 'EN_UK', 'Montserrat');
+INSERT INTO CountryTranslations (country, language, name) VALUES (140, 'EN_UK', 'Morocco');
+INSERT INTO CountryTranslations (country, language, name) VALUES (141, 'EN_UK', 'Mozambique');
+INSERT INTO CountryTranslations (country, language, name) VALUES (142, 'EN_UK', 'Myanmar');
+INSERT INTO CountryTranslations (country, language, name) VALUES (143, 'EN_UK', 'Namibia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (144, 'EN_UK', 'Nauru');
+INSERT INTO CountryTranslations (country, language, name) VALUES (145, 'EN_UK', 'Nepal');
+INSERT INTO CountryTranslations (country, language, name) VALUES (146, 'EN_UK', 'Netherlands');
+INSERT INTO CountryTranslations (country, language, name) VALUES (147, 'EN_UK', 'New Caledonia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (148, 'EN_UK', 'New Zealand');
+INSERT INTO CountryTranslations (country, language, name) VALUES (149, 'EN_UK', 'Nicaragua');
+INSERT INTO CountryTranslations (country, language, name) VALUES (150, 'EN_UK', 'Niger');
+INSERT INTO CountryTranslations (country, language, name) VALUES (151, 'EN_UK', 'Nigeria');
+INSERT INTO CountryTranslations (country, language, name) VALUES (152, 'EN_UK', 'Niue');
+INSERT INTO CountryTranslations (country, language, name) VALUES (153, 'EN_UK', 'Norfolk Island');
+INSERT INTO CountryTranslations (country, language, name) VALUES (154, 'EN_UK', 'Northern Mariana Islands');
+INSERT INTO CountryTranslations (country, language, name) VALUES (155, 'EN_UK', 'Norway');
+INSERT INTO CountryTranslations (country, language, name) VALUES (156, 'EN_UK', 'Oman');
+INSERT INTO CountryTranslations (country, language, name) VALUES (157, 'EN_UK', 'Pakistan');
+INSERT INTO CountryTranslations (country, language, name) VALUES (158, 'EN_UK', 'Palau');
+INSERT INTO CountryTranslations (country, language, name) VALUES (159, 'EN_UK', 'Panama');
+INSERT INTO CountryTranslations (country, language, name) VALUES (160, 'EN_UK', 'Papua New Guinea');
+INSERT INTO CountryTranslations (country, language, name) VALUES (161, 'EN_UK', 'Paraguay');
+INSERT INTO CountryTranslations (country, language, name) VALUES (162, 'EN_UK', 'Peru');
+INSERT INTO CountryTranslations (country, language, name) VALUES (163, 'EN_UK', 'Philippines');
+INSERT INTO CountryTranslations (country, language, name) VALUES (164, 'EN_UK', 'Pitcairn');
+INSERT INTO CountryTranslations (country, language, name) VALUES (165, 'EN_UK', 'Poland');
+INSERT INTO CountryTranslations (country, language, name) VALUES (166, 'EN_UK', 'Portugal');
+INSERT INTO CountryTranslations (country, language, name) VALUES (167, 'EN_UK', 'Puerto Rico');
+INSERT INTO CountryTranslations (country, language, name) VALUES (168, 'EN_UK', 'Qatar');
+INSERT INTO CountryTranslations (country, language, name) VALUES (169, 'EN_UK', 'Romania');
+INSERT INTO CountryTranslations (country, language, name) VALUES (170, 'EN_UK', 'Russian Federation');
+INSERT INTO CountryTranslations (country, language, name) VALUES (171, 'EN_UK', 'Rwanda');
+INSERT INTO CountryTranslations (country, language, name) VALUES (172, 'EN_UK', 'Saint Kitts and Nevis');
+INSERT INTO CountryTranslations (country, language, name) VALUES (173, 'EN_UK', 'Saint Lucia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (174, 'EN_UK', 'Saint Martin (French part)');
+INSERT INTO CountryTranslations (country, language, name) VALUES (175, 'EN_UK', 'Saint Pierre and Miquelon');
+INSERT INTO CountryTranslations (country, language, name) VALUES (176, 'EN_UK', 'Saint Vincent and the Grenadines');
+INSERT INTO CountryTranslations (country, language, name) VALUES (177, 'EN_UK', 'Samoa');
+INSERT INTO CountryTranslations (country, language, name) VALUES (178, 'EN_UK', 'San Marino');
+INSERT INTO CountryTranslations (country, language, name) VALUES (179, 'EN_UK', 'Sao Tome and Principe');
+INSERT INTO CountryTranslations (country, language, name) VALUES (180, 'EN_UK', 'Saudi Arabia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (181, 'EN_UK', 'Senegal');
+INSERT INTO CountryTranslations (country, language, name) VALUES (182, 'EN_UK', 'Serbia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (183, 'EN_UK', 'Seychelles');
+INSERT INTO CountryTranslations (country, language, name) VALUES (184, 'EN_UK', 'Sierra Leone');
+INSERT INTO CountryTranslations (country, language, name) VALUES (185, 'EN_UK', 'Singapore');
+INSERT INTO CountryTranslations (country, language, name) VALUES (186, 'EN_UK', 'Sint Maarten (Dutch part)');
+INSERT INTO CountryTranslations (country, language, name) VALUES (187, 'EN_UK', 'Slovakia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (188, 'EN_UK', 'Slovenia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (189, 'EN_UK', 'Solomon Islands');
+INSERT INTO CountryTranslations (country, language, name) VALUES (190, 'EN_UK', 'Somalia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (191, 'EN_UK', 'South Africa');
+INSERT INTO CountryTranslations (country, language, name) VALUES (192, 'EN_UK', 'South Georgia and the South Sandwich Islands', 'GS');
+INSERT INTO CountryTranslations (country, language, name) VALUES (193, 'EN_UK', 'South Sudan');
+INSERT INTO CountryTranslations (country, language, name) VALUES (194, 'EN_UK', 'Spain');
+INSERT INTO CountryTranslations (country, language, name) VALUES (195, 'EN_UK', 'Sri Lanka');
+INSERT INTO CountryTranslations (country, language, name) VALUES (196, 'EN_UK', 'Palestine');
+INSERT INTO CountryTranslations (country, language, name) VALUES (197, 'EN_UK', 'Sudan');
+INSERT INTO CountryTranslations (country, language, name) VALUES (198, 'EN_UK', 'Suriname');
+INSERT INTO CountryTranslations (country, language, name) VALUES (199, 'EN_UK', 'Svalbard and Jan Mayen', 'SJ');
+INSERT INTO CountryTranslations (country, language, name) VALUES (200, 'EN_UK', 'Swaziland');
+INSERT INTO CountryTranslations (country, language, name) VALUES (201, 'EN_UK', 'Sweden');
+INSERT INTO CountryTranslations (country, language, name) VALUES (202, 'EN_UK', 'Switzerland');
+INSERT INTO CountryTranslations (country, language, name) VALUES (203, 'EN_UK', 'Syrian Arab Republic');
+INSERT INTO CountryTranslations (country, language, name) VALUES (204, 'EN_UK', 'Taiwan');
+INSERT INTO CountryTranslations (country, language, name) VALUES (205, 'EN_UK', 'Tajikistan');
+INSERT INTO CountryTranslations (country, language, name) VALUES (206, 'EN_UK', 'Tanzania');
+INSERT INTO CountryTranslations (country, language, name) VALUES (207, 'EN_UK', 'Thailand');
+INSERT INTO CountryTranslations (country, language, name) VALUES (208, 'EN_UK', 'North Macedonia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (209, 'EN_UK', 'Timor-Leste');
+INSERT INTO CountryTranslations (country, language, name) VALUES (210, 'EN_UK', 'Togo');
+INSERT INTO CountryTranslations (country, language, name) VALUES (211, 'EN_UK', 'Tonga');
+INSERT INTO CountryTranslations (country, language, name) VALUES (212, 'EN_UK', 'Tokelau');
+INSERT INTO CountryTranslations (country, language, name) VALUES (213, 'EN_UK', 'Trinidad and Tobago');
+INSERT INTO CountryTranslations (country, language, name) VALUES (214, 'EN_UK', 'Tunisia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (215, 'EN_UK', 'Turkey');
+INSERT INTO CountryTranslations (country, language, name) VALUES (216, 'EN_UK', 'Turkmenistan');
+INSERT INTO CountryTranslations (country, language, name) VALUES (217, 'EN_UK', 'Tuvalu');
+INSERT INTO CountryTranslations (country, language, name) VALUES (218, 'EN_UK', 'Uganda');
+INSERT INTO CountryTranslations (country, language, name) VALUES (219, 'EN_UK', 'Ukraine');
+INSERT INTO CountryTranslations (country, language, name) VALUES (220, 'EN_UK', 'United Arab Emirates');
+INSERT INTO CountryTranslations (country, language, name) VALUES (221, 'EN_UK', 'United Kingdom of Great Britain and Northern Ireland');
+INSERT INTO CountryTranslations (country, language, name) VALUES (222, 'EN_UK', 'United Republic of Tanzania');
+INSERT INTO CountryTranslations (country, language, name) VALUES (223, 'EN_UK', 'United States Minor Outlying Islands');
+INSERT INTO CountryTranslations (country, language, name) VALUES (224, 'EN_UK', 'United States of America');
+INSERT INTO CountryTranslations (country, language, name) VALUES (225, 'EN_UK', 'Uruguay');
+INSERT INTO CountryTranslations (country, language, name) VALUES (226, 'EN_UK', 'Uzbekistan');
+INSERT INTO CountryTranslations (country, language, name) VALUES (227, 'EN_UK', 'Vanuatu');
+INSERT INTO CountryTranslations (country, language, name) VALUES (228, 'EN_UK', 'Venezuela');
+INSERT INTO CountryTranslations (country, language, name) VALUES (229, 'EN_UK', 'Viet Nam');
+INSERT INTO CountryTranslations (country, language, name) VALUES (230, 'EN_UK', 'Virgin Islands (British)');
+INSERT INTO CountryTranslations (country, language, name) VALUES (231, 'EN_UK', 'Virgin Islands (U.S.)');
+INSERT INTO CountryTranslations (country, language, name) VALUES (232, 'EN_UK', 'Wallis and Futuna');
+INSERT INTO CountryTranslations (country, language, name) VALUES (233, 'EN_UK', 'Western Sahara');
+INSERT INTO CountryTranslations (country, language, name) VALUES (234, 'EN_UK', 'Yemen');
+INSERT INTO CountryTranslations (country, language, name) VALUES (235, 'EN_UK', 'Zambia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (236, 'EN_UK', 'Zimbabwe');
+                                                                  
+INSERT INTO CountryTranslations (country, language, name) VALUES (1, 'PT_PT', 'Afeganistão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (2, 'PT_PT', 'Albânia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (3, 'PT_PT', 'Argélia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (4, 'PT_PT', 'Samoa Americana');
+INSERT INTO CountryTranslations (country, language, name) VALUES (5, 'PT_PT', 'Andorra');
+INSERT INTO CountryTranslations (country, language, name) VALUES (6, 'PT_PT', 'Angola');
+INSERT INTO CountryTranslations (country, language, name) VALUES (7, 'PT_PT', 'Anguilla');
+INSERT INTO CountryTranslations (country, language, name) VALUES (8, 'PT_PT', 'Antárctida');
+INSERT INTO CountryTranslations (country, language, name) VALUES (9, 'PT_PT', 'Antígua e Barbuda');
+INSERT INTO CountryTranslations (country, language, name) VALUES (10, 'PT_PT', 'Argentina');
+INSERT INTO CountryTranslations (country, language, name) VALUES (11, 'PT_PT', 'Arménia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (12, 'PT_PT', 'Aruba');
+INSERT INTO CountryTranslations (country, language, name) VALUES (13, 'PT_PT', 'Austrália');
+INSERT INTO CountryTranslations (country, language, name) VALUES (14, 'PT_PT', 'Áustria');
+INSERT INTO CountryTranslations (country, language, name) VALUES (15, 'PT_PT', 'Azerbaijão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (16, 'PT_PT', 'Bahamas');
+INSERT INTO CountryTranslations (country, language, name) VALUES (17, 'PT_PT', 'Bahrein');
+INSERT INTO CountryTranslations (country, language, name) VALUES (18, 'PT_PT', 'Bangladesh');
+INSERT INTO CountryTranslations (country, language, name) VALUES (19, 'PT_PT', 'Barbados');
+INSERT INTO CountryTranslations (country, language, name) VALUES (20, 'PT_PT', 'Bielorrússia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (21, 'PT_PT', 'Bélgica');
+INSERT INTO CountryTranslations (country, language, name) VALUES (22, 'PT_PT', 'Belize');
+INSERT INTO CountryTranslations (country, language, name) VALUES (23, 'PT_PT', 'Benin');
+INSERT INTO CountryTranslations (country, language, name) VALUES (24, 'PT_PT', 'Bermudas');
+INSERT INTO CountryTranslations (country, language, name) VALUES (25, 'PT_PT', 'Butão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (26, 'PT_PT', 'Bósnia e Herzegovina');
+INSERT INTO CountryTranslations (country, language, name) VALUES (27, 'PT_PT', 'Botsuana');
+INSERT INTO CountryTranslations (country, language, name) VALUES (28, 'PT_PT', 'Ilha Bouvet');
+INSERT INTO CountryTranslations (country, language, name) VALUES (29, 'PT_PT', 'Brasil');
+INSERT INTO CountryTranslations (country, language, name) VALUES (30, 'PT_PT', 'Território Britânico do Oceano Índico');
+INSERT INTO CountryTranslations (country, language, name) VALUES (31, 'PT_PT', 'Brunei Darussalam');
+INSERT INTO CountryTranslations (country, language, name) VALUES (32, 'PT_PT', 'Bulgária');
+INSERT INTO CountryTranslations (country, language, name) VALUES (33, 'PT_PT', 'Burquina Faso');
+INSERT INTO CountryTranslations (country, language, name) VALUES (34, 'PT_PT', 'Burundi');
+INSERT INTO CountryTranslations (country, language, name) VALUES (35, 'PT_PT', 'Camboja');
+INSERT INTO CountryTranslations (country, language, name) VALUES (36, 'PT_PT', 'Camarões');
+INSERT INTO CountryTranslations (country, language, name) VALUES (37, 'PT_PT', 'Canadá');
+INSERT INTO CountryTranslations (country, language, name) VALUES (38, 'PT_PT', 'Cabo Verde');
+INSERT INTO CountryTranslations (country, language, name) VALUES (39, 'PT_PT', 'Ilhas Caimão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (40, 'PT_PT', 'República Centro-Africana');
+INSERT INTO CountryTranslations (country, language, name) VALUES (41, 'PT_PT', 'Chade');
+INSERT INTO CountryTranslations (country, language, name) VALUES (42, 'PT_PT', 'Chile');
+INSERT INTO CountryTranslations (country, language, name) VALUES (43, 'PT_PT', 'China');
+INSERT INTO CountryTranslations (country, language, name) VALUES (44, 'PT_PT', 'Ilha do Natal');
+INSERT INTO CountryTranslations (country, language, name) VALUES (45, 'PT_PT', 'Ilhas Cocos (Keeling)');
+INSERT INTO CountryTranslations (country, language, name) VALUES (46, 'PT_PT', 'Colômbia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (47, 'PT_PT', 'Comores');
+INSERT INTO CountryTranslations (country, language, name) VALUES (48, 'PT_PT', 'Congo');
+INSERT INTO CountryTranslations (country, language, name) VALUES (49, 'PT_PT', 'Ilhas Cook');
+INSERT INTO CountryTranslations (country, language, name) VALUES (50, 'PT_PT', 'Costa Rica');
+INSERT INTO CountryTranslations (country, language, name) VALUES (51, 'PT_PT', 'Croácia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (52, 'PT_PT', 'Cuba');
+INSERT INTO CountryTranslations (country, language, name) VALUES (53, 'PT_PT', 'Chipre');
+INSERT INTO CountryTranslations (country, language, name) VALUES (54, 'PT_PT', 'República Checa');
+INSERT INTO CountryTranslations (country, language, name) VALUES (55, 'PT_PT', 'Dinamarca');
+INSERT INTO CountryTranslations (country, language, name) VALUES (56, 'PT_PT', 'Djibuti');
+INSERT INTO CountryTranslations (country, language, name) VALUES (57, 'PT_PT', 'Dominica');
+INSERT INTO CountryTranslations (country, language, name) VALUES (58, 'PT_PT', 'República Dominicana');
+INSERT INTO CountryTranslations (country, language, name) VALUES (59, 'PT_PT', 'Equador');
+INSERT INTO CountryTranslations (country, language, name) VALUES (60, 'PT_PT', 'Egito');
+INSERT INTO CountryTranslations (country, language, name) VALUES (61, 'PT_PT', 'El Salvador');
+INSERT INTO CountryTranslations (country, language, name) VALUES (62, 'PT_PT', 'Guiné Equatorial');
+INSERT INTO CountryTranslations (country, language, name) VALUES (63, 'PT_PT', 'Eritreia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (64, 'PT_PT', 'Estónia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (65, 'PT_PT', 'Etiópia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (66, 'PT_PT', 'Ilhas Falkland');
+INSERT INTO CountryTranslations (country, language, name) VALUES (67, 'PT_PT', 'Ilhas Faroé');
+INSERT INTO CountryTranslations (country, language, name) VALUES (68, 'PT_PT', 'Fiji');
+INSERT INTO CountryTranslations (country, language, name) VALUES (69, 'PT_PT', 'Finlândia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (70, 'PT_PT', 'França');
+INSERT INTO CountryTranslations (country, language, name) VALUES (71, 'PT_PT', 'Guiana Francesa');
+INSERT INTO CountryTranslations (country, language, name) VALUES (72, 'PT_PT', 'Polinésia Francesa');
+INSERT INTO CountryTranslations (country, language, name) VALUES (73, 'PT_PT', 'Territórios Austrais e Antárcticos Franceses');
+INSERT INTO CountryTranslations (country, language, name) VALUES (74, 'PT_PT', 'Gabão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (75, 'PT_PT', 'Gâmbia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (76, 'PT_PT', 'Geórgia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (77, 'PT_PT', 'Alemanha');
+INSERT INTO CountryTranslations (country, language, name) VALUES (78, 'PT_PT', 'Gana');
+INSERT INTO CountryTranslations (country, language, name) VALUES (79, 'PT_PT', 'Gibraltar');
+INSERT INTO CountryTranslations (country, language, name) VALUES (80, 'PT_PT', 'Grécia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (81, 'PT_PT', 'Gronelândia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (82, 'PT_PT', 'Granada');
+INSERT INTO CountryTranslations (country, language, name) VALUES (83, 'PT_PT', 'Guadalupe');
+INSERT INTO CountryTranslations (country, language, name) VALUES (84, 'PT_PT', 'Guam');
+INSERT INTO CountryTranslations (country, language, name) VALUES (85, 'PT_PT', 'Guatemala');
+INSERT INTO CountryTranslations (country, language, name) VALUES (86, 'PT_PT', 'Guernsey');
+INSERT INTO CountryTranslations (country, language, name) VALUES (87, 'PT_PT', 'Guiné');
+INSERT INTO CountryTranslations (country, language, name) VALUES (88, 'PT_PT', 'Guiné-Bissau');
+INSERT INTO CountryTranslations (country, language, name) VALUES (89, 'PT_PT', 'Guiana');
+INSERT INTO CountryTranslations (country, language, name) VALUES (90, 'PT_PT', 'Haiti');
+INSERT INTO CountryTranslations (country, language, name) VALUES (91, 'PT_PT', 'Ilha Heard e Ilhas McDonald');
+INSERT INTO CountryTranslations (country, language, name) VALUES (92, 'PT_PT', 'Santa Sé (Cidade do Vaticano)');
+INSERT INTO CountryTranslations (country, language, name) VALUES (93, 'PT_PT', 'Honduras');
+INSERT INTO CountryTranslations (country, language, name) VALUES (94, 'PT_PT', 'Hong Kong');
+INSERT INTO CountryTranslations (country, language, name) VALUES (95, 'PT_PT', 'Hungria');
+INSERT INTO CountryTranslations (country, language, name) VALUES (96, 'PT_PT', 'Islândia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (97, 'PT_PT', 'Índia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (98, 'PT_PT', 'Indonésia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (99, 'PT_PT', 'Irão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (100, 'PT_PT', 'Iraque');
+INSERT INTO CountryTranslations (country, language, name) VALUES (101, 'PT_PT', 'Irlanda');
+INSERT INTO CountryTranslations (country, language, name) VALUES (102, 'PT_PT', 'Ilha de Man');
+INSERT INTO CountryTranslations (country, language, name) VALUES (103, 'PT_PT', 'Israel');
+INSERT INTO CountryTranslations (country, language, name) VALUES (104, 'PT_PT', 'Itália');
+INSERT INTO CountryTranslations (country, language, name) VALUES (105, 'PT_PT', 'Jamaica');
+INSERT INTO CountryTranslations (country, language, name) VALUES (106, 'PT_PT', 'Japão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (107, 'PT_PT', 'Jersey');
+INSERT INTO CountryTranslations (country, language, name) VALUES (108, 'PT_PT', 'Jordánia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (109, 'PT_PT', 'Cazaquistão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (110, 'PT_PT', 'Quénia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (111, 'PT_PT', 'Kiribati');
+INSERT INTO CountryTranslations (country, language, name) VALUES (112, 'PT_PT', 'Kuwait');
+INSERT INTO CountryTranslations (country, language, name) VALUES (113, 'PT_PT', 'Quirguistão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (114, 'PT_PT', 'República Democrática Popular do Laos');
+INSERT INTO CountryTranslations (country, language, name) VALUES (115, 'PT_PT', 'Letónia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (116, 'PT_PT', 'Líbano');
+INSERT INTO CountryTranslations (country, language, name) VALUES (117, 'PT_PT', 'Lesoto');
+INSERT INTO CountryTranslations (country, language, name) VALUES (118, 'PT_PT', 'Libéria');
+INSERT INTO CountryTranslations (country, language, name) VALUES (119, 'PT_PT', 'Líbia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (120, 'PT_PT', 'Liechtenstein');
+INSERT INTO CountryTranslations (country, language, name) VALUES (121, 'PT_PT', 'Lituânia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (122, 'PT_PT', 'Luxemburgo');
+INSERT INTO CountryTranslations (country, language, name) VALUES (123, 'PT_PT', 'Macau');
+INSERT INTO CountryTranslations (country, language, name) VALUES (124, 'PT_PT', 'Madagáscar');
+INSERT INTO CountryTranslations (country, language, name) VALUES (125, 'PT_PT', 'Malaui');
+INSERT INTO CountryTranslations (country, language, name) VALUES (126, 'PT_PT', 'Malásia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (127, 'PT_PT', 'Maldivas');
+INSERT INTO CountryTranslations (country, language, name) VALUES (128, 'PT_PT', 'Mali');
+INSERT INTO CountryTranslations (country, language, name) VALUES (129, 'PT_PT', 'Malta');
+INSERT INTO CountryTranslations (country, language, name) VALUES (130, 'PT_PT', 'Ilhas Marshall');
+INSERT INTO CountryTranslations (country, language, name) VALUES (131, 'PT_PT', 'Martinica');
+INSERT INTO CountryTranslations (country, language, name) VALUES (132, 'PT_PT', 'Mauritânia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (133, 'PT_PT', 'Maurícia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (134, 'PT_PT', 'Mayotte');
+INSERT INTO CountryTranslations (country, language, name) VALUES (135, 'PT_PT', 'México');
+INSERT INTO CountryTranslations (country, language, name) VALUES (136, 'PT_PT', 'Mónaco');
+INSERT INTO CountryTranslations (country, language, name) VALUES (137, 'PT_PT', 'Mongólia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (138, 'PT_PT', 'Montenegro');
+INSERT INTO CountryTranslations (country, language, name) VALUES (139, 'PT_PT', 'Montserrat');
+INSERT INTO CountryTranslations (country, language, name) VALUES (140, 'PT_PT', 'Marrocos');
+INSERT INTO CountryTranslations (country, language, name) VALUES (141, 'PT_PT', 'Moçambique');
+INSERT INTO CountryTranslations (country, language, name) VALUES (142, 'PT_PT', 'Myanmar');
+INSERT INTO CountryTranslations (country, language, name) VALUES (143, 'PT_PT', 'Namíbia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (144, 'PT_PT', 'Nauru');
+INSERT INTO CountryTranslations (country, language, name) VALUES (145, 'PT_PT', 'Nepal');
+INSERT INTO CountryTranslations (country, language, name) VALUES (146, 'PT_PT', 'Holanda');
+INSERT INTO CountryTranslations (country, language, name) VALUES (147, 'PT_PT', 'Nova Caledónia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (148, 'PT_PT', 'Nova Zelândia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (149, 'PT_PT', 'Nicarágua');
+INSERT INTO CountryTranslations (country, language, name) VALUES (150, 'PT_PT', 'Níger');
+INSERT INTO CountryTranslations (country, language, name) VALUES (151, 'PT_PT', 'Nigéria');
+INSERT INTO CountryTranslations (country, language, name) VALUES (152, 'PT_PT', 'Niue');
+INSERT INTO CountryTranslations (country, language, name) VALUES (153, 'PT_PT', 'Ilha Norfolk');
+INSERT INTO CountryTranslations (country, language, name) VALUES (154, 'PT_PT', 'Ilhas Marianas do Norte');
+INSERT INTO CountryTranslations (country, language, name) VALUES (155, 'PT_PT', 'Noruega');
+INSERT INTO CountryTranslations (country, language, name) VALUES (156, 'PT_PT', 'Omã');
+INSERT INTO CountryTranslations (country, language, name) VALUES (157, 'PT_PT', 'Paquistão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (158, 'PT_PT', 'Palau');
+INSERT INTO CountryTranslations (country, language, name) VALUES (159, 'PT_PT', 'Panamá');
+INSERT INTO CountryTranslations (country, language, name) VALUES (160, 'PT_PT', 'Papua Nova Guiné');
+INSERT INTO CountryTranslations (country, language, name) VALUES (161, 'PT_PT', 'Paraguai');
+INSERT INTO CountryTranslations (country, language, name) VALUES (162, 'PT_PT', 'Peru');
+INSERT INTO CountryTranslations (country, language, name) VALUES (163, 'PT_PT', 'Filipinas');
+INSERT INTO CountryTranslations (country, language, name) VALUES (164, 'PT_PT', 'Ilhas Pitcairn');
+INSERT INTO CountryTranslations (country, language, name) VALUES (165, 'PT_PT', 'Polónia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (166, 'PT_PT', 'Portugal');
+INSERT INTO CountryTranslations (country, language, name) VALUES (167, 'PT_PT', 'Porto Rico');
+INSERT INTO CountryTranslations (country, language, name) VALUES (168, 'PT_PT', 'Catar');
+INSERT INTO CountryTranslations (country, language, name) VALUES (169, 'PT_PT', 'Roménia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (170, 'PT_PT', 'Federação Russa');
+INSERT INTO CountryTranslations (country, language, name) VALUES (171, 'PT_PT', 'Ruanda');
+INSERT INTO CountryTranslations (country, language, name) VALUES (172, 'PT_PT', 'São Cristóvão e Nevis');
+INSERT INTO CountryTranslations (country, language, name) VALUES (173, 'PT_PT', 'Santa Lúcia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (174, 'PT_PT', 'São Martinho (França)');
+INSERT INTO CountryTranslations (country, language, name) VALUES (175, 'PT_PT', 'São Pedro e Miquelão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (176, 'PT_PT', 'São Vicente e Granadinas');
+INSERT INTO CountryTranslations (country, language, name) VALUES (177, 'PT_PT', 'Samoa');
+INSERT INTO CountryTranslations (country, language, name) VALUES (178, 'PT_PT', 'San Marino');
+INSERT INTO CountryTranslations (country, language, name) VALUES (179, 'PT_PT', 'São Tomé e Príncipe');
+INSERT INTO CountryTranslations (country, language, name) VALUES (180, 'PT_PT', 'Arábia Saudita');
+INSERT INTO CountryTranslations (country, language, name) VALUES (181, 'PT_PT', 'Senegal');
+INSERT INTO CountryTranslations (country, language, name) VALUES (182, 'PT_PT', 'Sérvia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (183, 'PT_PT', 'Ilhas Seychelles');
+INSERT INTO CountryTranslations (country, language, name) VALUES (184, 'PT_PT', 'Serra Leoa');
+INSERT INTO CountryTranslations (country, language, name) VALUES (185, 'PT_PT', 'Singapura');
+INSERT INTO CountryTranslations (country, language, name) VALUES (186, 'PT_PT', 'Sint Maarten (Holanda)');
+INSERT INTO CountryTranslations (country, language, name) VALUES (187, 'PT_PT', 'Eslováquia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (188, 'PT_PT', 'Eslovénia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (189, 'PT_PT', 'Ilhas Salomão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (190, 'PT_PT', 'Somália');
+INSERT INTO CountryTranslations (country, language, name) VALUES (191, 'PT_PT', 'África do Sul');
+INSERT INTO CountryTranslations (country, language, name) VALUES (192, 'PT_PT', 'Ilhas Geórgia do Sul e Sandwich do Sul');
+INSERT INTO CountryTranslations (country, language, name) VALUES (193, 'PT_PT', 'Sudão do Sul');
+INSERT INTO CountryTranslations (country, language, name) VALUES (194, 'PT_PT', 'Espanha');
+INSERT INTO CountryTranslations (country, language, name) VALUES (195, 'PT_PT', 'Sri Lanka');
+INSERT INTO CountryTranslations (country, language, name) VALUES (196, 'PT_PT', 'Palestina');
+INSERT INTO CountryTranslations (country, language, name) VALUES (197, 'PT_PT', 'Sudão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (198, 'PT_PT', 'Suriname');
+INSERT INTO CountryTranslations (country, language, name) VALUES (199, 'PT_PT', 'Svalbard e Jan Mayen');
+INSERT INTO CountryTranslations (country, language, name) VALUES (200, 'PT_PT', 'Swazilândia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (201, 'PT_PT', 'Suécia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (202, 'PT_PT', 'Suíça');
+INSERT INTO CountryTranslations (country, language, name) VALUES (203, 'PT_PT', 'Síria');
+INSERT INTO CountryTranslations (country, language, name) VALUES (204, 'PT_PT', 'Taiwan');
+INSERT INTO CountryTranslations (country, language, name) VALUES (205, 'PT_PT', 'Tajiquistão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (206, 'PT_PT', 'Tanzânia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (207, 'PT_PT', 'Tailândia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (208, 'PT_PT', 'Macedónia do Norte');
+INSERT INTO CountryTranslations (country, language, name) VALUES (209, 'PT_PT', 'Timor-Leste');
+INSERT INTO CountryTranslations (country, language, name) VALUES (210, 'PT_PT', 'Togo');
+INSERT INTO CountryTranslations (country, language, name) VALUES (211, 'PT_PT', 'Tonga');
+INSERT INTO CountryTranslations (country, language, name) VALUES (212, 'PT_PT', 'Toquelau');
+INSERT INTO CountryTranslations (country, language, name) VALUES (213, 'PT_PT', 'Trindade e Tobago');
+INSERT INTO CountryTranslations (country, language, name) VALUES (214, 'PT_PT', 'Tunísia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (215, 'PT_PT', 'Turquia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (216, 'PT_PT', 'Turquemenistão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (217, 'PT_PT', 'Tuvalu');
+INSERT INTO CountryTranslations (country, language, name) VALUES (218, 'PT_PT', 'Uganda');
+INSERT INTO CountryTranslations (country, language, name) VALUES (219, 'PT_PT', 'Ucrânia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (220, 'PT_PT', 'Emirados Árabes Unidos');
+INSERT INTO CountryTranslations (country, language, name) VALUES (221, 'PT_PT', 'Reino Unido da Grã-Bretanha e Irlanda do Norte');
+INSERT INTO CountryTranslations (country, language, name) VALUES (222, 'PT_PT', 'República Unida da Tanzânia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (223, 'PT_PT', 'Ilhas Menores Distantes dos Estados Unidos');
+INSERT INTO CountryTranslations (country, language, name) VALUES (224, 'PT_PT', 'Estados Unidos da América');
+INSERT INTO CountryTranslations (country, language, name) VALUES (225, 'PT_PT', 'Uruguai');
+INSERT INTO CountryTranslations (country, language, name) VALUES (226, 'PT_PT', 'Uzbequistão');
+INSERT INTO CountryTranslations (country, language, name) VALUES (227, 'PT_PT', 'Vanuatu');
+INSERT INTO CountryTranslations (country, language, name) VALUES (228, 'PT_PT', 'Venezuela');
+INSERT INTO CountryTranslations (country, language, name) VALUES (229, 'PT_PT', 'Vietname');
+INSERT INTO CountryTranslations (country, language, name) VALUES (230, 'PT_PT', 'Ilhas Virgens Britânicas');
+INSERT INTO CountryTranslations (country, language, name) VALUES (231, 'PT_PT', 'Ilhas Virgens Americanas');
+INSERT INTO CountryTranslations (country, language, name) VALUES (232, 'PT_PT', 'Wallis e Futuna');
+INSERT INTO CountryTranslations (country, language, name) VALUES (233, 'PT_PT', 'Saara Ocidental');
+INSERT INTO CountryTranslations (country, language, name) VALUES (234, 'PT_PT', 'Iémen');
+INSERT INTO CountryTranslations (country, language, name) VALUES (235, 'PT_PT', 'Zâmbia');
+INSERT INTO CountryTranslations (country, language, name) VALUES (236, 'PT_PT', 'Zimbabwe');
+                                                                  
+                                                                    
+
+INSERT INTO KnowledgeAreas(id, image) VALUES (1 ,'http://www.images.com/ka_software_requirements');
 INSERT INTO KnowledgeAreas(id, image) VALUES (2 ,'http://www.images.com/ka_software_design');
 INSERT INTO KnowledgeAreas(id, image) VALUES (3 ,'http://www.images.com/ka_software_construction');
 INSERT INTO KnowledgeAreas(id, image) VALUES (4 ,'http://www.images.com/ka_software_testing');
@@ -342,149 +1057,223 @@ INSERT INTO DegreeTranslations(degreeId, language, name, description) VALUES (5,
         - a gestão e implementação de projectos informáticos, incluindo o projecto e implementação de sistemas de computação.\n\nComo futuros engenheiros deverão, também, ter sempre a preocupação do rigor, quer na execução quer na gestão do projecto, avaliando a sua qualidade, custos e impacto económico, bem como nas preocupações de implementação dos seus produtos nas organizações destino.');
         
 -- Degree Classes
--- Universidade do Porto
+
+-- UPorto 1st year
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (1, 1, 1, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1, 'PT_PT', 'Matemática Discreta' , 'A Lógica constitui a base de qualquer raciocínio científico e essa é a razão primeira da sua inclusão no 1º ano do curso. Para além disso, no caso da Engenharia Informática, a Lógica tem um interesse directo operacional em múltiplas dimensões da profissão.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (2, 1, 1, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (2, 'PT_PT', 'Arquitectura e Organização de Computadores' , 'Esta unidade curricular introduz os princípios de funcionamento de um computador moderno e a sua arquitectura geral, com especial ênfase na contribuição de cada subsistema para o desempenho global. A análise da tecnologia de implementação física dos computadores (circuitos lógicos e de memória), associada à explicação das formas elementares de representação de informação em formato digital, permitirá aos estudantes identificar e descrever princípios fundamentais da operação dos computadores, das linguagens de programação e do desenvolvimento de software.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (3, 1, 1, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (3, 'PT_PT', 'Fundamentos da Programação' , 'Objectivos: Desenvolver os algoritmos para a resolução dos problemas adoptando uma abordagem estruturada;\nSeleccionar e criar as abstracções adequadas, tanto ao nível dos procedimentos como dos dados;\nUtilizar como ferramenta de desenvolvimento a linguagem Scheme, caracterizada por uma sintaxe simples.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (4, 1, 1, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (4, 'PT_PT', 'Análise Matemática' , 'Aquisição de conhecimentos teóricos e práticos sobre cálculo diferencial e integral em R que possibilitem a aplicação das ferramentas básicas da análise matemática ao tratamento e resolução dos problemas mais adaptados ao perfil do curso.\nCapacitar o estudante para a inovação, complementando os conhecimentos de forma a desenvolver soluções para resolução de novas questões.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (5, 1, 1, 4.5, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (5, 'PT_PT', 'Álgebra' , 'Esta disciplina tem dois objectivos fundamentais: por um lado, tratando-se de uma disciplina propedêutica tem um carácter didáctico/científico, promovendo o desenvolvimento do raciocínio lógico e de métodos de análise e, por outro, visa introduzir e desenvolver em termos teóricos um conjunto de conceitos que serão ferramentas essenciais para apoio às disciplinas mais específicas da Engenharia.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (6, 1, 1, 1.5, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (6, 'PT_PT', 'Projecto FEUP' , 'Objectivos: Receber e integrar no ambiente FEUP os alunos recém-chegados;\nDar a conhecer os principais serviços disponíveis no campus;\nDar formação inicial nas áreas conhecidas como “Soft Skills” (trabalho em equipa, comunicação, etc.) e alertar para a sua importância ao longo da carreira em engenharia;\nDiscutir cientificamente um Tema\\resolver um Projecto de dificuldade limitada nas áreas de engenharia.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (7, 1, 2, 4.5, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (7, 'PT_PT', 'Métodos Estatísticos' , 'Esta disciplina tem como objectivo: Garantir que os alunos adquiram uma visão integrada de conceitos e técnicas básicas da Estatística no âmbito do curso de Engenharia Informática.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (8, 1, 2, 7.5, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (8, 'PT_PT', 'Programação' , 'Os objectivos principais desta unidade curricular são dotar os estudantes com:\n- conhecimentos fundamentais sobre a programação procedimental e a programação baseada em objectos;\n- a capacidade de aplicar esses paradigmas de programação para desenvolver programas, usando a linguagem C++ como ferramenta.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (9, 1, 2, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (9, 'PT_PT', 'Física I' , 'O objectivo desta unidade curricular é dar ao estudante conhecimentos básicos de mecânica e dos métodos computacionais usados para resolver sistemas dinâmicos. É usado um Sistema de Álgebra Computacional (CAS), para permitir que o estudante possa resolver problemas práticos de mecânica e sistemas dinâmicos, em vez de perder muito tempo em aprender métodos abstractos. Os conhecimentos adquiridos de dinâmica e modelação de sistemas físicos no computador serão bastante importantes em outras unidades curriculares relacionadas com computação gráfica e visualização, teoria de jogos, simulação e computação científica.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (10, 1, 2, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (10, 'PT_PT', 'Complementos de Matemática' , 'A unidade curricular tem dois objectivos fundamentais: por um lado, tratando-se de uma unidade curricular propedêutica tem um carácter didáctico/científico, promovendo o desenvolvimento do raciocínio lógico e de métodos de análise e, por outro, visa introduzir e desenvolver em termos teóricos um conjunto de conceitos que serão ferramentas essenciais para apoio às restantes unidades curriculares.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (11, 1, 2, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (11, 'PT_PT', 'Microprocessadores e Computadores Pessoais' , 'A unidade curricular de Microprocessadores e Computadores Pessoais tem por objectivo desenvolver, combinar e aplicar de forma integrada conceitos das áreas de Arquitectura de Computadores e de Linguagens de Programação. Por um lado, a unidade curricular explora as relações entre o conjunto de instruções do CPU e a programação de baixo nível (linguagem "assembly"). Por outro lado, reconhecendo que a arquitectura de computadores pessoais modernos vai muito para além da arquitectura do CPU, a unidade curricular abordará a arquitectura geral de um PC, incluindo o subsistema de armazenamento de dados e outros periféricos.');
 
+-- UPorto 2nd year
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (12, 2, 1, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (12, 'PT_PT', 'Teoria da Computação' , 'Preparar os estudantes em tópicos relacionados com teoria da computação, com um ênfase especial em tópicos relacionados com linguagens formais.\nCapacitar os estudantes para que estes sejam capazes de expressar problemas computacionais usando linguagens formais, autómatos e máquinas de Turing.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (13, 2, 1, 4.5, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (13, 'PT_PT', 'Métodos Numéricos' , 'A disciplina pretende em primeiro lugar fornecer aos estudantes competências sólidas no cálculo numérico. Será organizada por tópicos, cobrindo os problemas de representação numérica, a resolução de equações e sistemas de equações algébricas e diferenciais, a integração definida, a optimização não linear e o ajuste de curvas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (14, 2, 1, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (14, 'PT_PT', 'Física II' , 'Esta unidade curricular visa dotar os estudantes com conhecimentos básicos de electromagnetismo e processamento de sinais. A abordagem é experimental, com recurso a experiências simples que os estudantes podem realizar durante as aulas teórico-práticas para consolidar os conhecimentos teóricos e adquirir experiência no uso dos instrumentos de medição. O Sistema de Computação Algébrica (CAS) usado na unidade curricular Física 1 é também aproveitado para facilitar a resolução de problemas e para visualizar campos eléctricos e magnéticos.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (15, 2, 1, 7.5, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (15, 'PT_PT', 'Algoritmos e Estruturas de Dados' , 'Na sequência das unidades curriculares de Introdução à Programação, é objectivo desta unidade curricular: recorrer às noções de programação já estabelecidas e sistematizar o uso de estruturas de informação e de algoritmos para resolver categorias de problemas;  usar, como paradigma de suporte ao desenvolvimento de programas, a orientação por objectos; dar ênfase à organização dos programas em torno de tipos de dados abstractos. Serão realizados pequenos projectos usando a linguagem C++.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (16, 2, 1, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (16, 'PT_PT', 'Laboratório de Computadores' , 'Os objectivos da unidade curricular são dotar os estudantes com conhecimentos essenciais para serem capazes de:\n- utilizar a interface de "hardware" dos periféricos mais habituais de um PC;\n- desenvolver "software" de baixo nível e de "software" embebido para a plataforma PC;\n- usarem a linguagem de programação C de modo estruturado;\n- utilizarem várias ferramentas de desenvolvimento de software.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (17, 2, 2, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (17, 'PT_PT', 'Bases de Dados' , 'Este é um curso introdutório sobre bases de dados. Aborda o paradigma relacional. Abrange o desenho (modelo UML), construção (linguagem de definição de dados SQL), consulta (linguagem de manipulação de dados SQL) e gestão (optimização, controlo de acesso e políticas de concorrência) de bases de dados relacionais. Introduz, ainda, o conceito de bases de dados multi-dimensionais, bases de dados NoSQL e modelos de dados semi-estruturados.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (18, 2, 2, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (18, 'PT_PT', 'Concepção e Análise de Algoritmos' , 'Esta Unidade Curricular tem por objectivo complementar e aprofundar os conhecimentos assimilados nas disciplinas de "Programação" e de "Algoritmos e Estruturas de Dados", nomeadamente pela introdução de técnicas de concepção e implementação de algoritmos eficientes para a resolução de diferentes tipos de problemas, assim como a sua análise e avaliação.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (19, 2, 2, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (19, 'PT_PT', 'Computação Gráfica' , 'Transmitir o conhecimento de conceitos, técnicas, algoritmos, tecnologias e arquitecturas de Computação Gráfica.\n - Reforçar os conhecimentos teóricos com a sua aplicação prática, por meio da implementação, teste e avaliação de algoritmos abordados em teoria.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (20, 2, 2, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (20, 'PT_PT', 'Sistemas Operativos' , 'Os objectivos principais desta unidade curricular são fornecer os conhecimentos fundamentais sobre:\n- a estrutura e o funcionamento de um sistema operativo;\n- a utilização da interface de programação (API) de um sistema operativo real.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (21, 2, 2, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (21, 'PT_PT', 'Laboratório de Programação Orientada por Objectos' , 'Desenvolver e aprofundar as competências de programação orientada por objectos, numa linguagem orientada por objectos moderna (Java), representativa das linguagens utilizadas para desenvolvimento de software aplicacional.\nDesenvolver competências de desenho orientado por objectos, usando a linguagem UML e aplicando bons princípios e padrões de desenho.\nAprender a desenvolver aplicações com interface gráfica e a utilizar bibliotecas extensas.\nAdquirir o hábito de seguir boas práticas de desenvolvimento de software (desenvolvimento iterativo, testes unitários, "debugging", "refactoring", SCV, programação em pares, etc.).');
 
+-- UPorto 3rd year
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (22, 3, 1, 4.5, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (22, 'PT_PT', 'Programação em Lógica' , 'Adquirir familiaridade com os paradigmas da Programação em Lógica e da Programação com Restrições. Desenvolver as capacidades de raciocínio abstracto e de representação de problemas de forma declarativa.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (23, 3, 1, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (23, 'PT_PT', 'Laboratório de Aplicações com Interface Gráfica' , 'Esta unidade curricular tem por objectivo principal desenvolver um conjunto de competências práticas, algumas já tratadas em unidades curriculares anteriores num contexto mais teórico. Foca-se em trabalhos práticos de desenvolvimento, tendencialmente multidisciplinares, nomeadamente nas áreas de Computação Gráfica e Interfaces, de Programação em Lógica e de Sistemas Operativos.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (24, 3, 1, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (24, 'PT_PT', 'Engenharia de Software' , 'No final da unidade curricular, os estudantes deverão ser capazes de:\n- descrever os princípios, conceitos e práticas da engenharia de software e do ciclo de vida do software;\n- conhecer e saber aplicar as técnicas e ferramentas necessárias para executar e gerir as várias actividades do processo de desenvolvimento de software de qualidade;\n- explicar os métodos e processos de construção de diferentes tipos de sistemas de software.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (25, 3, 1, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (25, 'PT_PT', 'Redes de Computadores' , 'Redes de Computadores (RCOM) é a unidade curricular que introduz os estudantes no domínio de conhecimento das redes de comunicações. Os conceitos fundamentais endereçados em RCOM incluem os seguintes: canais de comunicação e controlo da ligação de dados, modelos de erro e atraso, comunicações multi-acesso, encaminhamento, controlo de fluxo e controlo de congestionamento. As principais tecnologias discutidas em RCOM são a Ethernet comutada, a Wireless LAN 802.11, a Internet e a pilha de comunicações TCP/IP. As implementações e projectos a desenvolver em RCOM incluem um protocolo de ligação de dados com controlo de fluxo, uma aplicação a funcionar em modo cliente, e a configuração e teste de redes Ethernet e IP.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (26, 3, 2, 7.5, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (26, 'PT_PT', 'Linguagens e Tecnologias Web' , 'Pretende-se, nesta disciplina, que os alunos desenvolvam competências nas linguagens e tecnologias WEB mais significativas, no contexto tecnológico actual, ou que foram determinantes no processo evolutivo da WEB.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (27, 3, 2, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (27, 'PT_PT', 'Laboratório de Bases de Dados e Aplicações Web' , 'A unidade curricular de LBAW tem como objectivo sedimentar as matérias expostas nas unidades curriculares de bases de dados e linguagens e tecnologias web. Esta unidade curricular oferece uma perspectiva prática sobre duas áreas centrais da engenharia informática.\nNesta unidade curricular pretende-se dotar os estudantes da capacidade de projectar e desenvolver sistemas de informação acessíveis através da web e suportados por sistemas de gestão de bases de dados.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (28, 3, 2, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (28, 'PT_PT', 'Inteligência Artificial' , 'Esta unidade curricular apresenta um conjunto de assuntos nucleares para a área dos Sistemas Inteligentes.\nOs seu objectivos são:\n- Saber o que caracteriza e distingue a IA e qual a sua aplicabilidade.\n- Saber como Representar, Adquirir, Manipular e Aplicar Conhecimento usando Sistemas Computacionais.\n- Desenvolver um pequeno projecto usando técnicas de IA.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (29, 3, 2, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (29, 'PT_PT', 'Compiladores' , 'Fornecer os conceitos que permitam:\n- compreender as fases de compilação de linguagens, em especial das linguagens imperativas e orientada por objectos;\n- especificar a sintaxe e semântica de uma linguagem de programação;\n- compreender e utilizar as estruturas de dados e os algoritmos principais usados na implementação de compiladores.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (30, 3, 2, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (30, 'PT_PT', 'Sistemas Distribuídos' , 'Esta unidade curricular tem dois objectivos fundamentais:\ndotar os estudantes com conhecimentos teóricos sobre sistemas distribuídos para que possam tomar decisões correctas quando confrontados com a necessidade de implementar um sistema desta natureza;\ndotar os estudantes com conhecimentos práticos para que possa desenvolver e tirar partido dos sistemas distribuídos.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (31, 3, 2, 4.5, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (31, 'PT_PT', 'Proficiência Pessoal e Interpessoal' , 'Identificar e adquirir os conhecimentos essenciais para saber como maximizar progressivamente as condições de êxito do desempenho pessoal e interpessoal.Ter consciência da importância de saber utilizar competências complementares (soft skills) e de realizar mudanças evolutivas de forma a desenvolver um perfil profissional que contribua para melhorar continuamente a futura atividade do engenheiro informático.');
 
+-- UPorto 4th year
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (32, 4, 1, 4.5, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (32, 'PT_PT', 'Sistemas de Informação' , 'Interpretar, Classificar e Explicar:\n- Processo de vendas e Procurement gerido por um ERP;\n- a forma como o SI contribui para a Construção de Valor numa organização, com especial foco no ERP e em outros com o qual o ERP se integra (e.g.: sistema de execução fabril e gestão de armazém);\n- Tendências tecnológicas e o seu impacto nos sistemas de informação empresariais (Cloud Computing, Big Data, a nova Internet).');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (33, 4, 1, 7.5, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (33, 'PT_PT', 'Laboratório de Desenvolvimento de Software' , 'Objectivos: dotar os alunos para serem capazes de definir e aplicar um processo de desenvolvimento de software, utilizando práticas ágeis, ferramentas tipicas de desenvolvimento de software, em equipa.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (34, 4, 1, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (34, 'PT_PT', 'Gestão de Empresas' , 'A unidade curricular tem por objectivo desenvolver competências na área da Gestão, integrando uma sólida componente teórica, baseada na apresentação e discussão de conceitos e metodologias, com a sua aplicação à análise e à discussão de casos de estudo.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (35, 4, 1, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (35, 'PT_PT', 'Agentes e Inteligência Artificial Distribuída' , 'A unidade curricular assume-se como de Engenharia (evidenciando apenas a teoria essencial para se entender as aplicações práticas) e proporciona uma perspectiva global das técnicas associadas à especificação e desenvolvimento de Agentes computacionais bem como realça a sua relevância prática apresentando exemplos de aplicação.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (36, 4, 1, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (36, 'PT_PT', 'Métodos Formais em Engenharia de Software' , 'Desenvolver as capacidades de abstracção de forma a descrever o que o sistema deve fazer e não a maneira de o fazer. Estar familiarizados com os métodos formais e forma como eles podem contribuir para aumentar a qualidade dos sistemas de software.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (37, 4, 2, 4.5, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (37, 'PT_PT', 'Investigação Operacional' , 'Dotar os alunos com competências para:\n- identificar problemas de decisão;\n- aplicar as várias fases de resolução de um problema de decisão, em particular, a definição e estruturação de problemas, a construção de modelos e a utilização de métodos quatitativoas para a obtenção da solução;\n- analisar de forma crítica a solução obtida;\n- perceber a importância do papel de agente de mudança nas organizações.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (38, 4, 2, 7.5, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (38, 'PT_PT', 'Laboratório de Gestão de Projectos' , 'No final da Unidade Curricular os estudantes deverão ser capazes de:\n- Identificar a necessidade de recurso à gestão de projectos bem como a importância do seu enquadramento estratégico;\n- Identificar os diferentes referenciais normativos e metodologias para a gestão de projectos;\n- Identificar e definir as áreas de processo e variáveis da gestão de projectos;\n- Aplicar metodologias e ferramentas de gestão de projecto e trabalho em equipa;\n- Aplicar conceitos e ferramentas de gestão da qualidade a projectos;\n- Identificar e gerir os riscos inerentes a um projectco.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (39, 4, 2, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (39, 'PT_PT', 'Arquitectura de Sistemas de Software' , 'A disciplina de Arquitecturas de Sistemas de Software tem como objectivo principal introduzir os conceitos de arquitecturas de software, padrões de desenho e tópicos directamente relacionados, tais como o de componentes de software.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (40, 4, 2, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (40, 'PT_PT', 'Arquitectura e Gestão de Redes e Sistemas' , 'Esta unidade curricular tem como objectivo que os estudantes adquiriram competências no planeamento e gestão integrada de infra-estruturas de rede, sistemas e serviços.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (41, 4, 2, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (41, 'PT_PT', 'Computação Paralela' , 'Aquisição de conhecimentos conducentes à utilização simultânea de várias unidades de processamento num sistema de computação. Construção de bases sólidas sobre arquitecturas paralelas, paralelização de algoritmos, modelos de programação, sincronização de processos e medidas de desempenho, através do desenvolvimento de programas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (42, 4, 2, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (42, 'PT_PT', 'Comunicações Móveis' , 'Nesta UC são discutidos os aspectos fundamentais do funcionamento de redes de comunicações móveis, as tecnologias de comunicações móveis mais importantes, e técnicas de engenharia e de projecto de redes de comunicações móveis.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (43, 4, 2, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (43, 'PT_PT', 'Desenvolvimento de Jogos de Computador' , 'O objectivo desta unidade curricular é transmitir o conhecimento sobre o processo de desenvolvimento de jogos de computador, com ênfase particular nos aspectos relacionados com a programação dos diversos módulos que compõem um motor de jogo.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (44, 4, 2, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (44, 'PT_PT', 'Engenharia de Requisitos de Sistemas de Software' , '');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (45, 4, 2, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (45, 'PT_PT', 'Gestão de Operações e Logística' , 'Dotar os alunos com competências para planear, gerir e levar a cabo um processo de análise e especificação de requisitos de um sistema de software.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (46, 4, 2, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (46, 'PT_PT', 'Linguagens de Anotação e Processamento de Documentos' , 'Esta unidade curricular foca-se na obtenção de linguagens de anotação para um dado domínio e na realização de aplicações baseadas em linguagens de anotação e tem por objectivos:\n- Sensibilizar os estudantes para as múltiplas aplicações não triviais das linguagens de anotação;\n- Familiarizar os estudantes com as tecnologias de processamento e armazenamento de informação semi-estruturada;\n- Aplicar as tecnologias de anotação na definição de uma linguagem e na resolução de um problema com recurso ao desenvolvimento de uma aplicação.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (47, 4, 2, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (47, 'PT_PT', 'Marketing' , 'A unidade curricular tem por objectivo desenvolver competências na área da Gestão de Marketing, integrando uma sólida componente teórica, baseada na apresentação e discussão de conceitos e metodologias, com a sua aplicação ao desenvolvimento de um plano de marketing e à discussão de casos de estudo.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (48, 4, 2, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (48, 'PT_PT', 'Modelação e Simulação de Sistemas' , 'Os objectivos da disciplina são:\n- Apresentar os conceitos básicos de modelação e simulação (computacional) e as suas diversas áreas de aplicação;\n- Apresentar as principais fases do ciclo de vida de um projecto de simulação, desde a fase de modelação até a análise e aplicação dos resultados;\n- Apresentar os principais tipos de modelos e a sua adequação ao tratamento de diferentes problemas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (49, 4, 2, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (49, 'PT_PT', 'Multimédia e Novos Serviços' , 'São objectivos da unidade curricular:\na) apresentar os conceitos, os serviços e as aplicações multimédia e hipermédia;\nb) apresentar as técnicas de codificação e representação da informação multimédia;\nc) introduzir as ferramentas de desenvolvimento de aplicações; d) desenvolver aplicações.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (50, 4, 2, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (50, 'PT_PT', 'Segurança em Sistemas Informáticos' , 'Esta Unidade Curricular tem por âmbito o estudo da problemática de segurança de sistemas Informáticos, de forma a fornecer aos estudantes um painel básico dos conceitos e das ameaças e defesas de uma utilização abusiva e destrutiva de tais sistemas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (51, 4, 2, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (51, 'PT_PT', 'Sistemas Embutidos e de Tempo Real' , 'Esta UC tem por objectivo dotar os alunos com capacidade de desenvolver sistemas embebidos com requisitos de tempo-real, recorrendo, se necessário, a sistemas operativos de tempo-real.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (52, 4, 2, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (52, 'PT_PT', 'Tecnologias de Bases de Dados' , 'Esta UC tem por objectivo habilitar os alunos a desenvolver e administrar grandes bases de dados, nomeadamente a afinar o esquema físico, a optimizar interrogações SQL, a tirar partido das extensões à manipulação de objectos e à tecnologia XML e a recuperar e replicar dados.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (53, 4, 2, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (53, 'PT_PT', 'Tecnologias de Distribuição e Integração' , 'Os objectivos principais da unidade curricular incluem:\n- a aquisição de conhecimento e prática dos conceitos essenciais do projecto e arquitectura de aplicaçãoes distribuídas empresariais;\n- aplicação dos principais padrões e tecnologias, consoante os requisitos e funcionalidades dos cenários finais;\n- conhecimaento detalhado de várias tecnologias, com vista à sua implementação fluente, e à sua interoperabilidade e integração.');
 
+-- UPorto 5th year
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (54, 5, 1, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (54, 'PT_PT', 'Preparação da Dissertação' , 'A unidade curricular \"Preparação de Dissertação\" acompanha o processo de organização e trabalho preliminar da dissertação do Mestrado Integrado em Engenharia Informática e Computação. Os estudantes completam PDIS antes do semestre em que a dissertação é realizada a tempo inteiro. O esforço da unidade é o equivalente a 6 ECTS (1/5 de semestre a tempo inteiro) e é ocupado com a escolha e familiarização com o tema da dissertação, com o estudo do estado da arte no domínio da dissertação e com a realização de trabalho preliminar que permita no semestre da dissertação um trabalho intenso, bem focado e com boa apresentação de resultados.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (55, 5, 1, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (55, 'PT_PT', 'Análise de Projectos de Investimento' , 'O objectivo desta disciplina é dotar os alunos do conhecimento das metodologias-base para a análise da viabilidade económica e financeira de projectos de investimento.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (56, 5, 1, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (56, 'PT_PT', 'Armazéns de Dados' , 'O objectvo da UC Armazém de Dadtos é dotar os alunos da capacidade de projectar, implementar e explorar armazéns de dados (data warehouses).');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (57, 5, 1, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (57, 'PT_PT', 'Computação Móvel' , 'Os objectivos principais desta unidade curricular visam a aquisição de conhecimento e prática dos conceitos essenciais do projecto, arquitectura e implementação de aplicações, principalmente empresariais, em dispositivos móveis, utilizando APIs de grande divulgação corrente.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (58, 5, 1, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (58, 'PT_PT', 'Descrição, Armazenamento e Pesquisa de Informação' , 'A unidade curricular "Descrição, Armazenamento e Pesquisa de Informação" tem como objectivo:\n-Sensibilizar os estudantes para os problemas do armazenamento e organização de grandes coleções de dados;\n-Familiarizar os estudantes com os conceitos principais na pesquisa de documentos textuais e da sua aplicação em ferramentas;\n-Explorar os métodos e ferramentas para a descrição de recursos na web e para o uso da descrição em aplicações que fazem uso do significado dos dados.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (59, 5, 1, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (59, 'PT_PT', 'Extracção de Conhecimento e Aprendizagem Computacional' , 'Os objectivos desta UC são:\n-Motivar para a utilização de técnicas de extração de conhecimento (EC) de dados, ou data mining, no apoio à decisão.\n-Desenvolver a capacidade de utilizar corretamente essas técnicas para análise automática de grandes quantidades de dados.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (60, 5, 1, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (60, 'PT_PT', 'Interacção Pessoa-Computador' , 'O principal objectivo da disciplina é o de preparar os estudantes para analisarem e projectarem as componentes interactivas dos sistemas, em particular da interface com os utilizadores, de uma forma adequada às suas necessidades, considerando o curto, médio e longo prazo.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (61, 5, 1, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (61, 'PT_PT', 'Metodologias Ágeis de Desenvolvimento de Software' , 'Os principais objectivos da unidade curricular é dotar os estudantes de conhecimentos e experiência concreta na definição, utilização e refinamento de processos ágeis para a especificidade de um projecto.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (62, 5, 1, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (62, 'PT_PT', 'Realidade Virtual e Aumentada' , 'Realidade Aumentada é uma tecnologia através da qual se pretende melhorar ou aumentar a visão que um utilizador tem do mundo real com imagens virtuais, usando técnicas de Visão por Computador e de Computação Gráfica/Realidade Virtual. O principal objectivo desta disciplina é transmitir aos alunos um conjunto de conhecimentos básicos destas técnicas, que lhes permitam prosseguir estudos mais avançados na área emergente da Realidade Aumentada, e a capacidade de realizar pequenos trabalhos ilustrativos das metodologias estudadas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (63, 5, 1, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (63, 'PT_PT', 'Robótica' , 'Os principais objectivos da UC Robótica são:\n-Compreender os conceitos básicos de Robótica e o enquadramento da Inteligência Artificial na Robótica.\n-Estudar métodos de perceção e interpretação sensorial (com ênfase na visão por computador)\n-Estudar os fundamentos da robótica cooperativa e da construção de equipas de robôs\n-Analisar as principais competições robóticas nacionais e internacionais, os simuladores robóticos mais realistas e as plataformas robóticas mais avançadas disponíveis no mercado.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (64, 5, 1, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (64, 'PT_PT', 'Segurança em Sistemas Informáticos' , 'Esta Unidade Curricular tem por âmbito o estudo da problemática de segurança de sistemas Informáticos, de forma a fornecer aos estudantes um painel básico dos conceitos e das ameaças e defesas de uma utilização abusiva e destrutiva de tais sistemas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (65, 5, 1, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (65, 'PT_PT', 'Seminário de Engenharia de Software e Sistemas de Informação' , 'O objectivo fundamental desta unidade curricular é aprender, discutir e desenhar soluções para as várias problemáticas que surgem pela influência da engenharia de software (e do uso do software em geral) pelas pessoas e pela sociedade como um todo.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (66, 5, 1, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (66, 'PT_PT', 'Seminário de Sistemas Inteligentes, Interacção e Multimédia' , 'Este Seminário tem como objectivos principais:\n-Tomar conhecimento e discutir sobre trabalhos de investigação em curso nas áreas dos Sistemas Inteligentes.\n-Tomar contacto com diferentes investigadores em Sistemas Inteligentes e, através deles, com vários grupos de investigação activos nos tópicos apresentados.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (67, 5, 1, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (67, 'PT_PT', 'Serviços de Rede e de Sistema' , '(Não disponível)');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (68, 5, 1, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (68, 'PT_PT', 'Teste, Verificação e Validação de Software' , 'O objectivo desta unidade curricular é o de dotar os alunos com conhecimentos consolidados na área das redes de computadores sob uma prespectiva de projectores e gestores de uma rede, nomedadamente, constituição de várias sub-redes para satisfazer requisitos específicos de organizações e utilizadores, atribuição de gamas de enderecos IP, gestão de serviços de encaminhamento de pacotes dentro de um domínio e entre domínios, identificação de servicos de redes necessários, sua instalação e configuração.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (69, 5, 1, 6, true, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (69, 'PT_PT', 'Visão por Computador' , 'A visão por computador é uma área da ciência da computação focada na extracção de "informação útil" de imagens e vídeos. O objectivo da visão por computador é "descobrir a partir de imagens o que está presente no mundo, onde estão localizadas as coisas, que acções estão a ser executadas" (Marr,1982).');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (70, 5, 2, 6, false, 1);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (70, 'PT_PT', 'Dissertação' , 'Trabalho individual de investigação e desenvolvimento, conducente à elaboração de uma dissertação de natureza científica sobre um tema da área de conhecimento do curso, ou visando a integração e aplicação à resolução de problemas complexos de engenharia de conhecimentos, competências e atitudes adquiridos ao longo do curso.');
 
@@ -492,133 +1281,200 @@ INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) 
 -- Degree Classes
 -- Universidade de Coimbra
 
+-- UCoimbra 1st year
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (71, 1, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (71, 'PT_PT', 'Análise Matemática' , 'Dotar os alunos dos conhecimentos básicos de Cálculo Diferencial e Integral para funções reais de uma variável real. Saber resolver equações diferenciais e aplicar os conhecimentos obtidos na modelação e resolução de problemas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (72, 1, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (72, 'PT_PT', 'Estruturas Discretas' , 'Um curso de matemática discreta tem vários objectivos. Os estudantes deverão aprender um conjunto de factos matemáticos e como aplicá-los; mas, mais importante, deverão aprender a pensar matematicamente. Para tal, é realçado o raciocínio matemático e as diferentes formas de abordar e resolver problemas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (73, 1, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (73, 'PT_PT', 'Introdução à Programação e Resolução de Problemas' , 'Aprender os princípios básicos de programação e gestão de dados num contexto de resolução de problemas. São exploradas as vertentes algorítmica e de modelação e manipulação de dados, sendo ainda introduzido contexto sobre sistemas informáticos em geral.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (74, 1, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (74, 'PT_PT', 'Tecnologia dos Computadores' , 'Tem como objectivos dar uma perspectiva geral das diversas áreas da informática. A componente prática concentra-se na aplicação de conceitos de electrónica digital utilizados no desenho de computadores.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (75, 1, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (75, 'PT_PT', 'Álgebra Linear e Geometria Analítica' , 'Dotar os alunos dos conhecimentos básicos de Álgebra Linear e Geometria Analítica. Nomeadamente, solucionar sistemas de equações lineares; efectuar operações algébricas com matrizes, compreender e relacionar conceitos e resultados fundamentais de espaços vectoriais, determinar projecções ortogonais e compreender a sua importância no contexto da optimização matemática, compreender e manusear os conceitos de valor próprio e a decomposição espectral de uma matriz');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (76, 1, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (76, 'PT_PT', 'Análise Matemática II' , 'O objectivo principal é dotar os alunos dos conhecimentos básicos de Cálculo Diferencial e Integral para funções de várias variáveis reais e de Análise Complexa. Saber resolver equações diferenciais lineares de coeficientes constantes (recorrendo às transformadas de Laplace) e equações de diferenças (recorrendo às transformadas de Z) e aplicar esses conhecimentos na modelação e resolução de problemas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (77, 1, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (77, 'PT_PT', 'Arquitectura de Computadores' , 'Proporcionar ao aluno uma noção global do funcionamento de um sistema computacional, na perspectiva do programador e do projectista de sistemas digitais, com especial enfoque em: (i) conhecimentos sobre arquitecturas de computadores actuais e compromissos que devem ser tidos em consideração no desenvolvimento de um sistema computacional; (ii) programação em linguagem Assembly; (iii) compreensão da forma como o software interage com o hardware e consequente consolidação das competências de programação em linguagem C.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (78, 1, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (78, 'PT_PT', 'Estatística' , 'Introduzir conhecimentos básicos em modelação de comportamentos padrão de fenómenos aleatórios em contextos de Engenharia ou Ciência, contribuindo para uma formação capaz de descrever, analisar e interpretar situações reais através de modelos matemáticos não deterministas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (79, 1, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (79, 'PT_PT', 'Princípios de Programação Procedimental' , 'Permitir ao aluno adquirir um conjunto de conhecimentos sólidos sobre programação procedimental utilizando a linguagem C, com particular destaque para apontadores e estruturas de dados dinâmicas simples.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (80, 1, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (80, 'PT_PT', 'Tópicos de Física Moderna' , 'Transmitir aos alunos conceitos básicos e ferramentas de trabalho que permitem explicar, compreender e prever fenómenos em Física Clássica e em Física Quântica e a sua relação com Computação Quântica');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (81, 2, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (81, 'PT_PT', 'Introdução às Redes de Comunicação' , 'A disciplina de Redes de Comunicações pretende dotar os estudantes de um largo espectro de conhecimento nas áreas das comunicações e de capacidades para projectarem soluções técnicas de elevado potencial.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (82, 2, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (82, 'PT_PT', 'Programação Orientada aos Objectos' , 'O objectivo desta disciplina é dar ao aluno um conjunto de conhecimentos sólidos em Programação Orientada aos Objectos. Estes conhecimentos não se cingirão à sintaxe de uma linguagem de programação particular, mas incluirão aspectos relativos à modelação orientada aos objectos, assim como à sua representação gráfica.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (83, 2, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (83, 'PT_PT', 'Sistemas Operativos' , 'O objectivo desta disciplina é dar a conhecer aos estudantes o funcionamento dos SO modernos e ao mesmo tempo dotar os estudantes das devidas capacidades para desenvolverem aplicações de sistema que façam uso directo do interface de programação do sistema operativo e que explorem as capacidades de concorrência e multi-programa.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (84, 2, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (84, 'PT_PT', 'Teoria da Computação' , 'Estudar os diversos tipos de autómatos (finitos, de pilha, Máquinas de Turing) e de gramáticas formais (regulares, independentes e dependentes do contexto, recursivas) e as relações entre eles, bem como sua relação com linguagens de programação e compiladores.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (85, 2, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (85, 'PT_PT', 'Teoria da Informação' , 'Fornecer de uma forma sistemática as noções fundamentais da teoria da informação e a sua aplicação em contextos de aprendizagem computacional, análise de dados e, sobretudo, aos princípios da codificação nos contextos da codificação de fontes e de canal e na criptografia.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (86, 2, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (86, 'PT_PT', 'Algoritmos e Estruturas de Dados' , 'Após a conclusão da unidade curricular deve demonstrar conhecimento e capacidade de compreensão nos seguintes aspectos: análise de complexidade; técnicas gerais de projecto de algoritmos; estruturas de dados e algoritmos de ordenamento (características, memória ocupada, velocidade de execução).');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (87, 2, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (87, 'PT_PT', 'Análise e Transformação de Dados' , 'A disciplina pretende desenvolver as seguintes competências:\n - Compreensão e interpretação de fenómenos e processos dinâmicos do mundo real e virtual\n - Capacidade de análise de dados suportada por ferramentas computacionais\n - Aprofundamento do raciocínio matemático para extracção de informação\n - Capacidade de resolução de problemas concretos no âmbito da análise e transformação de dados uni e multidimensionais no domínio do tempo, do espaço e da frequência');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (88, 2, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (88, 'PT_PT', 'Multimédia' , 'Após a conclusão da unidade curricular, o estudante deve demonstrar ter adquirido, ter compreendido e saber aplicar os conhecimentos e competências em:\n i) projecto multimédia\n ii) fundamentos de multimédia\n Nomeadamente:\n - planeamento, design, desenvolvimento e gestão de projectos multimédia em equipa;\n - tópicos de usabilidade e sua aplicação em projectos multimédia;\n - imagem, áudio e vídeo digital, com enfoque nos aspectos fisiológicos e perceptuais envolvidos e na representação e compressão desses tipo de dados multimédia.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (89, 2, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (89, 'PT_PT', 'Protocolos de Comunicação' , 'Os objectivos centrais da disciplina são o estudo e compreensão dos aspectos protocolares dos modernos sistemas de comunicação, sendo dada especial ênfase ao ambiente protocolar da Internet, tendo em vista um conhecimento das principais questões que caracterizam e condicionam os serviços e aplicações.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (90, 2, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (90, 'PT_PT', 'Simulação e Computação Científica' , 'Esta é uma disciplina transversal, de vastíssimo campo de aplicação. Um dos objectivos fundamentais é a aquisição de um conjunto de conhecimentos e competências que permitam, perante uma situação específica, desenvolver um modelo de simulação, implementá-lo, validá-lo e utilizá-lo de forma correcta, tomando em consideração as vantagens e limitações do uso da simulação.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (91, 2, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (91, 'PT_PT', 'Bases de Dados' , 'Esta UC debrucça-se sobre of fundamentos das bases de dados relacionais, incluindo modelo relacional, normalização, operações relacionais, linguagem SQL, transacções e controlo de concorrência, indexação, etc, Para além disso, também pretende operacionalizar estes conceitos através da análise, concepção e construção prática de bases de dados relacionais em ambiente cliente-servidor.');
 
+-- UCoimbra 2nd year
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (92, 3, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (92, 'PT_PT', 'Comunicação Técnica' , 'No final do semestre, os estudantes serão capazes de:\n(i) utilizar diferentes formas de comunicação em contextos académicos e profissionais (ex: redigir um relatório);\n(ii) argumentar, utilizando códigos distintos, em questões de natureza social associadas ao exercício da profissão (ex: apresentações formais);\n(iii) adequar as suas formas de comunicação aos públicos-alvo (ex: textos técnicos e de divulgação).');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (93, 3, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (93, 'PT_PT', 'Engenharia de Software' , 'O aluno deverá ser capaz de perceber porque razão a complexidade do software exige uma abordagem de engenharia e as diversas formas de organizar as pessoas e actividades para o desenvolvimento de um produto de qualidade, nomeadamente abordagens lineares, iterativas e incrementais. Deverá ainda ser capaz de perceber as diferenças entre elas e escolher a(s) mais indicada(s) em função do contexto concreto do projecto. Deverá também ser capaz de usar técnicas e artefactos genéricos de gestão de projecto (diagramas Gantt e PERT/CPM, análise de riscos,etc.). Finalmente, deverá ser capaz de descrever o artefacto de software a desenvolver usado a linguagem UML.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (94, 3, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (94, 'PT_PT', 'Processos de Gestão e de Inovação' , 'Nesta disciplina, os estudantes serão sensibilizados para a importância de mdeterminados conceitos, princípios e práticas da gestão da inovação, ao mesmo tempo que se irão familiarizar com algumas metodologias e ferramentas que permitam a sua operacionalização e implementação no terreno.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (95, 3, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (95, 'PT_PT', 'Sistemas Distribuídos' , 'Os alunos deverão adquirir competências no desenvolvimento de aplicações distribuídas usando várias tecnologias e deverão ser capazes de perceber e interligar conhecimentos sobre técnicas fundamentais para o desenho de aplicações distribuídas em ambiente empresarial e para a Internet.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (96, 3, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (96, 'PT_PT', 'Compiladores' , 'O estudante deverá passar a compreender: os objectivos e a arquitectura de um compilador; os princípios das análises lexical, sintática e semântica e saber implementar essas fases de um compilador, quer de raíz, quer usando ferramentas adequadas; alguns princípios de geração do código final.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (97, 3, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (97, 'PT_PT', 'Computação Gráfica' , 'Nesta unidade curricular pretende-se que o aluno adquira conhecimentos sobre temas centrais à Computação Gráfica, tanto a nível de fundamentos como a nível de utilização de ferramentas gráficas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (98, 3, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (98, 'PT_PT', 'Introdução à Inteligência Artificial' , 'Pretende-se que o aluno adquira conhecimentos de base sólidos sobre a área da inteligência artificial ao nível dos fundamentos, técnicas e aplicação prática. Para o efeito é adoptado o conceito integrador de Agente. Estuda-se o desenvolvimento de agentes de complexidade e capacidade crescente seguindo três metáforas: Simbólica, Conexionista e Biológica.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (99, 3, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (99, 'PT_PT', 'Laboratórios de Programação Avançada' , 'Resolução de problemas avançados típicos de programação. Aula maioritariamente prática.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (100, 3, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (100, 'PT_PT', 'Sistemas de Informação' , 'Esta uc proporciona aos alunos as competências e ferramentas que permitem discutir o projecto e evolução de sistemas de informação (SI) com responsáveis de negócio. Ao completar o curso, os alunos compreenderão as diferentes e frequentemente contraditórias perspectivas dos responsáveis de negócio e dos informáticos, tornando-se assim interlocutores privilegiados para ajudar ambas as partes a planear o SI da organização.');
 
+-- UCoimbra 3rd year
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (101, 4, 1, 4, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (101, 'PT_PT', 'Empreendedorismo e Gestão de Empresas' , 'São objectivos desta disciplina estimular a criação de competências de empreendedorismo e espírito inovador e familiarizar os futuros profissionais com a realidade do tecido empresarial e os fundamentos teóricos da criação e gestão de pequenas empresas e negócios numa óptica de criação de valor.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (102, 4, 1, 4, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (102, 'PT_PT', 'Interacção Humano-Computador' , 'Através desta unidade curricular os estudantes ficarão a conhecer os conceitos fundamentais para compreender a interação entre humanos e sistemas computacionais. O estudante deverá:\n - compreender o papel dos factores humanos na interação e interface;\n - compreender e aplicar técnicas de prototipagem para investigação e ensaio de proposta de design;\n - desenvolver a capacidade para conceber propostas de design de interação e interface para contextos de uso específicos tendo em vista a optimização da experiência de interação, com base em abordagens contextuais e participativas;\n - desenvolver a capacidade de avaliação da usabilidade com domínio de técnicas variadas e sua adequação ao contexto de projecto;\n - desenvolver a capacidade de construção de interfaces inovadoras e coerentes com o propósito;\n - desenvolver a capacidade de combinar as técnicas de uma forma sistemática numa abordagem empírica ao design de interação;\n - desenvolver a capacidade de aprendizagem autónoma no domínio de HCI.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (103, 4, 1, 4, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (103, 'PT_PT', 'Metodologias Experimentais em Informática' , 'Fornecer os métodos experimentais necessários para efetuar avaliação empírica de desempenho de sistemas computacionais que surgem nas várias áreas da informática, de redes de comunicação a algoritmos e inteligência artificial. Aquisição de competências ao nível da análise e síntese, organização e planeamento.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (104, 4, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (104, 'PT_PT', 'Modelação e Análise de Sistemas' , 'Esta disciplina foca-se em modelos para a análise de sistemas, com ênfase em problemas de optimização e sistemas de eventos discretos, com aplicações às quatro opções temáticas do curso. Pretende-se que os estudantes venham a ser capazes de:\n 1) formular problemas de optimização, categorizando-os em função das suas características e formalizando-os de modo a poderem ser resolvidos pelos métodos mais adequados\n 2) modelar e analisar sistemas simples de tráfego, de produção, computacionais (hardware e software) e de comunicação enquanto sistemas de eventos discretos\n Os estudantes deverão ainda desenvolver competências em análise e síntese, resolução de problemas, raciocínio crítico, aprendizagem autónoma, e a capacidade de aplicar o conhecimento teórico adquirido a situações práticas concretas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (105, 4, 1, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (105, 'PT_PT', 'Fundamentos de Sistemas de Comunicação' , 'Os objectivos principais desta UC são o estudo dos fundamentos dos sistemas de transmissão e de comutação. Os tópicos incluem: modulação e transmissão de sinais, sistemas de transmissão e de comutação, aspectos de sinalização em sistemas digitais. Esta UC trata dos aspectos dos sistemas relacionados com redes fixas ou móveis e satélites, e com a transmissão de sinais de voz e vídeo. A UC também cobre os fundamentos dos protocolos de comunicação relacionados com controlo de erros, controlo de fluxo e especificação de protocolos.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (106, 4, 1, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (106, 'PT_PT', 'Sistemas de Comunicação Móvel' , 'Objectivos centrais da UC são, por um lado, a abordagem e estudo, teórico e prático, dos principais aspectos relacionados com a mobilidade de sistemas e redes e, por outro, a exploração de protocolos, tecnologias e aplicações de redes de sensores.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (107, 4, 1, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (107, 'PT_PT', 'Engenharia de Requisitos' , 'Nesta unidade curricular os estudantes irão estudar diversos métodos para compreender o problema com que se deparam, os factores que condicionam a gama de soluções possíveis, e as abordagens para decidirem entre essas alternativas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (108, 4, 1, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (108, 'PT_PT', 'Integração de Sistemas' , 'Nesta disciplina abordamos múltiplas formas estruturadas de integrar aplicações, não só ao nível de uma organização, mas para além dela. É dada uma forte ênfase à integração utilizando middleware, em particular, utilizando abordagens como SOA (Service Oriented Architecture) e ESB (Enterprise Service Bus).');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (109, 4, 1, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (109, 'PT_PT', 'Aprendizagem Computacional' , 'Estudar  as principais técnicas de aprendizagem computacional no contexto da multiplicidade de tipos de dados disponíveis nas aplicações relevantes nomeadamente desenvolvimento e interpretação de árvores de decisão , configuração e treino de redes neuronais artificiais, de lógica difusa, sistemas difusos e neuro-difusos, e configuração e treino de máquinas de vectores de suporte. Desenvolver as competências para conceber sistemas de classificação de grandes conjuntos de dados, de diagnóstico em contextos industriais e médicos, de controlo inteligente, de análise sistémica dos problemas complexos e de avaliação crítico dos resultados.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (110, 4, 1, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (110, 'PT_PT', 'Inteligência Artificial' , 'Fornecer aos estudantes conceitos, princípios e teorias avançadas necessárias para o desenvolvimento de aplicações reais envolvendo agentes ou sistemas com capacidades de raciocínio, comportamento e interação com os seus ambientes de forma inteligente.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (111, 4, 1, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (111, 'PT_PT', 'Arquitectura de Empresas' , 'Uma arquitectura de empresa tenta descrever e controlar a estrutura de uma organização, processos, aplicações e sistemas de forma integrada. A especificação não ambígua dos componentes e das suas relações numa arquitectura requer uma linguagem de modelação coerente. Tal linguagem deve permitir a modelação integrada de vários domínios da arquitectura e deve ser analisada por pessoas de TI e por pessoas com um background empresarial. Nesta unidade curricular, apresentamos uma linguagem de modelação de empresas que capta a complexidade dos domínios de uma arquitectura, as suas relações e permite a construção de modelos integrados. A linguagem fornece aos arquitectos instrumentos concretos para que possam melhorar as suas práticas arquitectónicas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (112, 4, 1, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (112, 'PT_PT', 'Gestão de Sistemas de Informação' , 'Esta unidade curricular explica aos alunos os principais conceitos, princípios e metodologias necessárias para gerir SI em organizações. A unidade também fornece competências necessárias em síntese, comunicação escrita, resolução de problemas, raciocínio crítico e aplicação prática de conhecimento em áreas como governação de IT, governação de Big Data, e metodologias de gestão, tais como o ITIL e o COBIT.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (113, 4, 2, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (113, 'PT_PT', 'Segurança em Tecnologias da Informação' , 'Esta UC pretende dotar os alunos das capacidades técnicas para administração da segurança em TI. Aspectos de sistemas de comunicação, redes informáticas, sistemas de informação organizacionais e sistemas distribuídos. Compreender o conjunto de métodos e ferramentas para a realização das tarefas associadas a um especialista em Segurança em TI.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (114, 4, 2, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (114, 'PT_PT', 'Gestão de Infra-estruturas e Serviços na Internet' , 'Os objectivos centrais da disciplina são a abordagem teórica e prática à temática de gestão de infra-estruturas informáticas, incluindo o planeamento e gestão dos serviços de rede que integram e/ou dão suporte a essas infra-estruturas, o suporte ás operações e manutenção dessas infra-estruturas (planeamento, monitorização, gestão de falhas, gestão de níveis de serviço, AAA, etc.), os protocolos de suporte à gestão de redes e serviços informáticos, e a administração de serviços e infra-estruturas informáticas em ambientes virtualizados e/ou instalados em ambientes cloud.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (115, 4, 2, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (115, 'PT_PT', 'Modelação e Desempenho de Redes' , 'O objectivo principal da disciplina é o estudo de metodologias para a modelação e avaliação do desempenho de redes de comunicação. A disciplina aborda os fundamentos da teoria das probabilidades e dos processos estocásticos na perspectiva da modelação e análise de desempenho das redes de comunicação. De forma complementar, a disciplina aborda metodologias de simulação para avaliação de desempenho de sistemas de comunicação.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (116, 4, 2, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (116, 'PT_PT', 'Arquitectura de Software' , 'Após a conclusão desta unidade curricular, os alunos deverão:\n - ser capazes de descrever uma arquitectura com precisão;\n - reconhecer os principais estilos arquitecturais existentes em sistemas de software;\n - propor alternativas de arquitectura para um problema, e escolher entre eles;\n - ter as competências necessárias para a construção de um sistema de software de dimensão média que satisfaça uma especificação de arquitectura;\n - usar as ferramentas de desenvolvimento correctas para acelerar essas tarefas;\n - compreender a definição formal de uma arquitectura e ser capaz de raciocinar sobre as suas propriedades;\n - usar o conhecimento de domínio para especializar uma arquitectura para uma determinada família de aplicações.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (117, 4, 2, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (117, 'PT_PT', 'Qualidade e Confiabilidade de Software' , 'Esta unidade curricular aborda com profundidade as áreas da engenharia de software relacionadas com a verificação, validação e certificação. O objectivo é dotar os alunos com conhecimento abrangente sobre qualidade de software e as actividades técnicas levadas a cabo para assegurar a qualidade e a confiabilidade do software, incluindo análise estática e dinâmica, modelos de desenvolvimento e standards, e certificação de software.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (118, 4, 2, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (118, 'PT_PT', 'Computação Evolucionária' , 'Apresentar, discutir e desenvolver soluções de engenharia de inspiração natural (i.e., biológica, social, física) para problemas de elevada complexidade que, ou não têm solução analítica, ou são computacionalmente intratáveis. Aprender a avaliar de modo rigoroso, i.e., por recurso à estatística, soluções alternativas para os problemas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (119, 4, 2, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (119, 'PT_PT', 'Reconhecimento de Padrões' , 'O Reconhecimento de Padrões (RP) estuda a concepção, desenvolvimento e implementação de sistemas capazes de reconhecer padrões nos dados. Esta UC ministra os algoritmos que permitem explorar aplicações de RP, formalizando-as, com modelos analíticos de uso alargado nos mais diversos domínios. Conceitos básicos, modelos e ferramentas para a compreensão e desenho de um SRP.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (120, 4, 2, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (120, 'PT_PT', 'Engenharia de Serviços' , 'A engenharia de serviços fornece um contributo importante para a definição, desenho, modelação, execução e análise de serviços. A unidade curricular apresenta linguagens de modelação, métodos, metodologias, aplicações e casos de estudo com resultados accionáveis, ilustrando as técnicas que podem ser utilizadas em larga escala com recurso a exemplos do mundo real para projectar serviços.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (121, 4, 2, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (121, 'PT_PT', 'Gestão de Processos de Negócio' , 'A unidade curricular de Gestão de Processos de Negócio introduz conceitos e abordagens de gestão e melhoria de processos de negócio. Foca-se na compreensão, desenho e optimização de processos.\n Os estudantes aprenderão a identificar, desenhar, documentar, modelar, avaliar e melhorar processos de negócio,  apercebendo-se dos desafios inerentes. Perceberão a forma como as tecnologias de informação podem ser usadas para automatizar, gerir, transformar e melhorar processos de negócio, ganhando competências na utilização de algumas ferramentas. Compreenderão desafios, vantagens e riscos envolvidos em processos inter-organizacionais e em outsourcing de processos de negócio.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (122, 4, 2, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (122, 'PT_PT', 'Sistemas Complexos' , 'Esta cadeira tem por objectivo principal o estudo de sistemas complexos, sejam eles físicos (e.g., o clima), biológicos (e.g. redes de regulação genética), cognitivos (e.g. a mente) ou sociais (e.g., os mercados financeiros). Focaremos os conceitos, os modelos e as ferramentas necessários à compreensão destes sistemas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (123, 4, 2, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (123, 'PT_PT', 'Sistemas Ubíquos' , 'Nesta disciplina são adquiridos os conhecimentos necessários à concepção e desenvolvimento de sistemas ubíquos e à sua integração com os sistemas de informação existentes. É dada especial atenção às metodologias de posicionamento, representação de lugares e percepção de contexto, privacidade e segurança e avaliação de sistemas ubíquos.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (124, 4, 2, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (124, 'PT_PT', 'Sistemas de Gestão de Dados' , 'Aborda-se conceitos de sistemas de gestão de bases de dados (SGBD) convencionais, sistemas de gestão para bigdata, escalabilidade e performance. Aborda-se também sistemas de gestão de dados em outros ambientes. Os conceitos básicos incluem hardware, organização física, índices, processamento e optimização de pesquisas, transacções, backups e recuperação, bem como aspectos relacionados com o desenvolvimento de aplicações. Para além destes, a unidade curricular focará colocação e gestão de dados em ambientes paralelos, distribuídos e móveis, questões de replicação, consistência, transacções e disponibilidade nesses ambientes. São abordados temas actuais (e que podem evoluir ao longo dos anos), tais como Map-Reduce e Hive, bases de dados verticais, sistemas NoSQL.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (125, 4, 2, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (125, 'PT_PT', 'Visão por Computador' , 'Perceber os aspectos relativos à formação geométrica e radiométrica das imagens. Aprender métodos para estimar elementos na imagem e relacioná-los com as estruturas 3D. Aprender métodos para a reconstrução 3D e para a estimação de movimento 3D.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (126, 4, 2, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (126, 'PT_PT', 'Business Intelligence' , 'Esta disciplina tem por objectivos estudar as principais metodologias de desenvolvimento de soluções de Business Intelligence e mostrar como as técnicas de Data Warehouses(DW), de OLAP e de Data Mining(DM) podem ser conjugadas na construção de soluções informáticas de apoio à decisão.');
 
+-- UCoimbra 5th year
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (127, 5, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (127, 'PT_PT', 'Gestão de Projectos' , 'A natureza da actividade de um engenheiro informático é de tal forma única, que requer o conhecimento de técnicas de gestão de projectos, nomeadamente a nível da gestão de recursos, quer humanos quer computacionais, análise de riscos, planeamento, acompanhamento, etc. Nesta disciplina pretende-se abordar as principais técnicas de gestão de projecto enquanto actividade de engenharia, i.e. com custos e prazos finitos, incluindo aspectos de relacionamento pessoal e organizacional, como resultado da necessidade de trabalhar no seio de equipas de razoável dimensão (8 a 12 pessoas), em projectos reais com clientes reais.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (128, 5, 1, 6, false, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (128, 'PT_PT', 'Dissertação/Estágio' , 'Os objectivos principais do estágio são os seguintes:\n - Técnicas de projecto e desenvolvimento de software e sistemas de informação e comunicação\n - Realização de projectos de desenvolvimento tecnológico\n - Contacto com a elaboração de projectos em ambiente empresarial\n - Iniciação a actividades de investigação de base e aplicada\n - Integração no mercado laboral\n Realização de um documento com a proposta de estágio / dissertação incluindo os seguintes aspectos:\n - Análise do estado da arte\n - Escolha justificada das ferramentas e metodologias a utilizar\n - Análise de requisitos relativamente ao tema a desenvolver\n - Especificação de alto nível do sistema a desenvolver / trabalho a realizar incluindo objectivos concretos e calendarização para o segundo semestre.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (129, 5, 1, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (129, 'PT_PT', 'Informática Médica' , 'Fornecer de uma forma sistemática as tecnologias e os fundamentos para a integração e desenvolvimento de sistemas de informação e de apoio à decisão em aplicações clínicas. Em particular, é objectivo exporem-se os protocolos e abordagens mais significativas em sistemas de informação clínicos, as arquitecturas e tecnologias utilizadas para a construção de sistemas tele-médicos (nomeadamente de sistemas pHealth), e ainda algoritmos de análise de informação clínica para apoio ao diagnóstico.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (130, 5, 1, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (130, 'PT_PT', 'Robótica' , 'Pretende-se fornecer conhecimento (in-depth) em Robótica para aquisição de competências a todos:\n 1. aqueles que pretendam operar e/ou desenvolver aplicações que usem robots ou sistemas robóticos;\n 2. aqueles que pretendam desenvolver/projectar sistemas robóticos.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (131, 5, 1, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (131, 'PT_PT', 'Serviços Emergentes da Internet' , 'Os objectivos da disciplina são o conhecimento de fundamentos de aplicações telemáticas, aplicações para a Internet e de serviços emergentes na Internet. Serão também abordados os paradigmas, tecnologias e protocolos para o suporte de aplicações multimédia na Internet. Os alunos deverão desenvolver competências de análise crítica e exposição das soluções actuais e dos desafios futuros nas áreas das aplicações telemáticas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (132, 5, 1, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (132, 'PT_PT', 'Serviços e Infra-estruturas de Alto Desempenho' , 'Os objectivos centrais da disciplina são a abordagem teórica e prática à temática de gestão de serviços e infra-estruturas informáticas de alto desempenho, incluindo o planeamento e administração dessas infra-estruturas (especificação e desenho de centros de dados, operações e manutenção, gestão de recursos, aspectos de eficiência energética), o planeamento e administração desses serviços e das comunicações que lhe dão suporte (resiliência, qualidade de serviço, gestão de acordos de nível de serviço, eficiência energética).');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (133, 5, 1, 6, true, 2);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (133, 'PT_PT', 'Web Semântica' , 'O objectivo principal da cadeira de Web Semântica é que o aluno adquira um conjunto de competências: - Capacidade de construção e gestão de ontologias\n - Capacidade de representar uma ontologia numa linguagem da Web Semântica (RDF, RDFa, RDFs e OWL)\n - Capacidade para utilizar triple stores, SPARQL, Pesquisa Semântica e os mecanismos de raciocínio\n - Capacidade de aplicação e uso de ontologias representadas através de linguagens da Web Semântica, em aplicações para a Internet ou Intranets\n - Capacidade de especificação, design e desenvolvimento de sistemas/aplicações para a Web Semântica\n - Capacidade de reutilização de ontologias disponibilizadas na Internet');
 
@@ -628,20 +1484,28 @@ INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) 
 -- IST 1st year
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (134, 1, 1, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (134, 'PT_PT', 'Álgebra Linear' , 'Formação básica em Álgebra Linear. Domínio das seguintes matérias: espaços vectoriais, transformações lineares, espaços euclideanos, valores e vectores próprios.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (135, 1, 1, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (135, 'PT_PT', 'Cálculo Diferencial e Integral I' , 'Formação básica em Análise Matemática. Domínio das seguintes matérias: sucessões, cálculo diferencial e integral de funções reais de uma variável real. Introdução às séries numéricas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (136, 1, 1, 7.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (136, 'PT_PT', 'Fundamentos da Programação' , 'Fornecer conhecimentos sobre conceitos fundamentais relativos à actividade de programação, nomeadamente, algoritmo, abstracção procedimental e abstracção de dados, a programação como construção de abstracções, paradigmas de programação. Após a frequência da cadeira, os alunos deverão dominar os conceitos apresentados e serem capazes de desenvolver programas numa linguagem de programação de alto nível, o Python.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (137, 1, 1, 7.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (137, 'PT_PT', 'Introdução à Arquitectura de Computadores' , 'Os alunos deverão dominar os conceitos básicos e o funcionamento geral de um computador, a estrutura material que permite a execução de programas. Deverão conseguir descrever o funcionamento dos elementos básicos, processador, sistema de memória e sistema de entradas e saídas, e sua interacção. Em particular, devem ser capazes de compreender a estrutura interna de um processador e o processo de execução das instruções.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (138, 1, 1, 3, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (138, 'PT_PT', 'Introdução à Engenharia Informática' , 'Esta UC tem como objectivo principal dar aos alunos uma visão da engenharia informática na sociedade, nas empresas, na inovação e na investigação.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (139, 1, 2, 7.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (139, 'PT_PT', 'Cálculo Diferencial e Integral II' , 'Esta UC providencia os alunos com o domínio do cálculo diferencial e integral de funções de mais de uma variável real, incluindo os teoremas fundamentais do cálculo. Aplicações à Física.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (140, 1, 2, 7.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (140, 'PT_PT', 'Introdução aos Algoritmos e Estruturas de Dados' , 'Ganhar conhecimentos de programação numa linguagem imperativa. Adquirir conhecimentos sobre algoritmos básicos de ordenação e procura. Saber seleccionar, criar e utilizar estruturas de dados elementares. Saber projectar algoritmos iterativos e recursivos, para a resolução de problemas. Saber analisar a complexidade dos algoritmos utilizados para resolver um dado problema por forma a poder escolher aqueles que sejam mais eficientes.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (141, 1, 2, 7.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (141, 'PT_PT', 'Lógica para Programação' , 'Com a frequência da disciplina pretende-se que os alunos tenham conhecimento sobre os componentes de uma lógica, sejam capazes de desenvolver provas no sistema dedutivo, sejam capazes de utilizar o formalismo semântico, sejam capazes de relacionar o sistema dedutivo e o sistema semântico e provar propriedades sobre estas relações. Deverão obter noções sobre o raciocínio automático e ser capazes de desenvolver programas utilizando o paradigma da programação em lógica.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (143, 1, 2, 7.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (143, 'PT_PT', 'Matemática Discreta' , 'Desenvolver o raciocínio matemático rigoroso. Dominar os conceitos e instrumentos matemáticos necessários para a análise de procedimentos e algoritmos, quer quanto à sua correcção, quer quanto à sua eficiência.');
 
@@ -649,22 +1513,31 @@ INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) 
 
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (143, 2, 1, 7.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (143, 'PT_PT', 'Análise Complexa e Equações Diferenciais' , 'Formação básica em: funções de uma variável complexa, equações diferenciais ordinárias, métodos de análise de Fourier com aplicação à resolução de equações diferenciais parciais.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (144, 2, 1, 4.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (144, 'PT_PT', 'Gestão' , 'Pretende-se que os alunos fiquem habilitados com a introdução às competências profissionais fundamentais para o funcionamento das organizações tais como: Enquadramento Microeconómico, Gestão Estratégica, Marketing, Gestão de Recursos Humanos, Contabilidade e Avaliação de Projectos.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (145, 2, 1, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (145, 'PT_PT', 'Mecânica e Ondas' , 'Esta disciplina apresenta os conceitos e princípios básicos da mecânica clássica, dos fenómenos ondulatórios, e da relatividade restrita, reforçando a compreensão desses conceitos através de aplicações ao mundo real. Os alunos deverão ter a capacidade de manipular esses conceitos e saber aplica-los à resolução de problemas. Os estudantes serão motivados por exemplos de aplicação dos princípios da física noutras áreas do conhecimento científico e tecnológico.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (146, 2, 1, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (146, 'PT_PT', 'Programação com Objectos' , 'Conhecer: o paradigma de programação com objectos, as suas vantagens, inconvenientes e limitações;o paradigma dos padrões de desenho, tanto no desenvolvimento, como na refactorização de aplicações. Competências a adquirir: domínio do paradigma da programação com objectos, nomeadamente dos conceitos de encapsulamento, abstracção, herança e polimorfismo; capacidade de mutilizar uma linguagem de programação baseada em objectos; capacidade de utilização de padrões de desenho; e domínio da escrita de testes de avaliação.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (147, 2, 2, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (147, 'PT_PT', 'Sistemas Operativos' , 'Conhecer os conceitos fundamentais subjacentes aos sistemas operativos, com ênfase nos seus mecanismos e algoritmos, assim como a estrutura interna dos sistemas operativos mais relevantes. Programar, ao nível sistema, usando todas as funcionalidades dos sistemas operativos tendo em conta os modelos de programação sequencial e concorrente.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (148, 2, 2, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (148, 'PT_PT', 'Análise e Síntese de Algoritmos' , 'Formação de nível intermédio em algoritmia e complexidade, familiarizando os alunos com técnicas de análise e síntese de algoritmos e estruturas de dados. Conhecimento dos fundamentos da análise e síntese de algoritmos. Análise da realização prática de algoritmos e estruturas de dados. Perspectiva abrangente das aplicações dos algoritmos em Engenharia Informática.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (149, 2, 2, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (149, 'PT_PT', 'Electromagnetismo e Óptica' , 'Esta disciplina apresenta os conceitos e princípios básicos do electromagnetismo e da óptica física reforçando a compreensão desses conceitos através de aplicações ao mundo real. Os alunos deverão ter a capacidade de manipular esses conceitos e saber aplica-los à resolução de problemas. Os estudantes serão motivados por exemplos de aplicação dos princípios da física noutras áreas do conhecimento científico e tecnológico.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (150, 2, 2, 7.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (150, 'PT_PT', 'Interfaces Pessoa Máquina' , 'Aprender os princípios e regras fundamentais para a concepção e desenvolvimento de Interfaces Utilizador usáveis. Identificar os utilizadores e as tarefas que estes desejam realizar com o sistema interactivo a ser desenvolvido. Saber avaliar as interfaces em diferentes fases do seu desenvolvimento, aplicando as técnicas de avaliação que mais se adequam. Identificar os factores críticos no desenho de interfaces. Compreender e adoptar compromissos entre as várias restrições a que está sujeito o desenho da interface. Enquadrar o desenho de interfaces no projecto de engenharia informática.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (151, 2, 2, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (151, 'PT_PT', 'Probabilidades e Estatística' , 'Iniciação ao estudo da teoria das probabilidades e inferência estatística, tendo em vista a compreensão e aplicação dos seus principais conceitos e métodos.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (152, 2, 4.5, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (152, 'Teoria da Computação', 'Matemática' , 'Entender e saber utilizar os conceitos de máquina de Turing, computação e recurso computacional. Compreender e aprofundar os conceitos de "tarefa" algorítmica e de "tarefa" não algorítmica. Conhecer os limites para "tarefas" algorítmicas. Entender a computação como conceito físico-matemático e não como conceito puramente matemático. Experimentar conceitos e técnicas em ambientes computacionais interactivos.');
 
@@ -672,22 +1545,31 @@ INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) 
 
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (153, 3, 1, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (153, 'PT_PT', 'Bases de Dados' , 'A disciplina faz uma introdução à concepção e análise de bases de dados. O curso foca no modelo relacional, cobrindo o desenho lógico das bases de dados (desenho do esquema) e sua implementação, bem como os sistemas de gestão de transações. Alguns aspectos dos sistemas de bases de dados paralelas e distribuídas, gestão de informação não estruturada e semiestruturada serão também abordados. A disciplina tem como objectivo expor os alunos aos conceitos básicos necessários no desenho e concepção de um sistema de gestão de base de dados, assim como questões práticas da sua realização no âmbito de um projecto em equipa.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (154, 3, 1, 4.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (154, 'PT_PT', 'Computação Gráfica' , 'Esta unidade curricular pretende fornecer conhecimentos básicos sobre computação gráfica interactiva. São leccionados os fundamentos da representação e criação de imagens sintéticas a partir de cenas tri-dimensionais. Neste âmbito os alunos verão dominar as transformações geométricas elementarese compreender o funcionamento do pipeline de visualização 3D e dos seus andares principais. No final, os alunos estarão preparados para desenhar e desenvolver aplicações gráficas interactivas.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (155, 3, 1, 7.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (155, 'PT_PT', 'Inteligência Artificial' , 'Introduzir o tema de Inteligência Artificial ao aluno, de forma a que adquira os conhecimentos básicos desta área da informática e o motive a seguir a área da Inteligência Artificial. Servir de base a cadeiras mais avançadas de Inteligência Artificial.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (156, 3, 1, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (155, 'PT_PT', 'Organização de Computadores' , 'Os alunos deverão adquirir uma visão abrangente e actual das arquitecturas de computadores ao nível dos seus diversos componentes: processadores, sistema de memória e de entradas e saídas. Os alunos deverão ainda ser capazes de compreender as condicionantes para a evolução dos sistemas computacionais e de avaliar estratégias para optimização de programas tendo em atenção a arquitectura computacional subjacente, baseadas em métricas de desempenho.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (157, 3, 1, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (157, 'PT_PT', 'Redes de Computadores' , 'Saber analisar de forma crítica as várias opções tomadas na concepção de redes de computadores, suas arquitecturas e protocolos. Conhecer os protocolos principais da Internet. Saber programar aplicações de rede usando a interface de sockets.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (158, 3, 2, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (158, 'PT_PT', 'Análise e Modelação de Sistemas' , 'Dotar os alunos com as competências fundamentais para a análise de problemas de engenharia em que a solução se pode conceptualizar como um sistema, recorrendo a técnicas de engenharia de requisitos e desenvolvimento de modelos conceptuais (especialmente em UML, SysML e BPMN)');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (159, 3, 2, 6, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (159, 'PT_PT', 'Compiladores' , 'Aquisição de conceitos sobre a definição de linguagens de programação. Obtenção de conhecimentos sobre os métodos de análise (front-end) e síntese (back-end) mais usados pelos compiladores. Especificação lexical e sintáctica, bem como a análise semântica das linguagens de computação, com especial ênfase nas linguagens de programação. Desenvolver um compilador para uma linguagem de programação simples que gere código máquina executável.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (160, 3, 2, 3, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (160, 'PT_PT', 'Computação e Sociedade' , 'Transmitir aos futuros engenheiros informáticos a noção do enorme impacto social que os aspectos éticos têm no desenvolvimento e utilização de produtos e serviços baseados em tecnologias de informação. Ensinar os fundamentos necessários para que possam fazer as escolhas acertadas quando confrontados com situações concretas envolvendo o desenvolvimento, operação e utilização de sistemas de informação.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (161, 3, 2, 7.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (161, 'PT_PT', 'Engenharia de Software' , 'Transmitir um roteiro do desenvolvimento de software, desde o levantamento de requisitos até à manutenção de programas. Integrar os conhecimentos adquiridos noutras disciplinas no contexto mais alargado do processo de desenvolvimento. Motivar para o desenvolvimento de software como uma engenharia, que integra os aspectos tecnológicas da computação com os factores sociais e humanos da construção de produtos.');
+
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (162, 3, 2, 7.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (162, 'PT_PT', 'Sistemas Distribuídos' , 'Analisar as arquitecturas e as tecnologias que permitem desenvolver aplicações distribuídas que possam garantir requisitos não funcionais como a reconfigurabilidade, a segurança, a tolerância a faltas e a escalabilidade. Aquisição de conhecimentos que permitam desenvolver uma aplicação com uma arquitectura distribuída. Programar aplicações distribuídas. Interpretar requisitos de segurança formulando políticas e concretizando mecanismos seguros no código da aplicação. Análise de requisitos de fiabilidade e disponibilidade e introdução de mecanismos de tolerância a faltas.');
 
@@ -1172,27 +2054,1324 @@ INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) 
  
 -- IST 5th year
 
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (1000, 5, 1, 12, FALSE, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1000, 'PT_PT', 'Projecto de Mestrado em Engenharia Informática e de Computadores','Desenvolvimento de um trabalho de projecto de natureza integradora, na área da engenharia informática.');
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (223, 5, 1, 12, FALSE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (223, 'PT_PT', 'Projecto de Mestrado em Engenharia Informática e de Computadores','Desenvolvimento de um trabalho de projecto de natureza integradora, na área da engenharia informática.');
 
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (1000, 5, 1, 1.5, FALSE, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1000, 'PT_PT', 'Portfolio Pessoal 1','Desenvolver nos estudantes competências comportamentais de trabalho em equipa,
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (224, 5, 1, 1.5, FALSE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (224, 'PT_PT', 'Portfolio Pessoal 1','Desenvolver nos estudantes competências comportamentais de trabalho em equipa,
         de capacidade de expressão oral e escrita, de línguas e experiências internacionais e de experiência da realidade das empresas e
         do mundo do trabalho, através da prática de actividades extra-curriculares.');
 
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (1000, 5, 2, 1.5, FALSE, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1000, 'PT_PT', 'Portfolio Pessoal 2','Desenvolver nos estudantes competências comportamentais de trabalho em equipa,
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (225, 5, 2, 1.5, FALSE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (225, 'PT_PT', 'Portfolio Pessoal 2','Desenvolver nos estudantes competências comportamentais de trabalho em equipa,
         de capacidade de expressão oral e escrita, de línguas e experiências internacionais e de experiência da realidade das empresas e
         do mundo do trabalho, através da prática de actividades extra-curriculares.');
 
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (1000, 5, 2, 30, FALSE, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1000, 'PT_PT', 'Dissertação - Mestrado em Engenharia Informática e de Computadores','Escrita de uma tese de Mestrado na área da Engenharia Informática');
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (226, 5, 2, 30, FALSE, 3);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (226, 'PT_PT', 'Dissertação - Mestrado em Engenharia Informática e de Computadores','Escrita de uma tese de Mestrado na área da Engenharia Informática');
         
 -- Degree Classes
--- Instituto Superior Técnico
+-- Universidade de Aveiro
 
-INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (1000, 4, 2, 7.5, TRUE, 3);
-INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1000, 'PT_PT', 'Programação','');
+-- Aveiro 1st year
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (227, 1, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (227, 'PT_PT', 'Álgebra Linear e Geometria Analítica','Nesta unidade curricular comum a diversos cursos de engenharias,
+        leccionam-se alguns tópicos de álgebra linear e de geometria analítica que fornecem o quadro teórico conceptual
+        e os instrumentos de cálculo necessários à compreensão e desenvolvimento de variadas e importantes aplicações
+        da matemática a outras ciências e engenharias. Entre as competências fundamentais a desenvolver pelos estudantes
+        destacam-se a capacidade de cálculo formal algébrico e bem como a de formulação e resolução explícita de
+        problemas algébricos, incluindo questões de geometria analítica; a capacidade de utilizar técnicas vectoriais
+        e matriciais em diversas aplicações; a resolução de problemas recorrendo a subespaços e transformações
+        lineares; a identificação e manipulação algébrica de cónicas e quádricas.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (228, 1, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (228, 'PT_PT', 'Elementos de Física','A disciplina de Elementos de Física aborda diversos fenómenos e conceitos
+        físicos indispensáveis para a compreensão do progresso científico e tecnológico moderno, enquadrando a Física no
+        contexto de outras Ciências e Engenharias. Será dada ênfase especial aos desenvolvimentos do século XX,
+        apresentando, ainda que duma forma qualitativa, os modelos físicos e seus limites. Por outro lado,
+        pretende-se desenvolver competências no domínio da experimentação e capacidade de raciocínio crítico.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (229, 1, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (229, 'PT_PT', 'Cálculo I','Aquisição de conhecimentos e competências em cálculo com uma
+        variável incluindo o estudo de funções de uma variável e a integração.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (230, 1, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (230, 'PT_PT', 'Introdução às Tecnologias Web','Esta unidade curricular tem como objectivo fornecer as primeiras noções de
+        utilização de ferramentas e de programação web. Será dado um enfoque particular na criação das páginas, quer em
+        modo autónomo quer através da sua integração em ferramentas e ainda na programação do lado do cliente. No final
+        da unidade curricular, os alunos deverão ser capazes de desenvolver páginas web de pequena e média complexidade,
+        que modelem situações concretas e que forneçam resposta às questões por elas levantadas. Os alunos aprenderão
+        a conceber programas que manipulam quer objectos de interface web quer estruturas de dados.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (231, 1, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (231, 'PT_PT', 'Fundamentos de Programação','Pretende-se dotar os alunos da capacidade para resolver problemas de pequena e
+        média dimensão recorrendo a uma linguagem de programação multi-paradigma (Python)');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (232, 1, 2, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (232, 'PT_PT', 'Modelação e Análise de Sistemas','O objectivo da unidade curricular é fornecer uma compreensão geral dos
+        conceitos da análise por objectos, das metodologias  de desenvolvimento de software, e da linguagem UML
+        para construção de modelos.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (233, 1, 2, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (233, 'PT_PT', 'Cálculo II','Estender a formação de cálculo em uma variável ao estudo das séries e das
+        equações diferenciais. Estudo dos extremos d funções de várias variáveis.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (234, 1, 2, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (234, 'PT_PT', 'Matemática Discreta','Formação em matemática discreta que permita a compreensão de modelos
+        matemáticos de natureza combinatória, muito comuns em computação, telecomunicações, indústria de processadores,
+        desenho de circuitos integrados, criptografia e segurança na transmissão de comunicações, sistemas de tráfego, etc.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (235, 1, 2, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (235, 'PT_PT', 'Introdução à Arquitectura de Computadores','Conhecer as formas de representação da informação nos computadores digitais,
+        com relevo para a representação da informação numérica e as operações aritméticas básicas.\n
+- Conhecer as operações lógicas e as componentes eletrónicas que as realizam.\n
+- Compreender o funcionamento dos sistemas com memória e o funcionamento dos principais dispositivos de armazenamento de informação\n
+- Compreender a organização interna dos computadores digitais\n
+- Compreender os mecanismos de comunicação do computador com o exterior\n
+- Adquirir familiariedade com a arquitectura de processadores através da programação em assembly.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (236, 1, 2, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (236, 'PT_PT', 'Programação Orientada a Objectos','Este curso é uma introdução à programação orientada a objectos (OOP), usando a linguagem Java.
+        O objectivo é abordar temas como encapsulamento,herança, polimorfismo, estruturas de dados, de modo que os
+        alunos sejam capazes de decompor e construir uma solução de acordo com princípios de OOP.');
+
+
+-- Aveiro 2nd year
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (237, 2, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (237, 'PT_PT', 'Algoritmos e Estruturas de Dados','No final desta unidade curricular os alunos deverão estar habilitados a:\n
+        - Desenvolver estratégias algorítmicas fundamentais envolvendo iteração e recursividade\n
+        - Saber analisar o desempenho de algoritmos iterativos e recursivos em termos da sua complexidade algorítmica\n
+        - Saber aplicar estratégias sistemáticas de depuração, gestão de falhas e implementação de algoritmos e estruturas de dados com correcção e robustez.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (238, 2, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (238, 'PT_PT', 'Métodos Probabilísticos para Engenharia Informática','Justificar a necessidade da modelação probabilística no contexto da Eng. Informática.
+        Fornecer as ferramentas matemáticas que permitam caracterizar esta modelação nos seus diferentes aspectos
+        (probabilidades, estatística e processos estocásticos). Explorar as possibilidades de experimentação abertas pela
+        disponibilidade dos actuais meios computacionais. Ensinar as técnicas de simulação de eventos discretos.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (239, 2, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (239, 'PT_PT', 'Redes e Serviços','Esta UC tem como objectivo Fornecer uma visão detalhada das redes de comunicações,
+        abrangendo as tecnologias e serviços mais relevantes usados nas redes de acesso e de núcleo.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (240, 2, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (240, 'PT_PT', 'Sistemas Multimédia','Entender a relevância dos sistemas multimédia.
+        Entender a necessidade do uso de técnicas para a representação eficiente de informação multimédia.
+        Conhecer as principais tecnologias e normas para a representação eficiente e processamento de informação multimédia.
+        Conhecer os principais factores relacionados com o desempenho dos sistemas multimédia.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (241, 2, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (241, 'PT_PT', 'Sistemas Operativos','Apresentar os conceitos mais importantes sobre a organização dos sistemas de operação actuais numa perspectiva funcional;
+        Introduzir o ambiente de interacção com o sistema computacional baseado no processamento de linha de comandos;
+        Apresentar o sistema de operação como uma abstracção que fornece ao programador de aplicações um modelo de máquina virtual baseado em chamadas ao sistema;
+        Introduzir a programação concorrente e os mecanismos principais de comunicação e de sincronização entre processos;
+        Familiarizar os alunos com o interface de interacção fornecido pelo Unix.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (242, 2, 2, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (242, 'PT_PT', 'Compiladores','A unidade curricular aborda teoria das linguagens, tendo como objectivo dotar o estudante com a capacidade de projectar
+        e implementar tradutores dirigidos pela sintaxe, com foco na construção de compiladores. Pretende-se que o aluno adquira:\n
+        - Capacidade de trabalhar com linguagens regulares, incluindo a manipulação de modelos computacionais usados para as descrever
+        e reconhecer, nomeadamente as expressões regulares, autómatos finitos e gramáticas regulares.\n
+        - Capacidade de trabalhar linguagens independentes do contexto, quer na sua interpretação, quer no projecto.\n
+        - Capacidade de distinguir análise lexical e análise sintática.\n
+        - Capacidade de projectar e implementar tradutores dirigidos pela sintaxe, incluindo compiladores.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (243, 2, 2, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (243, 'PT_PT', 'Computação Distribuída','Introduzir os alunos aos princípios e à prática subjacente ao projecto de
+        sistemas distribuídos, apresentando os conceitos mais importantes relativos à sua implementação.
+        São particularmente explorados diferentes paradigmas de comunicação e de sincronização.
+        Pretende-se especificamente promover: a compreensão dos problemas principais que envolvem o
+        projecto de sistemas distribuídos; a capacidade de desenvolvimento de aplicações distribuídas simples.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (244, 2, 2, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (244, 'PT_PT', 'Padrões e Desenho de Software','Este curso aborda um conjunto de princípios e padrões de desenho de software
+        orientado a objectos. O objectivo é consolidar conceitos de OOP, como proceder a refactoring de código,
+        aprender a identificar e usar padrões de software.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (245, 2, 2, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (245, 'PT_PT', 'Interacção Humano-Computador','Trata-se de uma disciplina introdutória à área da Interacção Humano-Computador que
+        tem como objectivos específicos:\n
+        - promover a compreensão da importância da interface de utilizador num sistema interactivo;
+        - fazer uma introdução à bibliografia da área científica interacção humano-computador
+        - introduzir os conceitos, técnicas e ferramentas de projecto, implementação e avaliação de uma interface de utilizador;
+        - desenvolver capacidades mais genéricas como raciocínio crítico, capacidade de trabalhar em grupo e capacidade de comunicação oral e escrita.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (246, 2, 2, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (246, 'PT_PT', 'Bases de Dados','No final desta disciplina os alunos deverão ter conhecimentos ao nível dos conceitos,
+        métodos e técnicas fundamentais no domínio das bases de dados, que lhes permitam:\n
+        Construir um modelo de dados relacional adequado aos requisitos de um sistema de informação,
+        recorrendo às técnicas de desenho conceptual e lógico de uma base de dados;\n
+        Explorar as potencialidades de um sistema de gestão de bases de dados (SGBD),
+        incluindo a especificação da estrutura da base de dados com SQL DDL, a manipulação
+        de dados com SQL DML, as facilidades de programação SQL (stored procedures,
+        triggers e functions) e os mecanismos de segurança;\n
+        Compreender as diferentes possibilidades de interacção com uma base de dados
+        e desenvolver aplicações para acesso aos dados;\n
+        Compreender o papel das bases de dados no âmbito geral do ciclo de
+        modelação e desenvolvimento de um sistema de software.');
+
+-- Aveiro 3rd year
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (247, 3, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (247, 'PT_PT', 'Segurança Informática e Nas Organizações','Pretende-se que esta disciplina ofereça uma visão geral da área da Segurança
+        Informática, com ênfase particular para os problemas de segurança que se colocam ao nível das organizações.
+        Estes serão realçados em termos de segurança da informação e segurança das infra-estrututuras (máquinas e redes).
+        Nesta cadeira serão focados os aspectos base da segurança informática, a definição de políticas de
+        segurança e a sua implantação usando diversos mecanismos de segurança.Complementarmente, serão focadas
+        questões éticas, legais e sociais da segurança nas organizações.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (248, 3, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (248, 'PT_PT', 'Arquitectura e Gestão de Redes','Consolidar os conhecimentos fundamentais dos atuais sistemas de rede e simultaneamente
+        fornecer aos alunos competências no planeamento, monitorização e gestão de redes.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (249, 3, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (249, 'PT_PT', 'Gestão de Empresas','O objectivo geral desta unidade curricular é fornecer aos alunos os conceitos
+        fundamentais de gestão nas suas diversas funções para que sejam capazes de os conhecer, interpretar e aplicar. Pretende-se
+        sensibilizar os alunos para a importância de modelo de negócio no processo de criação de valor e promover a familiarização
+        com as metologias e as ferramentas de apoio à implementação de ideias de negócio.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (250, 3, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (250, 'PT_PT', 'Complementos de Bases de Dados','Enquanto a disciplina de Bases de Dados se foca apenas na representação
+        e gestão de dados estruturados recorrendo ao modelo relacional, esta unidade curricular aborda bases de dados NoSQL,
+        bases de dados NewSQL, bases de dados distribuídas e processamento distribuído. Adicionalmente, é também abordada
+        a problemática do controlo de acesso.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (251, 3, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (251, 'PT_PT', 'Inteligência Artificial','A disciplina de Inteligência Artificial fornece alguns dos conceitos nucleares na
+        área de Inteligência Artificial, desde a noção de agente até técnicas de pesquisa e planeamento. Esta disciplina
+        serve também o objectivo de familiarizar os alunos com aspectos da programação ao estilo funcional, com ênfase
+        no processamento de listas, recursividade e funções de ordem superior.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (252, 3, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (252, 'PT_PT', 'Introdução à Engenharia de Software','Desenvolver um sistema de software em equipa, com recurso a frameworks
+        de classe empresarial. Para cimentar estes objectivo, os alunos irão assumir vários papéis inerentes a uma
+        equipa de desenvolvimento e construir um sistema ao longo do semestre utilizando de uma arquitectura/plataforma
+        de referência (e.g. J2EE, .NET, Android), integrando serviços externos (e.g. google, sapo).');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (253, 3, 2, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (253, 'PT_PT', 'Investigação Operacional','Dar a conhecer o papel da Investigação Operacional (IO) na resolução de
+        problemas de decisão e apresentar algumas das técnicas de uso mais generalizado, nomeadamente:\n
+        - fornecer uma abordagem científica e estruturada na tomada de decisões, para a resolução de problemas
+        complexos nas operações (actividades) de uma organização, habitualmente em situação de recursos escassos;\n
+        -representar sistemas do mundo real, usando modelos matemáticos e algoritmos numa perspectiva de optimização;\n
+        -servir como processo social, em que os actores (clientes, gestores, decisores e utilizadores),
+        investigadores e um problema interactuam, com o principal objectivo de obter algum apoio,
+        para melhorar a qualidade das acções dos actores.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (254, 3, 2, 12, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (254, 'PT_PT', 'Projecto em Informática','Os objectivos desta UC são:
+        Familiarização com a metodologia de projecto em engenharia informática, aplicando e
+        integrando competências desenvolvidas ao longo do 1º ciclo de estudos.\n
+        Fomentar competências inerentes ao trabalho em equipa.\n
+        Contactar com problemas do mundo real através de seminários dados por profissionais do sector.\n
+        Reforçar capacidades de documentação, comunicação e demonstração de aplicações (protótipos)');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (255, 3, 2, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (255, 'PT_PT', 'Aspectos Profissionais e Sociais da Engenharia Informática','Pretende-se com esta disciplina dar uma panorâmica geral acerca da
+        profissão de engenheiro informático e do seu posicionamento perante a sociedade.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (256, 3, 2, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (256, 'PT_PT', 'Teste e Qualidade de Software','O objectivo geral da unidade curricular é fornecer aos alunos um conjunto
+        de princípios teóricos e de ferramentas que lhes permita compreender e aplicar um processo de garantia de
+        qualidade de software que seja sistemático, orientado aos testes e, tanto quanto possível, automatizado.');
+
+-- Aveiro 4th year        
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (257, 4, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (257, 'PT_PT', 'Algoritmos Avançados','A compreensão das características e do funcionamento de algoritmos de
+        diferentes tipos, e o conhecimento quanto às possíveis estratégias de abordagem para determinados problemas,
+        são componentes fundamentais da formação em Engenharia Informática. Pretende-se fornecer formação adicional à
+        adquirida no 1º ciclo (licenciatura) em algoritmia, tendo como ponto principal reconhecer que estrutura de
+        dados e algoritmo padrão são mais apropriados para resolver um determinado problema.');        
+    
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (258, 4, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (258, 'PT_PT', 'Teoria Algoritmica da Informação','Nesta unidade curricular pretende-se que os alunos:\n
+        - Entendam os conceitos básicos de teoria da informação\n
+        - Entendam a necessidade da existência de algoritmos de compressão de dados\n
+        - Fiquem a conhecer e percebam o funcionamento dos algoritmos principais de compressão de dados\n
+        - Entendam a relação entre a compressão de dados, a teoria algorítmica da informação, e a sua aplicação à análise e exploração de dados.</string>
+    <string name="uav_class_info_theory_topic1">Conceitos básicos de teoria da informação.');    
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (259, 4, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (259, 'PT_PT', 'Recuperação de Informação','O objectivo desta disciplina é estudar as técnicas e algoritmos
+        utilizados na recuperação e extracção de informação baseada em texto (IR e IE). Após o estudo deste curso o
+        aluno deverá ser capaz de:\n
+        1) compreender conceitos fundamentais de recuperação e extracção de informação\n
+        2) implementar algoritmos e usar estratégias baseadas em dicionários e em aprendizagem automática e\n
+        3) avaliar o desempenho de solução de IR e IE.');    
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (260, 4, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (260, 'PT_PT', 'Visualização de Informação','A utilização de métodos e ferramentas de Visualização de Informação
+        faz parte integrante do desenvolvimento de alguns tipos de Sistemas de Informação, e é reconhecida como essencial
+        para uma decisão informada por parte dos utilizadores.\n
+        A compreensão dos métodos e das características principais de ferramentas da Computação Gráfica e da
+        Visualização  são componentes fundamentais da formação em Sistemas de Informação.\n
+        Pretende-se fornecer formação básica em Computação Gráfica e Visualização de Dados e de Informação.
+        E utilizar uma ferramenta standard: "The Visualization Toolkit".');    
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (261, 4, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (261, 'PT_PT', 'Exploração de Dados','Esta unidade curricular foca o desenvolvimento de sistemas de apoio à
+        decisão usando técnicas de data warehousing e data mining.\n
+        O data warehousing designa um conjunto de técnicas de bases de dados para a criar repositórios centralizados
+        que integram dados provenientes de fontes heterogéneas. Tipicamente, armazenam dados atuais e dados históricos,
+        e são usados para análise de dados, análise de tendências e criação de relatórios em sistemas de apoio à decisão.\n
+        O data mining é uma área interdisciplinar orientada para o processo de procura de padrões em grandes volumes de dados.
+        Estes objectivos são alcançados utilizando técnicas de pré-processamento que visam a normalização e muitas vezes a
+        redução de dimensão, algoritmos que extraem a informação relevante e, finalmente a apresentação da informação de
+        maneira a poder ser interpretada.');    
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (262, 4, 2, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (262, 'PT_PT', 'Computação em Larga Escala','Esta disciplina pretende dotar os alunos com os conhecimentos relacionados com os
+        princípios e a utilização de computação em Cloud, computação paralela e em GPU. Os objectivos principais são:\n
+        - aprender os fundamentos de várias estratégias para resolver problemas que necessitam de computação em larga escala;\n
+        - adquirir competências para perceber os conceitos mais gerais relacionados com a Cloud, como a Virtualização;\n
+        - contacto com tecnologias actuais de computação na Cloud de modo a poderem desenvolver pequenos projectos;\n
+        - familiarização com os conceitos fundamentais de Passagem de Passagens e Memória Partilhada;\n
+        - utilização das tecnologias mais usadas em computação paralela;\n
+        - adquirir competências para perceber o modelo de programação e melhorias de desempenho que se podem obter
+        através da utilização de GPUs para computação geral e para o desenvolvimento de programas simples de utilização de CUDA.');    
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (263, 4, 2, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (263, 'PT_PT', 'Arquitecturas de Software','A AS é o culminar de um processo de definição de uma solução que
+        deve obedecer a um conjunto vasto de requisitos técnicos, operacionais, de qualidade e de custo. Pode ser analisada
+        a 2 níveis distintos: distribuição e composição. Ao nível da distribuição podemos ter diversas arquitectura, entre
+        as quais centralizadas, cliente-servidor e distribuídas. Ao nível da composição podemos ter diversas arquitectura,
+        entre as quais baseadas componentes e baseadas em MicroServices.\n
+        A UC aborda alguns dos aspectos mais relevantes que estão subjacentes à definição de uma arquitectura de software
+        quer seja ao nível da distribuição quer seja ao nível da composição. Os obj. definidos são os seguintes:\n
+        – Conhecer arquitecturas de software relevantes quer em termos de distribuição quer em termos de composição\n
+        – Conhecer factores com impacto em cada uma das arquitecturas\n
+        – Saber escolher para caso concreto qual ou quais as melhores arquitecturas a utilizar\n
+        – Conceber arquitecturas para casos concretos');  
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (264, 4, 2, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (264, 'PT_PT', 'Engenharia de Software','O principal objectivo deste curso é implementar uma aplicação de nível empresarial
+        (J2EE) que FUNCIONE desenvolvido no seio de uma equipa seguindo metodologia de desenvolvimento baseada em testes. Ao longo
+        cursos os conceitos principais relacionados com testes e qualidade de software serão apresentados e aplicados nos projectos.');  
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (265, 4, 2, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (265, 'PT_PT', 'Gestão de Infra-estruturas de Computação','Conhecer o contexto e requisitos de operação de plataformas de computação.
+        Conhecer as arquitecturas principais e métodos de planeamento de uma plataforma de computação.
+        Conhecer os modelos, mecanismos e ferramentas para a gestão de recursos em plataformas de computação
+        Conhecer a interdependência de sistemas numa plataforma de computação');    
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (266, 4, 2, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (266, 'PT_PT', 'Simulação e Optimização','Com esta UC espera-se que os alunos adquiram:\n
+        - compreensão dos conceitos básicos associados à modelação e simulação computacional\n
+        - capacidade de manipulação das ferramentas e das metodologias indispensáveis à elaboração de projectos de simulação,
+        desde a manipulação dos dados primitivos até à análise dos resultados\n
+        - compreensão das fases do ciclo de vida de um projecto de simulação, desde a análise de domínio e especificação do modelo ao teste e validação\n
+        - compreensão das várias abordagens e técnicas de simulação\n
+        - capacidade de identificar problemas que possam ser tratados através de simulação e de construir o sistema de simulação correspondente\n
+        - compreensão dos conceitos básicos da formulação de problemas de optimização\n
+        - conhecimento dos tipos de técnicas de optimização mais adequados aos vários tipos de problemas\n
+        - capacidade de aplicação prática de optimizadores baseados em programação linear, programação inteira e
+        metaheurísticas para a resolução de problemas.\n');    
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (267, 4, 2, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (267, 'PT_PT', 'Sistemas de Informação Nas Organizações','- Adquirir uma visão alargada acerca dos vários contextos de utilização dos
+        sistemas de informação nas organizações:Funcionais: CRM, ERP, KMS, etc. \n
+        Operacionais: front office, back office.\n
+        Sectoriais: áreas de utilização, cadeias de valor, actores, etc.\n
+        - Compreender as tecnologias e estruturas básicas dos modernos sistemas de informação (incluindo as tecnologias de virtualização e clouding).\n
+        - Desenhar e projectar a arquitectura básica de um sistema de informação e ser capaz de fazer a respectiva integração e colocação em serviço.\n
+        - Ter sensibilidade para os aspectos de natureza ética, legal e social dos sistemas de informação.');    
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (268, 4, 2, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (268, 'PT_PT', 'Sistemas Distribuídos','O seu objectivo principal é introduzir os alunos aos princípios e à prática subjacente
+        ao projecto de sistemas distribuídos, apresentando os conceitos mais importantes relativos à sua implementação.
+        São particularmente explorados diferentes paradigmas de comunicação e de sincronização.\n
+        Pretende-se especificamente promover\n
+        - compreensão dos problemas principais que envolvem o projecto de sistemas distribuídos;\n
+        - capacidade de desenvolvimento de aplicações distribuídas simples;\n
+        - familiarização com o ambiente de programação distribuída em Java.');    
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (269, 4, 2, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (269, 'PT_PT', 'Sistemas Inteligentes','Partindo de conhecimentos de base em Inteligência Artificial,
+        tipicamente adquiridos no 1º ciclo, aunidade curricular de Sistemas Inteligentes introduz conceitos avançados
+        nessa área, dando uma perspectiva integrada orientada ao sistema. Em particular, pretende-se que os alunos
+        fiquem a conhecer os conceitos básicos e a saber utilizar as principais técnicas nas seguintes áreas:\n
+        - Técnicas avançadas de representação do conhecimento e raciocínio\n
+        - Aprendizagem automática\n
+        - Sistemas multi-agente');    
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (270, 4, 2, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (270, 'PT_PT', 'Web Semântica','Unidade curricular centrada na formação avançada nos domínios das tecnologias
+        e gestão de conhecimento em ambientes Web, complementando a formação, nos mesmos domínios, obtida na licenciatura e
+        em disciplinas do primeiro semestre do mestrado.');    
+   
+-- Aveiro 5th year 
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (271, 5, 1, 6, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (271, 'PT_PT', 'Seminário','A cadeira de seminário pretende familiarizar o aluno com o ambiente
+        de investigação e desenvolvimento em geral, e com os mais recentes avanços na área de especialização quer
+        ao nível de I and D quer ao nível das empresas, assim como abordar competências transversais ao nível da
+        organização da investigação e escrita de artigos e teses, técnicas bibliográficas, apresentação e
+        comunicação, ética e deontologia profissional, empreendedorismo, etc.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (272, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (272, 'PT_PT', 'Avaliação e Gestão de Projectos','A gestão de projectos é uma ciência bem desenvolvida e aceite tanto no meio
+        profissional como académico. Inúmeros métodos, técnicas e ferramentas têm sido desenvolvidos, para cobrir todos os
+        aspectos da gestão de projectos, nomeadamente, a avaliação da mesma.\n
+        No entanto, a Avaliação e Gestão de Projectos continua a ser uma área problemática, ou seja, não tem sido vista como
+        um processo organizacional, a despeito de existir a visão de que todas as Organizações necessitariam de realizar
+        projectos internamente para assegurarem e/ou minimizarem o risco nas suas actividades principais, e por tal,
+        criar competências internas para executar os seus projectos.\n
+        Esta disciplina visa fornecer conhecimentos teóricos necessários à gestão de projectos ao nível Organizacional
+        e os conhecimentos práticos das ferramentas de planeamento, avaliação e controlo de custos, prazos,
+        recursos materiais, humanos e financeiros.\n
+        A metodologia permitirá a implementação de um conjunto de boas práticas de Avaliação e Gestão de
+        Projectos nas suas diferentes fases.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (273, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (273, 'PT_PT', 'Computação Móvel, Ubiqua e Pervasiva','Fornecer uma visão global dos aspectos fundamentais que norteiam o
+        desenvolvimento de soluções e aplicações moveis, ubíquas e pervasivas. Apresentar os conceitos e tecnologias que
+        norteiam o estado da arte. Deve ser capaz de compreender e discutir, protocolos e tecnologias de rede apropriadas
+        à utilização em ambientes de computação ubíqua e pervasivo. Ser capaz de projectar e desenvolver aplicações e
+        serviços ubíquos e pervasivos.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (274, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (274, 'PT_PT', 'Computação Quântica','A Computação Quântica é uma área recente em franco desenvolvimento,
+        visando na sua componente prática a construção de computadores quânticos.
+        Neste curso introdutório, os alunos poderão adquirir os fundamentos matemáticos básicos subjacentes ao
+        modelo de computação quântica, a par com a compreensão global dos mais proeminentes algoritmos desenvolvidos
+        até ao momento e suas implicações');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (275, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (275, 'PT_PT', 'Computação Visual','A disciplina de Computação Visual visa dotar os alunos com conhecimentos
+        fundamentais associados aos algoritmos e operações nucleares dos processos de Síntese e de Análise de Imagens,
+        através uma selecção apropriada de tópicos das áreas de Computação Gráfica e Processamento de Imagem.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (276, 5, 2, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (276, 'PT_PT', 'Empreendedorismo','Objectivos para esta UC:\n
+        - Apresentar a evolução histórica, as teorias e o processo do empreendedorismo no Mundo e, em particular, o empreendedorismo em Portugal;\n
+        - Fornecer um conjunto de técnicas utilizadas para formular, implementar e gerir uma ideia de negócio;\n
+        - Proporcionar meios e caminhos para as análises teóricas e práticas dos ambientes interno e externos às organizações;\n
+        - Estimular a atitude empreendedora do aluno e no aluno;\n
+        - Incentivar a compreensão do processo de detecção e de análise das oportunidades de negócios;\n
+        - Fornecer ferramentas para as análises da plausibilidade e da viabilidade económica e financeira de um negócio.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (277, 5, 2, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (277, 'PT_PT', 'Engenharia de Serviços','Fornecer uma visão global dos aspectos fundamentais que norteiam o desenvolvimento de
+        arquitecturas de serviço em telecomunicações. Apresentar arquitecturas de desenvolvimento de software e serviços em redes avançadas.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (278, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (278, 'PT_PT', 'Estratégia e Competitividade','Os objectivos da unidade curricular são:\n
+        - Fornecer aos discentes um conjunto de elementos que lhes permitam, utilizando uma lógica de raciocínio própria
+        das ciências empresariais, compreender e interpretar o funcionamento das organizações, sejam públicas,
+        privadas ou para-públicas, numa óptica estratégica;\n
+        - Proporcionar aos discentes uma perspectiva técnica e científica da estratégia e competitividade,
+        tanto a nível de planeamento como a nível de implementação;\n
+        - Adquirir um corpo básico de conhecimentos, de forma a permitir a sua aplicação no contexto
+        empresarial no que concerne a tomadas de decisões estratégicas;\n
+        - Desenvolver competências de pesquisa bibliográfica e de campo, de trabalho em grupo e de
+        apresentação oral e escrita científica.\n
+        - Reconhecer a necessidade de adaptação contínua ao meio em que a empresa se insere,
+        nomeadamente tendo em consideração o relacionamento bi-direccional empresa-meio ambiente.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (279, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (279, 'PT_PT', 'Geometria Computacional','O objectivo desta disciplina é desenvolver algoritmos e estruturas de dados
+        eficientes que serão aplicados na resolução de problemas de optimização em termos de objectos geométricos elementares.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (280, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (280, 'PT_PT', 'Gestão da Qualidade em Serviços','Os objectivos específicos da unidade curricular são os seguintes:
+        - Desenvolver os elementos fundamentais da gestão de qualidade em serviços;\n
+        - Abordar diferentes modelos de avaliação da qualidade dos serviços;\n
+        - Aprofundar o papel do cliente na definição de requisitos dos serviços;\n
+        - Discutir metodologias de projecto e definição dos padrões dos serviços;\n
+        - Detalhar estratégias e ferramentas para a prestação de serviços de qualidade;\n
+        - Examinar os mecanismos de gestão das promessas de serviço.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (281, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (281, 'PT_PT', 'Gestão de Dados e de Informação','Estudar conceitos essenciais relativos aos dados semi-estruturados e tipos de dados complexos.
+        Estudar as mais recentes tecnologias e normas relacionadas com este tipo de dados.
+        Aplicar os conceitos estudados a cenários reais e utilizar as tecnologias e normas no desenvolvimento de soluções
+        informáticas que facilitem a criação, manipulação, pesquisa e recuperação no âmbito deste tipo de dados e informação.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (282, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (282, 'PT_PT', 'Modelos e Processos de Negócio Nas Organizações','Os objectivos desta UC são:
+        estudar modelos e processos de negócio, do planeamento e desenho à implementação e controlo,que permitam à organização uma posição sustentada no mercado;\n
+        introduzir metodologias e ferramentas que permitam arquitectar e desenhar o modelo de negócio e inventariar, analisar, representar e automatizar os processos;\n
+        estudar e desenvolver novas formas de negócio implementadas com recurso à Internet;\n
+        estudar e desenvolver formas de integração intra e interorganizacional, recorrendo a perspectivas, ferramentas e competências multidisciplinares.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (283, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (283, 'PT_PT', 'Programação Concorrente Orientada por Objectos','Domínio de métodos e técnicas avançadas de programação concorrente no
+        contexto da programação orientada por objectos em Java');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (284, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (284, 'PT_PT', 'Programação Web Avançada','Objectivos da unidade curricular e conhecimentos, capacidades e competências a adquirir:\n
+        - Aprender as diferenças entre CMS, ERP e CRM.\n
+        - Compreender os diferentes requisitos associados a cada sistema, sabendo avaliar de forma cabal a necessidade,
+        validade e exequibilidade destes no decurso de exigências associadas a determinados processos de negócio.\n
+        - Aprender a analisar componentes integráveis nos diversos CMSs.\n
+        - Aprender a especificar, implementar e testar componentes integráveis num CMS.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (285, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (285, 'PT_PT', 'Realidade Virtual e Aumentada','Esta é uma disciplina introdutória às áreas da Realidade Virtual e Aumentada em que se pretende introduzir
+        conceitos básicos, métodos e ferramentas que permitam aos alunos projectar, avaliar e desenvolver aplicações simples.\n
+        Os objectivos principais são:\n
+        - Definir e dar uma panorâmica das aplicações da Realidade Virtual e Aumentada;\n
+        - Introduzir ideias, métodos e ferramentas para o projecto, implementação e avaliação de sistemas de Realidade Virtual e Aumentada.\n
+        - Pretende-se também promover capacidades gerais importantes, como o pensamento crítico, capacidade de trabalho em
+        grupo e capacidades de comunicação oral e por escrito.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (286, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (286, 'PT_PT', 'Redes e Serviços em Imagiologia','Introduzir o conceito genérico de PACS\n
+        Abordar do ponto de vista sistémico as principais modalidades de imagem médica\n
+        Estudar as principais estratégias de arquivo de transmissão de imagem\n
+        Abordar questões de gestão e controlo de qualidade em ambientes RIS/PACS\n
+        Envolver os alunos em pequenos projectos de desenvolvimento relacionado com o universo PACS/DICOM');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (287, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (287, 'PT_PT', 'Robótica Móvel e Inteligente','Pretende-se nesta disciplina fornecer aos alunos uma formação abrangente
+        na área da robótica móvel inteligente, focando temas essenciais no desenvolvimento de um robô autónomo e móvel.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (288, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (288, 'PT_PT', 'Segurança','O objectivo geral desta disciplina é apresentar e descrever os principais conceitos
+        fundamentais da segurança em sistemas computacionais. Como muitas das soluções de segurança recorrem à aplicação de técnicas
+        criptográficas, nesta cadeira faz-se também uma introdução à criptografia e à criptanálise. A segurança é abordada em diversos
+        contextos, como o dos programas, dos sistemas operativos, das máquinas virtuais e das bases de dados.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (289, 5, 1, 6, TRUE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (289, 'PT_PT', 'Segurança e Gestão de Risco','Aprender a projectar e orientar o desenvolvimento de uma política de segurança na organização\n
+        Aprender a determinar estratégias adequadas para assegurar confidencialidade, integridade e disponibilidade da informação\n
+        Aprender a aplicar técnicas de gestão de risco de modo a melhor gerir riscos, reduzir vulnerabilidades, ameaças e aplicar garantias/controlos adequados.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (290, 5, 2, 42, FALSE, 4);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (290, 'PT_PT', 'Dissertação/Projecto/Estágio','Esta é uma unidade curricular integradora onde os alunos devem demonstrar que têm as
+        competências e os conhecimentos necessários para obter o grau de Mestre em Engenharia Informática. Os objectivos são os seguintes:\n
+        - Aprofundar as capacidades de organização, planificação e gestão do tempo.
+        - Ser capaz de trabalhar de forma autónoma, agir com iniciativa e tomar decisões tendo em vista a
+        concretização dos objectivos definidos no plano de trabalhos.
+        - Ser capaz de aplicar conhecimentos técnicos e metodológicos adquiridos no curso, e de resolver problemas
+        em situações novas e não familiares, bem como em contextos alargados e multidisciplinares.
+        - Ser capaz de apresentar resultados de forma concisa, estruturada e com rigor académico e científico.
+        - Promover o raciocínio crítico e o desenvolvimento da autocrítica.');
+       
+-- UMinho 1st year
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (291, 1, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (291, 'PT_PT', 'Álgebra Linear','Pretende-se que o estudante adquira:\n
+        - conhecimentos básicos de Álgebra Linear;\n
+        - capacidade de aplicar os conhecimentos adquiridos em diversos contextos;\n
+        - aptidões de cálculo e raciocínio matemáticos de modo a construir argumentos rigorosos;\n
+        - capacidade de comunicar, por escrito e oralmente, em linguagem matemática;\n
+        - capacidade de trabalhar em grupo;\n
+        - capacidade de aprender de modo autónomo.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (292, 1, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (292, 'PT_PT', 'Cálculo','No final do semestre os alunos deverão ser capazes de:\n
+        - aplicar resultados de continuidade e diferenciabilidade ao estudo das propriedades e ao esboço dos
+        gráficos de funções reais de variável real;\n
+        - calcular primitivas de funções aplicando as técnicas apresentadas;\n
+        - aplicar o conceito de integral ao áreas e de comprimento de curvas. Reconhecer e calcular
+        integrais impróprios;\n
+        - interpretar e aplicar critérios de convergência de séries numéricas;\n
+        - analisar em que condições uma série de potências define uma função e estabelecer algumas das suas
+        propriedades.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (293, 1, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (293, 'PT_PT', 'Tópicos de Matemática Discreta','Transmissão de conhecimentos específicos: cálculo proposicional, indução nos naturais, teoria de
+        conjuntos, relações binárias, conjuntos finitos e infinitos.
+        Contribuição para a aquisição de um conjunto de competências:\n
+        - capacidade de assimilar informação e de a comunicar;\n
+        - capacidade de construir argumentos rigorosos, recorrendo ao raciocínio matemático;\n
+        - capacidade de expressão escrita e oral;\n
+        - capacidade de aprendizagem independente.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (294, 1, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (294, 'PT_PT', 'Programação Funcional','No final desta unidade curricular o aluno deverá ser
+        capaz de programar dentro do paradigma funcional, tendo por base a linguagem Haskell. Nomeadamente:\n
+        - Escrever programas em Haskell.\n
+        - Definir tipos indutivos e codificar funções recursivas.\n
+        - Definir tipos algébricos para modelar problemas, e programar com esses tipos.\n
+        - Compreender a noção de tipo principal e de polimorfismo.\n
+        - Usar funções de ordem superior.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (295, 1, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (295, 'PT_PT', 'Elementos de Engenharia de Sistemas','O principal objectivo desta UC é introduzir a área a
+        Engenharia de Sistemas através da sua caracterização, metodologia e ferramentas representativas.
+        Dentro destas últimas são abordados modelos de simulação, de filas de espera e de optimização de
+        sistemas em rede. Os resultados de aprendizagem são:\n
+        - Identificar sistemas onde modelos de simulação, filas de espera e de optimização,
+        podem ser utilizados na definição da sua configuração ou no melhoramento do seu desempenho.\n
+        - Obter e interpretar as principais medidas de desempenho de um sistema de filas de espera
+        de Markov dadas as taxas de chegada e de serviço.\n
+        - Utilizar modelos de rede para representar e optimizar problemas reais.\n
+        - Obter soluções óptimas através da utilização de software em modelos referidos
+        no ponto anterior.\n
+        - Obter soluções aproximadas através da aplicação manual de algoritmos adequados
+        em problemas de redes de pequena dimensão.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (296, 1, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (296, 'PT_PT', 'Laboratórios de Informática I','Aprendizagem prática de conceitos básicos de programação.
+        Ciclo edição/compilação/teste. Programação na shell de um sistema operativo. Contacto com um sistema
+        para produção de documentação de qualidade. Prática em desenvolvimento de projectos de software em grupo.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (297, 1, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (297, 'PT_PT', 'Sistemas de Computação','Ao completar com sucesso a UC cada estudante deverá demonstrar que
+        adquiriu os seguintes conhecimentos, capacidades e aptidões:\n
+        - reconhecer e discutir a organização e arquitectura dum computador e sua evolução;\n
+        - reconhecer e interpretar as principais características da arquitectura de um instraction set;\n
+        - examinar e modificar a funcionalidade de programas imperativos (tipo C), com recurso ao assembly e
+        linguagem máquina;\n
+        - aplicar e experimentar técnicas com impacto no desempenho na execução de código;\n
+        - utilizar e analisar ferramentas de compilação de programas, e análise e teste de
+        baixo nível de código (em Unix/Linux);\n
+        - aptidões transversais, nomeadamente a capacidade de raciocínio na resolução de problemas
+        e a capacidade de comunicação escrita e oral.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (298, 1, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (298, 'PT_PT', 'Análise','No final do semestre os alunos deverão ser capazes de:\n
+        - interpretar as noções de continuidade, de derivabilidade direcional e global;\n
+        - determinar e classificar extremos livres e condicionados de funções reais de várias variáveis reais;\n
+        - interpretar a noção de integrabilidade de uma função real sobre um subconjunto de R^n;\n
+        - calcular e interpretar integrais múltiplos, de linha e de superfície.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (299, 1, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (299, 'PT_PT', 'Tópicos de Física Moderna','Conhecer a relatividade de Einstein aplicando-a a problemas concretos.
+        Descrever matematicamente ondas mecânicas e ondas eletromagnéticas e aplicar os conceitos de reflexão,
+        refracção, polarização, interferência e difracção da radiação electromagnética.
+        Reconhecer a natureza corpuscular da radiação e a existência de níveis de energia discretos na matéria.
+        Conhecer e aplicar os diversos modelos atómicos.
+        Reconhecer o dualismo onda-corpúsculo quer para a radiação quer para as partículas.
+        Interpretar o princípio de incerteza de Heisenberg e os fundamentos da Física Quântica interpretando a
+        equação de Schrodinger.
+        Compreender os fundamentos da estrutura atómica e molecular à luz da Mecânica Quântica.
+        Conhecer a estrutura nuclear e aplicar os conceitos associados à radioactividade.
+        Compreender os efeitos nocivos da radiação ionizante.
+        Adquirir conhecimentos básicos sobre as partículas elementares e as interações fundamentais na
+        natureza. Interpretar o modelo padrão.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (300, 1, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (300, 'PT_PT', 'Lógica','No final do semestre o aluno deve ter capacidade para:\n
+        1) definir funções por recursão estrutural e fazer demonstrações por indução estrutural;\n
+        2) manipular a sintaxe formal do Cálculo Proposicional e do Predicados de 1ª Ordem da Lógica Clássica;\n
+        3) usar fórmulas da Lógica de 1ª Ordem para representar frases em linguagem natural;\n
+        4) dar significado a fórmulas e decidir o seu valor lógico, no contexto de uma interpretação;\n
+        5) compreender e construir demonstrações formais em dedução natural;\n
+        6) conhecer algumas das consequências dos Teoremas da Correcção e da Completude.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (301, 1, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (301, 'PT_PT', 'Programação Imperativa','No fim da disciplina, o aluno deverá ser capaz de: \n
+        - bresolver problemas decompondo-os em problemas mais pequenos e especificando algoritmos para cada um destes;\n
+        - resolver problemas envolvendo cálculo numérico, manipulação de strings, manipulação de ficheiros,
+        armazenamento de informação e processamento de estruturas de dados (listas e árvores binárias);\n
+        - codificar qualquer algoritmo na linguagem de programação C.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (302, 1, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (302, 'PT_PT', 'Laboratórios de Informática II','O conhecimento e a capacidade de codificar algoritmos e estruturas de
+        dados numa linguagem de programação imperativa:\n
+        - a capacidade de gerar, executar e testar programas codificados em C, usando um conjunto adequado de utilitários\n
+        - o conhecimento e a capacidade de analisar a execução de programas numa dada arquitectura, e as aptidões de
+        desenvolver e aplicar testes de conformidade em situações de fronteira\n
+        - a aptidão para analisar código em assembly e utilizar ferramentas de depuração de programas\n
+        - as capacidades e aptidões para descrever, aplicar e avaliar técnicas de optimização de desempenho\n
+        - a capacidade trabalhar em equipa e de desenvolver algoritmos para resolver problemas.');
+
+-- UMinho 2nd year
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (303, 2, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (303, 'PT_PT', 'Introdução aos Sistemas Dinâmicos','1. Descrever técnicas de integração e exemplificar aplicações de equações diferenciais ordinárias.\n
+        2. Analisar qualitativamente sistemas de EDOs não-lineares.\n
+        3. Aplicar ferramentas computacionais no contexto da unidade curricular.\n
+        4. Descrever técnicas de integração e aplicações de equações diferenciais de derivadas parciais.</string>
+    <string name="um_class_dynamic_sys_topic1">Equações diferenciais ordinárias');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (304, 2, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (304, 'PT_PT', 'Estatística Aplicada','Aprendizagem de metodologia associada à recolha e análise de dados em estatística. Os objectivos
+        expressos em resultados de aprendizagem podem ser descritos da seguinte forma:\n
+        - Resumir e descrever conjuntos de dados.\n
+        - Seleccionar uma amostra representativa.\n
+        - Interpretar dados de natureza qualitativa e quantitativa.\n
+        - Calcular probabilidades e determinar funções de probabilidade.\n
+        - Formular e testar hipóteses.\n
+        - Usar software específico (SPSS).');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (305, 2, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (305, 'PT_PT', 'Engenharia Económica','O objectivo principal desta UC é proporcionar aos alunos
+        conhecimentos essenciais de economia e gestão que lhes permitam uma correta tomada de decisão em ambiente empresarial. Os resultados esperados de
+        aprendizagem são os seguintes:\n
+        - Compreender o funcionamento de uma economia \n
+        - Caracterizar as funções gerais de gestão de uma empresa\n
+        - Explicar os comportamentos dos agentes económicos e suas inter-relações nos mercados\n
+        - Explicar o funcionamento de diferentes estruturas de mercado \n
+        - Avaliar aspectos económicos na perspectiva da decisão\n
+        - Adquirir conhecimentos básicos de natureza financeira \n
+        - Aplicar conhecimentos matemáticos e de natureza financeira para descrever e analisar projectos de investimento.\n
+        - Aplicar ferramentas de análise económica.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (306, 2, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (306, 'PT_PT', 'Arquitectura de Computadores','Identificar e caracterizar as métricas relativas ao
+        desempenho da execução de programas e a sua relação com a codificação de programas em linguagens de alto nível\n
+        Identificar o impacto da hierarquia de memória no desempenho de programas escritos em linguagens de alto nível \n
+        Caracterizar limitações inerentes ao encadeamento de instruções (dependências) e conceber potenciais soluções\n
+        Analisar e justificar o impacto de múltiplas unidades funcionais no desempenho da máquina\n
+        Descrever, aplicar e avaliar técnicas de optimização do desempenho\n
+        Identificar as oportunidades de exploração de processamento paralelo e caracterizar as limitações inerentes ao processamento paralelo');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (307, 2, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (307, 'PT_PT', 'Comunicação de Dados','Definir, discutir e relacionar os conceitos teóricos básicos
+        relacionados com os processos de comunicação de dados e tecnologias de telecomunicações;\n
+        Explicar os componentes fundamentais dum sistema de comunicações digital ou analógico; \n
+        Compreender e relacionar diversos conceitos da área da Teoria da Informação
+        no contexto dos processos de codificação e comunicação de dados; \n
+        Listar e discutir as principais limitações dos sistemas de transmissão;\n
+        Compreender os mecanismos básicos de multiplexagem subjacentes aos sistemas de telecomunicações/transmissão actuais; \n
+        Capacidade de compreender e analisar a representação no domínio das frequências
+        (espectro) de sinais analógicos e digitais; \n
+        Compreender os conceitos subjacentes aos principais algoritmos,técnicas e ferramentas
+        relacionadas com a digitalização e processamento de sinais multimédia; \n
+        Compreender as técnicas e a teorias de suporte que permitem a detecção e correcção
+        de erros nas comunicações digitais.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (308, 2, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (308, 'PT_PT', 'Algoritmos e Complexidade','O objectivo principal da UC de Algoritmos e Complexidade é
+        a introdução de técnicas para o desenho e análise de algoritmos.Resultados de aprendizagem:\n
+        1. Avaliar a correcção de um algoritmo\n
+        2. Determinar a complexidade assimptótica de um algoritmo iterativo ou recursivo.\n
+        3. Reconhecer e utilizar estratégias algorítmicas fundamentais.\n
+        4. Utilizar estruturas de dados fundamentais (em particular implementações de funções finitas e grafos), e
+        utilizar algoritmos sobre elas.\n
+        5. Reconhecer problemas NP-completos e alguns algoritmos aproximados para a sua resolução.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (309, 2, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (309, 'PT_PT', 'Sistemas Operativos','Num sentido lato, o objectivo da unidade curricular é ajudar a ter uma visão coerente e integrada de como
+        funcionam os sistemas informáticos: o que é, em termos físicos, uma aplicação informática, que recursos
+        necessita, como interage com outras e com o sistema operativo, que políticas de gestão são mais
+        adequadas a cada tipo de carga e respectivos custos de implementação, razões para o sistema estar lento,
+        que atitudes tomar, etc.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (310, 2, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (310, 'PT_PT', 'Programação Orientada aos Objectos','Compreender os conceitos fundamentais da PPO (Objectos, Classes, Herança e Polimorfismo;\n
+        - analisar e ilustrar a estruturação de um domínio em classes;\n
+        - construir hierarquias de classes utilizando as noções de classe abstracta, tipo abstracto de dados e polimorfismo;\n
+        - compreender a importância das classes abstractas e herança na concepção de um sistema em POO;\n
+        - utilizar linguagens de programação por objectos para construção de programas de média escala, seguros, robustos e extensíveis.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (311, 2, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (311, 'PT_PT', 'Electromagnetismo','1. Calcular o campo eléctrico para distribuições discretas e contínuas de carga.\n
+        Usar a lei de Gauss para o cálculo do campo eléctricos.\n
+        2. Aplicar o conceito de potencial eléctrico a distribuições discretas e contínuas de carga.\n
+        3. Compreender e usar o conceito de capacidade e de força electromotriz\n
+        4.) Descrever o movimento de cargas eléctricas na presença de campos magnéticos\n
+        5.) Conhecer as fontes de campo magnético. Calcular o campo magnético de alguns sistemas simples\n
+        6.) Conhecer e aplicar o conceito de indução magnética e de indutância.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (312, 2, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (312, 'PT_PT', 'Opcional','A Opção UMinho será escolhida pelos alunos entre um conjunto de UCs que todos os anos será disponibilizado ao nível da Universidade');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (313, 2, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (313, 'PT_PT', 'Programas','(i) Construção de programas: escrever programas funcionais de forma
+        composicional, com recurso a combinadores algébricos.\n
+        (ii) Transformação de programas: recurso à algebra da programação para se obterem programas mais
+        eficientes sem comprometer as sua correcção.\n
+        (iii) Análise e compreensão de programas: recurso à factorização em pares "fold" + "unfold" (hilomorfismos)
+        como forma de se perceber a arquitectura dos algoritmos e sua catalogação.\n
+        (iv) Síntese de programas: ciclos-for a partir de definições indutivas.\n
+        (v) Programação funcional avançada: construir e raciocinar sobre programas funcionais com efeitos sob a forma de mónades.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (314, 2, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (314, 'PT_PT', 'Laboratórios de Informática III','Conhecer os princípios fundamentais da Engenharia de Software, designadamente modularidade,
+        reutilização, encapsulamento e abstracção de dados, e saber implementá-los em diferentes linguagens de
+        implementação (C - 1º projecto e Java 2º projecto);\n
+        - Complementar experimentalmente os conhecimentos adquiridos nas Unidades Curriculares de
+        Algoritmos e Complexidade e Programação Orientada aos Objectos;\n
+        - Desenhar e codificar dois projectos de média dimensão, a serem entregues e avaliados em várias fases. 1º
+        projecto Linguagem C Conceitos envolvidos: modularidade, reutilização, grafos, árvores, manipulação de
+        ficheiros.
+        2º projecto Linguagem Java Conceitos envolvidos: manipulação de colecções Java, medição de
+        tempos de operações sobre colecções, construção de interfaces com utilizador (padrão MVC), exploração
+        dos componentes Swing.');
+
+-- UMinho 3rd year
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (315, 3, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (315, 'PT_PT', 'Bases de Dados','1) Distinguir dados, informação e conhecimento.\n
+        2) Compreender e aplicar as formas normais e definir conceptualmente o modelo de dados para um
+        problema específico.\n
+        3) Escrever interrogações de bases de dados relacionais usando a álgebra relacional\n
+        4) Utilizar a linguagem SQL para administrar, manter e interrogar bases de dados relacionais.\n
+        5) Desenvolver aplicações informáticas que operem sobre bases de dados, incluindo aplicações baseadas
+        na Web.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (316, 3, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (316, 'PT_PT', 'Desenvolvimento de Sistemas Software','Os alunos deverão ser capazes de:\n
+        - Reconhecer os diferentes tipos de diagramas da UML ;\n
+        - Compreender modelos (de requisitos/estruturais/comportamentais) descritos em UML;\n
+        - Conceber sistemas de software utilizando UML;\n
+        - Implementar sistemas de software a partir de modelos UML.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (317, 3, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (317, 'PT_PT', 'Modelos Determinísticos de Investigação Operacional','Desenvolver a capacidade de resolução de problemas (modelos determinísticos), com ênfase em
+        problemas de engenharia de sistemas.\n
+        - Conhecer as técnicas e os métodos de Investigação Operacional apresentados na Unidade Curricular, e
+        ser capaz de os aplicar na resolução de instâncias de problemas de pequena dimensão.\n
+        -  Desenvolver a capacidade de analisar sistemas complexos, de criar modelos para os descrever, de obter
+        soluções para esses modelos utilizando programas computacionais adequados, de validar os modelos
+        obtidos, de interpretar as soluções obtidas, e de elaborar recomendações para o sistema em análise.\n
+        - Compreender a importância da avaliação das soluções, e ser capaz de realizar análises de sensibilidade.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (318, 3, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (318, 'PT_PT', 'Sistemas Distribuídos','a) Conhecer as características, virtudes, limitações e aplicabilidade do modelo de memória partilhada;\n
+        b) conhecer e saber analisar os vários problemas decorrentes da programação com processos concorrentes;\n
+        c) conhecer e saber aplicar vários tipos de primitivas de controlo de concorrência em sistemas de memória partilhada;\n
+        d) Conhecer as características, virtudes, limitações e aplicabilidade dos modelos e arquitecturas de sistemas distribuídos;\n
+        f) saber resolver problemas clássicos de coordenação em sistemas distribuídos.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (319, 3, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (319, 'PT_PT', 'Redes de Computadores','Como resultado da aprendizagem, espera-se que os alunos devam ser capazes de:\n
+        - Discutir os conceitos fundamentais sobre comunicação de dados, protocolos de comunicação, famílias
+        de protocolos e sua arquitectura, incluindo os elementos protocolares mais comuns;\n
+        - Analisar e instanciar esses conceitos, em especial, no nível de ligação de dados;\n
+        - Ter uma visão global e crítica sobre as redes locais de computadores e do seu funcionamento;\n
+        - Explicar em detalhe as principais funções do protocolo IP;\n
+        - Saber implementar soluções concretas do estabelecimento de uma rede local IP, planeando também o
+        seu esquema de endereçamento e encaminhamento.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (325, 3, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (325, 'PT_PT', 'Métodos Numéricos e Optimização Não Linear','Compreender e utilizar métodos de resolução de equações e sistemas não lineares;\n
+        Resolver sistemas de equações lineares por métodos diretos com pivotagem parcial;\n
+        Compreender e aplicar estratégias de aproximação de funções;\n
+        Descrever e aplicar métodos de integração numérica;\n
+        Compreender, escolher e utilizar o método de optimização mais adequado a um problema específico;\n
+        Utilizar os métodos numéricos em problemas de Engenharia Informática;\n
+        Utilizar software específico (MATLAB) na resolução de problemas.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (326, 3, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (326, 'PT_PT', 'Sistemas de Representação de Conhecimento e Raciocínio','As matérias que são objecto de tratamento na unidade curricular emanam da área de conhecimento que,
+        em larga medida, se situa na intersecção das áreas científicas da Inteligência Artificial, das Bases de
+        Dados e da Lógica Computacional.\n
+        (i) É objectivo desta unidade curricular a introdução dos discentes aos paradigmas da representação do
+        conhecimento e de raciocínio lógico, e sua aplicação na concepção e implementação de sistemas
+        inteligentes ou de apoio à decisão, em que a qualidade da informação e o grau de confiança que é
+        depositado na conjugação dos atributos de um predicado ou função lógica é fulcral.\n
+        (ii) Compreender a relação entre a complexidade de um modelo representação de conhecimento e as
+        formas de raciocínio a ele associadas e o seu desempenho, utilizando esta informação na definição de
+        uma estratégia para a sua optimização.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (327, 3, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (327, 'PT_PT', 'Modelos Estocásticos de Investigação Operacional','a) Conhecer as técnicas e os métodos de Investigação Operacional apresentados na UC, e ser capaz de os
+        aplicar na resolução de instâncias de problemas de pequena dimensão.\n
+        b) Desenvolver a capacidade de resolução de problemas (modelos estocásticos), com ênfase em
+        problemas de engenharia de sistemas.\n
+        c) Desenvolver a capacidade de analisar sistemas complexos, de criar modelos para os descrever, de
+        obter soluções para esses modelos utilizando programas computacionais adequados, de validar os
+        modelos obtidos, de interpretar as soluções obtidas, e de elaborar recomendações para o sistema em
+        análise.\n
+        d) Compreender a importância da avaliação das soluções, e ser capaz de realizar análises de sensibilidade.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (328, 3, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (328, 'PT_PT', 'Computação Gráfica','Os formandos devem desenvolver as seguintes competências com a frequência deste módulo:\n
+        - Caracterizar as transformações geométricas e os referencias utilizados na computação gráfica;\n
+        - Aplicar transformações para construção de modelos geométricos complexos e posicionamento da câmara;\n
+        - Algoritmos de iluminação local e global: Gouraud, Phong, Ray-tracing, Radiosity and Virtual Point Lights;\n
+        - Aplicar texturas e definir coordenadas de textura;\n
+        - Analisar soluções do ponto de vista do desempenho recorrento a profilers.\n
+        - Utilizar apropriadamente soluções de eliminação de geometria, recorrendo a partição espacial.\n
+        - Aplicar a Analisar algoritmos para geração de sombras');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (329, 3, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (329, 'PT_PT', 'Comunicações por Computador','- Descrever e aplicar os diferentes algoritmos de rotas (LS e DV)\n
+        - Discutir diferentes protocolos de encaminhamento unicast\n
+        - Planear e implementar solução de interligação intra e inter domínios\n
+        - Distinguir os diferentes serviços de transporte\n
+        - Configurar soluções de segurança para os níveis de rede e de transporte\n
+        - Identificar, classificar e configurar serviços básicos de rede e soluções de gestão de redes\n
+        - Descrever o funcionamento das principais aplicações\n
+        - Classificar as diferentes aplicações em função dos seus requisitos de QoS');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (330, 3, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (330, 'PT_PT', 'Processamento de Linguagens','Competências Genéricas:
+        a capacidade de comunicação escrita e oral na apresentação e discussão dos processos usados e
+        resultados obtidos;\n
+        a capacidade de utilização de ferramentas genéricas de informática em ambiente Linux e de elaboração de
+        documentos.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (331, 3, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (331, 'PT_PT', 'Laboratórios de Informática IV','- Fundamentar, projectar e gerir o desenvolvimento de um sistema de software.\n
+        - Analisar e especificar de forma completa todos os requisitos operacionais e funcionais de um sistema de software.\n
+        - Desenvolver, testar, documentar e instalar sistemas de software.');
+
+-- UMinho 4th year
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (332, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (332, 'PT_PT', 'Algoritmos para Análise de Sequências Biológicas','O objectivo desta unidade curricular é o de dotar os alunos das capacidades de perceber,
+        utilizar e desenvolver algoritmos de processamento e análise de sequências biológicas, utilizando uma linguagem de programação para a sua implementação.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (333, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (333, 'PT_PT', 'Laboratórios de Bioinformática','- Dotar os alunos dos conhecimentos biológicos básicos para
+        compreensão dos problemas e ferramentas da Bioinformática\n
+        - Promover o conhecimento das principais bases de dados e ferramentas disponíveis na área da Bioinformática\n
+        - Promover o desenvolvimento de competências ao nível da utilização avançada de repositórios de software livre
+        na área da Bioinformática para construção de pequenos programas para tarafas específicas');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (334, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (334, 'PT_PT', 'Algoritmos Avançados de Bioinformática','Promover a aquisição de competências avançadas ao nível da compreensão
+        e implementação dos principais algoritmos na área da Bioinformática, incluindo métodos de
+        optimização e sua utilização para resolução de problemas biológicos');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (335, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (335, 'PT_PT', 'Extracção de Conhecimento de Bases de Dados Biológicas','Promover a aquisição de conhecimentos e competências básicas sobre os processos e
+        ferramentas de análise de dados multivariada, mineração de dados  e aprendizagem máquina e suas aplicações na Bioinformática');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (336, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (336, 'PT_PT', 'Visualização e Iluminação I','Os formandos devem desenvolver as seguintes competências com a frequência deste módulo:\m
+        Caracterizar o pipeline gráfico e o fluxo de dados. Identificar as componentes programáveis e as suas
+        potencialidades;\n
+        Produzir programas a correr no GPU para obter efeitos gráficos ou processamento de dados ;\n
+        Projectar, implementar, e avaliar soluções recorrendo à programação em GPU para problemas na área da
+        computação gráfica;\n
+        Analisar algoritmos de iluminação local, e efeitos gráficos do ponto de vista da sua adequabilidade à
+        utilização de GPUs, e desempenho final.\n
+        Adicionalmente, pretende-se desenvolver a seguinte competência transversal:\n
+        Exibir uma capacidade de comunicação escrita e oral adequada, promovendo a linguagem como ferramenta
+        de expressão e construção de pensamentos, ideias e argumentos próprios, alicerçados no espírito crítico.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (337, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (337, 'PT_PT', 'Visão por computador','Introduzir o estado da arte na tecnologia da imagem médica, fornecendo uma visão global sobre as normas,
+        técnicas, equipamentos e aplicações. Promover a análise de casos práticos e simulação de situações de
+        ambientes clínicos reais.\n
+        Competências:\n
+        - Reconhecer e argumentar a importância da utilização de computadores no processamento de informação
+        pictórica no contexto médico.\n
+        - Evidenciar conhecimento acerca dos conceitos associados aos sistemas de imagem, processamento de
+        imagem, visão e modelação por computador em imagem médica.\n
+        - Executar as tarefas de desenvolvimento de novos componentes funcionais utilizando as aplicações ImageJ e OsiriX.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (338, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (338, 'PT_PT', 'Visualização e Iluminação II','Os formandos devem desenvolver as seguintes competências com a frequência deste módulo:\n
+        - Caracterizar a iluminação global e descrever os vários estágios do processo de síntese e visualização de
+        imagens;\n
+        - Explicar a equação de rendering e discutir o significado de cada um dos seus factores;\n
+        - Relacionar os vários métodos de iluminação global com o modelo geral sustentado pela equação de
+        rendering, inferindo quais os fenómenos de iluminação modelados;\n
+        - Projectar, implementar e avaliar soluções para novos problemas de iluminação por recombinação de
+        soluções conhecidas;\n
+        -Reconhecer as limitações funcionais e/ou de desempenho associadas a cada algoritmo de iluminação global.
+        Adicionalmente, pretende-se desenvolver a seguinte competência transversal:\n
+        - Exibir uma capacidade de comunicação escrita e oral adequada, promovendo a linguagem como ferramenta
+        de expressão e construção de pensamentos, ideias e argumentos próprios, alicerçados no espírito crítico.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (339, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (339, 'PT_PT', 'Tecnologias e Aplicações','Este módulo pretende expor os alunos a técnicas avançadas no domínio da
+        computação gráfica confrontado-os com aplicações práticas. Pretende-se que os formandos desenvolvam as seguintes competências:\n
+        Analisar soluções associadas aos sistemas de imagem, processamento de imagem, visão e modelação por computador em imagem médica,
+        nomeadamente utilizando técnicas de aprendizagem profunda;\n
+        Criar aplicações de processamento de imagem baseadas em casos concretos, como por exemplo reconhecimento de sinais de trânsito;
+        Proectar, implementar e avaliar soluções para geração de imagens baseadas na física do transporte de luz;\n
+        Projectar, implementar e avaliar soluções para geração de imagens de alta qualidade em tempo real recorrendo a técnicas como Voxelização.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (340, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (340, 'PT_PT', 'Arquitecturas Avançadas','Um estudante que complete com sucesso a UC deverá ser capaz de demonstrar que adquiriu as seguintes
+        competências:\n
+        - caracterizar e avaliar qualitativa e quantitativamente a arquitectura de sistemas de computação
+        paralelos/distribuídos\n
+        - analisar, medir e avaliar o desempenho de sistemas de computação na execução de aplicações\n
+        - desenvolver e/ou modificar aplicações computacionais com vista a optimizar o seu desempenho e
+        escalabilidade');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (341, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (341, 'PT_PT', 'Algoritmos Paralelos','Um estudante que complete com sucesso esta UC deverá ser capaz de demonstrar que adquiriu as seguintes
+        competências:\n
+        Apreender os fundamentos teóricos para suporte aos algoritmos analisados\n
+        Identificar, a diferentes níveis (complexidade, robustez, eficiência, escalabilidade, etc.) pontos fortes e fracos
+        dos algoritmos analisados\n
+        Desenvolver implementações sequenciais e paralelas e discutir os resultados de desempenho e eficiência
+        obtidos com os algoritmos analisados\n
+        Identificar, nos algoritmos paralelos, eventuais problemas de balanceamento de carga e/ou elevados custos
+        de comunicação entre os elementos de computação');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (342, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (342, 'PT_PT', 'Engenharia dos Sistemas de Computação','Identificar os diferentes tipos de sistemas de computação, incluindo máquinas SMP, clusters e grids e
+        discutir as respectivas vantagens e limitações\n
+        Analisar e avaliar os requisitos de hardware e software com vista ao planeamento e instalação do
+        equipamento\n
+        Identificar os requisitos dos utilizadores necessários para selecionar o software a instalar e a manter\n
+        Identificar e caracterizar políticas de gestão e escalonamento de trabalhos e avaliar os resultados da sua
+        aplicação\n
+        Discutir e avaliar o desempenho efetivo de programas sequenciais e paralelos nas plataformas estudadas\n
+        Identificar os pontos de estrangulamento do ambiente de execução (run-time) face a uma determinada carga
+        computacional.\n
+        Usar as ferramentas existentes, ao nível do ambiente de execução, para estudar estratégias de optimização
+        dos recurso partilhados nas diferentes plataformas com vista a minimizar uma determinada função de custo
+        (por exemplo tempo de execução)');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (343, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (343, 'PT_PT', 'Paradigmas de Computação Paralela','Um estudante que complete com sucesso esta UC deverá ser capaz de demonstrar que adquiriu as seguintes
+        competências:
+        - Desenvolver aplicações paralelas capazes de executar numa gama alargada de arquitecturas
+        - Implementar aplicações utilizando os tipos mais comuns de algoritmos paralelos
+        - Medir e optimizar o desempenho de aplicações em sistemas de memória distribuída
+        - Implementar técnicas de gestão de recursos ao nível da aplicação.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (344, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (344, 'PT_PT', 'Tecnologia Criptográfica','(Não disponível)');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (345, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (345, 'PT_PT', 'Tecnologia da Segurança','(Não disponível)');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (346, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (346, 'PT_PT', 'Estruturas Criptográficas','(Não disponível)');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (347, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (347, 'PT_PT', 'Engenharia de Segurança','(Não disponível)');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (348, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (348, 'PT_PT', 'Arquitecturas Aplicacionais','Analisar e conhecer os principais patterns estruturais e de comportamento utilizados para o
+        desenvolvimento de sistemas de software complexo e de grande escala, tendo em conta as especificidades
+        arquitecturais das aplicações multi-camada.\n
+        Saber desenvolver camadas computacionais que permitam evolução controlada e independente das
+        camadas de apresentação e dados e que permitam a disponibilização de serviços como mecanismo de
+        integração.\n
+        Identificar as principais características dos servidores aplicacionais por forma a escolher o modelo de
+        programação pretendido e saber utilizar tecnologia orientada a serviços como mecanismo de criação de
+        arquitecturas de software parametrizáveis.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (349, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (349, 'PT_PT', 'Administração de Bases de Dados','Reconhecer e explicar os principais desafios de desempenho, fiabilidade e escala na gestão de dados.
+        Conhecer e descrever os mecanismos disponiveis para o processamento de interrogações e a manutenção de
+        garantias transaccionais.
+        Planear e executar soluções de gestão de dados, combinando, compondo e configurando os mecanismos
+        disponíveis.
+        Estimar a medir o comportamento de sistemas de gestão de dados.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (350, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (350, 'PT_PT', 'Infra-estruturas de Centro de Dados','Compreender e explicar os compromissos entre custo, desempenho, e confiabilidade na concepção de
+        centros de dados e a sua tradução em tecnologias concretas.\n
+        Aplicar mecanismos de redundância, virtualização e administração centralizada no desenvolvimento e
+        operação de centros de dados.\n
+        Desenhar, planear e concretizar infra-estruturas de armazenamento de dados escaláveis e de elevado
+        desempenho\n
+        Compreender e estabelecer os limites das infra-estruturas definindo os thresholds para a sua revisão e
+        actualização\n
+        Ter uma visão global das infra-estruturas e capacidade para identificar os pontos críticos das mesmas');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (351, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (351, 'PT_PT', 'Sistemas Interactivos','Conceber interfaces com o utilizador com consideração por aspectos de usabilidade\n
+        - Saber avaliar as interfaces concebidas recorrendo às técnicas mais apropriadas\n
+        - Compreender e explorar diferentes técnicas de desenvolvimento de camadas interactivas\n
+        - Saber desenvolver camadas de apresentação que permitam evolução controlada e independente das
+        camadas de lógica e de dados.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (352, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (352, 'PT_PT', 'Arquitecturas de Software','Conhecer e compreender, tendo por base o RUP, as várias etapas do processo de conceção e
+        desenvolvimento de um sistema de software complexo e de grande escala e usar a linguagem UML como
+        ferramenta de base para a sua modelação;\n
+        - Conhecer e ser capaz de aplicar princípios avançados de engenharia de software (ES), designadamente IOC
+        (Inversion of Control), DI (Dependency Injection) e de separação de camadas (cf. modelo MVC - model, view e
+        controller), bem como aplicar padrões usuais (“design patterns”);\n
+        - Saber usar tecnologias Java para desenvolvimento de aplicações Web, designadamente, Servlets, Java
+        Server Pages (ou Java Server Faces ou Structs) e Beans (bem como tecnologias de persistência), e usá-las
+        segundo os princípios do modelo MVC;\n
+        - Saber modelar em Alloy pequenos subsistemas de um dado sistema de software e realizar a verificação
+        formal da satisfação de propriedades que fazem parte dos requisitos funcionais de tais subsistemas');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (353, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (353, 'PT_PT', 'Engenharia de Requisitos','Definir, no âmbito de todo o processo de engenharia de software, a intervenção da equipa de engenharia de
+        requisitos e o envolvimento formal dos stakeholders\n
+        Escolher a forma como devem ser capturados os requisitos, em particular decidir quais as técnicas a usar
+        para levantar os requisitos junto das fontes identificadas\n
+        Detectar, negociar e resolver conflitos entre os requisitos capturados\n
+        Estruturar o documento de requisitos a dois níveis (os requisitos do utilizador e os requisitos de sistema) e
+        assegurar a sua qualidade e verificabilidade\n
+        Examinar o documento de requisitos, garantindo que descreve o sistema pretendido, através de revisões
+        formais, de inspecções ou de criação de protótipos\n
+        Gerir a alteração dos requisitos, através de técnicas de rastreabilidade e de análise de impacto');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (354, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (354, 'PT_PT', 'Engenharia Web','Conceber, desenvolver, instalar e manter aplicações web\n
+        Identificar as questões de âmbito legal, profissional, social e ético envolvidas no desenvolvimento de
+        aplicações web usáveis e acessíveis\n
+        Adaptar uma aplicação web a outros contextos de utilização, em função dos requisitos capturados\n
+        Descrever e discutir as técnicas, os métodos e as abordagens usados no desenvolvimento web');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (355, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (355, 'PT_PT', 'Gestão do Processo de Software','Os estudantes que completarem esta UC com sucesso, deverão ser capazes de:\n
+        1. Discutir alternativas de aplicação das técnicas do PMBoK em projectos de software;\n
+        2. Elaborar o plano de um projecto de desenvolvimento de sistemas de informação, seguindo as orientações do PMBoK;\n
+        3. Compreender e aplicar os métodos adequados para registar o progresso de um projecto (Execução do Projecto);\n
+        4. Aplicar as técnicas propostas pelo PMBoK para monitorizar o progresso de um projecto (EVM - Earned Value Management);\n
+        5. Compreender os princípios, temas e processos propostos pelo método PRINCE2.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (356, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (356, 'PT_PT', 'Tecnologias e Protocolos Internet','Pretende-se com esta UC desenvolver as capacidades dos alunos nas vertentes de conhecimentos
+        teóricos e experimentais centrados em temas relevantes da área das tecnologias de acesso e core,
+        bem como das soluções protocolares de internetworking IPv4 e IPv6.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (357, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (357, 'PT_PT', 'Redes Móveis','Enquadra-se na vertente de formação especializada do curso,
+        leccionada no 1º ano, e destina-se a introduzir os fundamentos e as tecnologias associados às redes de
+        comunicações móveis. Aborda a emissão, propagação e recepção de sinais de rádio, e introduz as tecnologias
+        associadas às redes móveis celulares e às redes de área local sem fios.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (358, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (358, 'PT_PT', 'Qualidade de Serviço na Internet','A presente unidade curricular (UC) visa promover o estudo e o
+        conhecimento de soluções actuais e emergentes que possibilitam a integração de Aplicações e Serviços
+        com requisitos de Qualidade de Serviço (QoS) distintos na rede Internet.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (359, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (359, 'PT_PT', 'Aplicações Multimedia e Ubíquas','Compreender os princípios, técnicas e algoritmos usados para
+        representação, compressão, recuperação e processamento de conteúdos multimédia;
+        Conhecer e diferenciar as diferentes tecnologias e sistemas e aplicações multimédia em rede.
+        Tem ainda como objectivo complementar a formação em Tecnologia da Informação e Comunicações com
+        competências avançadas na concepção, realização e avaliação de soluções informáticas para
+        sistemas caracterizados pela forte mobilidade dos seus utilizadores e pela ubiquidade
+        dos serviços de computação e comunicações.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (360, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (360, 'PT_PT', 'Administração e Exploração de Bases de Dados','É objectivo desta unidade curricular a introdução aos sistemas de bases de dados,
+        em particular no que diz respeito à sua administração e exploração.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (361, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (361, 'PT_PT', 'Análise de Dados','É objectivo desta unidade curricular a introdução à análise de dados e a sua
+        aplicação na concepção e implementação de sistemas de business inteligence ou de apoio à decisão.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (362, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (362, 'PT_PT', 'Interoperabilidade Semântica','O objectivo desta unidade curricular a introdução ao conceito de interoperabilidade semântica.
+        Pretende-se alcançar os seguintes resultados de aprendizagem:\n
+        - Identificar, descrever e definir os principais conceitos relacionados com a interopersbilidade semântica.\n
+        - Compreender e identificar os níveis de interoperabilidade e as normas internacionais associadas a esta área temática.\n
+        - Compreender e identificar protocolos e formatos de comunicação.\n
+        - Estudar, implementar e avaliar arquétipos, terminologias e ontologias.\n
+        - Desenvolver ferramentas de software para a sincronização e integração semântica de dados.</');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (363, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (363, 'PT_PT', 'Descoberta de Conhecimento','É objectivo desta unidade curricular a introdução ao conceito de descoberta do conhecimento.
+        Pretende-se alcançar os seguintes resultados de aprendizagem:\n
+        - Identificar, descrever e definir os principais conceitos relacionados com a descoberta do conhecimento.\n
+        - Seleccionar as metodologias apropriadas e aplicar software disponível mais recomendado na resolução de problemas reais de descoberta de conhecimento.\n
+        - Introduzir o conceito de visão por computador.\n
+        - Analisar os resultados de ferramentas de descoberta de conhecimento.\n
+        - Conhecer e ser capaz de implementar e avaliar cenários.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (364, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (364, 'PT_PT', 'Gestão de Redes','Esta UC visa introduzir uma formação genérica na área da gestão
+        de redes e de sistemas de comunicações por computador. Abordando temáticas iminentemente práticas, apesar da
+        intenção em garantir uma importante componente formativa sobre os principais conceitos teóricos definidos nas
+        normas actuais, as aulas teóricas são complementadas, na parte prática, com pequenos projectos de desenvolvimento
+        ou de investigação, individuais ou em pequenos grupos, que sirvam para experimentação das ferramentas mais
+        importantes neste domínio e que ajudem os alunos a compreender e resolver os problemas mais comuns da gestão
+        de redes de computadores, serviços, sistemas de comunicações ou aplicações distribuídas.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (365, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (365, 'PT_PT', 'Segurança em Redes','As competências a adquirir são as seguintes:\n
+        Reconhecer a importância de uma cultura de segurança relativamente à utilização das redes de computadores\n
+        Conhecer os aspectos técnicos das redes de computadores e que mais as expõem a riscos de segurança\n
+        Reconhecer as principais ameaças e a forma típica como os ataques são efectuados\n
+        Analisar vulnerabilidades em sistemas interligados em rede\n
+        Implementar e controlar processos de gestão, contínuos, definidos no contexto de uma política de segurança para rede de computadores\n
+        Discutir a evolução do fenómeno de Segurança dos Sistemas de Informação, não só no aspecto das tecnologias de segurança, mas também das ameaças.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (366, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (366, 'PT_PT', 'Virtualização de Redes','Explorar e compreender as definições, protocolos e normas para as Redes
+        Definidas por Software (SDN). Perceber o funcionamento e a interligação dos componentes que são necessários para construir
+        redes que usam software para comunição bi-direcional comunicação entre as aplicações e a infra-estrutura de rede subjacente.
+        Será tambem necessário a compreensão de vários caso de uso das SDNs nomeadamente escalonamento e manipulação da
+        largura de banda, tráfego de entrada e acções desencadeadas, tal como casos interessantes à volta de big data,
+        redes de overlay em centros de dados e virtualização de funções de rede (NFVs). É necessário avaliar como as
+        empresas e fornecedores de serviço estão a tirar partido das SDNs e as NFVs para concretizar e fazer evoluir
+        os seus serviços e negócios.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (367, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (367, 'PT_PT', 'Arquitecturas Emergentes de Rede','Nesta UC o objectivo é tomar contacto com arquitecturas emergentes de rede.
+        Começa-se por identificar as principais debilidades da arquitectura da Internet actual, abordando a partir delas novas
+        arquitecturas que melhor colmatam essas debilidades. Para as dificuldades em lidar com a mobilidade, surgem as redes
+        Ad-Hoc as redes Veiculares e as redes tolerantes a atrasos. Para as questões relacionadas com o desempenho as novas
+        arquitecturas centradas nos conteúdos (CDN, Peer-to-Peer e NDN). No último item abordam-se as questões relacionadas
+        com a escala levantadas pela Internet das Coisas.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (368, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (368, 'PT_PT', 'Especificação e Modelação','Abstrair os detalhes de um componente de software por forma a obter um modelo adequado à verificação
+        formal; \n
+        Modelar o estado de um componente de software usando o conceito unificador de relação matemática;\n
+        Especificar invariantes e pré- e pós-condições de operações usando lógica relacional; \n
+        Especificar sistemas reactivos usando lógica temporal;\n
+        Utilizar ferramentas de verificação automática para estabelecer a validade
+        de uma propriedade de software.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (369, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (369, 'PT_PT', 'Cálculo de Sistemas de Informação','(Não disponível)');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (370, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (370, 'PT_PT', 'Arquitectura e Cálculo','Esta Unidade Curricular, que é parte integrante do perfil em Métodos Formais em Engenharia de Software, tem
+        por objectivo proporcionar formação em Arquitectura de Software numa perspectiva formal e com ênfase nos sistemas reactivos.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (371, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (371, 'PT_PT', 'Verificação Formal','Explicar o funcionamento das técnicas mais importantes em verificação de software.\n
+        Especificar o comportamento de programas através de contratos.\n
+        Utilizar ferramentas para a verificação de programas anotados com contratos.\n
+        Explicar as diferentes abordagens que têm sido utilizadas para mitigar o problema de explosão do espaço de
+        estados no model checking.\n
+        Utilizar uma ferramenta de model checking simbólico.\n
+        Utilizar ferramentas de verificação automática de software baseadas em model checking.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (372, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (372, 'PT_PT', 'Gramáticas na Compreensão de Software','No fim, os alunos deverão ter: capacidade para desenvolver especificações da sintaxe/semântica de
+        linguagens e problemas em geral com gramáticas;\n
+        capacidade para gerar programas (protótipos) usando ferramentas automáticas baseadas em gramáticas;\n
+        capacidade de construir front-ends poderosos para a análise de linguagens de programação;\n
+        capacidade para conceber e implementar estruturas de dados complexas para representação intermédia da
+        informação extraída da análise do código;\n
+        capacidade para criar representações visuais adequadas à compreensão clara do conhecimento complexo detido;\n
+        capacidade para desenvolver software como uma tarefa de transformação de programas e/ou especificações em
+        implementações eficientes;\n
+        capacidade para utilizar técnicas de transformação de programas para optimizar
+        programas (e.g. cálculo parcial, detecção de código morto), efetuar debugging de programase melhorar a estrutura dos programas;\n
+        capacidade de desenvolver ferramentas para ajuda à compreensão de código.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (373, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (373, 'PT_PT', 'Processamento e Representação de Conhecimento','No fim, os alunos deverão: ser capazes de especificar formalmente conhecimento usando várias
+        metodologias: taxonomias, thesaurus e ontologias; ser capazes de adicionar semântica descritiva a objectos
+        digitais; ser capazes de especificar taxonomias em SKOS; ser capazes de espeficicar ontologias em OWL; ser
+        capazes de processar ontologias; ser capazes de adicionar semântica a sítios web usando as normas RDFa e
+        "Open Linked Data".');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (374, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (374, 'PT_PT', 'Processamento e Representação de Informação','No fim, os alunos deverão: conhecer o ciclo de vida documental, saber identificar as várias fases e as
+        tecnologias a utilizar em cada uma; ser capazes de especificar uma linguagem de anotação para um conjunto
+        de requisitos; ser capazes de implementar transformações de documentos para diversos fins: extracção de
+        conhecimento, publicação na Web, intercâmbio de informação; conhecer e utilizar soluções de
+        armazenamento para documentos anotados; ser capazes de definir as camadas necessárias para integrar e
+        realizar o intercâmbio de informação entre sistemas de informação distintos; ser capazes de implementar um
+        projecto de publicação electrónica recorrendo a normas internacionais abertas: XML, XSLFO e XSL; ser capazes
+        de programar a geração automática de sítios Web a partir de um repositório de documentos XML; ser capazes
+        de utilizar linguagens de anotação e respectivas ferramentas desenvolvidas por outrém.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (375, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (375, 'PT_PT', 'Scripting no Processamento de Linguagem Natural','No fim, os alunos deverão: ser capazes de escrever scripts para automatização de uma variedade de tarefas e
+        transformações; ser capazes de resolver problemas usando transformações via expressões regulares;
+        compreender as vantagens e o funcionamento de sistemas guiados por regras de produção (condição-reacção);
+        ter a capacidade para construir DSLs concretas; ter a capacidade de construir e usar corpora; ter a capacidade
+        de extrair informação diversa a partir de corpora; ter a capacidade de construir dicionários electrónicos; ter a
+        capacidade de construir pequenos protótipos para modelar linguagem natural.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (376, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (376, 'PT_PT', 'Paradigmas de Sistemas Distribuídos','No seguimento da programação de sistemas (de Sistemas Operativos) e das
+        noções essenciais de programação concorrente e sistemas distribuídos (de Sistemas Distribuídos), esta UC aborda
+        diferentes paradigmas que podem ser utilizados no desenvolvimento de aplicações distribuídas sofisticadas.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (377, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (377, 'PT_PT', 'Fundamentos de Sistemas Distribuídos','Na sequência das noções básicas de programação de sistemas distribuídos e em
+        paralelo com a aprendizagem de paradigmas de programação que tornam possível a construção de sistemas cada vez mais complexos,
+        esta unidade curricular tem como objectivo focar o raciocínio no sistema distribuído como um todo, compreendendo as noções
+        de correcção do sistema e os algoritmos principais para a atingir baseados em relógios lógicos e transacções distribuídas.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (378, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (378, 'PT_PT', 'Tolerância a Faltas','Desenvolver e aprofundar a formação na área de sistemas distribuídos
+        dando continuidade ao desenvolvimento das técnicas estudadas na unidade curricular de Sistemas Distribuídos.
+        Pretende-se complementar a formação anterior e conferir capacidade de desenvolver sistemas distribuídos
+        confiáveis com recurso a técnicas de replicação por software para coerência forte.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (379, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (379, 'PT_PT', 'Sistemas Distribuídos em Larga Escala','Esta unidade dá continuidade aos temas desenvolvidos em Sistemas Operativos e Sistemas Distribuídos,
+        e aborda um conjunto de matérias que suportam a criação de soluções robustas para sistemas distribuídos em larga escala.
+        Entende-se aqui larga escala por elevados números de componentes, potencialmente distribuídos numa escala
+        geográfica com distâncias físicas significativas.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (380, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (380, 'PT_PT', 'Agentes Inteligentes','- Compreender as noções gerais de agente e sistemas multiagente, enumerando
+        e classificando diferentes propriedades de agentes e de ambientes;\n
+        - Criar agentes com uma dada arquitectura;\n
+        - Desenhar uma sociedade de agentes e utilizá-la na resolução de um problema; \n
+        - Desenvolver soluções, nas mais diversas áreas de aplicação, usando uma metodologia de resolução de problemas orientada ao agente;\n
+        - Criar, de uma forma prática, uma sociedade de agentes que comunicam usando uma linguagem de agentes, e usando diferentes plataformas.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (381, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (381, 'PT_PT', 'Aprendizagem e Extracção de Conhecimento','- Identificar, descrever e definir os principais conceitos relacionados com os sistemas de dados,
+        processamento analítico, mineração, extracção de conhecimento e aprendizagem máquina.\n
+        - Utilizar, classificar e avaliar as aplicações existentes ou a desenvolver.\n
+        - Seleccionar as metodologias apropriadas e aplicar software disponível na resolução de problemas reais, ao
+        nível da análise de dados, mineração de dados, extração de conhecimento e tomada de decisão.\n
+        - Conhecer e ser capaz de implementar os principais algoritmos relacionados com as técnicas de mineração
+        de dados, extracção de conhecimento e formas de aprendizagem.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (382, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (382, 'PT_PT', 'Computação Natural','- Identificar, descrever e definir os principais conceitos relacionados
+        com Computação Evolutiva (e.g., Intelectos Virtuais), Inteligência de Grupo (e.g. “Particle Swarm”)
+        e Computação Natural (e.g. Redes Neuronais Artificias, Programação Genética e Evolucionária).\n
+        - Seleccionar as metodologias de resolução de problemas, assim como os paradigmas computacionais que melhor se lhes adequam.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (383, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (383, 'PT_PT', 'Sistemas Autónomos','- Identificar, descrever e definir os principais conceitos relacionados com Sistemas Autónomos e Agentes Robóticos.\n
+        - Realizar Sistemas Autónomos pela utilização do conceito de Agentes Inteligentes.\n
+        - Conhecer e saber utilizar o conhecimento proveniente de sensores.\n
+        - Conhecer e saber utilizar os actuadores que potenciam a mobilidade e a navegação.\n
+        - Estudar e desenvolver métodos de coordenação e interacção com o meio.\n
+        - Utilizar a prototipagem e a análise de complexidade para a sua aplicação na resolução de problemas.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (384, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (384, 'PT_PT', 'Mineração de Dados','Sensibilizar os alunos para o valor acrescentado que se pode retirar
+        dos dados acumulados resultantes de actividades empresariais, públicas ou científicas;\n
+        Dotar os alunos do conhecimento adequado para que possam utilizar, ou gerir a utilização,
+        com rigor de ferramentas computacionais no apoio à decisão baseado em dados;\n
+        Dotar os alunos de conhecimentos suficientes, a nível conceptual, para que possam
+        desenvolver e avaliar novas ferramentas de mineração de dados;');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (385, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (385, 'PT_PT', 'Computação Paralela','Um estudante que complete com sucesso a UC deverá ser capaz de demonstrar que adquiriu as seguintes competências:\n
+        caracterizar e avaliar qualitativa e quantitativamente os sistemas de computação;\n
+        analisar, medir e avaliar o desempenho de sistemas de computação na execução de aplicações;\n
+        desenvolver aplicações paralelas capazes de executar numa gama alargada de arquitecturas;\n
+        implementar aplicações utilizando os tipos mais comuns de algoritmos paralelos;\n
+        medir e optimizar o desempenho de aplicações computacionais com vista a optimizar o seu desempenho e escalabilidade;');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (386, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (386, 'PT_PT', 'Segurança de Sistemas Informáticos','O objectivo desta unidade curricular é o de dotar os alunos de capacidade de:
+        - compreender conceitos, estratégias, técnicas e ferramentas essenciais para o domínio da Segurança de Sistemas Informáticos;\n
+        - identificar e relacionar os principais problemas relacionados com ameaças e vulnerabilidades técnicas e não-técnicas no domínio das Tecnologias da Informação;\n
+        - compreender e aplicar as normas e melhores práticas no âmbito da segurança, tanto ao nível do desenvolvimento do software como da operação de infra-estruturas;\n
+        - desenhar, implementar e manter mecanismos de protecção de infra-estruturas informáticas;\n
+        - desenhar, implementar e manter mecanismos de mitigação de riscos de segurança, detectar e conter intrusões, e conter o impacto na organização;\n
+        - auditar infra-estruturas existentes, identificar vulnerabilidades, eventuais métodos de exploração e ferramentas relevantes;');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (387, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (387, 'PT_PT', 'Processamento de Dados com Streams de Java','Estudo, compreensão e aplicação das construções de Java que possibilitam realizar
+        Programação Funcional: Lambdas, Interfaces Funcionais, Funções, Composição Funcional e Currying;\n
+        Estudo, compreensão e aplicação de construções, técnicas e métodos de Metaprogramação e de
+        Refactoring em Java: Reflexão, MetaClasses, Factory Methods, Annotations e Inversão de Controlo (IoC);\n
+        Processamento massivo de dados usando pipelines. Estudo das Streams de Java. Operações com streams.
+        Processamento sequencial versus processamento paralelo. Análise e testes de performance;');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (388, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (388, 'PT_PT', 'Análise e Teste de Software','Explicar as técnicas genéricas para análise de código de software;\n
+        Desenvolver ferramentas para analisar programas e sistemas de software;\n
+        Perceber o conceito de qualidade de software e modelos de qualidade de software;\n
+        Desenvolver analisadores de qualidadade de software baseado em métricas;\n
+        Construir ferramentas de software para a transformação, refactoring e evolução de programas.\n
+        Implementar algoritmos fundamentais de análise estática de programas;');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (389, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (389, 'PT_PT', 'Entrega de Sistemas e Benchmarking','A UC tem como objectivo a aprendizagem do processo de análise de
+        requisitos de operação de aplicações informáticas, seguida da operacionalização e avaliação de todo o
+        sistema de suporte à entrega do serviço.
+        A UC é de cariz fortemente tecnológico, fazendo acompanhar a formação conceptual dos vários
+        tópicos do programa com a apresentação e experimentação detalhada de tecnologia representante do estado da arte.
+        O conteúdo programático da UC está particularmente alinhado com os perfis de Sistemas
+        Distribuídos e Engenharia de Aplicações. O seu teor prático é complementar e de manifesto
+        interesse tanto para estes como para vários perfis orientados à construção de software.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (390, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (390, 'PT_PT', 'Inteligência Ambiente: Tecnologias e Aplicações','Com a unidade curricular de Inteligência Ambiente pretende-se dar formação na área
+        científica da Inteligência Ambiente. Os tópicos que a compõem garantem que o aluno possuirá conhecimentos sobre as
+        potencialidades da Inteligência Ambiente, sua caracterização, bem como das tecnologias e metodologias de
+        resolução problemas, mais comuns nesta área, sendo capaz de as contextualizar, aplicar e analisar.');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (391, 4, 2, 10, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (391, 'PT_PT', 'Laboratório de Engenharia Informática','Aprendizagem prática de conceitos de desenvolvimento de projecto, associado a um perfil de especialização.');
+
+-- UMinho 5th year
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (392, 5, 1, 15, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (392, 'PT_PT', 'Projecto de Engenharia Informática','Desenhar e implementar um projecto de software em grupo');
+
+INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (393, 5, 1, 45, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (393, 'PT_PT', 'Dissertação em Engenharia Informática em Engenharia Informáticaação','A dissertação implica necessariamente o envolvimento do estudante num projecto de
+        investigação e desenvolvimento de média/grande dimensão. Este projecto insere-se regra geral num projecto
+        maior, associado a um centro de investigação e/ou a uma empresa');
+
 
 INSERT INTO DegreeClasses(id, year, semester, etcs , isOptional, degree) VALUES (1000, 4, 2, 7.5, TRUE, 3);
 INSERT INTO DegreeClassTranslations(degreeClassId, language, name, description) VALUES  (1000, 'PT_PT', 'Programação','');

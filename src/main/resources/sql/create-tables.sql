@@ -26,16 +26,37 @@ CREATE TABLE KnowledgeAreaTranslations (
 
 CREATE TABLE Topics(
 	id SMALLINT NOT NULL PRIMARY KEY,
-	knowledgeareaid SMALLINT NOT NULL REFERENCES KnowledgeAreas(id) ON UPDATE NO ACTION ON DELETE NO ACTION
+	knowledgearea SMALLINT NOT NULL REFERENCES KnowledgeAreas(id) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 
 CREATE TABLE TopicTranslations (
-    topicId SMALLINT NOT NULL REFERENCES Topics(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+    topic SMALLINT NOT NULL REFERENCES Topics(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
 	language language_type NOT NULL,
 	name text NOT NULL,
 	description text NOT NULL,
 	PRIMARY KEY(topicId, language)
 );
+
+CREATE SEQUENCE country_id_seq INCREMENT 1;
+CREATE TABLE Countries(
+	id SMALLINT NOT NULL PRIMARY KEY DEFAULT nextval('country_id_seq'),
+	alpha2code text NOT NULL UNIQUE
+);
+
+CREATE TABLE CountryTranslations (
+    country SMALLINT NOT NULL REFERENCES Countries(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+    language language_type NOT NULL,
+    name text NOT NULL,
+    PRIMARY KEY (country, language)
+);
+
+
+CREATE SEQUENCE school_id_seq INCREMENT 1;    
+CREATE TABLE Schools (
+	id SMALLINT NOT NULL PRIMARY KEY DEFAULT nextval('school_id_seq'),
+	name text NOT NULL,
+	country NOT NULL REFERENCES Countries(id) ON UPDATE NO ACTION ON DELETE NO ACTION
+)
 
 CREATE TYPE university_type AS ENUM(
 	'U_PORTO',
