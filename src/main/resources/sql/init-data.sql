@@ -7620,6 +7620,36 @@ INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (162, 3, 2, 7.5, false, 3);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (162, 'PT_PT', 'Sistemas Distribuídos' , 'Analisar as arquitecturas e as tecnologias que permitem desenvolver aplicações distribuídas que possam garantir requisitos não funcionais como a reconfigurabilidade, a segurança, a tolerância a faltas e a escalabilidade. Aquisição de conhecimentos que permitam desenvolver uma aplicação com uma arquitectura distribuída. Programar aplicações distribuídas. Interpretar requisitos de segurança formulando políticas e concretizando mecanismos seguros no código da aplicação. Análise de requisitos de fiabilidade e disponibilidade e introdução de mecanismos de tolerância a faltas.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (1940, 162, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (1941, 162, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (1942, 162, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (1943, 162, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (1944, 162, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (1945, 162, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (1946, 162, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (1947, 162, 8);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (1948, 162, 9);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (1949, 162, 10);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1940, 'PT_PT', 'Introdução: Problemas introduzidos pela distribuição. Evolução histórica. Arquitecturas de referência.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1941, 'PT_PT', 'Comunicação Distribuídas: Nível de Transporte e respectivas API. Chamada de Procedimentos Remotos. Sistemas de Objectos Distribuídos. Web Services.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1942, 'PT_PT', 'Gestão de Nomes: Propriedades dos Nomes, Sistemas de gestão de nomes. Sistemas de Directório. Arquitectura de serviço de gestão de nomes.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1943, 'PT_PT', 'Segurança: Politicas e mecanismo de segurança. Base computacional de confiança. Canais seguros.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1944, 'PT_PT', 'Introdução à criptografia: Chave simétrica e chave assimétrica, distribuição de chaves. Autenticação. Autorização. Integridade e assinaturas digitais');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1945, 'PT_PT', 'Web Services security');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1946, 'PT_PT', 'Tolerância a faltas: Modelo de Sistema, Tipos de falta; densas, bizantinas. Grandezas: Fiabilidade, Disponibilidade. Politicas de tolerância a faltas e recuperação do erro, processamento do erro. Sistema de replicação passiva.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1947, 'PT_PT', 'Transacções distribuídas: Arquitectura X/Open, Terminação em duas Fases, Monitores Transaccionais. Filas de Mensagens, Comunicação Síncrona e Assíncrona');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1948, 'PT_PT', 'Message Oriented Middleware: Java Messages');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1949, 'PT_PT', 'Análise de plataformas integradoras: Sun-RPC, CORBA, J2EE, Web Services');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1940, 'EN_UK', 'Introduction: Problems introduced by distribution. Historical evolution. Reference architectures.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1941, 'EN_UK', 'Distributed Communication: Transport Layer and its APIs. Remote Procedure Call. Distributed Object Systems. Web Services.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1942, 'EN_UK', 'Name Management: Name Properties, Name Management Systems. Directory Systems. Name Management Service Architecture.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1943, 'EN_UK', 'Security: Security policies and mechanisms. Trusted computing base. Secure channels.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1944, 'EN_UK', 'Introduction to cryptography: Symmetric and asymmetric keys, key distribution. Authentication. Authorization. Integrity and digital signatures');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1945, 'EN_UK', 'Web Services security');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1946, 'EN_UK', 'Fault tolerance: System Model, Types of failure; dense, Byzantine. Metrics: Reliability, Availability. Fault tolerance policies and error recovery, error processing. Passive replication system.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1947, 'EN_UK', 'Distributed transactions: X/Open architecture, Two-Phase Termination, Transaction Monitors. Message Queues, Synchronous and Asynchronous Communication');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1948, 'EN_UK', 'Message Oriented Middleware: Java Messages');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (1949, 'EN_UK', 'Analysis of integration platforms: Sun-RPC, CORBA, J2EE, Web Services');
 
 -- IST 4th year
 
