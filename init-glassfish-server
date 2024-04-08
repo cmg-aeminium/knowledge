@@ -1,3 +1,0 @@
-// DataSource configuration - basically the access door to the database. This is a configuration for localhost, if in another environment, please replace accordingly, port as well
-asadmin> create-jdbc-connection-pool --datasourceclassname org.postgresql.ds.PGPoolingDataSource --restype javax.sql.DataSource --validationmethod=auto-commit --wrapjdbcobjects=false --property User=postgres:Password=admin:Url=jdbc\\:postgresql\\:\/\/localhost\\:5445\/sweranker sweranker_pool --port 4849
-asadmin> create-jdbc-resource --connectionpoolid sweranker_pool jdbc/sweranker --port 4849

@@ -366,7 +366,7 @@
         </dependency>
         <dependency>
             <groupId>org.jboss.weld</groupId>
-            <artifactId>weld-osgi-bundle</artifactId> <!-- Loaded this osgi artifact because it is provided by Glassfish -->
+            <artifactId>weld-osgi-bundle</artifactId> <!-- Loaded this osgi artifact because it is provided by app server -->
             <scope>provided</scope>
         </dependency>
         
