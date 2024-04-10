@@ -13464,6 +13464,33 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         3. Aplicar ferramentas computacionais no contexto da unidade curricular.\n
         4. Descrever técnicas de integração e aplicações de equações diferenciais de derivadas parciais.</string>
     <string name="um_class_dynamic_sys_topic1">Equações diferenciais ordinárias');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3511, 303, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3512, 303, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3513, 303, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3514, 303, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3515, 303, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3516, 303, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3517, 303, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3518, 303, 8);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3519, 303, 9);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3511, 'PT_PT', 'Equações diferenciais ordinárias');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3512, 'PT_PT', 'Aplicações à dinâmica de sistemas mecânicos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3513, 'PT_PT', 'Oscilações lineares');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3514, 'PT_PT', 'Equações diferenciais com derivadas parciais');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3515, 'PT_PT', 'Análise de Fourier');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3516, 'PT_PT', 'Equação de onda e equação de difusão');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3517, 'PT_PT', 'Sistemas não-lineares');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3518, 'PT_PT', 'Sistemas caóticos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3519, 'PT_PT', 'Implementação computacional de sistemas dinâmicos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3511, 'EN_UK', 'Ordinary differential equations');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3512, 'EN_UK', 'Applications to the dynamics of mechanical systems');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3513, 'EN_UK', 'Linear oscillations');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3514, 'EN_UK', 'Partial differential equations');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3515, 'EN_UK', 'Fourier analysis');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3516, 'EN_UK', 'Wave equation and diffusion equation');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3517, 'EN_UK', 'Non-linear systems');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3518, 'EN_UK', 'Chaotic systems');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3519, 'EN_UK', 'Computational implementation of dynamical systems');
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (304, 2, 1, 5, FALSE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (304, 'PT_PT', 'Estatística Aplicada','Aprendizagem de metodologia associada à recolha e análise de dados em estatística. Os objectivos
@@ -13474,6 +13501,48 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         - Calcular probabilidades e determinar funções de probabilidade.\n
         - Formular e testar hipóteses.\n
         - Usar software específico (SPSS).');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3520, 304, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3521, 304, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3522, 304, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3523, 304, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3524, 304, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3525, 304, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3526, 304, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3527, 304, 8);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3528, 304, 9);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3529, 304, 10);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3530, 304, 11);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3531, 304, 12);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3532, 304, 13);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3533, 304, 14);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3520, 'PT_PT', 'População e amostra');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3521, 'PT_PT', 'Tipos de dados e escalas de medida');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3522, 'PT_PT', 'Estatística descritiva');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3523, 'PT_PT', 'Conceitos de probabilidade');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3524, 'PT_PT', 'Variáveis aleatórias e distribuições de probabilidade univariadas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3525, 'PT_PT', 'Esperança matemática');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3526, 'PT_PT', 'Famílias de distribuições de probabilidade');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3527, 'PT_PT', 'Estimação de parâmetros');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3528, 'PT_PT', 'Intervalos de confiança');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3529, 'PT_PT', 'Testes de hipóteses simples');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3530, 'PT_PT', 'Análise da variância (ANOVA)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3531, 'PT_PT', 'Regressão e correlação');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3532, 'PT_PT', 'Testes de bom ajuste para grandes amostras');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3533, 'PT_PT', 'Uso de software: SPSS');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3520, 'EN_UK', 'Population and sample');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3521, 'EN_UK', 'Data types and measurement scales');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3522, 'EN_UK', 'Descriptive statistics');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3523, 'EN_UK', 'Concepts of probability');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3524, 'EN_UK', 'Random variables and univariate probability distributions');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3525, 'EN_UK', 'Mathematical expectation');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3526, 'EN_UK', 'Families of probability distributions');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3527, 'EN_UK', 'Parameter estimation');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3528, 'EN_UK', 'Confidence intervals');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3529, 'EN_UK', 'Simple hypothesis tests');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3530, 'EN_UK', 'Analysis of variance (ANOVA)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3531, 'EN_UK', 'Regression and correlation');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3532, 'EN_UK', 'Goodness-of-fit tests for large samples');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3533, 'EN_UK', 'Software use: SPSS');
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (305, 2, 1, 5, FALSE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (305, 'PT_PT', 'Engenharia Económica','O objectivo principal desta UC é proporcionar aos alunos
@@ -13487,6 +13556,30 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         - Adquirir conhecimentos básicos de natureza financeira \n
         - Aplicar conhecimentos matemáticos e de natureza financeira para descrever e analisar projectos de investimento.\n
         - Aplicar ferramentas de análise económica.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3534, 305, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3535, 305, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3536, 305, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3537, 305, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3538, 305, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3539, 305, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3540, 305, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3541, 305, 8);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3534, 'PT_PT', 'Conceitos introdutórios: escolha e escassez; princípio do custo-benefício; custo de oportunidade; lucro económico');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3535, 'PT_PT', 'O modelo da procura e da oferta: os determinantes da oferta e da procura, o equilíbrio de mercado, utilizações do modelo');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3536, 'PT_PT', 'Teoria da procura: da procura individual à procura de mercado; o conceito de elasticidade da procura; a estimação da procura');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3537, 'PT_PT', 'A empresa: definição, objectivo e classificação; formalidades na constituição de uma empresa; o planeamento estratégico');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3538, 'PT_PT', 'Teoria da oferta: função de produção; a produção; os rendimentos à escala; os custos; custos no longo prazo e a estrutura do sector');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3539, 'PT_PT', 'Mercados e formação dos preços: a concorrência perfeita; o monopólio');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3540, 'PT_PT', 'Conceitos básicos de matemática financeira: valor do dinheiro no tempo, conceito de equivalência de capitais, actualização e capitalização');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3541, 'PT_PT', 'Comparação e selecção de projectos de investimento: opções com igual tempo de vida, opções com diferente tempo de vida e opções com diferente dimensão de investimento');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3534, 'EN_UK', 'Introductory concepts: choice and scarcity; cost-benefit principle; opportunity cost; economic profit');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3535, 'EN_UK', 'The model of supply and demand: the determinants of supply and demand, market equilibrium, uses of the model');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3536, 'EN_UK', 'Demand theory: from individual demand to market demand; the concept of price elasticity of demand; estimation of demand');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3537, 'EN_UK', 'The firm: definition, objective and classification; formalities in the constitution of a company; strategic planning');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3538, 'EN_UK', 'Supply theory: production function; production; returns to scale; costs; long-run costs and industry structure');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3539, 'EN_UK', 'Markets and price formation: perfect competition; monopoly');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3540, 'EN_UK', 'Basic concepts of financial mathematics: time value of money, concept of capital equivalence, discounting and compounding');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3541, 'EN_UK', 'Comparison and selection of investment projects: options with equal lifetime, options with different lifetime and options with different investment size');
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (306, 2, 1, 5, FALSE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (306, 'PT_PT', 'Arquitectura de Computadores','Identificar e caracterizar as métricas relativas ao
@@ -13496,6 +13589,33 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         Analisar e justificar o impacto de múltiplas unidades funcionais no desempenho da máquina\n
         Descrever, aplicar e avaliar técnicas de optimização do desempenho\n
         Identificar as oportunidades de exploração de processamento paralelo e caracterizar as limitações inerentes ao processamento paralelo');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3542, 306, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3543, 306, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3544, 306, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3545, 306, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3546, 306, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3547, 306, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3548, 306, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3549, 306, 8);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3550, 306, 9);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3542, 'PT_PT', 'Avaliação do Desempenho: “Benchmarks”: sintéticos, SPEC');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3543, 'PT_PT', 'Métricas: tempo de execução, ciclos por instrução (CPI); ciclos por elemento (CPE)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3544, 'PT_PT', 'Metodologias: resolução e precisão do relógio; medição de tempo; contadores de desempenho; apresentação de resultados');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3545, 'PT_PT', 'Hierarquia de Memória: Conceitos; localidade temporal e espacial; métricas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3546, 'PT_PT', 'Organização de memória: mapeamento, políticas de escrita e substituição');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3547, 'PT_PT', 'Codificação de algoritmos: técnicas de codificação para melhoria da localidade');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3548, 'PT_PT', 'Organização do Processador: Organização sequencial - fases de execução; execução encadeada; arquitecturas superescalares');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3549, 'PT_PT', 'Optimização do Desempenho: optimizações dependentes/independentes da máquina');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3550, 'PT_PT', 'Arquitecturas Actuais: vectoriais e multicore');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3542, 'EN_UK', 'Performance Evaluation: Benchmarks: synthetic, SPEC');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3543, 'EN_UK', 'Metrics: execution time, cycles per instruction (CPI); cycles per element (CPE)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3544, 'EN_UK', 'Methodologies: clock resolution and accuracy; time measurement; performance counters; presentation of results');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3545, 'EN_UK', 'Memory Hierarchy: Concepts; temporal and spatial locality; metrics');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3546, 'EN_UK', 'Memory Organization: mapping, write and replacement policies');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3547, 'EN_UK', 'Algorithm Coding: coding techniques for locality improvement');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3548, 'EN_UK', 'Processor Organization: Sequential organization - execution phases; pipelined execution; superscalar architectures');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3549, 'EN_UK', 'Performance Optimization: machine-dependent/independent optimizations');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3550, 'EN_UK', 'Current Architectures: vector and multicore');
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (307, 2, 1, 5, FALSE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (307, 'PT_PT', 'Comunicação de Dados','Definir, discutir e relacionar os conceitos teóricos básicos
@@ -13511,6 +13631,42 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         relacionadas com a digitalização e processamento de sinais multimédia; \n
         Compreender as técnicas e a teorias de suporte que permitem a detecção e correcção
         de erros nas comunicações digitais.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3551, 307, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3552, 307, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3553, 307, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3554, 307, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3555, 307, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3556, 307, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3557, 307, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3558, 307, 8);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3559, 307, 9);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3560, 307, 10);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3561, 307, 11);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3562, 307, 12);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3551, 'PT_PT', 'Teoria da Informação: Medidas de Informação, Entropia, Codificação de Fontes com/sem memória, Rendimento e Compressão, Códigos Shannon-fano');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3552, 'PT_PT', 'Capacidade do canal, Lei de Hartley Shannon');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3553, 'PT_PT', 'Digitalização: Teoria da Amostragem; Quantização Uniforme/não uniforme; Ruído de Quantização');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3554, 'PT_PT', 'Digitalização: Conversão Analógico/Digital; PCM, Ruído em PCM; Outras técnicas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3555, 'PT_PT', 'Multiplexagem: Multipla Divisão do Tempo (TDM); Hierarquias PDH/SONET/SDH. TDM estatístico;');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3556, 'PT_PT', 'Multiplexagem: Modelos de filas de espera e escalonamento. Multipla Divisão de Frequência (FDM); Técnicas híbridas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3557, 'PT_PT', 'Análise de Sinais: Análise temporal/frequências, Séries de Fourier, Potência, Largura de Banda');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3558, 'PT_PT', 'Análise de Sinais: Teorema de Parseval, Modulação');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3559, 'PT_PT', 'Análise de Sistemas de Transmissão: Sistemas LIT, Função de transferência, Largura de Banda, Ganhos/Perdas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3560, 'PT_PT', 'Análise de Sistemas de Transmissão: Limitações, Ritmo de Nyquist, Ruído, Filtros/sistemas reais/ideais');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3561, 'PT_PT', 'Códigos de Controlo de Erros: Códigos de bloco, Distância de Hamming, Capacidade de detecção/correcção');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3562, 'PT_PT', '">Códigos de Controlo de Erros: Circuitos codificadores de códigos cíclicos sistemáticos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3551, 'EN_UK', 'Information Theory: Information Measures, Entropy, Source Coding with/without memory, Rate and Compression, Shannon-Fano Codes');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3552, 'EN_UK', 'Channel Capacity, Hartley Shannon Law');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3553, 'EN_UK', 'Digitization: Sampling Theory; Uniform/non-uniform Quantization; Quantization Noise');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3554, 'EN_UK', 'Digitization: Analog/Digital Conversion; PCM, Noise in PCM; Other techniques');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3555, 'EN_UK', 'Multiplexing: Time Division Multiplexing (TDM); PDH/SONET/SDH Hierarchies. Statistical TDM;');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3556, 'EN_UK', 'Multiplexing: Queueing and scheduling models. Frequency Division Multiplexing (FDM); Hybrid techniques');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3557, 'EN_UK', 'Signal Analysis: Time/frequency analysis, Fourier Series, Power, Bandwidth');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3558, 'EN_UK', 'Signal Analysis: Parseval''s Theorem, Modulation');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3559, 'EN_UK', 'Analysis of Transmission Systems: LIT Systems, Transfer Function, Bandwidth, Gains/Losses');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3560, 'EN_UK', 'Analysis of Transmission Systems: Limitations, Nyquist Rate, Noise, Filters/real/ideal systems');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3561, 'EN_UK', 'Error Control Codes: Block codes, Hamming Distance, Detection/correction capability');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3562, 'EN_UK', 'Error Control Codes: Encoder circuits for systematic cyclic codes');
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (308, 2, 1, 5, FALSE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (308, 'PT_PT', 'Algoritmos e Complexidade','O objectivo principal da UC de Algoritmos e Complexidade é
@@ -13521,6 +13677,33 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         4. Utilizar estruturas de dados fundamentais (em particular implementações de funções finitas e grafos), e
         utilizar algoritmos sobre elas.\n
         5. Reconhecer problemas NP-completos e alguns algoritmos aproximados para a sua resolução.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3563, 308, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3564, 308, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3565, 308, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3566, 308, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3567, 308, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3568, 308, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3569, 308, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3570, 308, 8);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3571, 308, 9);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3563, 'PT_PT', 'Análise de correcção: Introdução à Lógica de Floyd-Hoare');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3564, 'PT_PT', 'Análise de complexidade: modelo da complexidade assimptótica');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3565, 'PT_PT', 'Estratégias algorítmicas: incremental, greedy, programação dinâmica');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3566, 'PT_PT', 'Casos de estudo: algoritmos de ordenação');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3567, 'PT_PT', 'Estudo de algoritmos fundamentais sobre grafos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3568, 'PT_PT', 'Introdução à noção de problema NP-completo');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3569, 'PT_PT', 'Estruturas de dados fundamentais e eficiência na procura: tabelas de Hash');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3570, 'PT_PT', 'Estruturas de dados fundamentais e eficiência na procura: estruturas lineares');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3571, 'PT_PT', 'Estruturas de dados fundamentais e eficiência na procura: hierárquicas (árvores, heaps, árvores-B)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3563, 'EN_UK', 'Correctness analysis: Introduction to Floyd-Hoare Logic');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3564, 'EN_UK', 'Complexity analysis: asymptotic complexity model');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3565, 'EN_UK', 'Algorithmic strategies: incremental, greedy, dynamic programming');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3566, 'EN_UK', 'Case studies: sorting algorithms');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3567, 'EN_UK', 'Study of fundamental algorithms on graphs');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3568, 'EN_UK', 'Introduction to the notion of NP-complete problem');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3569, 'EN_UK', 'Fundamental data structures and search efficiency: hash tables');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3570, 'EN_UK', 'Fundamental data structures and search efficiency: linear structures');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3571, 'EN_UK', 'Fundamental data structures and search efficiency: hierarchical (trees, heaps, B-trees)');
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (309, 2, 2, 5, FALSE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (309, 'PT_PT', 'Sistemas Operativos','Num sentido lato, o objectivo da unidade curricular é ajudar a ter uma visão coerente e integrada de como
@@ -13528,6 +13711,24 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         necessita, como interage com outras e com o sistema operativo, que políticas de gestão são mais
         adequadas a cada tipo de carga e respectivos custos de implementação, razões para o sistema estar lento,
         que atitudes tomar, etc.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3572, 309, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3573, 309, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3574, 309, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3575, 309, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3576, 309, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3577, 309, 6);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3572, 'PT_PT', 'Introdução aos sistemas operativos modernos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3573, 'PT_PT', 'Gestão de processos: objectivos, estratégias de escalonamento');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3574, 'PT_PT', 'Noções de programação concorrente: comunicação e sincronização de processos e threads');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3575, 'PT_PT', 'Gestão de memória: sistemas de memória real e virtual, paginação e segmentação');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3576, 'PT_PT', 'Gestão de periféricos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3577, 'PT_PT', 'Gestão de ficheiros');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3572, 'EN_UK', 'Introduction to modern operating systems');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3573, 'EN_UK', 'Process management: objectives, scheduling strategies');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3574, 'EN_UK', 'Concurrent programming concepts: process and thread communication and synchronization');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3575, 'EN_UK', 'Memory management: real and virtual memory systems, paging and segmentation');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3576, 'EN_UK', 'Device management');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3577, 'EN_UK', 'File management');
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (310, 2, 2, 5, FALSE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (310, 'PT_PT', 'Programação Orientada aos Objectos','Compreender os conceitos fundamentais da PPO (Objectos, Classes, Herança e Polimorfismo;\n
@@ -13535,6 +13736,30 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         - construir hierarquias de classes utilizando as noções de classe abstracta, tipo abstracto de dados e polimorfismo;\n
         - compreender a importância das classes abstractas e herança na concepção de um sistema em POO;\n
         - utilizar linguagens de programação por objectos para construção de programas de média escala, seguros, robustos e extensíveis.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3578, 310, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3579, 310, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3580, 310, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3581, 310, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3582, 310, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3583, 310, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3584, 310, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3585, 310, 8);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3578, 'PT_PT', 'Introdução à Programação por Objectos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3579, 'PT_PT', 'Noção de Objecto em POO');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3580, 'PT_PT', 'Encapsulamento');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3581, 'PT_PT', 'Classes e Hierarquias de classes');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3582, 'PT_PT', 'Herança');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3583, 'PT_PT', 'Classes Abstractas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3584, 'PT_PT', 'Herança simples vs herança múltipla');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3585, 'PT_PT', 'Herança múltipla e interfaces');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3578, 'EN_UK', 'Introduction to Object-Oriented Programming')
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3579, 'EN_UK', 'Concept of Object in OOP')
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3580, 'EN_UK', 'Encapsulation')
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3581, 'EN_UK', 'Classes and Class Hierarchies')
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3582, 'EN_UK', 'Inheritance')
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3583, 'EN_UK', 'Abstract Classes')
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3584, 'EN_UK', 'Single Inheritance vs Multiple Inheritance')
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3585, 'EN_UK', 'Multiple Inheritance and Interfaces')
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (311, 2, 2, 5, FALSE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (311, 'PT_PT', 'Electromagnetismo','1. Calcular o campo eléctrico para distribuições discretas e contínuas de carga.\n
@@ -13544,9 +13769,30 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         4.) Descrever o movimento de cargas eléctricas na presença de campos magnéticos\n
         5.) Conhecer as fontes de campo magnético. Calcular o campo magnético de alguns sistemas simples\n
         6.) Conhecer e aplicar o conceito de indução magnética e de indutância.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3586, 311, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3587, 311, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3588, 311, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3589, 311, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3590, 311, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3591, 311, 6);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3586, 'PT_PT', 'Campo eléctrico');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3587, 'PT_PT', 'Potencial eléctrico');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3588, 'PT_PT', 'Capacitância, força electromotriz e circuitos simples');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3589, 'PT_PT', 'Campo magnético');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3590, 'PT_PT', 'Fontes do campo magnético');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3591, 'PT_PT', 'Indução electromagnética');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3586, 'EN_UK', 'Electric field');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3587, 'EN_UK', 'Electric potential');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3588, 'EN_UK', 'Capacitance, electromotive force and simple circuits');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3589, 'EN_UK', 'Magnetic field');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3590, 'EN_UK', 'Sources of the magnetic field');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3591, 'EN_UK', 'Electromagnetic induction');
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (312, 2, 2, 5, FALSE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (312, 'PT_PT', 'Opcional','A Opção UMinho será escolhida pelos alunos entre um conjunto de UCs que todos os anos será disponibilizado ao nível da Universidade');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3592, 312, 1);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3592, 'PT_PT', 'A UC Opcional é escolhida de uma panóplia de UCs oferecidas pela UMinho das mais variadas Áreas Científicas que não a Engenharia Informática');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3592, 'EN_UK', 'The Optional Course Unit is chosen from a range of UC offered by UMinho from the most varied Scientific Areas other than Computer Engineering');
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (313, 2, 2, 5, FALSE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (313, 'PT_PT', 'Programas','(i) Construção de programas: escrever programas funcionais de forma
@@ -13557,6 +13803,90 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         como forma de se perceber a arquitectura dos algoritmos e sua catalogação.\n
         (iv) Síntese de programas: ciclos-for a partir de definições indutivas.\n
         (v) Programação funcional avançada: construir e raciocinar sobre programas funcionais com efeitos sob a forma de mónades.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3593, 313, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3594, 313, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3595, 313, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3596, 313, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3597, 313, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3598, 313, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3599, 313, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3600, 313, 8);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3601, 313, 9);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3602, 313, 10);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3603, 313, 11);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3604, 313, 12);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3605, 313, 13);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3606, 313, 14);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3607, 313, 15);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3608, 313, 16);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3609, 313, 17);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3610, 313, 18);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3611, 313, 19);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3612, 313, 20);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3613, 313, 21);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3614, 313, 22);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3615, 313, 23);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3616, 313, 24);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3617, 313, 25);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3618, 313, 26);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3619, 313, 27);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3620, 313, 28);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3593, 'PT_PT', 'Teoria e método em programação');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3594, 'PT_PT', 'Cálculo e raciocínio sobre programas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3595, 'PT_PT', 'Composicionalidade');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3596, 'PT_PT', 'Combinadores de programas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3597, 'PT_PT', 'Modularidade e reutilização');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3598, 'PT_PT', '«Pacotes» de programação');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3599, 'PT_PT', 'Programação funcional: sua motivação e antecendentes históricos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3600, 'PT_PT', 'Composição de funções');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3601, 'PT_PT', 'Noções de abstracção e de isomorfismo');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3602, 'PT_PT', 'Iniciação à estruturação de dados');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3603, 'PT_PT', 'Combinadores básicos e suas propriedades estruturais (reflexão, fusão, absorção, cancelamento e de functorialidade)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3604, 'PT_PT', 'Álgebra de um tipo de dados');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3605, 'PT_PT', 'Lei da troca');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3606, 'PT_PT', 'Introdução às estruturas de dados indutivas regulares');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3607, 'PT_PT', 'Álgebras de functores');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3608, 'PT_PT', 'A triologia «cata-ana-hilo»');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3609, 'PT_PT', 'Recursividade polinomial');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3610, 'PT_PT', 'Caso de estudo: algoritmos de ordenação');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3611, 'PT_PT', 'Parametrização e polimorfismo');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3612, 'PT_PT', 'Inferência de tipos polimórficos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3613, 'PT_PT', 'Programação genérica');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3614, 'PT_PT', 'Functores de tipo');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3615, 'PT_PT', 'Introdução ao politipismo');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3616, 'PT_PT', 'Programação funcional com efeitos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3617, 'PT_PT', 'Mónades e sua teoria');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3618, 'PT_PT', 'Construção de programas monádicos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3619, 'PT_PT', 'Exemplos: excepções, processamento de listas, computações com estado');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3620, 'PT_PT', 'Breve referência ao mónade IO');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3593, 'EN_UK', 'Theory and method in programming');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3594, 'EN_UK', 'Calculation and reasoning about programs');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3595, 'EN_UK', 'Compositionality');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3596, 'EN_UK', 'Program combinators');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3597, 'EN_UK', 'Modularity and reusability');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3598, 'EN_UK', 'Programming "packages"');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3599, 'EN_UK', 'Functional programming: its motivation and historical background');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3600, 'EN_UK', 'Function composition');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3601, 'EN_UK', 'Concepts of abstraction and isomorphism');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3602, 'EN_UK', 'Introduction to data structures');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3603, 'EN_UK', 'Basic combinators and their structural properties (reflection, fusion, absorption, cancellation, and functoriality)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3604, 'EN_UK', 'Algebra of a data type');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3605, 'EN_UK', 'Exchange law');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3606, 'EN_UK', 'Introduction to regular inductive data structures');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3607, 'EN_UK', 'Functor algebras');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3608, 'EN_UK', 'The "cata-ana-hilo" trilogy');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3609, 'EN_UK', 'Polynomial recursion');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3610, 'EN_UK', 'Case study: sorting algorithms');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3611, 'EN_UK', 'Parametrization and polymorphism');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3612, 'EN_UK', 'Inference of polymorphic types');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3613, 'EN_UK', 'Generic programming');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3614, 'EN_UK', 'Type functors');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3615, 'EN_UK', 'Introduction to polymorphism');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3616, 'EN_UK', 'Functional programming with effects');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3617, 'EN_UK', 'Monads and their theory');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3618, 'EN_UK', 'Construction of monadic programs');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3619, 'EN_UK', 'Examples: exceptions, list processing, computations with state');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3620, 'EN_UK', 'Brief reference to the IO monad');
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (314, 2, 2, 5, FALSE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (314, 'PT_PT', 'Laboratórios de Informática III','Conhecer os princípios fundamentais da Engenharia de Software, designadamente modularidade,
@@ -13570,6 +13900,27 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         2º projecto Linguagem Java Conceitos envolvidos: manipulação de colecções Java, medição de
         tempos de operações sobre colecções, construção de interfaces com utilizador (padrão MVC), exploração
         dos componentes Swing.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3621, 314, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3622, 314, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3623, 314, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3624, 314, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3625, 314, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3626, 314, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3627, 314, 7);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3621, 'PT_PT', 'Revisão de princípios de engenharia fundamentais como: modularidade, abstracção de dados, encapsulamento e reutilização');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3622, 'PT_PT', 'Estruturas de dados genéricas em C (árvores e grafos)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3623, 'PT_PT', 'Realização do 1º projecto (em C)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3624, 'PT_PT', 'Revisão do Java Collections Framework (JCF); Implementação de Grafos em Java');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3625, 'PT_PT', 'Criação de Interfaces com o utilizador usando SWING e o modelo MVC (Model-View-Controller)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3626, 'PT_PT', 'Persistência simples de dados em Java (ObjectStreams)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3627, 'PT_PT', 'Realização do 2º projecto (em Java)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3621, 'EN_UK', 'Review of fundamental engineering principles such as: modularity, data abstraction, encapsulation and reuse');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3622, 'EN_UK', 'Generic data structures in C (trees and graphs)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3623, 'EN_UK', 'Completion of the 1st project (in C)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3624, 'EN_UK', 'Review of the Java Collections Framework (JCF); Implementation of Graphs in Java');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3625, 'EN_UK', 'Creation of User Interfaces using SWING and the MVC (Model-View-Controller) model');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3626, 'EN_UK', 'Simple data persistence in Java (ObjectStreams)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3627, 'EN_UK', 'Completion of the 2nd project (in Java)');
 
 -- UMinho 3rd year
 
@@ -13581,6 +13932,24 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         4) Utilizar a linguagem SQL para administrar, manter e interrogar bases de dados relacionais.\n
         5) Desenvolver aplicações informáticas que operem sobre bases de dados, incluindo aplicações baseadas
         na Web.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3628, 315, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3629, 315, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3630, 315, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3631, 315, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3632, 315, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3633, 315, 6);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3628, 'PT_PT', 'Sistemas de informação e bases de dados');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3629, 'PT_PT', 'A linguagem estruturada de interrogação SQL');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3630, 'PT_PT', 'Bases de dados distribuídas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3631, 'PT_PT', 'Bases de Dados Dedutivas ou Lógicas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3632, 'PT_PT', 'Optimização de interrogações e avaliação do desempenho');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3633, 'PT_PT', 'Sistemas Gestores de Bases de Dados');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3628, 'EN_UK', 'Information systems and databases');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3629, 'EN_UK', 'The structured query language SQL');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3630, 'EN_UK', 'Distributed databases');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3631, 'EN_UK', 'Deductive or Logical Databases');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3632, 'EN_UK', 'Query optimization and performance evaluation');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3633, 'EN_UK', 'Database Management Systems');
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (316, 3, 1, 5, FALSE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (316, 'PT_PT', 'Desenvolvimento de Sistemas Software','Os alunos deverão ser capazes de:\n
@@ -13588,6 +13957,30 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         - Compreender modelos (de requisitos/estruturais/comportamentais) descritos em UML;\n
         - Conceber sistemas de software utilizando UML;\n
         - Implementar sistemas de software a partir de modelos UML.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3634, 316, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3635, 316, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3636, 316, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3637, 316, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3638, 316, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3639, 316, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3640, 316, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3641, 316, 8);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3634, 'PT_PT', 'Introdução aos Sistemas de Software: definição');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3635, 'PT_PT', 'Introdução aos Sistemas de Software: modelos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3636, 'PT_PT', 'Introdução aos Sistemas de Software: processo de desenvolvimento de software');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3637, 'PT_PT', 'Modelação em UML: Introdução à Unified Modelling Language (UML)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3638, 'PT_PT', 'Modelação em UML: Modelação Estrutural');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3639, 'PT_PT', 'Modelação em UML: Modelação Comportamental');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3640, 'PT_PT', 'Modelação em UML: Modelação Arquitectural');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3641, 'PT_PT', 'Modelação em UML: Estudos de Casos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3634, 'EN_UK', 'Introduction to Software Systems: definition');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3635, 'EN_UK', 'Introduction to Software Systems: models');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3636, 'EN_UK', 'Introduction to Software Systems: software development process');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3637, 'EN_UK', 'UML Modeling: Introduction to the Unified Modeling Language (UML)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3638, 'EN_UK', 'UML Modeling: Structural Modeling');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3639, 'EN_UK', 'UML Modeling: Behavioral Modeling');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3640, 'EN_UK', 'UML Modeling: Architectural Modeling');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3641, 'EN_UK', 'UML Modeling: Case Studies');
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (317, 3, 1, 5, FALSE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (317, 'PT_PT', 'Modelos Determinísticos de Investigação Operacional','Desenvolver a capacidade de resolução de problemas (modelos determinísticos), com ênfase em
@@ -13598,6 +13991,60 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         soluções para esses modelos utilizando programas computacionais adequados, de validar os modelos
         obtidos, de interpretar as soluções obtidas, e de elaborar recomendações para o sistema em análise.\n
         - Compreender a importância da avaliação das soluções, e ser capaz de realizar análises de sensibilidade.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3642, 317, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3643, 317, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3644, 317, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3645, 317, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3646, 317, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3647, 317, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3648, 317, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3649, 317, 8);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3650, 317, 9);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3651, 317, 10);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3652, 317, 11);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3653, 317, 12);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3654, 317, 13);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3655, 317, 14);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3656, 317, 15);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3657, 317, 16);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3658, 317, 17);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3659, 317, 18);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3642, 'PT_PT', 'Metodologia da Investigação Operacional');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3643, 'PT_PT', 'Modelos e sua estrutura');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3644, 'PT_PT', 'Disponibilidade de dados');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3645, 'PT_PT', 'Óptimo e Função Objectivo');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3646, 'PT_PT', 'Resolução e Validação de Modelos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3647, 'PT_PT', 'Programação Linear: Aspectos geométricos, Método Simplex, Método do M e Técnica das Duas Fases.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3648, 'PT_PT', 'Programação Linear Avançada: Teoremas da Programação Linear e Análise de Sensibilidade');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3649, 'PT_PT', 'Programação Linear Avançada: Preço Sombra, Teoria da Dualidade e Método Simplex-Dual.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3650, 'PT_PT', 'Programação Inteira: Método Partição e Avaliação, Planos de Corte Fraccional e Mistos.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3651, 'PT_PT', 'Programação Inteira: Modelos de Programação Inteira, Custo Fixo');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3652, 'PT_PT', 'Programação Inteira: Planeamento da Produção, Dicotomias, Dimensão de Lote');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3653, 'PT_PT', 'Programação Inteira: Modelos de Fluxo em Rede e Análise de Optimabilidade');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3654, 'PT_PT', 'Programação Inteira: Método dos Multiplicadores e Transporte com Limites Superiores.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3655, 'PT_PT', 'Gestão de Projectos: Representação de projectos, redes de actividades, diagramas de Gantt, CPM');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3656, 'PT_PT', 'Programação Dinâmica: Definições e terminologia, Relação de Recorrência.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3657, 'PT_PT', 'Programação Dinâmica: Condições de Validade (separabilidade e optimalidade)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3658, 'PT_PT', 'Programação Dinâmica: Contribuições aditivas, multiplicativas e maximin');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3659, 'PT_PT', 'Programação Dinâmica: Carga computacional');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3642, 'EN_UK', 'Methodology of Operational Research');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3643, 'EN_UK', 'Models and their structure');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3644, 'EN_UK', 'Data availability');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3645, 'EN_UK', 'Optimum and Objective Function');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3646, 'EN_UK', 'Model Solving and Validation');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3647, 'EN_UK', 'Linear Programming: Geometric aspects, Simplex Method, M-Method and Two-Phase Technique.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3648, 'EN_UK', 'Advanced Linear Programming: Theorems of Linear Programming and Sensitivity Analysis');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3649, 'EN_UK', 'Advanced Linear Programming: Shadow Price, Duality Theory and Simplex-Dual Method.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3650, 'EN_UK', 'Integer Programming: Partition and Evaluation Method, Fractional and Mixed Cutting Planes.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3651, 'EN_UK', 'Integer Programming: Integer Programming Models, Fixed Cost');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3652, 'EN_UK', 'Integer Programming: Production Planning, Dichotomies, Batch Sizing');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3653, 'EN_UK', 'Integer Programming: Network Flow Models and Optimality Analysis');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3654, 'EN_UK', 'Integer Programming: Multipliers Method and Transportation with Upper Bounds.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3655, 'EN_UK', 'Project Management: Project representation, activity networks, Gantt charts, CPM');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3656, 'EN_UK', 'Dynamic Programming: Definitions and terminology, Recurrence Relation.');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3657, 'EN_UK', 'Dynamic Programming: Validity conditions (separability and optimality)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3658, 'EN_UK', 'Dynamic Programming: Additive, multiplicative and maximin contributions');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3659, 'EN_UK', 'Dynamic Programming: Computational burden');
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (318, 3, 1, 5, FALSE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (318, 'PT_PT', 'Sistemas Distribuídos','a) Conhecer as características, virtudes, limitações e aplicabilidade do modelo de memória partilhada;\n
@@ -13605,6 +14052,21 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         c) conhecer e saber aplicar vários tipos de primitivas de controlo de concorrência em sistemas de memória partilhada;\n
         d) Conhecer as características, virtudes, limitações e aplicabilidade dos modelos e arquitecturas de sistemas distribuídos;\n
         f) saber resolver problemas clássicos de coordenação em sistemas distribuídos.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3660, 318, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3661, 318, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3662, 318, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3663, 318, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3664, 318, 5);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3660, 'PT_PT', 'Introdução a processos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3661, 'PT_PT', 'Concorrência e sistemas distribuídos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3662, 'PT_PT', 'Concorrência em memória partilhada');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3663, 'PT_PT', 'Passagem de mensagens e sistemas distribuídos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3664, 'PT_PT', 'Algoritmos distribuídos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3660, 'EN_UK', 'Introduction to processes');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3661, 'EN_UK', 'Concurrency and distributed systems');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3662, 'EN_UK', 'Shared-memory concurrency');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3663, 'EN_UK', 'Message passing and distributed systems');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3664, 'EN_UK', 'Distributed algorithms');
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (319, 3, 1, 5, FALSE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (319, 'PT_PT', 'Redes de Computadores','Como resultado da aprendizagem, espera-se que os alunos devam ser capazes de:\n
@@ -13615,18 +14077,108 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         - Explicar em detalhe as principais funções do protocolo IP;\n
         - Saber implementar soluções concretas do estabelecimento de uma rede local IP, planeando também o
         seu esquema de endereçamento e encaminhamento.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3665, 319, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3666, 319, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3667, 319, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3668, 319, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3669, 319, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3670, 319, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3671, 319, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3672, 319, 8);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3673, 319, 9);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3674, 319, 10);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3675, 319, 11);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3676, 319, 12);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3677, 319, 13);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3678, 319, 14);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3679, 319, 15);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3680, 319, 16);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3681, 319, 17);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3682, 319, 18);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3683, 319, 19);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3684, 319, 20);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3685, 319, 21);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3686, 319, 22);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3665, 'PT_PT', 'Introdução à comunicação de dados: Transmissão assíncrona e síncrona');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3666, 'PT_PT', 'Introdução à comunicação de dados: Protocolos de comunicação e funções protocolares');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3667, 'PT_PT', 'Introdução à comunicação de dados: Modelo de referência protocolar OSI');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3668, 'PT_PT', 'Introdução à comunicação de dados: Modelo TCP/IP');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3669, 'PT_PT', 'Elementos de protocolos: Controlo de uma ligação de dados');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3670, 'PT_PT', 'Elementos de protocolos: Topologias e disciplinas não contenciosas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3671, 'PT_PT', 'Elementos de protocolos: Endereçamento e controlo de fluxo');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3672, 'PT_PT', 'Elementos de protocolos: Controlo de erros ARQ');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3673, 'PT_PT', 'Elementos de protocolos: Análise de desempenho');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3674, 'PT_PT', 'Protocolos de ligação: Modos, estrutura e operação');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3675, 'PT_PT', 'Protocolos de ligação: Encapsulamento protocolar e interfaces de serviço');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3676, 'PT_PT', 'Protocolos de ligação: Diagrama de transição de estados');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3677, 'PT_PT', 'Redes Locais: Topologias');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3678, 'PT_PT', 'Redes Locais: Acesso ao meio por CSMA');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3679, 'PT_PT', 'Redes Locais: Normas 802.x: Ethernet e WLAN');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3680, 'PT_PT', 'Redes Locais: Equipamento de interligação');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3681, 'PT_PT', 'Redes Locais: Comutação e redes virtuais');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3682, 'PT_PT', 'Protocolo Internet: Interligação, serviço e encaminhamento');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3683, 'PT_PT', 'Protocolo Internet: Comutação de datagramas e redes de circuitos virtuais');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3684, 'PT_PT', 'Protocolo Internet: Serviço de entrega por melhor-esforço');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3685, 'PT_PT', 'Protocolo Internet: Endereçamento com e sem classes, subnets e supernets, resolução nomes e ARP');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3686, 'PT_PT', 'Protocolo Internet: Algoritmos encaminhamento, Fragmentação, MTU, ICMP, IPv6');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3665, 'EN_UK', 'Introduction to data communication: Asynchronous and synchronous transmission');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3666, 'EN_UK', 'Introduction to data communication: Communication protocols and protocol functions');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3667, 'EN_UK', 'Introduction to data communication: OSI protocol reference model');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3668, 'EN_UK', 'Introduction to data communication: TCP/IP model');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3669, 'EN_UK', 'Protocol elements: Data link control');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3670, 'EN_UK', 'Protocol elements: Topologies and non-contention disciplines');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3671, 'EN_UK', 'Protocol elements: Addressing and flow control');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3672, 'EN_UK', 'Protocol elements: ARQ error control');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3673, 'EN_UK', 'Protocol elements: Performance analysis');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3674, 'EN_UK', 'Connection protocols: Modes, structure and operation');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3675, 'EN_UK', 'Connection protocols: Protocol encapsulation and service interfaces');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3676, 'EN_UK', 'Connection protocols: State transition diagram');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3677, 'EN_UK', 'Local Area Networks: Topologies');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3678, 'EN_UK', 'Local Area Networks: CSMA media access');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3679, 'EN_UK', 'Local Area Networks: 802.x standards: Ethernet and WLAN');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3680, 'EN_UK', 'Local Area Networks: Interconnection equipment');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3681, 'EN_UK', 'Local Area Networks: Switching and virtual networks');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3682, 'EN_UK', 'Internet Protocol: Interconnection, service and routing');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3683, 'EN_UK', 'Internet Protocol: Datagram switching and virtual circuit networks');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3684, 'EN_UK', 'Internet Protocol: Best-effort delivery service');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3685, 'EN_UK', 'Internet Protocol: Classful and classless addressing, subnets and supernets, name resolution and ARP');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3686, 'EN_UK', 'Internet Protocol: Routing algorithms, Fragmentation, MTU, ICMP, IPv6');
 
-INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (325, 3, 1, 5, FALSE, 5);
-INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (325, 'PT_PT', 'Métodos Numéricos e Optimização Não Linear','Compreender e utilizar métodos de resolução de equações e sistemas não lineares;\n
+INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (320, 3, 1, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (320, 'PT_PT', 'Métodos Numéricos e Optimização Não Linear','Compreender e utilizar métodos de resolução de equações e sistemas não lineares;\n
         Resolver sistemas de equações lineares por métodos diretos com pivotagem parcial;\n
         Compreender e aplicar estratégias de aproximação de funções;\n
         Descrever e aplicar métodos de integração numérica;\n
         Compreender, escolher e utilizar o método de optimização mais adequado a um problema específico;\n
         Utilizar os métodos numéricos em problemas de Engenharia Informática;\n
         Utilizar software específico (MATLAB) na resolução de problemas.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3687, 320, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3688, 320, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3689, 320, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3690, 320, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3691, 320, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3692, 320, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3693, 320, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3694, 320, 8);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3687, 'PT_PT', 'Erros em cálculo numérico');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3688, 'PT_PT', 'Métodos directos para sistemas de equações lineares');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3689, 'PT_PT', 'Métodos iterativos para equações não lineares');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3690, 'PT_PT', 'Aproximação de funções por polinómios interpoladores e por "Splines" cúbicas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3691, 'PT_PT', 'Integração numérica');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3692, 'PT_PT', 'Aproximação dos mínimos quadrados (linear)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3693, 'PT_PT', 'Métodos de optimização para problemas não lineares sem restrições, com e sem derivadas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3694, 'PT_PT', 'Prática laboratorial: MATLAB');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3687, 'EN_UK', 'Errors in numerical calculus');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3688, 'EN_UK', 'Direct methods for systems of linear equations');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3689, 'EN_UK', 'Iterative methods for nonlinear equations');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3690, 'EN_UK', 'Approximation of functions by interpolating polynomials and cubic splines');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3691, 'EN_UK', 'Numerical integration');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3692, 'EN_UK', 'Least squares approximation (linear)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3693, 'EN_UK', 'Optimization methods for nonlinear problems without constraints, with and without derivatives');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3694, 'EN_UK', 'Laboratory practice: MATLAB');
 
-INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (326, 3, 2, 5, FALSE, 5);
-INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (326, 'PT_PT', 'Sistemas de Representação de Conhecimento e Raciocínio','As matérias que são objecto de tratamento na unidade curricular emanam da área de conhecimento que,
+INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (321, 3, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (321, 'PT_PT', 'Sistemas de Representação de Conhecimento e Raciocínio','As matérias que são objecto de tratamento na unidade curricular emanam da área de conhecimento que,
         em larga medida, se situa na intersecção das áreas científicas da Inteligência Artificial, das Bases de
         Dados e da Lógica Computacional.\n
         (i) É objectivo desta unidade curricular a introdução dos discentes aos paradigmas da representação do
@@ -13636,9 +14188,33 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         (ii) Compreender a relação entre a complexidade de um modelo representação de conhecimento e as
         formas de raciocínio a ele associadas e o seu desempenho, utilizando esta informação na definição de
         uma estratégia para a sua optimização.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3695, 321, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3696, 321, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3697, 321, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3698, 321, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3699, 321, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3700, 321, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3701, 321, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3702, 321, 8);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3695, 'PT_PT', 'Lógica computacional');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3696, 'PT_PT', 'Extensão à programação em lógica');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3697, 'PT_PT', 'Representação do conhecimento e formas de raciocínio');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3698, 'PT_PT', 'Representação de conhecimento imperfeito');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3699, 'PT_PT', 'Inferência estatística');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3700, 'PT_PT', 'Sistemas hierárquicos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3701, 'PT_PT', 'Reconhecimento de padrões');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3702, 'PT_PT', 'Estudos de complexidade');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3695, 'EN_UK', 'Computational logic');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3696, 'EN_UK', 'Extension to logic programming');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3697, 'EN_UK', 'Knowledge representation and reasoning methods');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3698, 'EN_UK', 'Representation of imperfect knowledge');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3699, 'EN_UK', 'Statistical inference');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3700, 'EN_UK', 'Hierarchical systems');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3701, 'EN_UK', 'Pattern recognition');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3702, 'EN_UK', 'Complexity studies');
 
-INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (327, 3, 2, 5, FALSE, 5);
-INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (327, 'PT_PT', 'Modelos Estocásticos de Investigação Operacional','a) Conhecer as técnicas e os métodos de Investigação Operacional apresentados na UC, e ser capaz de os
+INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (322, 3, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (322, 'PT_PT', 'Modelos Estocásticos de Investigação Operacional','a) Conhecer as técnicas e os métodos de Investigação Operacional apresentados na UC, e ser capaz de os
         aplicar na resolução de instâncias de problemas de pequena dimensão.\n
         b) Desenvolver a capacidade de resolução de problemas (modelos estocásticos), com ênfase em
         problemas de engenharia de sistemas.\n
@@ -13647,9 +14223,45 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         modelos obtidos, de interpretar as soluções obtidas, e de elaborar recomendações para o sistema em
         análise.\n
         d) Compreender a importância da avaliação das soluções, e ser capaz de realizar análises de sensibilidade.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3703, 322, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3704, 322, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3705, 322, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3706, 322, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3707, 322, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3708, 322, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3709, 322, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3710, 322, 8);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3711, 322, 9);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3712, 322, 10);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3713, 322, 11);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3714, 322, 12);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3703, 'PT_PT', 'Introdução aos Processos Estocásticos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3704, 'PT_PT', 'Processos Markovianos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3705, 'PT_PT', 'Processos Ergódicos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3706, 'PT_PT', 'Programação Dinâmica');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3707, 'PT_PT', 'Processos de decisão Markovianos com um número finito de estágios');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3708, 'PT_PT', 'Processos de decisão Markovianos com um número indeterminado de estágios');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3709, 'PT_PT', 'Filas de Espera: Filas M/M/S, M/M/S(K), M/M/S(N), Ek/El/1');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3710, 'PT_PT', 'Filas de Espera: Problemas de decisão e Métodos exactos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3711, 'PT_PT', 'Filas de Espera: Simulação de filas de espera');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3712, 'PT_PT', 'Modelo determinístico da Quantidade Económica de Encomenda (QEE)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3713, 'PT_PT', 'Modelos probabilísticos ou estocásticos: políticas de Nível de Encomenda e de Ciclo de Encomenda para procuras estacionárias e estáveis');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3714, 'PT_PT', 'Modelo estático de decisão, "Newsboy Problem", para situações de encomenda única');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3703, 'EN_UK', 'Introduction to Stochastic Processes');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3704, 'EN_UK', 'Markov Processes');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3705, 'EN_UK', 'Ergodic Processes');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3706, 'EN_UK', 'Dynamic Programming');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3707, 'EN_UK', 'Markov Decision Processes with a Finite Number of Stages');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3708, 'EN_UK', 'Markov Decision Processes with an Infinite Number of Stages');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3709, 'EN_UK', 'Queueing Theory: M/M/S, M/M/S(K), M/M/S(N), Ek/El/1 Queues');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3710, 'EN_UK', 'Queueing Theory: Decision Problems and Exact Methods');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3711, 'EN_UK', 'Queueing Theory: Queueing Simulation');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3712, 'EN_UK', 'Deterministic Economic Order Quantity (EOQ) Model');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3713, 'EN_UK', 'Probabilistic or Stochastic Models: Order Level and Order Cycle Policies for Stationary and Stable Demands');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3714, 'EN_UK', 'Static Decision Model, "Newsboy Problem", for Single Order Situations');
 
-INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (328, 3, 2, 5, FALSE, 5);
-INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (328, 'PT_PT', 'Computação Gráfica','Os formandos devem desenvolver as seguintes competências com a frequência deste módulo:\n
+INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (323, 3, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (323, 'PT_PT', 'Computação Gráfica','Os formandos devem desenvolver as seguintes competências com a frequência deste módulo:\n
         - Caracterizar as transformações geométricas e os referencias utilizados na computação gráfica;\n
         - Aplicar transformações para construção de modelos geométricos complexos e posicionamento da câmara;\n
         - Algoritmos de iluminação local e global: Gouraud, Phong, Ray-tracing, Radiosity and Virtual Point Lights;\n
@@ -13657,9 +14269,30 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         - Analisar soluções do ponto de vista do desempenho recorrento a profilers.\n
         - Utilizar apropriadamente soluções de eliminação de geometria, recorrendo a partição espacial.\n
         - Aplicar a Analisar algoritmos para geração de sombras');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3715, 323, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3716, 323, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3717, 323, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3718, 323, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3719, 323, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3720, 323, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3721, 323, 7);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3715, 'PT_PT', 'Transformações geométricas e referenciais');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3716, 'PT_PT', 'Construção de cenários 3D complexos através de primitivas simples e transformações geométricas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3717, 'PT_PT', 'Algoritmos de iluminação local e global: Gouraud, Phong, Ray-tracing, radiosity, e Virtual Point Lights');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3718, 'PT_PT', 'Texturas: aplicação e definição de coordenadas de textura');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3719, 'PT_PT', 'Análise de desempenho com ferramentas de profiling');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3720, 'PT_PT', 'Partição espacial e culling');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3721, 'PT_PT', 'Algoritmos para geração de sombras: shadow maps e shadow volumes');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3715, 'EN_UK', 'Geometric and reference transformations');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3716, 'EN_UK', 'Construction of complex 3D scenes using simple primitives and geometric transformations');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3717, 'EN_UK', 'Local and global illumination algorithms: Gouraud, Phong, Ray-tracing, radiosity, and Virtual Point Lights');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3718, 'EN_UK', 'Textures: application and definition of texture coordinates');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3719, 'EN_UK', 'Performance analysis with profiling tools');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3720, 'EN_UK', 'Spatial partitioning and culling');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3721, 'EN_UK', 'Shadow generation algorithms: shadow maps and shadow volumes');
 
-INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (329, 3, 2, 5, FALSE, 5);
-INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (329, 'PT_PT', 'Comunicações por Computador','- Descrever e aplicar os diferentes algoritmos de rotas (LS e DV)\n
+INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (324, 3, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (324, 'PT_PT', 'Comunicações por Computador','- Descrever e aplicar os diferentes algoritmos de rotas (LS e DV)\n
         - Discutir diferentes protocolos de encaminhamento unicast\n
         - Planear e implementar solução de interligação intra e inter domínios\n
         - Distinguir os diferentes serviços de transporte\n
@@ -13667,43 +14300,230 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         - Identificar, classificar e configurar serviços básicos de rede e soluções de gestão de redes\n
         - Descrever o funcionamento das principais aplicações\n
         - Classificar as diferentes aplicações em função dos seus requisitos de QoS');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3722, 324, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3723, 324, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3724, 324, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3725, 324, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3726, 324, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3727, 324, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3728, 324, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3729, 324, 8);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3730, 324, 9);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3731, 324, 10);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3722, 'PT_PT', 'Encaminhamento dinâmico: Vector Distância (DV) e Estado das Ligações (LS)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3723, 'PT_PT', 'Protocolos de encaminhamento');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3724, 'PT_PT', 'UDP e TCP');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3725, 'PT_PT', 'Mecanismos TCP: controlo de fluxo, controlo de congestão, controlo de erros');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3726, 'PT_PT', 'Programação usando sockets TCP e UDP');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3727, 'PT_PT', 'SMTP e MIME, POP e IMAP');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3728, 'PT_PT', 'FTP e HTTP: Mensagens, Diagramas de sequência');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3729, 'PT_PT', 'Directorias e Serviços de Resolução de Nomes (DNS, X.500, LDAP)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3730, 'PT_PT', 'Segurança ao nível da rede e de transporte');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3731, 'PT_PT', 'Aplicações Multimédia: Streaming de Audio e Video na Internet');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3722, 'EN_UK', 'Dynamic routing: Distance Vector (DV) and Link State (LS)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3723, 'EN_UK', 'Routing protocols');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3724, 'EN_UK', 'UDP and TCP');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3725, 'EN_UK', 'TCP mechanisms: flow control, congestion control, error control');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3726, 'EN_UK', 'Programming using TCP and UDP sockets');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3727, 'EN_UK', 'SMTP and MIME, POP and IMAP');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3728, 'EN_UK', 'FTP and HTTP: Messages, Sequence Diagrams');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3729, 'EN_UK', 'Directories and Name Resolution Services (DNS, X.500, LDAP)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3730, 'EN_UK', 'Network and transport layer security');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3731, 'EN_UK', 'Multimedia Applications: Streaming Audio and Video on the Internet');
 
-INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (330, 3, 2, 5, FALSE, 5);
-INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (330, 'PT_PT', 'Processamento de Linguagens','Competências Genéricas:
+INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (325, 3, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (325, 'PT_PT', 'Processamento de Linguagens','Competências Genéricas:
         a capacidade de comunicação escrita e oral na apresentação e discussão dos processos usados e
         resultados obtidos;\n
         a capacidade de utilização de ferramentas genéricas de informática em ambiente Linux e de elaboração de
         documentos.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3732, 325, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3733, 325, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3734, 325, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3735, 325, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3736, 325, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3737, 325, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3738, 325, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3739, 325, 8);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3740, 325, 9);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3741, 325, 10);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3742, 325, 11);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3743, 325, 12);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3744, 325, 13);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3732, 'PT_PT', 'Noção de Linguagem e de Gramática');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3733, 'PT_PT', 'Interpretador versus Compilador');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3734, 'PT_PT', 'Arquitectura de um processador de linguagens: análise léxica, análise sintáctica e análise semântica');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3735, 'PT_PT', 'Linguagens Regulares e Análise Léxica');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3736, 'PT_PT', 'Especificação de linguagens regulares com expressões regulares');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3737, 'PT_PT', 'Reconhecimento de linguagens especificadas com expressões regulares: o conceito de autómato');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3738, 'PT_PT', 'Conversão de Expressões Regulares em Autómatos Finitos Determinísticos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3739, 'PT_PT', 'A ferramenta flex como gerador de autómatos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3740, 'PT_PT', 'Análise Sintáctica: Linguagens e Gramáticas Independentes de Contexto');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3741, 'PT_PT', 'Estrutura e funcionamento de um parser; Parsing Top-Down: o Recursivo-descendente e LL(1); Parsing Bottom-UP: LR(0), LR(1) e SLR(1)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3742, 'PT_PT', 'Utilização da ferramenta yacc como gerador de parsers Bottom-UP');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3743, 'PT_PT', 'Análise Semântica e Transformação especificada via Gramáticas Tradutoras');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3744, 'PT_PT', 'Tradução Dirigida pela Sintaxe');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3732, 'EN_UK', 'Notion of Language and Grammar');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3733, 'EN_UK', 'Interpreter versus Compiler');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3734, 'EN_UK', 'Architecture of a language processor: lexical analysis, syntactic analysis and semantic analysis');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3735, 'EN_UK', 'Regular Languages and Lexical Analysis');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3736, 'EN_UK', 'Specification of regular languages with regular expressions');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3737, 'EN_UK', 'Recognition of languages specified with regular expressions: the concept of automaton');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3738, 'EN_UK', 'Conversion of Regular Expressions into Deterministic Finite Automata');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3739, 'EN_UK', 'The flex tool as a generator of automata');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3740, 'EN_UK', 'Syntactic Analysis: Context-Free Languages and Grammars');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3741, 'EN_UK', 'Structure and operation of a parser; Top-Down Parsing: Recursive-descent and LL(1); Bottom-UP Parsing: LR(0), LR(1) and SLR(1)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3742, 'EN_UK', 'Use of the yacc tool as a generator of Bottom-UP parsers');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3743, 'EN_UK', 'Semantic Analysis and Transformation specified via Translating Grammars');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3744, 'EN_UK', 'Syntax-Directed Translation');
 
-INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (331, 3, 2, 5, FALSE, 5);
-INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (331, 'PT_PT', 'Laboratórios de Informática IV','- Fundamentar, projectar e gerir o desenvolvimento de um sistema de software.\n
+INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (326, 3, 2, 5, FALSE, 5);
+INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (326, 'PT_PT', 'Laboratórios de Informática IV','- Fundamentar, projectar e gerir o desenvolvimento de um sistema de software.\n
         - Analisar e especificar de forma completa todos os requisitos operacionais e funcionais de um sistema de software.\n
         - Desenvolver, testar, documentar e instalar sistemas de software.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3745, 326, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3746, 326, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3747, 326, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3748, 326, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3749, 326, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3750, 326, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3751, 326, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3752, 326, 8);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3753, 326, 9);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3754, 326, 10);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3745, 'PT_PT', 'A Evolução do Software');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3746, 'PT_PT', 'Metodologias e Processos de Software');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3747, 'PT_PT', 'Gestão de Projectos de Software');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3748, 'PT_PT', 'Engenharia de Requisitos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3749, 'PT_PT', 'Modelação de Sistemas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3750, 'PT_PT', 'Arquitecturas de Software e de Aplicações');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3751, 'PT_PT', 'Desenvolvimento Rápido de Software');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3752, 'PT_PT', 'Verificação, Validação e Testes de Software');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3753, 'PT_PT', 'Ambientes e Ferramentas de Desenvolvimento de Software');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3754, 'PT_PT', 'Fábricas de Software');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3745, 'EN_UK', 'Software Evolution');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3746, 'EN_UK', 'Software Methodologies and Processes');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3747, 'EN_UK', 'Software Project Management');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3748, 'EN_UK', 'Requirements Engineering');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3749, 'EN_UK', 'Systems Modeling');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3750, 'EN_UK', 'Software and Application Architectures');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3751, 'EN_UK', 'Rapid Software Development');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3752, 'EN_UK', 'Software Verification, Validation and Testing');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3753, 'EN_UK', 'Software Development Environments and Tools');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3754, 'EN_UK', 'Software Factories');
 
 -- UMinho 4th year
 
-INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (332, 4, 1, 5, TRUE, 5);
-INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (332, 'PT_PT', 'Algoritmos para Análise de Sequências Biológicas','O objectivo desta unidade curricular é o de dotar os alunos das capacidades de perceber,
+INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (327, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (327, 'PT_PT', 'Algoritmos para Análise de Sequências Biológicas','O objectivo desta unidade curricular é o de dotar os alunos das capacidades de perceber,
         utilizar e desenvolver algoritmos de processamento e análise de sequências biológicas, utilizando uma linguagem de programação para a sua implementação.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3755, 327, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3756, 327, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3757, 327, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3758, 327, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3759, 327, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3760, 327, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3761, 327, 7);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3755, 'PT_PT', 'Algoritmos básicos de processamento de sequências biológicas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3756, 'PT_PT', 'Procura de padrões em sequências');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3757, 'PT_PT', 'Alinhamentos de sequências (simples e múltiplos)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3758, 'PT_PT', 'Procura de sequências similares em bases de dados');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3759, 'PT_PT', 'Algoritmos para análise filogenética');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3760, 'PT_PT', 'Descoberta de motifs a partir de conjuntos de sequências');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3761, 'PT_PT', 'Algoritmos para a descoberta de genes');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3755, 'EN_UK', 'Basic algorithms for biological sequence processing');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3756, 'EN_UK', 'Pattern search in sequences');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3757, 'EN_UK', 'Sequence alignments (pairwise and multiple)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3758, 'EN_UK', 'Search for similar sequences in databases');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3759, 'EN_UK', 'Algorithms for phylogenetic analysis');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3760, 'EN_UK', 'Motif discovery from sequence sets');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3761, 'EN_UK', 'Algorithms for gene discovery');
 
-INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (333, 4, 1, 5, TRUE, 5);
-INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (333, 'PT_PT', 'Laboratórios de Bioinformática','- Dotar os alunos dos conhecimentos biológicos básicos para
+INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (328, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (328, 'PT_PT', 'Laboratórios de Bioinformática','- Dotar os alunos dos conhecimentos biológicos básicos para
         compreensão dos problemas e ferramentas da Bioinformática\n
         - Promover o conhecimento das principais bases de dados e ferramentas disponíveis na área da Bioinformática\n
         - Promover o desenvolvimento de competências ao nível da utilização avançada de repositórios de software livre
         na área da Bioinformática para construção de pequenos programas para tarafas específicas');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3762, 328, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3763, 328, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3764, 328, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3765, 328, 4);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3762, 'PT_PT', 'Conceitos básicos de Biologia Molecular');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3763, 'PT_PT', 'Bases de dados biológicas e sua exploração');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3764, 'PT_PT', 'Principais ferramentas na área da Bioinformática');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3765, 'PT_PT', 'Repositórios de software livre em Bioinformática e sua exploração');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3762, 'EN_UK', 'Basic Concepts of Molecular Biology');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3763, 'EN_UK', 'Biological Databases and Their Exploration');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3764, 'EN_UK', 'Main Tools in Bioinformatics');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3765, 'EN_UK', 'Bioinformatics Free Software Repositories and Their Exploration');
 
-INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (334, 4, 2, 5, TRUE, 5);
-INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (334, 'PT_PT', 'Algoritmos Avançados de Bioinformática','Promover a aquisição de competências avançadas ao nível da compreensão
+INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (329, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (329, 'PT_PT', 'Algoritmos Avançados de Bioinformática','Promover a aquisição de competências avançadas ao nível da compreensão
         e implementação dos principais algoritmos na área da Bioinformática, incluindo métodos de
         optimização e sua utilização para resolução de problemas biológicos');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3766, 329, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3767, 329, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3768, 329, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3769, 329, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3770, 329, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3771, 329, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3772, 329, 7);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3766, 'PT_PT', 'Grafos e algoritmos sobre grafos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3767, 'PT_PT', 'Redes biológicas e sua análise');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3768, 'PT_PT', 'Algoritmos para procura eficiente de padrões em sequências');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3769, 'PT_PT', 'Algoritmos para alinhamento de sequências contra referências');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3770, 'PT_PT', 'Algoritmos para assemblagem de genomas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3771, 'PT_PT', 'Métodos metaheurísticos de optimização estocásticos e sua aplicação em Bioinformática');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3772, 'PT_PT', 'Implementação de algoritmos avançados de Bioinformática');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3766, 'EN_UK', 'Graphs and graph algorithms');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3767, 'EN_UK', 'Biological networks and their analysis');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3768, 'EN_UK', 'Algorithms for efficient pattern search in sequences');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3769, 'EN_UK', 'Algorithms for sequence alignment against references');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3770, 'EN_UK', 'Algorithms for genome assembly');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3771, 'EN_UK', 'Stochastic metaheuristic optimization methods and their application in Bioinformatics');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3772, 'EN_UK', 'Implementation of advanced Bioinformatics algorithms');
 
-INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (335, 4, 2, 5, TRUE, 5);
-INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (335, 'PT_PT', 'Extracção de Conhecimento de Bases de Dados Biológicas','Promover a aquisição de conhecimentos e competências básicas sobre os processos e
+INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (330, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (330, 'PT_PT', 'Extracção de Conhecimento de Bases de Dados Biológicas','Promover a aquisição de conhecimentos e competências básicas sobre os processos e
         ferramentas de análise de dados multivariada, mineração de dados  e aprendizagem máquina e suas aplicações na Bioinformática');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3773, 330, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3774, 330, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3775, 330, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3776, 330, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3777, 330, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3778, 330, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3779, 330, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3780, 330, 8);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3781, 330, 9);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3782, 330, 10);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3783, 330, 11);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3773, 'PT_PT', 'Métodos para análise multivariada de dados');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3774, 'PT_PT', 'Métodos para pré-processamento de dados');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3775, 'PT_PT', 'Mineração de Dados e Aprendizagem Máquina: conceitos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3776, 'PT_PT', 'Modelos e algoritmos de classificação e regressão');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3777, 'PT_PT', 'Árvores e regras');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3778, 'PT_PT', 'Redes neuronais e modelos funcionais');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3779, 'PT_PT', 'Aprendizagem baseada em instâncias');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3780, 'PT_PT', 'Modelos bayesianos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3781, 'PT_PT', 'Avaliação e comparação de modelos e algoritmos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3782, 'PT_PT', 'Aplicações na análise e mineração de dados biológicos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3783, 'PT_PT', 'Ferramentas computacionais para análise e mineração de dados');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3773, 'EN_UK', 'Methods for multivariate data analysis');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3774, 'EN_UK', 'Methods for data preprocessing');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3775, 'EN_UK', 'Data Mining and Machine Learning: concepts');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3776, 'EN_UK', 'Classification and regression models and algorithms');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3777, 'EN_UK', 'Trees and rules');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3778, 'EN_UK', 'Neural networks and functional models');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3779, 'EN_UK', 'Instance-based learning');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3780, 'EN_UK', 'Bayesian models');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3781, 'EN_UK', 'Evaluation and comparison of models and algorithms');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3782, 'EN_UK', 'Applications in the analysis and mining of biological data');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3783, 'EN_UK', 'Computational tools for data analysis and mining');
 
-INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (336, 4, 1, 5, TRUE, 5);
-INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (336, 'PT_PT', 'Visualização e Iluminação I','Os formandos devem desenvolver as seguintes competências com a frequência deste módulo:\m
+
+INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (331, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (331, 'PT_PT', 'Visualização e Iluminação I','Os formandos devem desenvolver as seguintes competências com a frequência deste módulo:\m
         Caracterizar o pipeline gráfico e o fluxo de dados. Identificar as componentes programáveis e as suas
         potencialidades;\n
         Produzir programas a correr no GPU para obter efeitos gráficos ou processamento de dados ;\n
@@ -13714,9 +14534,21 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         Adicionalmente, pretende-se desenvolver a seguinte competência transversal:\n
         Exibir uma capacidade de comunicação escrita e oral adequada, promovendo a linguagem como ferramenta
         de expressão e construção de pensamentos, ideias e argumentos próprios, alicerçados no espírito crítico.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3784, 331, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3785, 331, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3786, 331, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3787, 331, 4);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3784, 'PT_PT', 'O Pipeline Gráfico no estado presente e a sua evolução');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3785, 'PT_PT', 'Programação do pipeline gráfico recorrendo a linguagens como o GLSL');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3786, 'PT_PT', 'Algoritmos de iluminação local e efeitos gráficos e a sua implementação em GPU');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3787, 'PT_PT', 'Análise de desempenho para soluções em GPU');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3784, 'EN_UK', 'The Graphics Pipeline in the Present State and Its Evolution');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3785, 'EN_UK', 'Graphics Pipeline Programming Using Languages Like GLSL');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3786, 'EN_UK', 'Local Illumination Algorithms and Graphic Effects and Their Implementation in GPU');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3787, 'EN_UK', 'Performance Analysis for GPU Solutions');
 
-INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (337, 4, 1, 5, TRUE, 5);
-INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (337, 'PT_PT', 'Visão por computador','Introduzir o estado da arte na tecnologia da imagem médica, fornecendo uma visão global sobre as normas,
+INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (332, 4, 1, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (332, 'PT_PT', 'Visão por computador','Introduzir o estado da arte na tecnologia da imagem médica, fornecendo uma visão global sobre as normas,
         técnicas, equipamentos e aplicações. Promover a análise de casos práticos e simulação de situações de
         ambientes clínicos reais.\n
         Competências:\n
@@ -13725,9 +14557,42 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         - Evidenciar conhecimento acerca dos conceitos associados aos sistemas de imagem, processamento de
         imagem, visão e modelação por computador em imagem médica.\n
         - Executar as tarefas de desenvolvimento de novos componentes funcionais utilizando as aplicações ImageJ e OsiriX.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3788, 332, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3789, 332, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3790, 332, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3791, 332, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3792, 332, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3793, 332, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3794, 332, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3795, 332, 8);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3796, 332, 9);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3797, 332, 10);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3798, 332, 11);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3788, 'PT_PT', 'Evolução na área da imagem médica: evolução no sentido das modalidades digitais');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3789, 'PT_PT', 'Evolução na área da imagem médica: equipamentos de imagem médica');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3790, 'PT_PT', 'Manipulação e processamento de imagem médica: Nível e janela, ampliação, filtros, segmentação, ROIs (Regiões de Interesse)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3791, 'PT_PT', 'Manipulação e processamento de imagem médica: Aplicações clínicas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3792, 'PT_PT', 'Sistemas de arquivo e comunicação de imagem (PACS): Arquitectura, tecnologias de arquivo, norma DICOM');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3793, 'PT_PT', 'Sistemas de arquivo e comunicação de imagem (PACS): processos do fluxo de trabalhos');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3794, 'PT_PT', 'Sistemas de arquivo e comunicação de imagem (PACS): integração dos sistemas de informação hospitalar com o sistema de informação da radiologia');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3795, 'PT_PT', 'Sistemas de arquivo e comunicação de imagem (PACS): Concretizações práticas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3796, 'PT_PT', 'Imagem Multidimensional: realinhamento e fusão de imagens');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3797, 'PT_PT', 'Imagem Multidimensional: reconstruções 3D');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3798, 'PT_PT', 'Imagem Multidimensional: aplicações clinicas');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3788, 'EN_UK', 'Evolution in the area of medical imaging: evolution towards digital modalities');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3789, 'EN_UK', 'Evolution in the area of medical imaging: medical imaging equipment');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3790, 'EN_UK', 'Manipulation and processing of medical images: Level and window, magnification, filters, segmentation, ROIs (Regions of Interest)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3791, 'EN_UK', 'Manipulation and processing of medical images: Clinical applications');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3792, 'EN_UK', 'Image archiving and communication systems (PACS): Architecture, storage technologies, DICOM standard');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3793, 'EN_UK', 'Image archiving and communication systems (PACS): workflow processes');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3794, 'EN_UK', 'Image archiving and communication systems (PACS): integration of hospital information systems with the radiology information system');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3795, 'EN_UK', 'Image archiving and communication systems (PACS): Practical implementations');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3796, 'EN_UK', 'Multidimensional Imaging: image realignment and fusion');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3797, 'EN_UK', 'Multidimensional Imaging: 3D reconstructions');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3798, 'EN_UK', 'Multidimensional Imaging: clinical applications');
 
-INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (338, 4, 2, 5, TRUE, 5);
-INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (338, 'PT_PT', 'Visualização e Iluminação II','Os formandos devem desenvolver as seguintes competências com a frequência deste módulo:\n
+INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (333, 4, 2, 5, TRUE, 5);
+INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (333, 'PT_PT', 'Visualização e Iluminação II','Os formandos devem desenvolver as seguintes competências com a frequência deste módulo:\n
         - Caracterizar a iluminação global e descrever os vários estágios do processo de síntese e visualização de
         imagens;\n
         - Explicar a equação de rendering e discutir o significado de cada um dos seus factores;\n
@@ -13739,6 +14604,30 @@ INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VA
         Adicionalmente, pretende-se desenvolver a seguinte competência transversal:\n
         - Exibir uma capacidade de comunicação escrita e oral adequada, promovendo a linguagem como ferramenta
         de expressão e construção de pensamentos, ideias e argumentos próprios, alicerçados no espírito crítico.');
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3799, 333, 1);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3800, 333, 2);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3801, 333, 3);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3802, 333, 4);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3803, 333, 5);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3804, 333, 6);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3805, 333, 7);
+INSERT INTO DegreeClassTopics(id, degreeClass, ordering) VALUES (3806, 333, 8);
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3799, 'PT_PT', 'Modelos de iluminação locais e globais');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3800, 'PT_PT', 'Modelos de iluminação empíricos (Phong)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3801, 'PT_PT', 'Modelos de iluminação baseados na física (Cook-Torrance, Ward)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3802, 'PT_PT', 'Radiometria e Fotometria');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3803, 'PT_PT', 'Mecanismos de transporte de luz, a BRDF e a equação de rendering');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3804, 'PT_PT', 'Algoritmos de iluminação global: Ray tracing (Clássico, distribuído e Monte Carlo)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3805, 'PT_PT', 'Algoritmos de iluminação global: radiosidade');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3806, 'PT_PT', 'Algoritmos de iluminação global: photon mapping');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3799, 'EN_UK', 'Local and global illumination models');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3800, 'EN_UK', 'Empirical illumination models (Phong)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3801, 'EN_UK', 'Physically based illumination models (Cook-Torrance, Ward)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3802, 'EN_UK', 'Radiometry and photometry');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3803, 'EN_UK', 'Light transport mechanisms, the BRDF, and the rendering equation');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3804, 'EN_UK', 'Global illumination algorithms: Ray tracing (Classic, distributed, and Monte Carlo)');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3805, 'EN_UK', 'Global illumination algorithms: radiosity');
+INSERT INTO DegreeClassTopicTranslations(degreeClassTopic, language, description) VALUES (3806, 'EN_UK', 'Global illumination algorithms: photon mapping');
 
 INSERT INTO DegreeClasses(id, year, semester, ects , isOptional, degree) VALUES (339, 4, 2, 5, TRUE, 5);
 INSERT INTO DegreeClassTranslations(degreeClass, language, name, description) VALUES  (339, 'PT_PT', 'Tecnologias e Aplicações','Este módulo pretende expor os alunos a técnicas avançadas no domínio da
