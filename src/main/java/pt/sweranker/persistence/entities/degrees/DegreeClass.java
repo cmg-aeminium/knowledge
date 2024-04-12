@@ -30,7 +30,7 @@ public class DegreeClass {
     private Boolean isOptional;
 
     @Column(name = "degree", nullable = false)
-    private Degree degree;
+    private Course degree;
     //    @OneToMany
     //    @JoinColumn(name = "knowledgeareaid", referencedColumnName = "id")
     //    private Set<String> classTopics;

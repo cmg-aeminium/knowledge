@@ -44,7 +44,7 @@ public class DegreeTranslation implements Serializable {
     @Id
     @ManyToOne
     @JoinColumn(name = "degreeId", referencedColumnName = "id")
-    private Degree degree;
+    private Course degree;
 
     @Id
     @Enumerated(EnumType.STRING)
@@ -60,7 +60,7 @@ public class DegreeTranslation implements Serializable {
         return degree.getId();
     }
 
-    public Degree getDegree() {
+    public Course getDegree() {
         return degree;
     }
 
