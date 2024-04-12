@@ -1,55 +1,59 @@
---CREATE DATABASE sweranker
---    WITH 
---    OWNER = postgres
---    ENCODING = 'UTF8'
---    CONNECTION LIMIT = -1;
+CREATE DATABASE sweranker
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1;
     
-
 CREATE TYPE language_type AS ENUM (
 	'PT_PT',
     'EN_UK'
 );   
 
-CREATE SEQUENCE knowledgearea_id_seq INCREMENT 1;    
+CREATE SEQUENCE textcontents_id_seq INCREMENT 1;    
+CREATE TABLE TextContents (
+    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('textcontents_id_seq'),
+	language language_type NOT NULL,
+	textvalue text
+);
+
+CREATE TABLE TranslatedTexts (
+    id BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	language language_type NOT NULL,
+	textvalue text,
+	PRIMARY KEY(id, language)
+);
+
+CREATE SEQUENCE bodiesofknowledge_id_seq INCREMENT 1;
+CREATE TABLE BodiesOfKnowledge (
+    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('bodiesofknowledge_id_seq'),
+    year smallint NOT NULL,
+	image text NOT NULL,
+	name BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	description BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION
+);
+
+CREATE SEQUENCE knowledgeareas_id_seq INCREMENT 1;    
 CREATE TABLE KnowledgeAreas (
-    id SMALLINT NOT NULL PRIMARY KEY DEFAULT nextval('knowledgearea_id_seq'),
-	image text NOT NULL
+    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('knowledgeareas_id_seq'),
+	image text NOT NULL,
+	name BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	description BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 
-CREATE TABLE KnowledgeAreaTranslations (
-    knowledgeArea SMALLINT NOT NULL REFERENCES KnowledgeAreas(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
-	language language_type NOT NULL,
-	name text NOT NULL,
-	description text NOT NULL
-);
-
-
-CREATE TABLE Topics(
-	id SMALLINT NOT NULL PRIMARY KEY,
-	knowledgearea SMALLINT NOT NULL REFERENCES KnowledgeAreas(id) ON UPDATE NO ACTION ON DELETE NO ACTION
-);
-
-CREATE TABLE TopicTranslations (
-    topic SMALLINT NOT NULL REFERENCES Topics(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
-	language language_type NOT NULL,
-	name text NOT NULL,
-	description text NOT NULL,
-	PRIMARY KEY(topic, language)
+CREATE SEQUENCE knowledgetopics_id_seq INCREMENT 1;    
+CREATE TABLE KnowledgeTopics(
+	id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('knowledgetopics_id_seq'),
+	knowledgearea SMALLINT NOT NULL REFERENCES KnowledgeAreas(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	name BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	description BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 
 CREATE SEQUENCE country_id_seq INCREMENT 1;
 CREATE TABLE Countries(
 	id SMALLINT NOT NULL PRIMARY KEY DEFAULT nextval('country_id_seq'),
-	alpha2code text NOT NULL UNIQUE
+	alpha2code text NOT NULL UNIQUE,
+	name BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
-
-CREATE TABLE CountryTranslations (
-    country SMALLINT NOT NULL REFERENCES Countries(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
-    language language_type NOT NULL,
-    name text NOT NULL,
-    PRIMARY KEY (country, language)
-);
-
 
 CREATE SEQUENCE school_id_seq INCREMENT 1;    
 CREATE TABLE Schools (
@@ -58,52 +62,33 @@ CREATE TABLE Schools (
 	country SMALLINT NOT NULL REFERENCES Countries(id) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 
-CREATE SEQUENCE degree_id_seq INCREMENT 1; 
-CREATE TABLE Degrees (
-	id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('degree_id_seq'),
+CREATE SEQUENCE courses_id_seq INCREMENT 1; 
+CREATE TABLE Courses (
+	id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('courses_id_seq'),
 	acronym text NOT NULL,
 	image text NOT NULL,
 	school SMALLINT NOT NULL REFERENCES Schools(id) ON UPDATE NO ACTION ON DELETE NO ACTION ,
-	year SMALLINT NOT NULL
+	year SMALLINT NOT NULL,
+	name BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	description BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 
-CREATE TABLE DegreeTranslations (
-	degree BIGINT NOT NULL REFERENCES Degrees(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
-	language language_type NOT NULL,
-	name text NOT NULL,
-	description text NOT NULL,
-	PRIMARY KEY(degree, language)
-);
-
-CREATE SEQUENCE degreeclass_id_seq INCREMENT 1;   
-CREATE TABLE DegreeClasses (
-	id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('degreeclass_id_seq'),
+CREATE SEQUENCE courseclasses_id_seq INCREMENT 1;   
+CREATE TABLE CourseClasses (
+	id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('courseclasses_id_seq'),
 	year SMALLINT NOT NULL,
 	semester SMALLINT NULL,
 	ects SMALLINT NULL,
 	isOptional BOOLEAN NOT NULL DEFAULT 'FALSE',
-	degree BIGINT NOT NULL REFERENCES Degrees(id) ON UPDATE NO ACTION ON DELETE NO ACTION
+	name BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	description BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	course BIGINT NOT NULL REFERENCES Courses(id) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 
-CREATE TABLE DegreeClassTranslations (
-	degreeClass BIGINT NOT NULL  REFERENCES DegreeClasses(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
-	language language_type NOT NULL,
-	name text NOT NULL,
-	description text NOT NULL,
-	PRIMARY KEY(degreeClass, language)
+CREATE SEQUENCE courseclasstopic_id_seq INCREMENT 1;   
+CREATE TABLE CourseClassTopics (
+	id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('courseclasstopic_id_seq'),
+	courseClass BIGINT NOT NULL REFERENCES CourseClasses(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	ordering SMALLINT NULL,
+	description BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
-
-CREATE SEQUENCE degreeclasstopic_id_seq INCREMENT 1;   
-CREATE TABLE DegreeClassTopics (
-	id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('degreeclasstopic_id_seq'),
-	degreeClass BIGINT NOT NULL REFERENCES DegreeClasses(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
-	ordering SMALLINT NULL
-);
-
-CREATE TABLE DegreeClassTopicTranslations (
-	degreeClassTopic BIGINT NOT NULL REFERENCES DegreeClassTopics(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
-	language language_type NOT NULL,
-	description text NOT NULL,
-	PRIMARY KEY(degreeClassTopic, language)
-);
-
