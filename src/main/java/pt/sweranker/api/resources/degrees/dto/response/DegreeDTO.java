@@ -4,7 +4,7 @@
  */
 package pt.sweranker.api.resources.degrees.dto.response;
 
-import pt.sweranker.persistence.entities.degrees.University;
+import pt.sweranker.persistence.entities.schools.School;
 
 /**
  * @author Carlos Gonçalves
@@ -12,7 +12,7 @@ import pt.sweranker.persistence.entities.degrees.University;
 public class DegreeDTO {
     public Long id;
     public String acronym;
-    public University university;
+    public School university;
     public String name;
     public String description;
     public Integer year;

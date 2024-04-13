@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import pt.sweranker.persistence.entities.schools.School;
 
 /**
  * @author Carlos Gonçalves
@@ -28,8 +29,14 @@ public class Course implements Serializable {
     private static final long serialVersionUID = 4430445702440386925L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(name = "courses_id_seq")
+    @SequenceGenerator(
+        sequenceName = "courses_id_seq",
+        allocationSize = 1,
+        initialValue = 1,
+        name = "COURSES_SEQUENCE")
+    @GeneratedValue(
+        strategy = GenerationType.SEQUENCE,
+        generator = "COURSES_SEQUENCE")
     private Long id;
 
     @Column(name = "acronym", nullable = false)
@@ -40,7 +47,7 @@ public class Course implements Serializable {
 
     @Column(name = "university", nullable = false)
     @Enumerated(EnumType.STRING)
-    private University university;
+    private School university;
 
     @Column(name = "year", nullable = false)
     private int year;
@@ -57,7 +64,7 @@ public class Course implements Serializable {
         return image;
     }
 
-    public University getUniversity() {
+    public School getUniversity() {
         return university;
     }
 

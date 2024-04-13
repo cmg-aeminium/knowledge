@@ -5,7 +5,7 @@
 package pt.sweranker.api.resources.degrees.dto.request;
 
 import javax.ws.rs.QueryParam;
-import pt.sweranker.persistence.entities.degrees.University;
+import pt.sweranker.persistence.entities.schools.School;
 
 /**
  * @author Carlos Gonçalves
@@ -13,7 +13,7 @@ import pt.sweranker.persistence.entities.degrees.University;
 public class DegreeSearchFilter {
 
     @QueryParam("university")
-    public University university;
+    public School university;
 
     @QueryParam("year")
     public Integer year;

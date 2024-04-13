@@ -10,7 +10,7 @@ import javax.persistence.TypedQuery;
 import pt.sweranker.dao.JPACrudDAO;
 import pt.sweranker.persistence.entities.Language;
 import pt.sweranker.persistence.entities.degrees.DegreeTranslation;
-import pt.sweranker.persistence.entities.degrees.University;
+import pt.sweranker.persistence.entities.schools.School;
 
 /**
  * @author Carlos Gonçalves
@@ -91,7 +91,7 @@ public class DegreeDAO extends JPACrudDAO<DegreeTranslation> {
          * @param year
          * @param name
          */
-        public DegreeFilterCriteria(University university, Language language, Integer year, String name) {
+        public DegreeFilterCriteria(School university, Language language, Integer year, String name) {
             super();
             this.university = university;
             this.language = language;
@@ -99,7 +99,7 @@ public class DegreeDAO extends JPACrudDAO<DegreeTranslation> {
             this.name = name;
         }
 
-        public University university;
+        public School university;
         public Language language;
         public Integer year;
         public String name;
