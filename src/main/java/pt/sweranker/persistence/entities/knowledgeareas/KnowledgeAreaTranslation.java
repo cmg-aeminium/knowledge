@@ -20,7 +20,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.QueryHint;
 import org.eclipse.persistence.config.QueryHints;
 import pt.sweranker.persistence.entities.Language;
-import pt.sweranker.persistence.entities.localisation.KnowledgeAreaId;
+import pt.sweranker.persistence.entities.degrees.KnowledgeAreaId;
 
 /**
  * Knowledge Area Translation

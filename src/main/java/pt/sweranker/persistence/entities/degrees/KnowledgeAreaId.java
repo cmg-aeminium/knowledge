@@ -3,7 +3,7 @@
  * Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * All rights reserved.
  */
-package pt.sweranker.persistence.entities.localisation;
+package pt.sweranker.persistence.entities.degrees;
 
 import java.io.Serializable;
 import javax.persistence.Column;
