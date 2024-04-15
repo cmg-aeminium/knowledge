@@ -2,7 +2,7 @@
  * Copyright (c) 2020 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.sweranker.persistence.entities.knowledgeareas;
+package pt.sweranker.persistence.entities.degrees;
 
 import java.io.Serializable;
 import javax.persistence.Column;
@@ -14,27 +14,27 @@ import javax.persistence.Table;
  * @author Carlos Gonçalves
  */
 @Entity
-@Table(name = "tropicana")
+@Table(name = "empty")
 public class TropicanaTranslated implements Serializable {
 
     private static final long serialVersionUID = -7950524049133845822L;
 
     @Id
-    @Column(name = "topic", nullable = false)
-    private String topic;
+    @Column(name = "id", nullable = false)
+    private Long id;
 
     @Column(name = "cenas")
     private String cenas;
 
-    @Column(name = "cenas")
-    private String description;
+    @Column(name = "age")
+    private int age;
 
-    public String getTopic() {
-        return topic;
+    public Long getId() {
+        return id;
     }
 
-    public void setTopic(String topic) {
-        this.topic = topic;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getCenas() {
@@ -45,12 +45,12 @@ public class TropicanaTranslated implements Serializable {
         this.cenas = cenas;
     }
 
-    public String getDescription() {
-        return description;
+    public int getAge() {
+        return age;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setAge(int age) {
+        this.age = age;
     }
 
 }
