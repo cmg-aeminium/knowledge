@@ -57,12 +57,16 @@ public class School {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public TextContent getNameContent() {
+        return nameContent;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameContent(TextContent nameContent) {
+        this.nameContent = nameContent;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public Country getCountry() {

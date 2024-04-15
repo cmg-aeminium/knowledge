@@ -20,7 +20,7 @@ public class DegreeClassTranslation {
     @Id
     @ManyToOne
     @JoinColumn(name = "degreeClassId", referencedColumnName = "id")
-    private DegreeClass degreeClass;
+    private CourseClass degreeClass;
 
     @Id
     @Enumerated(EnumType.STRING)
