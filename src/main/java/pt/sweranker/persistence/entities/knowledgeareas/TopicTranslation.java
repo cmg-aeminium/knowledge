@@ -35,7 +35,7 @@ public class TopicTranslation {
     @Id
     @ManyToOne
     @JoinColumn(name = "topicId", referencedColumnName = "id")
-    private Topic topic;
+    private KnowledgeTopic topic;
 
     @Column(name = "language", nullable = false)
     @Enumerated(EnumType.STRING)
@@ -47,11 +47,11 @@ public class TopicTranslation {
     @Column(name = "description", nullable = false)
     private String description;
 
-    public Topic getTopic() {
+    public KnowledgeTopic getTopic() {
         return topic;
     }
 
-    public void setTopic(Topic topic) {
+    public void setTopic(KnowledgeTopic topic) {
         this.topic = topic;
     }
 

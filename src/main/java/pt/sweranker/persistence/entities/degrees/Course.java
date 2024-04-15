@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2020  Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
+ * Copyright (c) 2020 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
 package pt.sweranker.persistence.entities.degrees;
@@ -37,6 +37,7 @@ public class Course implements Serializable {
     @GeneratedValue(
         strategy = GenerationType.SEQUENCE,
         generator = "COURSES_SEQUENCE")
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "acronym", nullable = false)
