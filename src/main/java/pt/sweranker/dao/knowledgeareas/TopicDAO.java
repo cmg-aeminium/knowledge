@@ -10,46 +10,46 @@ import javax.persistence.TypedQuery;
 import pt.sweranker.dao.JPACrudDAO;
 import pt.sweranker.persistence.entities.Language;
 import pt.sweranker.persistence.entities.knowledgeareas.KnowledgeArea;
-import pt.sweranker.persistence.entities.knowledgeareas.TopicTranslation;
+import pt.sweranker.persistence.entities.knowledgeareas.TropicanaTranslationAgain;
 
 /**
  * @author Carlos Gonçalves
  */
 @Stateless
-public class TopicDAO extends JPACrudDAO<TopicTranslation> {
+public class TopicDAO extends JPACrudDAO<TropicanaTranslationAgain> {
 
     /**
      * @param entityClass
      */
     public TopicDAO() {
-        super(TopicTranslation.class);
+        super(TropicanaTranslationAgain.class);
     }
 
     @Override
-    public TopicTranslation findById(Long id) {
+    public TropicanaTranslationAgain findById(Long id) {
         return findById(id, Language.DEFAULT_LANGUAGE);
     }
 
-    public TopicTranslation findById(Long id, Language language) {
+    public TropicanaTranslationAgain findById(Long id, Language language) {
 
         if (language == null) {
             language = Language.DEFAULT_LANGUAGE;
         }
 
-        TypedQuery<TopicTranslation> query = getEntityManager().createNamedQuery("TopicTranslations.findByIdAndLanguage", TopicTranslation.class);
+        TypedQuery<TropicanaTranslationAgain> query = getEntityManager().createNamedQuery("TopicTranslations.findByIdAndLanguage", TropicanaTranslationAgain.class);
         query.setParameter("id", id);
         query.setParameter("language", language);
 
         return query.getResultList().get(0);
     }
 
-    public List<TopicTranslation> findTopicsOfKnowledgeArea(KnowledgeArea knowledgeArea, Language language) {
+    public List<TropicanaTranslationAgain> findTopicsOfKnowledgeArea(KnowledgeArea knowledgeArea, Language language) {
 
         if (language == null) {
             language = Language.DEFAULT_LANGUAGE;
         }
 
-        TypedQuery<TopicTranslation> query = getEntityManager().createNamedQuery("TopicTranslations.findByKnowledgeArea", TopicTranslation.class);
+        TypedQuery<TropicanaTranslationAgain> query = getEntityManager().createNamedQuery("TopicTranslations.findByKnowledgeArea", TropicanaTranslationAgain.class);
         query.setParameter("ka", knowledgeArea);
         query.setParameter("language", language);
 

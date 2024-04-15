@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2020  Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
+ * Copyright (c) 2020 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
 package pt.sweranker.persistence.entities.knowledgeareas;
@@ -10,32 +10,19 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQuery;
-import javax.persistence.QueryHint;
-import org.eclipse.persistence.config.QueryHints;
+import javax.persistence.Table;
 import pt.sweranker.persistence.entities.Language;
 
 /**
  * @author Carlos Gonçalves
  */
-@Entity(name = "TopicTranslations")
-@NamedQuery(
-    name = "TopicTranslations.findByIdAndLanguage",
-    query = "SELECT tp FROM TopicTranslations tp INNER JOIN FETCH tp.topic t WHERE t.id = :id AND tp.language = :language",
-    hints = {
-        @QueryHint(name = QueryHints.QUERY_RESULTS_CACHE_TYPE, value = "FULL")
-
-    })
-@NamedQuery(
-    name = "TopicTranslations.findByKnowledgeArea",
-    query = "SELECT tp FROM TopicTranslations tp INNER JOIN FETCH tp.topic t WHERE t.knowledgeArea = :ka AND tp.language = :language")
-public class TopicTranslation {
+@Entity
+@Table(name = "TopicTranslations")
+public class TropicanaTranslationAgain {
 
     @Id
-    @ManyToOne
     @JoinColumn(name = "topicId", referencedColumnName = "id")
-    private KnowledgeTopic topic;
+    private Long topic;
 
     @Column(name = "language", nullable = false)
     @Enumerated(EnumType.STRING)
@@ -47,11 +34,11 @@ public class TopicTranslation {
     @Column(name = "description", nullable = false)
     private String description;
 
-    public KnowledgeTopic getTopic() {
+    public Long getTopic() {
         return topic;
     }
 
-    public void setTopic(KnowledgeTopic topic) {
+    public void setTopic(Long topic) {
         this.topic = topic;
     }
 
