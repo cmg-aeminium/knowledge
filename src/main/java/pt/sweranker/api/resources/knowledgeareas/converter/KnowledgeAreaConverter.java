@@ -7,7 +7,7 @@ package pt.sweranker.api.resources.knowledgeareas.converter;
 import java.time.LocalDateTime;
 import javax.ejb.Stateless;
 import pt.sweranker.api.resources.knowledgeareas.dto.response.DetailedKnowledgeAreaDTO;
-import pt.sweranker.persistence.entities.knowledgeareas.KnowledgeAreaTranslation;
+import pt.sweranker.persistence.entities.knowledgebodies.KnowledgeAreaTranslation;
 
 /**
  * @author Carlos Manuel

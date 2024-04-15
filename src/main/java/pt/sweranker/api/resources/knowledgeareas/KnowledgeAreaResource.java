@@ -16,7 +16,7 @@ import pt.sweranker.api.resources.knowledgeareas.converter.KnowledgeAreaConverte
 import pt.sweranker.api.resources.knowledgeareas.converter.TopicConverter;
 import pt.sweranker.dao.knowledgeareas.KnowledgeAreaDAO;
 import pt.sweranker.dao.knowledgeareas.TopicDAO;
-import pt.sweranker.persistence.entities.knowledgeareas.KnowledgeAreaTranslation;
+import pt.sweranker.persistence.entities.knowledgebodies.KnowledgeAreaTranslation;
 
 @Path("knowledgreareas")
 @Stateless
