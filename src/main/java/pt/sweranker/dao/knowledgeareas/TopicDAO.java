@@ -9,8 +9,8 @@ import javax.ejb.Stateless;
 import javax.persistence.TypedQuery;
 import pt.sweranker.dao.JPACrudDAO;
 import pt.sweranker.persistence.entities.Language;
+import pt.sweranker.persistence.entities.TropicanaTranslationAgain;
 import pt.sweranker.persistence.entities.knowledgeareas.KnowledgeArea;
-import pt.sweranker.persistence.entities.knowledgeareas.TropicanaTranslationAgain;
 
 /**
  * @author Carlos Gonçalves

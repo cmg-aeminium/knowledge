@@ -2,27 +2,26 @@
  * Copyright (c) 2020 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.sweranker.persistence.entities.knowledgeareas;
+package pt.sweranker.persistence.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import pt.sweranker.persistence.entities.Language;
+import pt.sweranker.persistence.entities.localisation.TextContent;
 
 /**
  * @author Carlos Gonçalves
  */
 @Entity
-@Table(name = "TopicTranslations")
+@Table(name = "translations")
 public class TropicanaTranslationAgain {
 
     @Id
-    @JoinColumn(name = "topicId", referencedColumnName = "id")
-    private Long topic;
+    private Long id;
 
     @Column(name = "language", nullable = false)
     @Enumerated(EnumType.STRING)
@@ -31,16 +30,9 @@ public class TropicanaTranslationAgain {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "description", nullable = false)
-    private String description;
-
-    public Long getTopic() {
-        return topic;
-    }
-
-    public void setTopic(Long topic) {
-        this.topic = topic;
-    }
+    @Column(name = "textcontent")
+    @OneToOne
+    private TextContent textContent;
 
     public Language getLanguage() {
         return language;
@@ -54,16 +46,24 @@ public class TropicanaTranslationAgain {
         return name;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public TextContent getTextContent() {
+        return textContent;
+    }
+
+    public void setTextContent(TextContent textContent) {
+        this.textContent = textContent;
+    }
+
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
 }
