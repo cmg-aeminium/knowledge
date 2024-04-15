@@ -15,7 +15,7 @@ import pt.sweranker.persistence.entities.Language;
 /**
  * @author Carlos Gonçalves
  */
-public class DegreeClassTranslation {
+public class CourseClassTopic {
 
     @Id
     @ManyToOne
