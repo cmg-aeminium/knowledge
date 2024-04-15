@@ -12,9 +12,11 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "countries")
@@ -39,9 +41,12 @@ public class Country implements Serializable {
     @Column
     private String alpha2Code;
 
-    @Column
-    @OneToOne(fetch = FetchType.LAZY)
-    private TextContent name;
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "name", referencedColumnName = "id")
+    private TextContent nameContent;
+
+    @Transient
+    private String name;
 
     public Long getId() {
         return id;
@@ -59,22 +64,21 @@ public class Country implements Serializable {
         this.alpha2Code = alpha2Code;
     }
 
-    public TextContent getName() {
+    public TextContent getNameContent() {
+        return nameContent;
+    }
+
+    public void setNameContent(TextContent nameContent) {
+        this.nameContent = nameContent;
+    }
+
+    public String getName() {
         return name;
-    }
-
-    public void setName(TextContent name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "Country [id=" + id + ", alpha2Code=" + alpha2Code + ", name=" + name + "]";
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(alpha2Code, id, name);
+        return Objects.hash(alpha2Code, id);
     }
 
     @Override
@@ -89,7 +93,7 @@ public class Country implements Serializable {
             return false;
         }
         Country other = (Country) obj;
-        return Objects.equals(alpha2Code, other.alpha2Code) && Objects.equals(id, other.id) && Objects.equals(name, other.name);
+        return Objects.equals(alpha2Code, other.alpha2Code) && Objects.equals(id, other.id);
     }
 
 }

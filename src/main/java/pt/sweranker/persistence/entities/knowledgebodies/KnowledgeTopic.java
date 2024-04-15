@@ -44,13 +44,15 @@ public class KnowledgeTopic implements Serializable {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "knowledgeareaid", referencedColumnName = "id")
+    @JoinColumn(name = "knowledgearea", referencedColumnName = "id")
     private KnowledgeArea knowledgeArea;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "name", referencedColumnName = "id")
     private TextContent nameContent;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "description", referencedColumnName = "id")
     private TextContent descriptionContent;
 
     @Transient

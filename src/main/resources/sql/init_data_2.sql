@@ -715,18 +715,28 @@ INSERT INTO Countries (id, alpha2code, name) VALUES (236, 'ZW', 236);
 
 -- END Countries
 
--- Schools                                                  
-INSERT INTO Schools (id, name, country) VALUES (1, 'Universidade do Porto' , 166);
-INSERT INTO Schools (id, name, country) VALUES (2, 'Universidade de Coimbra' , 166);
-INSERT INTO Schools (id, name, country) VALUES (3, 'Instituto Superior Técnico' , 166);
-INSERT INTO Schools (id, name, country) VALUES (4, 'Universidade de Aveiro' , 166);
-INSERT INTO Schools (id, name, country) VALUES (5, 'Universidade do Minho' , 166);
+-- Schools          
+INSERT INTO TextContents (id, language, textvalue) VALUES (5613, 'PT_PT', 'Universidade do Porto');
+INSERT INTO TextContents (id, language, textvalue) VALUES (5614, 'PT_PT', 'Universidade de Coimbra');
+INSERT INTO TextContents (id, language, textvalue) VALUES (5615, 'PT_PT', 'Instituto Superior Técnico');
+INSERT INTO TextContents (id, language, textvalue) VALUES (5616, 'PT_PT', 'Universidade de Aveiro');
+INSERT INTO TextContents (id, language, textvalue) VALUES (5617, 'PT_PT', 'Universidade do Minho');
+INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (5613, 'EN_UK', 'University of Porto');
+INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (5614, 'EN_UK', 'University of Coimbra');
+INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (5615, 'EN_UK', 'IST');
+INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (5616, 'EN_UK', 'University of Aveiro');
+INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (5617, 'EN_UK', 'University of Minho');
+INSERT INTO Schools (id, name, country) VALUES (1, 5613, 166);
+INSERT INTO Schools (id, name, country) VALUES (2, 5614, 166);
+INSERT INTO Schools (id, name, country) VALUES (3, 5615, 166);
+INSERT INTO Schools (id, name, country) VALUES (4, 5616, 166);
+INSERT INTO Schools (id, name, country) VALUES (5, 5617, 166);
 
 -- Bodies of Knowledge
-INSERT INTO TextContents (id, language, textvalue) VALUES (237, 'PT_PT', 'SWEBOK');
-INSERT INTO TextContents (id, language, textvalue) VALUES (238, 'PT_PT', 'Corpo de Conhecimento de  Engenharia de Software pelo IEEE');
-INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (237, 'EN_UK', 'SWEBOK');
-INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (238, 'EN_UK', 'Software Engineering Book of Knowledge by IEEE');
+INSERT INTO TextContents (id, language, textvalue) VALUES (237, 'PT_PT', 'SWEBOK v3');
+INSERT INTO TextContents (id, language, textvalue) VALUES (238, 'PT_PT', 'Corpo de Conhecimento de Engenharia de Software pelo IEEE versão 3');
+INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (237, 'EN_UK', 'SWEBOK v3');
+INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (238, 'EN_UK', 'Software Engineering Book of Knowledge by IEEE version 3');
 INSERT INTO BodiesOfKnowledge (id, year,image, name, description) VALUES (1, 2017, 'http://www.images.com/swebok.jpg', 237 , 238);
 
 -- BEGIN Knowledge Areas

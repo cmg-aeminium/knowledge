@@ -6,7 +6,10 @@ package pt.sweranker.persistence.entities.degrees;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import pt.sweranker.persistence.entities.localisation.TextContent;
@@ -36,14 +39,19 @@ public class CourseClass {
     @Column(name = "course", nullable = false)
     private Course course;
 
-    @Column(name = "name")
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "name", referencedColumnName = "id")
     private TextContent nameContent;
 
-    @Column(name = "description")
-    private String description;
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "description", referencedColumnName = "id")
+    private TextContent descriptionContent;
 
     @Transient
     private String name;
+
+    @Transient
+    private String description;
 
     public CourseClass() {
     }
@@ -108,12 +116,16 @@ public class CourseClass {
         this.nameContent = nameContent;
     }
 
-    public String getDescription() {
-        return description;
+    public TextContent getDescriptionContent() {
+        return descriptionContent;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescriptionContent(TextContent descriptionContent) {
+        this.descriptionContent = descriptionContent;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
 }

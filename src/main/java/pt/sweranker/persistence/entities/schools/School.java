@@ -11,6 +11,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -39,8 +40,8 @@ public class School {
     @Column
     private Country country;
 
-    @Column(name = "name")
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "name", referencedColumnName = "id")
     private TextContent nameContent;
 
     @Transient

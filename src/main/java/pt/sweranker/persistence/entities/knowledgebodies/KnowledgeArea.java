@@ -1,8 +1,6 @@
 /*
  * Copyright (c) 2019
- *
  * Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
- *
  * All rights reserved.
  */
 package pt.sweranker.persistence.entities.knowledgebodies;
@@ -10,17 +8,26 @@ package pt.sweranker.persistence.entities.knowledgebodies;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+import pt.sweranker.persistence.entities.localisation.TextContent;
 
-@Entity(name = "KnowledgeAreas")
-@NamedQuery(name = "KnowledgeArea.findAll", query = "SELECT ka FROM KnowledgeAreas ka")
+@Entity
+@Table(name = "knowledgeareas")
+@NamedQuery(name = KnowledgeArea.QUERY_FIND_ALL, query = "SELECT ka FROM KnowledgeArea ka")
 public class KnowledgeArea implements Serializable {
 
     private static final long serialVersionUID = 4341439068096536870L;
+
+    public static final String QUERY_FIND_ALL = "KnowledgeArea.findAll";
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "KNOWLEDGEAREA_SEQUENCE")
@@ -33,6 +40,20 @@ public class KnowledgeArea implements Serializable {
 
     @Column(name = "image", nullable = true)
     private String image;
+
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "name", referencedColumnName = "id")
+    private TextContent nameContent;
+
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "description", referencedColumnName = "id")
+    private TextContent descriptionContent;
+
+    @Transient
+    private String name;
+
+    @Transient
+    private String description;
 
     public Long getId() {
         return id;
@@ -48,6 +69,30 @@ public class KnowledgeArea implements Serializable {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public TextContent getNameContent() {
+        return nameContent;
+    }
+
+    public void setNameContent(TextContent nameContent) {
+        this.nameContent = nameContent;
+    }
+
+    public TextContent getDescriptionContent() {
+        return descriptionContent;
+    }
+
+    public void setDescriptionContent(TextContent descriptionContent) {
+        this.descriptionContent = descriptionContent;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
 }

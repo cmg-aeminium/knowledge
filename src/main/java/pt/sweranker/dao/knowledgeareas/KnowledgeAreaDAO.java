@@ -4,13 +4,13 @@ import javax.ejb.Stateless;
 import javax.persistence.TypedQuery;
 import pt.sweranker.dao.JPACrudDAO;
 import pt.sweranker.persistence.entities.Language;
-import pt.sweranker.persistence.entities.knowledgebodies.KnowledgeAreaTranslation;
+import pt.sweranker.persistence.entities.knowledgebodies.KnowledgeArea;
 
 @Stateless
-public class KnowledgeAreaDAO extends JPACrudDAO<KnowledgeAreaTranslation> {
+public class KnowledgeAreaDAO extends JPACrudDAO<KnowledgeArea> {
 
     public KnowledgeAreaDAO() {
-        super(KnowledgeAreaTranslation.class);
+        super(KnowledgeArea.class);
     }
 
     /**
@@ -21,9 +21,9 @@ public class KnowledgeAreaDAO extends JPACrudDAO<KnowledgeAreaTranslation> {
      * @return
      */
     @Override
-    public KnowledgeAreaTranslation findById(Long id) {
+    public KnowledgeArea findById(Long id) {
 
-        TypedQuery<KnowledgeAreaTranslation> query = getEntityManager().createNamedQuery("KnowledgeAreaTranslation.findByIdAndLanguage", KnowledgeAreaTranslation.class);
+        TypedQuery<KnowledgeArea> query = getEntityManager().createNamedQuery("KnowledgeAreaTranslation.findByIdAndLanguage", KnowledgeArea.class);
         query.setParameter("id", id);
         query.setParameter("language", Language.DEFAULT_LANGUAGE);
 
@@ -38,13 +38,13 @@ public class KnowledgeAreaDAO extends JPACrudDAO<KnowledgeAreaTranslation> {
      * @param language
      * @return
      */
-    public KnowledgeAreaTranslation findById(Long id, Language language) {
+    public KnowledgeArea findById(Long id, Language language) {
 
         if (language == null) {
             language = Language.DEFAULT_LANGUAGE;
         }
 
-        TypedQuery<KnowledgeAreaTranslation> query = getEntityManager().createNamedQuery("KnowledgeAreaTranslation.findByIdAndLanguage", KnowledgeAreaTranslation.class);
+        TypedQuery<KnowledgeArea> query = getEntityManager().createNamedQuery("KnowledgeAreaTranslation.findByIdAndLanguage", KnowledgeArea.class);
         query.setParameter("id", id);
         query.setParameter("language", language);
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019  Fashion Concierge
+ * Copyright (c) 2019 Fashion Concierge
  * All rights reserved.
  */
 package pt.sweranker.dao.cache;
@@ -13,7 +13,6 @@ import javax.persistence.PersistenceUnit;
 import javax.persistence.TypedQuery;
 import pt.sweranker.persistence.entities.Language;
 import pt.sweranker.persistence.entities.knowledgebodies.KnowledgeArea;
-import pt.sweranker.persistence.entities.knowledgebodies.KnowledgeAreaTranslation;
 
 /**
  * @author Carlos Manuel
@@ -35,7 +34,7 @@ public class CacheLoader {
 
         for (KnowledgeArea ka : knowledgeAreas) {
 
-            TypedQuery<KnowledgeAreaTranslation> kaquery = database.createNamedQuery("KnowledgeAreaTranslation.findByIdAndLanguage", KnowledgeAreaTranslation.class);
+            TypedQuery<KnowledgeArea> kaquery = database.createNamedQuery("KnowledgeAreaTranslation.findByIdAndLanguage", KnowledgeArea.class);
             kaquery.setParameter("id", ka.getId());
             kaquery.setParameter("language", Language.PT_PT);
 
