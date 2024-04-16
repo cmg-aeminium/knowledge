@@ -20,9 +20,9 @@ import pt.cmg.sweranker.api.rest.filters.request.RequestContextData;
 import pt.cmg.sweranker.api.rest.filters.request.RequestData;
 import pt.cmg.sweranker.api.rest.resources.courses.converters.CourseConverter;
 import pt.cmg.sweranker.api.rest.resources.courses.dto.request.CourseSearchFilter;
-import pt.cmg.sweranker.dao.degrees.DegreeDAO;
-import pt.cmg.sweranker.persistence.entities.degrees.Course;
+import pt.cmg.sweranker.dao.schools.DegreeDAO;
 import pt.cmg.sweranker.persistence.entities.degrees.DegreeTranslation;
+import pt.cmg.sweranker.persistence.entities.schools.Course;
 
 /**
  * @author Carlos Gonçalves

@@ -2,7 +2,7 @@
  * Copyright (c) 2020 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.cmg.sweranker.persistence.entities.degrees;
+package pt.cmg.sweranker.persistence.entities.schools;
 
 import java.io.Serializable;
 import javax.persistence.Column;
@@ -17,7 +17,6 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import pt.cmg.sweranker.persistence.entities.localisation.TextContent;
-import pt.cmg.sweranker.persistence.entities.schools.School;
 
 /**
  * @author Carlos Gonçalves

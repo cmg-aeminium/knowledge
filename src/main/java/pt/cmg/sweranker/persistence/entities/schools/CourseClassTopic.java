@@ -2,7 +2,7 @@
  * Copyright (c) 2020 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.cmg.sweranker.persistence.entities.degrees;
+package pt.cmg.sweranker.persistence.entities.schools;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

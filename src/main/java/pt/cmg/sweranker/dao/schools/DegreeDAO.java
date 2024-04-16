@@ -2,14 +2,14 @@
  * Copyright (c) 2020 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.cmg.sweranker.dao.degrees;
+package pt.cmg.sweranker.dao.schools;
 
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.TypedQuery;
 import pt.cmg.sweranker.dao.JPACrudDAO;
 import pt.cmg.sweranker.persistence.entities.Language;
-import pt.cmg.sweranker.persistence.entities.degrees.Course;
+import pt.cmg.sweranker.persistence.entities.schools.Course;
 import pt.cmg.sweranker.persistence.entities.schools.School;
 
 /**
