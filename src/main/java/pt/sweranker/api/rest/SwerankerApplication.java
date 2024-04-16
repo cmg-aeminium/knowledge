@@ -1,4 +1,4 @@
-package pt.sweranker.api;
+package pt.sweranker.api.rest;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -6,10 +6,10 @@ import javax.json.bind.Jsonb;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import javax.ws.rs.ext.ContextResolver;
-import pt.sweranker.api.filters.request.ApplicationDataRequestFilter;
-import pt.sweranker.api.filters.request.LanguageSetterRequestFilter;
-import pt.sweranker.api.resources.degrees.DegreeResource;
-import pt.sweranker.api.resources.knowledgeareas.KnowledgeAreaResource;
+import pt.sweranker.api.rest.filters.request.ApplicationDataRequestFilter;
+import pt.sweranker.api.rest.filters.request.LanguageSetterRequestFilter;
+import pt.sweranker.api.rest.resources.courses.CourseResource;
+import pt.sweranker.api.rest.resources.knowledgeareas.KnowledgeAreaResource;
 import pt.sweranker.config.jsonb.JSONBConfigurator;
 
 /**
@@ -27,7 +27,7 @@ public class SwerankerApplication extends Application {
         Set<Class<?>> resources = new HashSet<>();
 
         resources.add(KnowledgeAreaResource.class);
-        resources.add(DegreeResource.class);
+        resources.add(CourseResource.class);
 
         resources.add(LanguageSetterRequestFilter.class);
         resources.add(ApplicationDataRequestFilter.class);

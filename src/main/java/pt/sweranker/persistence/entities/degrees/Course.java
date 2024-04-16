@@ -7,8 +7,6 @@ package pt.sweranker.persistence.entities.degrees;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -51,9 +49,9 @@ public class Course implements Serializable {
     @Column(name = "image", nullable = true)
     private String image;
 
-    @Column(name = "university", nullable = false)
-    @Enumerated(EnumType.STRING)
-    private School university;
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "school", referencedColumnName = "id")
+    private School school;
 
     @Column(name = "year", nullable = false)
     private int year;
@@ -82,10 +80,6 @@ public class Course implements Serializable {
 
     public String getImage() {
         return image;
-    }
-
-    public School getUniversity() {
-        return university;
     }
 
     public int getYear() {
@@ -128,12 +122,16 @@ public class Course implements Serializable {
         this.image = image;
     }
 
-    public void setUniversity(School university) {
-        this.university = university;
-    }
-
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public School getSchool() {
+        return school;
+    }
+
+    public void setSchool(School school) {
+        this.school = school;
     }
 
 }

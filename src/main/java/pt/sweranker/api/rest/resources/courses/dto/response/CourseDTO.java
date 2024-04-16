@@ -2,23 +2,19 @@
  * Copyright (c) 2020  Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.sweranker.api.resources.degrees.dto.request;
+package pt.sweranker.api.rest.resources.courses.dto.response;
 
-import javax.ws.rs.QueryParam;
 import pt.sweranker.persistence.entities.schools.School;
 
 /**
  * @author Carlos Gonçalves
  */
-public class DegreeSearchFilter {
-
-    @QueryParam("university")
+public class CourseDTO {
+    public Long id;
+    public String acronym;
     public School university;
-
-    @QueryParam("year")
-    public Integer year;
-
-    @QueryParam("name")
     public String name;
-
+    public String description;
+    public Integer year;
+    public String image;
 }

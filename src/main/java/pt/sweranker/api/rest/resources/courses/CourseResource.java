@@ -1,8 +1,8 @@
 /**
- * Copyright (c) 2020  Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
+ * Copyright (c) 2020 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.sweranker.api.resources.degrees;
+package pt.sweranker.api.rest.resources.courses;
 
 import java.util.List;
 import javax.ejb.EJB;
@@ -16,19 +16,20 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import pt.sweranker.api.filters.request.RequestContextData;
-import pt.sweranker.api.filters.request.RequestData;
-import pt.sweranker.api.resources.degrees.converters.DegreeConverter;
-import pt.sweranker.api.resources.degrees.dto.request.DegreeSearchFilter;
+import pt.sweranker.api.rest.filters.request.RequestContextData;
+import pt.sweranker.api.rest.filters.request.RequestData;
+import pt.sweranker.api.rest.resources.courses.converters.CourseConverter;
+import pt.sweranker.api.rest.resources.courses.dto.request.CourseSearchFilter;
 import pt.sweranker.dao.degrees.DegreeDAO;
+import pt.sweranker.persistence.entities.degrees.Course;
 import pt.sweranker.persistence.entities.degrees.DegreeTranslation;
 
 /**
  * @author Carlos Gonçalves
  */
-@Path("degrees")
+@Path("courses")
 @Stateless
-public class DegreeResource {
+public class CourseResource {
 
     @Inject
     @RequestData
@@ -38,12 +39,12 @@ public class DegreeResource {
     private DegreeDAO degreeDAO;
 
     @EJB
-    private DegreeConverter degreeConverter;
+    private CourseConverter degreeConverter;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAll(@Valid @BeanParam DegreeSearchFilter filter) {
-        List<DegreeTranslation> degrees = degreeDAO.findFiltered(degreeConverter.toDegreeFilterCriteria(filter));
+    public Response getAll(@Valid @BeanParam CourseSearchFilter filter) {
+        List<Course> degrees = degreeDAO.findFiltered(degreeConverter.toDegreeFilterCriteria(filter));
         return Response.ok(degreeConverter.toDegreeDTOs(degrees)).build();
     }
 

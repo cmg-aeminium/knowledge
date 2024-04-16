@@ -1,8 +1,8 @@
 /**
- * Copyright (c) 2020  Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
+ * Copyright (c) 2020 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.sweranker.api.filters.request;
+package pt.sweranker.api.rest.filters.request;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;

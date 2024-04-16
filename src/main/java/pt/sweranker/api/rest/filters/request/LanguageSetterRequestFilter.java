@@ -1,15 +1,15 @@
 /**
- * Copyright (c) 2020  Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
+ * Copyright (c) 2020 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.sweranker.api.filters.request;
+package pt.sweranker.api.rest.filters.request;
 
 import java.io.IOException;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
-import pt.sweranker.api.SwerankerApplication;
+import pt.sweranker.api.rest.SwerankerApplication;
 import pt.sweranker.persistence.entities.Language;
 
 /**
