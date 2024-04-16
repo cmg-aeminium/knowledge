@@ -6,11 +6,11 @@ import javax.json.bind.Jsonb;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import javax.ws.rs.ext.ContextResolver;
+import pt.cmg.jakartautils.jsonb.JSONBConfigurator;
 import pt.cmg.sweranker.api.rest.filters.request.ApplicationDataRequestFilter;
 import pt.cmg.sweranker.api.rest.filters.request.LanguageSetterRequestFilter;
 import pt.cmg.sweranker.api.rest.resources.courses.CourseResource;
 import pt.cmg.sweranker.api.rest.resources.knowledgeareas.KnowledgeAreaResource;
-import pt.cmg.sweranker.config.jsonb.JSONBConfigurator;
 
 /**
  * @author Carlos Manuel

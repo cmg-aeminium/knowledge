@@ -2,10 +2,11 @@
 
     <modelVersion>4.0.0</modelVersion>
     
-    <groupId>pt.sweranker.cmg</groupId>
+    <groupId>pt.cmg</groupId>
     <artifactId>sweranker</artifactId>
     <version>1.0</version>
     
+    <name>sweranker</name>
     <packaging>war</packaging>
     
     <developers>
@@ -374,6 +375,12 @@
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>${postresql-version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>pt.cmg</groupId>
+            <artifactId>jakartautils</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
         
