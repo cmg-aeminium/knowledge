@@ -16,13 +16,13 @@ import pt.cmg.sweranker.persistence.entities.TropicanaTranslationAgain;
 @Stateless
 public class TopicConverter {
 
-    public List<TopicDTO> toTopicDTOs(List<TropicanaTranslationAgain> translatedTopics) {
+    public List<KnowledgeTopicDTO> toTopicDTOs(List<TropicanaTranslationAgain> translatedTopics) {
         return translatedTopics.stream().map(this::toTopicDTO).collect(Collectors.toList());
     }
 
-    public TopicDTO toTopicDTO(TropicanaTranslationAgain translatedTopic) {
+    public KnowledgeTopicDTO toTopicDTO(TropicanaTranslationAgain translatedTopic) {
 
-        TopicDTO dto = new TopicDTO();
+        KnowledgeTopicDTO dto = new KnowledgeTopicDTO();
         dto.id = translatedTopic.getTopic().getId();
         dto.name = translatedTopic.getName();
         dto.description = translatedTopic.getDescription();

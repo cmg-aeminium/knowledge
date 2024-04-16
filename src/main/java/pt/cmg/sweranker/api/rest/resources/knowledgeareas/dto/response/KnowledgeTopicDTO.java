@@ -11,7 +11,7 @@ import javax.json.bind.config.PropertyOrderStrategy;
  * @author Carlos Gonçalves
  */
 @JsonbPropertyOrder(PropertyOrderStrategy.ANY)
-public class TopicDTO {
+public class KnowledgeTopicDTO {
     public Long id;
     public String name;
     public String description;
