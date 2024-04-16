@@ -16,14 +16,14 @@ import pt.cmg.sweranker.persistence.entities.schools.School;
  * @author Carlos Gonçalves
  */
 @Stateless
-public class DegreeDAO extends JPACrudDAO<Course> {
+public class CourseDAO extends JPACrudDAO<Course> {
 
     private static final String BASE_SELECT_DEGREE_QUERY = "SELECT d "
         + "FROM DegreeTranslations d JOIN FETCH d.degree deg ";
 
     public static final String AND = " AND ";
 
-    public DegreeDAO() {
+    public CourseDAO() {
         super(Course.class);
     }
 

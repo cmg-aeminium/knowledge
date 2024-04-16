@@ -16,12 +16,12 @@ import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeTopic;
  * @author Carlos Gonçalves
  */
 @Stateless
-public class TopicDAO extends JPACrudDAO<KnowledgeTopic> {
+public class KnowledgeTopicDAO extends JPACrudDAO<KnowledgeTopic> {
 
     /**
      * @param entityClass
      */
-    public TopicDAO() {
+    public KnowledgeTopicDAO() {
         super(KnowledgeTopic.class);
     }
 

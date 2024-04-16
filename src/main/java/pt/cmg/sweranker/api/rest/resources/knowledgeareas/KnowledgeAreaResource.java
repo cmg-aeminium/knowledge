@@ -15,7 +15,7 @@ import pt.cmg.sweranker.api.filters.request.RequestData;
 import pt.cmg.sweranker.api.resources.knowledgeareas.converter.KnowledgeAreaConverter;
 import pt.cmg.sweranker.api.resources.knowledgeareas.converter.TopicConverter;
 import pt.cmg.sweranker.dao.knowledgeareas.KnowledgeAreaDAO;
-import pt.cmg.sweranker.dao.knowledgeareas.TopicDAO;
+import pt.cmg.sweranker.dao.knowledgeareas.KnowledgeTopicDAO;
 import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeAreaTranslation;
 
 @Path("knowledgreareas")
@@ -29,7 +29,7 @@ public class KnowledgeAreaResource {
     private KnowledgeAreaConverter knowledgeAreaConverter;
 
     @EJB
-    private TopicDAO topicDAO;
+    private KnowledgeTopicDAO topicDAO;
 
     @EJB
     private TopicConverter topicConverter;

@@ -20,7 +20,7 @@ import pt.cmg.sweranker.api.rest.filters.request.RequestContextData;
 import pt.cmg.sweranker.api.rest.filters.request.RequestData;
 import pt.cmg.sweranker.api.rest.resources.courses.converters.CourseConverter;
 import pt.cmg.sweranker.api.rest.resources.courses.dto.request.CourseSearchFilter;
-import pt.cmg.sweranker.dao.schools.DegreeDAO;
+import pt.cmg.sweranker.dao.schools.CourseDAO;
 import pt.cmg.sweranker.persistence.entities.degrees.DegreeTranslation;
 import pt.cmg.sweranker.persistence.entities.schools.Course;
 
@@ -36,7 +36,7 @@ public class CourseResource {
     private RequestContextData requestData;
 
     @EJB
-    private DegreeDAO degreeDAO;
+    private CourseDAO degreeDAO;
 
     @EJB
     private CourseConverter degreeConverter;
