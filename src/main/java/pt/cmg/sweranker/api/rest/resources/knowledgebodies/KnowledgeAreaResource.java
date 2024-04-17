@@ -1,4 +1,4 @@
-package pt.cmg.sweranker.api.rest.resources.knowledgeareas;
+package pt.cmg.sweranker.api.rest.resources.knowledgebodies;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -11,8 +11,8 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import pt.cmg.sweranker.api.rest.filters.request.RequestContextData;
 import pt.cmg.sweranker.api.rest.filters.request.RequestData;
-import pt.cmg.sweranker.api.rest.resources.knowledgeareas.converter.KnowledgeAreaConverter;
-import pt.cmg.sweranker.api.rest.resources.knowledgeareas.converter.KnowledgeTopicConverter;
+import pt.cmg.sweranker.api.rest.resources.knowledgebodies.converter.KnowledgeAreaConverter;
+import pt.cmg.sweranker.api.rest.resources.knowledgebodies.converter.KnowledgeTopicConverter;
 import pt.cmg.sweranker.dao.knowledgeareas.KnowledgeAreaDAO;
 import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeArea;
 

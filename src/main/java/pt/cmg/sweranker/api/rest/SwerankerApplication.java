@@ -10,7 +10,7 @@ import pt.cmg.jakartautils.jsonb.JSONBConfigurator;
 import pt.cmg.sweranker.api.rest.filters.request.ApplicationDataRequestFilter;
 import pt.cmg.sweranker.api.rest.filters.request.LanguageSetterRequestFilter;
 import pt.cmg.sweranker.api.rest.resources.courses.CourseResource;
-import pt.cmg.sweranker.api.rest.resources.knowledgeareas.KnowledgeAreaResource;
+import pt.cmg.sweranker.api.rest.resources.knowledgebodies.KnowledgeAreaResource;
 
 /**
  * @author Carlos Manuel

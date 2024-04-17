@@ -7,11 +7,11 @@ package pt.cmg.sweranker.api.rest.resources.courses.converters;
 import java.util.List;
 import java.util.stream.Collectors;
 import pt.cmg.sweranker.api.rest.common.converters.CountryConverter;
-import pt.cmg.sweranker.api.rest.resources.schools.dto.response.SchoolDTO;
+import pt.cmg.sweranker.api.rest.resources.courses.dto.response.SchoolDTO;
 import pt.cmg.sweranker.persistence.entities.schools.School;
 
 /**
- * @author Carlos Goçalves
+ * @author Carlos Gonçalves
  */
 public class SchoolConverter {
 

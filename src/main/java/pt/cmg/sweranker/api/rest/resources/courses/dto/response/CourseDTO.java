@@ -4,8 +4,6 @@
  */
 package pt.cmg.sweranker.api.rest.resources.courses.dto.response;
 
-import pt.cmg.sweranker.api.rest.resources.schools.dto.response.SchoolDTO;
-
 /**
  * @author Carlos Gonçalves
  */

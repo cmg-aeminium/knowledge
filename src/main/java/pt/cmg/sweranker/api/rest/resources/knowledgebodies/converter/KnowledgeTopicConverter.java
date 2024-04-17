@@ -2,11 +2,11 @@
  * Copyright (c) 2020 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.cmg.sweranker.api.rest.resources.knowledgeareas.converter;
+package pt.cmg.sweranker.api.rest.resources.knowledgebodies.converter;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import pt.cmg.sweranker.api.rest.resources.knowledgeareas.dto.response.KnowledgeTopicDTO;
+import pt.cmg.sweranker.api.rest.resources.knowledgebodies.dto.response.KnowledgeTopicDTO;
 import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeTopic;
 
 /**

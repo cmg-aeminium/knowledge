@@ -2,7 +2,7 @@
  * Copyright (c) 2020  Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.cmg.sweranker.api.rest.resources.knowledgeareas.dto.response;
+package pt.cmg.sweranker.api.rest.resources.knowledgebodies.dto.response;
 
 import javax.json.bind.annotation.JsonbPropertyOrder;
 import javax.json.bind.config.PropertyOrderStrategy;
