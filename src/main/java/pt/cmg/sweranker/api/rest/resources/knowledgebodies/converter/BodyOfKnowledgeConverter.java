@@ -5,14 +5,14 @@
 package pt.cmg.sweranker.api.rest.resources.knowledgebodies.converter;
 
 import pt.cmg.sweranker.api.rest.resources.knowledgebodies.dto.response.BodyOfKnowledgeDTO;
-import pt.cmg.sweranker.persistence.entities.knowledgebodies.BodyOfKnowledge;
+import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeBody;
 
 /**
  * @author Carlos Gonçalves
  */
 public class BodyOfKnowledgeConverter {
 
-    public static BodyOfKnowledgeDTO toBodyOfKnowledgeDTO(BodyOfKnowledge bok) {
+    public static BodyOfKnowledgeDTO toBodyOfKnowledgeDTO(KnowledgeBody bok) {
         BodyOfKnowledgeDTO dto = new BodyOfKnowledgeDTO();
         dto.id = bok.getId();
         dto.image = bok.getImage();

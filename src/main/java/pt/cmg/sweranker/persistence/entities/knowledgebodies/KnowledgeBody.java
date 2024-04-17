@@ -22,7 +22,7 @@ import pt.cmg.sweranker.persistence.entities.localisation.TextContent;
  */
 @Entity
 @Table(name = "bodiesofknowledge")
-public class BodyOfKnowledge {
+public class KnowledgeBody {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "BOK_SEQUENCE")

@@ -16,9 +16,9 @@ import pt.cmg.sweranker.api.rest.resources.knowledgebodies.converter.KnowledgeTo
 import pt.cmg.sweranker.dao.knowledgeareas.KnowledgeAreaDAO;
 import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeArea;
 
-@Path("knowledgreareas")
+@Path("knowledgebodies")
 @Stateless
-public class KnowledgeAreaResource {
+public class KnowledgeBodyResource {
 
     @Inject
     @RequestData

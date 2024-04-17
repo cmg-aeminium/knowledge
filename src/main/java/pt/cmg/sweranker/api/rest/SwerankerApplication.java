@@ -10,7 +10,7 @@ import pt.cmg.jakartautils.jsonb.JSONBConfigurator;
 import pt.cmg.sweranker.api.rest.filters.request.ApplicationDataRequestFilter;
 import pt.cmg.sweranker.api.rest.filters.request.LanguageSetterRequestFilter;
 import pt.cmg.sweranker.api.rest.resources.courses.CourseResource;
-import pt.cmg.sweranker.api.rest.resources.knowledgebodies.KnowledgeAreaResource;
+import pt.cmg.sweranker.api.rest.resources.knowledgebodies.KnowledgeBodyResource;
 
 /**
  * @author Carlos Manuel
@@ -26,7 +26,7 @@ public class SwerankerApplication extends Application {
     public Set<Class<?>> getClasses() {
         Set<Class<?>> resources = new HashSet<>();
 
-        resources.add(KnowledgeAreaResource.class);
+        resources.add(KnowledgeBodyResource.class);
         resources.add(CourseResource.class);
 
         resources.add(LanguageSetterRequestFilter.class);

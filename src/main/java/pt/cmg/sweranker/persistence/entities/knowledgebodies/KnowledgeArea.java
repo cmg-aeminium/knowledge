@@ -61,7 +61,7 @@ public class KnowledgeArea implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "bodyofknowledge", referencedColumnName = "id")
-    private BodyOfKnowledge bodyOfKnowledge;
+    private KnowledgeBody bodyOfKnowledge;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "knowledgeArea", fetch = FetchType.LAZY)
     private List<KnowledgeTopic> knowledgeTopics;
@@ -106,11 +106,11 @@ public class KnowledgeArea implements Serializable {
         return description;
     }
 
-    public BodyOfKnowledge getBodyOfKnowledge() {
+    public KnowledgeBody getBodyOfKnowledge() {
         return bodyOfKnowledge;
     }
 
-    public void setBodyOfKnowledge(BodyOfKnowledge bodyOfKnowledge) {
+    public void setBodyOfKnowledge(KnowledgeBody bodyOfKnowledge) {
         this.bodyOfKnowledge = bodyOfKnowledge;
     }
 
