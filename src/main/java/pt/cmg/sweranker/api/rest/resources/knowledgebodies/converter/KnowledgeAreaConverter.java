@@ -4,7 +4,10 @@
  */
 package pt.cmg.sweranker.api.rest.resources.knowledgebodies.converter;
 
+import java.util.List;
+import java.util.stream.Collectors;
 import pt.cmg.sweranker.api.rest.resources.knowledgebodies.dto.response.DetailedKnowledgeAreaDTO;
+import pt.cmg.sweranker.api.rest.resources.knowledgebodies.dto.response.KnowledgeAreaDTO;
 import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeArea;
 
 /**
@@ -20,7 +23,22 @@ public class KnowledgeAreaConverter {
         dto.image = knowledgeArea.getImage();
         dto.name = knowledgeArea.getName();
         dto.description = knowledgeArea.getDescription();
-        dto.bodyOfKnowledge = BodyOfKnowledgeConverter.toBodyOfKnowledgeDTO(knowledgeArea.getBodyOfKnowledge());
+        dto.bodyOfKnowledge = KnowledgeBodyConverter.toKnowledgeBodyDTO(knowledgeArea.getBodyOfKnowledge());
+
+        return dto;
+    }
+
+    public static List<KnowledgeAreaDTO> toKnowledgeAreaDTOs(List<KnowledgeArea> kas) {
+        return kas.stream().map(KnowledgeAreaConverter::toKnowledgeAreaDTO).collect(Collectors.toList());
+    }
+
+    public static KnowledgeAreaDTO toKnowledgeAreaDTO(KnowledgeArea knowledgeArea) {
+
+        KnowledgeAreaDTO dto = new KnowledgeAreaDTO();
+
+        dto.id = knowledgeArea.getId();
+        dto.image = knowledgeArea.getImage();
+        dto.name = knowledgeArea.getName();
 
         return dto;
     }

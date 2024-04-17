@@ -11,5 +11,4 @@ public class KnowledgeAreaDTO {
     public Long id;
     public String image;
     public String name;
-    public String description;
 }

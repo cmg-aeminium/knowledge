@@ -7,7 +7,6 @@ package pt.cmg.sweranker.persistence.entities.schools;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -45,7 +44,8 @@ public class School implements Serializable {
         generator = "SCHOOLS_SEQUENCE")
     private Long id;
 
-    @Column
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "country", referencedColumnName = "id")
     private Country country;
 
     @OneToOne(optional = false, fetch = FetchType.LAZY)

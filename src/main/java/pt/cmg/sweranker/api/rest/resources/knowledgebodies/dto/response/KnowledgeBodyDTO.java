@@ -7,7 +7,7 @@ package pt.cmg.sweranker.api.rest.resources.knowledgebodies.dto.response;
 /**
  * @author Carlos Gonçalves
  */
-public class BodyOfKnowledgeDTO {
+public class KnowledgeBodyDTO {
     public Long id;
     public String name;
     public String description;

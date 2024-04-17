@@ -737,7 +737,7 @@ INSERT INTO TextContents (id, language, textvalue) VALUES (237, 'PT_PT', 'SWEBOK
 INSERT INTO TextContents (id, language, textvalue) VALUES (238, 'PT_PT', 'Corpo de Conhecimento de Engenharia de Software pelo IEEE versão 3');
 INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (237, 'EN_UK', 'SWEBOK v3');
 INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (238, 'EN_UK', 'Software Engineering Book of Knowledge by IEEE version 3');
-INSERT INTO BodiesOfKnowledge (id, year,image, name, description) VALUES (1, 2017, 'http://www.images.com/swebok.jpg', 237 , 238);
+INSERT INTO KnowledgeBodies (id, year,image, name, description) VALUES (1, 2017, 'http://www.images.com/swebok.jpg', 237 , 238);
 
 -- BEGIN Knowledge Areas
 
@@ -812,22 +812,22 @@ INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (268, 'EN_UK', 'The
 INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (269, 'EN_UK', 'Engineering Foundations is a KA that arises from the fact that Software Engineering is an Engineering discipline. As mentioned earlier, engineering is defined as "the application of a systematic, disciplined and quantifiable approach to structures, machines, products, systems or processes."It is the difference between this statement and another more empirical approach that allows Software Engineering to be recognized as a fully legitimate engineering discipline. As such, this KA addresses the aspects that apply to software engineering and other engineering disciplines, such as measurement, experimental techniques, or statistical analysis.');
 INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (270, 'EN_UK', 'No Software Engineering Knowledge Area');
 
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (1 , 239, 255, 'http://www.images.com/ka_software_requirements');
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (2 , 240, 256, 'http://www.images.com/ka_software_design');
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (3 , 241, 257, 'http://www.images.com/ka_software_construction');
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (4 , 242, 258, 'http://www.images.com/ka_software_testing');
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (5 , 243, 259, 'http://www.images.com/ka_software_maintenance');
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (6 , 244, 260, 'http://www.images.com/ka_software_config_management');
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (7 , 245, 261, 'http://www.images.com/ka_software_engineering_management');
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (8 , 246, 262, 'http://www.images.com/ka_software_engineering_process');
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (9 , 247, 263, 'http://www.images.com/ka_software_models_methods');
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (10, 248, 264, 'http://www.images.com/ka_software_quality');
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (11, 249, 265, 'http://www.images.com/ka_software_engineering_professional_practice');
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (12, 250, 266, 'http://www.images.com/ka_software_economics');
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (13, 251, 267, 'http://www.images.com/ka_computing_foundations');
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (14, 252, 268, 'http://www.images.com/ka_mathematical_foundations');
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (15, 253, 269, 'http://www.images.com/ka_engineering_foundations');
-INSERT INTO KnowledgeAreas(id,name, description, image ) VALUES (16, 254, 270, 'http://www.images.com/ka_other');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (1 , 1, 239, 255, 'http://www.images.com/ka_software_requirements');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (2 , 1, 240, 256, 'http://www.images.com/ka_software_design');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (3 , 1, 241, 257, 'http://www.images.com/ka_software_construction');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (4 , 1, 242, 258, 'http://www.images.com/ka_software_testing');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (5 , 1, 243, 259, 'http://www.images.com/ka_software_maintenance');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (6 , 1, 244, 260, 'http://www.images.com/ka_software_config_management');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (7 , 1, 245, 261, 'http://www.images.com/ka_software_engineering_management');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (8 , 1, 246, 262, 'http://www.images.com/ka_software_engineering_process');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (9 , 1, 247, 263, 'http://www.images.com/ka_software_models_methods');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (10, 1, 248, 264, 'http://www.images.com/ka_software_quality');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (11, 1, 249, 265, 'http://www.images.com/ka_software_engineering_professional_practice');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (12, 1, 250, 266, 'http://www.images.com/ka_software_economics');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (13, 1, 251, 267, 'http://www.images.com/ka_computing_foundations');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (14, 1, 252, 268, 'http://www.images.com/ka_mathematical_foundations');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (15, 1, 253, 269, 'http://www.images.com/ka_engineering_foundations');
+INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (16, 1, 254, 270, 'http://www.images.com/ka_other');
 
 -- END Knowledge Areas
 

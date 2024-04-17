@@ -4,6 +4,8 @@
  */
 package pt.cmg.sweranker.persistence.entities.knowledgebodies;
 
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,6 +13,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -21,13 +24,13 @@ import pt.cmg.sweranker.persistence.entities.localisation.TextContent;
  * @author Carlos Gonçalves
  */
 @Entity
-@Table(name = "bodiesofknowledge")
+@Table(name = "knowledgebodies")
 public class KnowledgeBody {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "BOK_SEQUENCE")
     @SequenceGenerator(name = "BOK_SEQUENCE",
-        sequenceName = "bodiesofknowledge_id_seq",
+        sequenceName = "knowledgebodies_id_seq",
         initialValue = 1,
         allocationSize = 1)
     @Column(name = "id")
@@ -52,6 +55,9 @@ public class KnowledgeBody {
 
     @Transient
     private String description;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "knowledgeBody", fetch = FetchType.LAZY)
+    private List<KnowledgeArea> knowledgeAreas;
 
     public Long getId() {
         return id;
@@ -99,6 +105,14 @@ public class KnowledgeBody {
 
     public String getDescription() {
         return description;
+    }
+
+    public List<KnowledgeArea> getKnowledgeAreas() {
+        return knowledgeAreas;
+    }
+
+    public void setKnowledgeAreas(List<KnowledgeArea> knowledgeAreas) {
+        this.knowledgeAreas = knowledgeAreas;
     }
 
 }

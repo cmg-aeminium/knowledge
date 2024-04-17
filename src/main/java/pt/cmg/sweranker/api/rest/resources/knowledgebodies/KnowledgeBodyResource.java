@@ -1,5 +1,6 @@
 package pt.cmg.sweranker.api.rest.resources.knowledgebodies;
 
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -8,13 +9,13 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
+import pt.cmg.jakartautils.errors.ErrorDTO;
 import pt.cmg.sweranker.api.rest.filters.request.RequestContextData;
 import pt.cmg.sweranker.api.rest.filters.request.RequestData;
 import pt.cmg.sweranker.api.rest.resources.knowledgebodies.converter.KnowledgeAreaConverter;
-import pt.cmg.sweranker.api.rest.resources.knowledgebodies.converter.KnowledgeTopicConverter;
-import pt.cmg.sweranker.dao.knowledgeareas.KnowledgeAreaDAO;
-import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeArea;
+import pt.cmg.sweranker.api.rest.resources.knowledgebodies.converter.KnowledgeBodyConverter;
+import pt.cmg.sweranker.dao.knowledgeareas.KnowledgeBodyDAO;
+import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeBody;
 
 @Path("knowledgebodies")
 @Stateless
@@ -25,28 +26,38 @@ public class KnowledgeBodyResource {
     private RequestContextData requestData;
 
     @Inject
-    private KnowledgeAreaDAO knowledgeAreaDAO;
+    private KnowledgeBodyDAO knowledgeBodyDAO;
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAll() {
+        List<KnowledgeBody> knowledgeBodies = knowledgeBodyDAO.findAll();
+        return Response.ok(KnowledgeBodyConverter.toKnowledgeBodyDTOs(knowledgeBodies)).build();
+    }
 
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getKnowledgeArea(@PathParam("id") Long id) {
-        KnowledgeArea ka = knowledgeAreaDAO.findById(id);
-        return Response.ok(KnowledgeAreaConverter.toDetailedKnowledgeAreaDTO(ka)).build();
+    public Response getById(@PathParam("id") Long id) {
+        KnowledgeBody bodyOfKnowledge = knowledgeBodyDAO.findById(id);
+
+        if (bodyOfKnowledge == null) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1)).build();
+        }
+
+        return Response.ok(KnowledgeBodyConverter.toKnowledgeBodyDTO(bodyOfKnowledge)).build();
     }
 
     @GET
-    @Path("{id}/topics")
+    @Path("{id}/knowledgeareas")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getTopicsOfKnowledgeArea(@PathParam("id") Long knowledgeAreaId) {
+    public Response getKnowledgeAreasOfBody(@PathParam("id") Long id) {
+        KnowledgeBody bodyOfKnowledge = knowledgeBodyDAO.findById(id);
 
-        var knowledgeArea = knowledgeAreaDAO.findById(knowledgeAreaId);
-
-        if (knowledgeArea == null) {
-            return Response.status(Status.BAD_REQUEST).build();
+        if (bodyOfKnowledge == null) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1)).build();
         }
-
-        return Response.ok(KnowledgeTopicConverter.toTopicDTOs(knowledgeArea.getKnowledgeTopics())).build();
+        return Response.ok(KnowledgeAreaConverter.toKnowledgeAreaDTOs(bodyOfKnowledge.getKnowledgeAreas())).build();
     }
 
 }

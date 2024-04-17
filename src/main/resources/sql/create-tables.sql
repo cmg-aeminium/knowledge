@@ -23,9 +23,9 @@ CREATE TABLE TranslatedTexts (
 	PRIMARY KEY(id, language)
 );
 
-CREATE SEQUENCE knowledgebody_id_seq INCREMENT 1;
-CREATE TABLE KnowledgeBody (
-    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('knowledgebody_id_seq'),
+CREATE SEQUENCE knowledgebodies_id_seq INCREMENT 1;
+CREATE TABLE KnowledgeBodies (
+    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('knowledgebodies_id_seq'),
     year smallint NOT NULL,
 	image text NOT NULL,
 	name BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
@@ -36,7 +36,7 @@ CREATE SEQUENCE knowledgeareas_id_seq INCREMENT 1;
 CREATE TABLE KnowledgeAreas (
     id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('knowledgeareas_id_seq'),
 	image text NOT NULL,
-	knowledgebody BIGINT NOT NULL REFERENCES KnowledgeBody(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	knowledgebody BIGINT NOT NULL REFERENCES KnowledgeBodies(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
 	name BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
 	description BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION
 );

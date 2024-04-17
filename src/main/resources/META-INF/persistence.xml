@@ -5,13 +5,13 @@
         <jta-data-source>java:global/SwerankerDataSource</jta-data-source>
         
         <properties>
-            <!-- property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/-->
+            <!--  property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/-->
             
-            <!-- property name="javax.persistence.schema-generation.create-source" value="metadata"/-->
-            <!-- property name="javax.persistence.schema-generation.drop-source" value="metadata"/-->
+            <!--property name="javax.persistence.schema-generation.create-source" value="metadata"/-->
+            <!--property name="javax.persistence.schema-generation.drop-source" value="metadata"/-->
             
-            <!-- property name="javax.persistence.schema-generation.create-script-source" value="META-INF/sql/create-schema.sql"/-->
-            <!-- property name="javax.persistence.schema-generation.drop-script-source" value="META-INF/sql/drop-schema.sql"/-->
+            <!--  property name="javax.persistence.schema-generation.create-script-source" value="META-INF/sql/create-tables.sql"/-->
+            <!--  property name="javax.persistence.schema-generation.drop-script-source" value="META-INF/sql/drop-schema.sql"/-->
             
             <!-- property name="javax.persistence.sql-load-script-source" value="META-INF/sql/init-data.sql"/-->
             

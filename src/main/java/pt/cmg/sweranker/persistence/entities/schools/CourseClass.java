@@ -4,11 +4,14 @@
  */
 package pt.cmg.sweranker.persistence.entities.schools;
 
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -36,7 +39,8 @@ public class CourseClass {
     @Column(name = "isoptional", nullable = false)
     private boolean isOptional;
 
-    @Column(name = "course", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "course", referencedColumnName = "id")
     private Course course;
 
     @OneToOne(optional = false, fetch = FetchType.LAZY)
@@ -52,6 +56,9 @@ public class CourseClass {
 
     @Transient
     private String description;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "courseClass")
+    private List<CourseClassTopic> courseClassTopics;
 
     public CourseClass() {
     }
@@ -126,6 +133,14 @@ public class CourseClass {
 
     public String getDescription() {
         return description;
+    }
+
+    public List<CourseClassTopic> getCourseClassTopics() {
+        return courseClassTopics;
+    }
+
+    public void setCourseClassTopics(List<CourseClassTopic> courseClassTopics) {
+        this.courseClassTopics = courseClassTopics;
     }
 
 }

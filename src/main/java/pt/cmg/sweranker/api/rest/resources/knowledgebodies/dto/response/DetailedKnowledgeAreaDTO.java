@@ -13,5 +13,5 @@ public class DetailedKnowledgeAreaDTO {
     public String image;
     public String name;
     public String description;
-    public BodyOfKnowledgeDTO bodyOfKnowledge;
+    public KnowledgeBodyDTO bodyOfKnowledge;
 }
