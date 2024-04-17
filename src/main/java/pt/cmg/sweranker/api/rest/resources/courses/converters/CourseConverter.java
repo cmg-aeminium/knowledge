@@ -12,7 +12,6 @@ import pt.cmg.sweranker.api.rest.filters.request.RequestContextData;
 import pt.cmg.sweranker.api.rest.filters.request.RequestData;
 import pt.cmg.sweranker.api.rest.resources.courses.dto.request.CourseSearchFilter;
 import pt.cmg.sweranker.api.rest.resources.courses.dto.response.CourseDTO;
-import pt.cmg.sweranker.api.rest.resources.schools.converters.SchoolConverter;
 import pt.cmg.sweranker.dao.schools.CourseDAO.DegreeFilterCriteria;
 import pt.cmg.sweranker.dao.schools.SchoolDAO;
 import pt.cmg.sweranker.persistence.entities.schools.Course;

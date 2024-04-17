@@ -2,7 +2,7 @@
  * Copyright (c) 2024 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.cmg.sweranker.api.rest.resources.schools.converters;
+package pt.cmg.sweranker.api.rest.resources.courses.converters;
 
 import java.util.List;
 import java.util.stream.Collectors;

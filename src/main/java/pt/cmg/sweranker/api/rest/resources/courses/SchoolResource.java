@@ -2,7 +2,7 @@
  * Copyright (c) 2024 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.cmg.sweranker.api.rest.resources.schools;
+package pt.cmg.sweranker.api.rest.resources.courses;
 
 import java.util.List;
 import javax.ejb.EJB;
@@ -15,7 +15,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import pt.cmg.sweranker.api.rest.filters.request.RequestContextData;
 import pt.cmg.sweranker.api.rest.filters.request.RequestData;
-import pt.cmg.sweranker.api.rest.resources.schools.converters.SchoolConverter;
+import pt.cmg.sweranker.api.rest.resources.courses.converters.SchoolConverter;
 import pt.cmg.sweranker.dao.schools.SchoolDAO;
 import pt.cmg.sweranker.persistence.entities.schools.School;
 
