@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2020  Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
+ * Copyright (c) 2020 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
 package pt.cmg.sweranker.dao;
@@ -33,8 +33,6 @@ public abstract class JPACrudDAO<T> {
 
     /**
      * Persists an entity into the system.
-     *
-     * @param entity
      */
     public void create(T entity) {
         if (entity != null) {
@@ -60,8 +58,6 @@ public abstract class JPACrudDAO<T> {
 
     /**
      * Edits an Entity
-     *
-     * @param entity
      */
     public void edit(T entity) {
         if (entity != null) {
@@ -76,8 +72,6 @@ public abstract class JPACrudDAO<T> {
 
     /**
      * Removes an entity from the database
-     *
-     * @param entity
      */
     public void remove(T entity) {
         if (entity != null) {
@@ -119,7 +113,7 @@ public abstract class JPACrudDAO<T> {
     /**
      * Retrieves the total number of Entities of its type with no restrictions.
      *
-     * @return a list of the results (empty if none was found)
+     * @return the total number of entities found
      */
     public Long count() {
         CriteriaQuery<Long> cq = getEntityManager().getCriteriaBuilder().createQuery(Long.class);

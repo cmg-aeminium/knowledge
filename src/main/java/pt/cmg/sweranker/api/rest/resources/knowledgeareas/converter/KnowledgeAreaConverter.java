@@ -4,25 +4,23 @@
  */
 package pt.cmg.sweranker.api.rest.resources.knowledgeareas.converter;
 
-import java.time.LocalDateTime;
-import javax.ejb.Stateless;
 import pt.cmg.sweranker.api.rest.resources.knowledgeareas.dto.response.DetailedKnowledgeAreaDTO;
+import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeArea;
 
 /**
  * @author Carlos Manuel
  */
-@Stateless
 public class KnowledgeAreaConverter {
 
-    public DetailedKnowledgeAreaDTO toDetailedKnowledgeAreaDTO(KnowledgeAreaTranslation knowledgeArea) {
+    public static DetailedKnowledgeAreaDTO toDetailedKnowledgeAreaDTO(KnowledgeArea knowledgeArea) {
 
         DetailedKnowledgeAreaDTO dto = new DetailedKnowledgeAreaDTO();
 
         dto.id = knowledgeArea.getId();
-        dto.image = knowledgeArea.getKnowledgeArea().getImage();
-        dto.name = knowledgeArea.getTranslatedName();
-        dto.description = knowledgeArea.getTranslatedDescription();
-        dto.now = LocalDateTime.now();
+        dto.image = knowledgeArea.getImage();
+        dto.name = knowledgeArea.getName();
+        dto.description = knowledgeArea.getDescription();
+        dto.bodyOfKnowledge = BodyOfKnowledgeConverter.toBodyOfKnowledgeDTO(knowledgeArea.getBodyOfKnowledge());
 
         return dto;
     }

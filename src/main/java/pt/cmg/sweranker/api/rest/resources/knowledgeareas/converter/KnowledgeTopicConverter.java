@@ -6,25 +6,24 @@ package pt.cmg.sweranker.api.rest.resources.knowledgeareas.converter;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import javax.ejb.Stateless;
 import pt.cmg.sweranker.api.rest.resources.knowledgeareas.dto.response.KnowledgeTopicDTO;
+import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeTopic;
 
 /**
  * @author Carlos Gonçalves
  */
-@Stateless
-public class TopicConverter {
+public class KnowledgeTopicConverter {
 
-    public List<KnowledgeTopicDTO> toTopicDTOs(List<TropicanaTranslationAgain> translatedTopics) {
-        return translatedTopics.stream().map(this::toTopicDTO).collect(Collectors.toList());
+    public static List<KnowledgeTopicDTO> toTopicDTOs(List<KnowledgeTopic> topics) {
+        return topics.stream().map(KnowledgeTopicConverter::toTopicDTO).collect(Collectors.toList());
     }
 
-    public KnowledgeTopicDTO toTopicDTO(TropicanaTranslationAgain translatedTopic) {
+    public static KnowledgeTopicDTO toTopicDTO(KnowledgeTopic topic) {
 
         KnowledgeTopicDTO dto = new KnowledgeTopicDTO();
-        dto.id = translatedTopic.getTopic().getId();
-        dto.name = translatedTopic.getName();
-        dto.description = translatedTopic.getDescription();
+        dto.id = topic.getId();
+        dto.name = topic.getName();
+        dto.description = topic.getDescription();
         return dto;
     }
 

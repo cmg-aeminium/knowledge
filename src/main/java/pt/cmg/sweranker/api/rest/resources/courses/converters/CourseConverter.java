@@ -6,42 +6,49 @@ package pt.cmg.sweranker.api.rest.resources.courses.converters;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import javax.ejb.Stateless;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import pt.cmg.sweranker.api.rest.filters.request.RequestContextData;
 import pt.cmg.sweranker.api.rest.filters.request.RequestData;
 import pt.cmg.sweranker.api.rest.resources.courses.dto.request.CourseSearchFilter;
 import pt.cmg.sweranker.api.rest.resources.courses.dto.response.CourseDTO;
+import pt.cmg.sweranker.api.rest.resources.schools.converters.SchoolConverter;
 import pt.cmg.sweranker.dao.schools.CourseDAO.DegreeFilterCriteria;
+import pt.cmg.sweranker.dao.schools.SchoolDAO;
 import pt.cmg.sweranker.persistence.entities.schools.Course;
+import pt.cmg.sweranker.persistence.entities.schools.School;
 
 /**
  * @author Carlos Gonçalves
  */
-@Stateless
+@RequestScoped
 public class CourseConverter {
 
     @Inject
     @RequestData
     private RequestContextData requestData;
 
+    @Inject
+    private SchoolDAO schoolDAO;
+
     public DegreeFilterCriteria toDegreeFilterCriteria(CourseSearchFilter searchFilter) {
-        return new DegreeFilterCriteria(searchFilter.university, requestData.getSelectedLanguage(), searchFilter.year, searchFilter.name);
+        School school = schoolDAO.findById(searchFilter.school);
+        return new DegreeFilterCriteria(school, searchFilter.year, searchFilter.name, searchFilter.acronym);
     }
 
     public List<CourseDTO> toCourseDTOs(List<Course> degrees) {
         return degrees.stream().map(this::toCourseDTO).collect(Collectors.toList());
     }
 
-    public CourseDTO toCourseDTO(Course degree) {
+    public CourseDTO toCourseDTO(Course course) {
         CourseDTO dto = new CourseDTO();
-        dto.id = degree.getId();
-        dto.acronym = degree.getAcronym();
-        dto.name = degree.getName();
-        dto.description = degree.getDescription();
-        dto.image = degree.getImage();
-        dto.university = degree.getSchool();
-        dto.year = degree.getYear();
+        dto.id = course.getId();
+        dto.acronym = course.getAcronym();
+        dto.name = course.getName();
+        dto.description = course.getDescription();
+        dto.image = course.getImage();
+        dto.school = SchoolConverter.toSchoolDTO(course.getSchool());
+        dto.year = course.getYear();
 
         return dto;
     }

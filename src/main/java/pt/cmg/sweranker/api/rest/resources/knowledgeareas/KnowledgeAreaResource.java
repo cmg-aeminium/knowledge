@@ -1,6 +1,5 @@
 package pt.cmg.sweranker.api.rest.resources.knowledgeareas;
 
-import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
@@ -13,38 +12,27 @@ import javax.ws.rs.core.Response.Status;
 import pt.cmg.sweranker.api.rest.filters.request.RequestContextData;
 import pt.cmg.sweranker.api.rest.filters.request.RequestData;
 import pt.cmg.sweranker.api.rest.resources.knowledgeareas.converter.KnowledgeAreaConverter;
-import pt.cmg.sweranker.api.rest.resources.knowledgeareas.converter.TopicConverter;
+import pt.cmg.sweranker.api.rest.resources.knowledgeareas.converter.KnowledgeTopicConverter;
 import pt.cmg.sweranker.dao.knowledgeareas.KnowledgeAreaDAO;
-import pt.cmg.sweranker.dao.knowledgeareas.KnowledgeTopicDAO;
+import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeArea;
 
 @Path("knowledgreareas")
 @Stateless
 public class KnowledgeAreaResource {
 
-    @EJB
-    private KnowledgeAreaDAO knowledgeAreaDAO;
-
-    @EJB
-    private KnowledgeAreaConverter knowledgeAreaConverter;
-
-    @EJB
-    private KnowledgeTopicDAO topicDAO;
-
-    @EJB
-    private TopicConverter topicConverter;
-
     @Inject
     @RequestData
     private RequestContextData requestData;
+
+    @Inject
+    private KnowledgeAreaDAO knowledgeAreaDAO;
 
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getKnowledgeArea(@PathParam("id") Long id) {
-
-        KnowledgeAreaTranslation ka = knowledgeAreaDAO.findById(id, requestData.getSelectedLanguage());
-
-        return Response.ok(knowledgeAreaConverter.toDetailedKnowledgeAreaDTO(ka)).build();
+        KnowledgeArea ka = knowledgeAreaDAO.findById(id);
+        return Response.ok(KnowledgeAreaConverter.toDetailedKnowledgeAreaDTO(ka)).build();
     }
 
     @GET
@@ -58,9 +46,7 @@ public class KnowledgeAreaResource {
             return Response.status(Status.BAD_REQUEST).build();
         }
 
-        var topics = topicDAO.findTopicsOfKnowledgeArea(knowledgeArea.getKnowledgeArea(), requestData.getSelectedLanguage());
-
-        return Response.ok(topicConverter.toTopicDTOs(topics)).build();
+        return Response.ok(KnowledgeTopicConverter.toTopicDTOs(knowledgeArea.getKnowledgeTopics())).build();
     }
 
 }

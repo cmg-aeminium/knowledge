@@ -7,8 +7,8 @@ package pt.cmg.sweranker.dao.schools;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.TypedQuery;
+import org.apache.commons.lang3.StringUtils;
 import pt.cmg.sweranker.dao.JPACrudDAO;
-import pt.cmg.sweranker.persistence.entities.Language;
 import pt.cmg.sweranker.persistence.entities.schools.Course;
 import pt.cmg.sweranker.persistence.entities.schools.School;
 
@@ -18,8 +18,7 @@ import pt.cmg.sweranker.persistence.entities.schools.School;
 @Stateless
 public class CourseDAO extends JPACrudDAO<Course> {
 
-    private static final String BASE_SELECT_DEGREE_QUERY = "SELECT d "
-        + "FROM DegreeTranslations d JOIN FETCH d.degree deg ";
+    private static final String BASE_SELECT_DEGREE_QUERY = "SELECT c FROM Course c ";
 
     public static final String AND = " AND ";
 
@@ -29,26 +28,35 @@ public class CourseDAO extends JPACrudDAO<Course> {
 
     /**
      * Searches for Degrees with some filtering criteria
-     *
-     * @param filterParameters
-     * @return
      */
     public List<Course> findFiltered(DegreeFilterCriteria filterParameters) {
 
-        StringBuilder queryText = new StringBuilder(BASE_SELECT_DEGREE_QUERY);
+        StringBuilder selectText = new StringBuilder(BASE_SELECT_DEGREE_QUERY);
+        StringBuilder filterText = new StringBuilder();
         String prefix = " WHERE ";
 
-        if (filterParameters.university != null) {
-            queryText.append(prefix).append("deg.university = :university ");
+        if (filterParameters.school != null) {
+            filterText.append(prefix).append("c.school = :school ");
             prefix = AND;
         }
 
         if (filterParameters.year != null) {
-            queryText.append(prefix).append("deg.year = :year ");
+            filterText.append(prefix).append("c.year = :year ");
             prefix = AND;
         }
 
-        TypedQuery<Course> query = getEntityManager().createQuery(queryText.toString(), Course.class);
+        if (StringUtils.isNotBlank(filterParameters.acronym)) {
+            filterText.append(prefix).append("c.acronym = :acronym ");
+            prefix = AND;
+        }
+
+        if (StringUtils.isNotBlank(filterParameters.name)) {
+            filterText.append(prefix).append("c.name = :name ");
+            prefix = AND;
+        }
+
+        String queryText = selectText.append(filterText).toString();
+        TypedQuery<Course> query = getEntityManager().createQuery(queryText, Course.class);
 
         setDegreeQueryParameters(query, filterParameters);
 
@@ -57,34 +65,36 @@ public class CourseDAO extends JPACrudDAO<Course> {
 
     private void setDegreeQueryParameters(TypedQuery<Course> query, DegreeFilterCriteria filterParameters) {
 
-        if (filterParameters.university != null) {
-            query.setParameter("university", filterParameters.university);
+        if (filterParameters.school != null) {
+            query.setParameter("school", filterParameters.school);
         }
 
         if (filterParameters.year != null) {
             query.setParameter("year", filterParameters.year);
         }
+
+        if (StringUtils.isNotBlank(filterParameters.acronym)) {
+            query.setParameter("acronym", filterParameters.acronym);
+        }
+
+        if (StringUtils.isNotBlank(filterParameters.name)) {
+            query.setParameter("name", filterParameters.name);
+        }
     }
 
     public static class DegreeFilterCriteria {
 
-        /**
-         * @param university
-         * @param language
-         * @param year
-         * @param name
-         */
-        public DegreeFilterCriteria(School university, Language language, Integer year, String name) {
+        public DegreeFilterCriteria(School school, Integer year, String name, String acronym) {
             super();
-            this.university = university;
-            this.language = language;
+            this.school = school;
             this.year = year;
             this.name = name;
+            this.acronym = acronym;
         }
 
-        public School university;
-        public Language language;
+        public School school;
         public Integer year;
         public String name;
+        public String acronym;
     }
 }

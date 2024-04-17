@@ -4,7 +4,7 @@
  */
 package pt.cmg.sweranker.api.rest.resources.courses.dto.response;
 
-import pt.cmg.sweranker.persistence.entities.schools.School;
+import pt.cmg.sweranker.api.rest.resources.schools.dto.response.SchoolDTO;
 
 /**
  * @author Carlos Gonçalves
@@ -12,7 +12,7 @@ import pt.cmg.sweranker.persistence.entities.schools.School;
 public class CourseDTO {
     public Long id;
     public String acronym;
-    public School school;
+    public SchoolDTO school;
     public String name;
     public String description;
     public Integer year;

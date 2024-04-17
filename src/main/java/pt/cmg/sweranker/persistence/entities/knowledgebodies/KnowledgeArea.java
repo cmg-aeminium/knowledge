@@ -6,6 +6,8 @@
 package pt.cmg.sweranker.persistence.entities.knowledgebodies;
 
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -13,7 +15,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -55,6 +59,13 @@ public class KnowledgeArea implements Serializable {
     @Transient
     private String description;
 
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "bodyofknowledge", referencedColumnName = "id")
+    private BodyOfKnowledge bodyOfKnowledge;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "knowledgeArea", fetch = FetchType.LAZY)
+    private List<KnowledgeTopic> knowledgeTopics;
+
     public Long getId() {
         return id;
     }
@@ -93,6 +104,22 @@ public class KnowledgeArea implements Serializable {
 
     public String getDescription() {
         return description;
+    }
+
+    public BodyOfKnowledge getBodyOfKnowledge() {
+        return bodyOfKnowledge;
+    }
+
+    public void setBodyOfKnowledge(BodyOfKnowledge bodyOfKnowledge) {
+        this.bodyOfKnowledge = bodyOfKnowledge;
+    }
+
+    public List<KnowledgeTopic> getKnowledgeTopics() {
+        return knowledgeTopics;
+    }
+
+    public void setKnowledgeTopics(List<KnowledgeTopic> knowledgeTopics) {
+        this.knowledgeTopics = knowledgeTopics;
     }
 
 }

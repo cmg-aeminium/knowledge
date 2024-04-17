@@ -7,31 +7,29 @@ package pt.cmg.sweranker.api.rest.resources.courses.validators;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import org.apache.commons.lang3.StringUtils;
-import pt.cmg.jakartaexample.microtwo.api.v1.resources.users.dto.request.NewUserDTO;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 import pt.cmg.jakartautils.errors.ErrorDTO;
+import pt.cmg.sweranker.api.rest.resources.courses.dto.request.CourseSearchFilter;
+import pt.cmg.sweranker.dao.schools.SchoolDAO;
 
 /**
  * @author Carlos Gonçalves
  */
+@RequestScoped
 public class CourseValidator {
 
-    public static Optional<List<ErrorDTO>> isValidUserForCreation(NewUserDTO userDTO) {
+    @Inject
+    private SchoolDAO schoolDAO;
+
+    public Optional<List<ErrorDTO>> isSearchFilterValid(CourseSearchFilter searchFilter) {
         List<ErrorDTO> errors = new ArrayList<>();
 
-        if (StringUtils.isBlank(userDTO.name)) {
-            errors.add(new ErrorDTO(1));
+        if (searchFilter.school != null) {
+            if (schoolDAO.findById(searchFilter.school) == null) {
+                errors.add(new ErrorDTO(1));
+            }
         }
-
-        if (StringUtils.isBlank(userDTO.email)) {
-            errors.add(new ErrorDTO(2));
-        }
-
-        if (StringUtils.isBlank(userDTO.picture)) {
-            errors.add(new ErrorDTO(2));
-        }
-
-        // now validate groups
 
         return errors.isEmpty() ? Optional.empty() : Optional.of(errors);
     }
