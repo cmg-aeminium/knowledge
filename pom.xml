@@ -119,6 +119,7 @@
     </properties>
     
     <build>
+        
         <pluginManagement>
             <plugins>
             
@@ -287,15 +288,17 @@
                         <phase>package</phase>
 					    <configuration>
 					        <payaraVersion>${payara-version}</payaraVersion>
+					        <!-- Uncomment below to name the context root path from ROOT to whatever I want -->
+					        <!--autoDeployContextRoot>${project.artifactId}</autoDeployContextRoot-->
 					        <systemProperties>
 					            <property>
 					                <name>payaramicro.port</name>
 					                <value>50000</value>
 					            </property>
-					            <property>
+					            <!--property>
 					                <name>payaramicro.rootDir</name>
 					                <value>${domain.dir}</value>
-					            </property>
+					            </property-->
 					            <property>
 					                <name>database.user</name>
 					                <value>postgres</value>
@@ -312,6 +315,18 @@
 					                <name>database.name</name>
 					                <value>sweranker</value>
 					            </property>
+					            <property>
+                                    <name>jpa.cache.loadAtStartup</name>
+                                    <value>true</value>
+                                </property>
+                                <property>
+                                    <name>payaramicro.minHttpThreads</name>
+                                    <value>10</value>
+                                </property>
+                                <property>
+                                    <name>payaramicro.maxHttpThreads</name>
+                                    <value>10</value>
+                                </property>
 					            <property>
 					                <name>datasource.javaclass</name>
 					                <value>org.postgresql.ds.PGPoolingDataSource</value>

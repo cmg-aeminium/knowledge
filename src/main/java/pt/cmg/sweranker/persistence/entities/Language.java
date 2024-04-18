@@ -1,8 +1,6 @@
 /*
  * Copyright (c) 2019
- *
  * Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
- *
  * All rights reserved.
  */
 package pt.cmg.sweranker.persistence.entities;
@@ -16,25 +14,45 @@ import java.util.Map;
  */
 public enum Language {
 
-    PT_PT,
-    EN_UK,
-    ES_ES;
+    EN_UK("en-UK"),
+    PT_PT("pt-PT");
 
-    public static final Language DEFAULT_LANGUAGE = PT_PT;
-
+    private final String name;
     private static final Map<String, Language> map = new HashMap<>();
 
-    static {
-        Language[] values = Language.values();
-        for (Language value : values) {
-            map.put(value.name().toLowerCase(Locale.ROOT), value);
-        }
+    public final static Language DEFAULT_LANGUAGE = Language.PT_PT;
+    public final static String DEFAULT_LANGUAGE_NAME = "pt-PT";
+
+    Language(String name) {
+        this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Note that Jersey uses this method to instantiate enums from String QueryParams automatically, so do not delete it
+     */
     public static Language fromString(String name) {
         if (name == null) {
-            return DEFAULT_LANGUAGE;
+            return Language.DEFAULT_LANGUAGE;
         }
-        return map.getOrDefault(name.toLowerCase(Locale.ROOT), DEFAULT_LANGUAGE);
+
+        return map.getOrDefault(name.toLowerCase(Locale.ROOT), Language.DEFAULT_LANGUAGE);
+    }
+
+    /**
+     * ... and MicroProfile uses this one so...
+     */
+    public static Language of(String name) {
+        return fromString(name);
+    }
+
+    static {
+        Language[] values = values();
+        for (Language value : values) {
+            map.put(value.getName().toLowerCase(Locale.ROOT), value);
+        }
     }
 }

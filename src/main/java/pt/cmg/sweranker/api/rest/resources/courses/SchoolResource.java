@@ -19,7 +19,9 @@ import pt.cmg.sweranker.api.rest.filters.request.RequestContextData;
 import pt.cmg.sweranker.api.rest.filters.request.RequestData;
 import pt.cmg.sweranker.api.rest.resources.courses.converters.CourseConverter;
 import pt.cmg.sweranker.api.rest.resources.courses.converters.SchoolConverter;
+import pt.cmg.sweranker.dao.localisation.TextContentDAO;
 import pt.cmg.sweranker.dao.schools.SchoolDAO;
+import pt.cmg.sweranker.persistence.entities.localisation.TextContent;
 import pt.cmg.sweranker.persistence.entities.schools.School;
 
 /**
@@ -39,11 +41,31 @@ public class SchoolResource {
     @Inject
     private CourseConverter courseConverter;
 
+    @Inject
+    private TextContentDAO textContentDAO;
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll() {
         List<School> schools = schoolDAO.findAll();
         return Response.ok(SchoolConverter.toSchoolDTOs(schools)).build();
+    }
+
+    @GET
+    @Path("{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getSchoolById(@PathParam("id") Long id) {
+
+        School school = schoolDAO.findById(id);
+
+        if (school == null) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1)).build();
+        }
+
+        TextContent tc = textContentDAO.findById(school.getNameTextContentId());
+        school.setName(tc.getTextValue());
+
+        return Response.ok(SchoolConverter.toSchoolDTO(school)).build();
     }
 
     @GET

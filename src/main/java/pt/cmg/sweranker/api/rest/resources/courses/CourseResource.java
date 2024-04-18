@@ -39,7 +39,7 @@ public class CourseResource {
     @EJB
     private CourseDAO courseDAO;
 
-    @EJB
+    @Inject
     private CourseConverter degreeConverter;
 
     @Inject
@@ -62,7 +62,7 @@ public class CourseResource {
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getDegree(@PathParam("id") Long id) {
+    public Response getCourseById(@PathParam("id") Long id) {
 
         Course course = courseDAO.findById(id);
 

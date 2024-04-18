@@ -5,8 +5,8 @@ CREATE DATABASE sweranker
     CONNECTION LIMIT = -1;
     
 CREATE TYPE language_type AS ENUM (
-	'PT_PT',
-    'EN_UK'
+	'pt-PT',
+    'en-UK'
 );   
 
 CREATE SEQUENCE textcontents_id_seq INCREMENT 1;    
@@ -59,7 +59,7 @@ CREATE TABLE Countries(
 CREATE SEQUENCE school_id_seq INCREMENT 1;    
 CREATE TABLE Schools (
 	id SMALLINT NOT NULL PRIMARY KEY DEFAULT nextval('school_id_seq'),
-	name TEXT NOT NULL,
+	name BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
 	country SMALLINT NOT NULL REFERENCES Countries(id) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 

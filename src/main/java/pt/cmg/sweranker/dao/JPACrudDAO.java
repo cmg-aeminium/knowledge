@@ -4,6 +4,7 @@
  */
 package pt.cmg.sweranker.dao;
 
+import java.util.Collection;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -106,6 +107,17 @@ public abstract class JPACrudDAO<T> {
 
         cq.select(cq.from(entityClass));
         cq.orderBy(cb.asc(root.get("id")));
+
+        return getEntityManager().createQuery(cq).getResultList();
+    }
+
+    public List<T> findInIds(Collection<Long> ids) {
+        CriteriaQuery<T> cq = getEntityManager().getCriteriaBuilder().createQuery(entityClass);
+
+        Root<T> root = cq.from(entityClass);
+
+        cq.select(cq.from(entityClass));
+        cq.where(root.get("id").in(ids));
 
         return getEntityManager().createQuery(cq).getResultList();
     }

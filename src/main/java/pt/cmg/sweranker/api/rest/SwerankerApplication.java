@@ -13,9 +13,10 @@ import pt.cmg.sweranker.api.rest.resources.courses.CourseResource;
 import pt.cmg.sweranker.api.rest.resources.courses.SchoolResource;
 import pt.cmg.sweranker.api.rest.resources.knowledgebodies.KnowledgeAreaResource;
 import pt.cmg.sweranker.api.rest.resources.knowledgebodies.KnowledgeBodyResource;
+import pt.cmg.sweranker.persistence.entities.Language;
 
 /**
- * @author Carlos Manuel
+ * @author Carlos Gonçalves
  */
 @ApplicationPath("/v1")
 public class SwerankerApplication extends Application {
@@ -23,6 +24,8 @@ public class SwerankerApplication extends Application {
     public static final String REQUEST_HEADER_LANGUAGE = "swr-language";
     public static final String REQUEST_HEADER_APP_NAME = "swr-app";
     public static final String REQUEST_HEADER_APP_VERSION = "swr-app-version";
+
+    public static final Language APP_DEFAULT_LANGUAGE = Language.DEFAULT_LANGUAGE;
 
     @Override
     public Set<Class<?>> getClasses() {
