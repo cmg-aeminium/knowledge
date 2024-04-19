@@ -5,7 +5,7 @@
 package pt.cmg.sweranker.api.rest.filters.request;
 
 import java.io.Serializable;
-import pt.cmg.sweranker.persistence.entities.Language;
+import pt.cmg.sweranker.persistence.entities.localisation.Language;
 
 /**
  * This object will hold Request data that is filled in every request.

@@ -13,7 +13,7 @@ import pt.cmg.sweranker.api.rest.resources.courses.CourseResource;
 import pt.cmg.sweranker.api.rest.resources.courses.SchoolResource;
 import pt.cmg.sweranker.api.rest.resources.knowledgebodies.KnowledgeAreaResource;
 import pt.cmg.sweranker.api.rest.resources.knowledgebodies.KnowledgeBodyResource;
-import pt.cmg.sweranker.persistence.entities.Language;
+import pt.cmg.sweranker.persistence.entities.localisation.Language;
 
 /**
  * @author Carlos Gonçalves

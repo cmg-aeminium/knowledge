@@ -30,6 +30,9 @@ public class CourseConverter {
     @Inject
     private SchoolDAO schoolDAO;
 
+    @Inject
+    private SchoolConverter schoolConverter;
+
     public DegreeFilterCriteria toDegreeFilterCriteria(CourseSearchFilter searchFilter) {
         School school = schoolDAO.findById(searchFilter.school);
         return new DegreeFilterCriteria(school, searchFilter.year, searchFilter.name, searchFilter.acronym);
@@ -46,7 +49,7 @@ public class CourseConverter {
         dto.name = course.getName();
         dto.description = course.getDescription();
         dto.image = course.getImage();
-        dto.school = SchoolConverter.toSchoolDTO(course.getSchool());
+        dto.school = schoolConverter.toSchoolDTO(course.getSchool());
         dto.year = course.getYear();
 
         return dto;

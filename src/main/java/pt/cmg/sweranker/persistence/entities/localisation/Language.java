@@ -3,7 +3,7 @@
  * Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * All rights reserved.
  */
-package pt.cmg.sweranker.persistence.entities;
+package pt.cmg.sweranker.persistence.entities.localisation;
 
 import java.util.HashMap;
 import java.util.Locale;

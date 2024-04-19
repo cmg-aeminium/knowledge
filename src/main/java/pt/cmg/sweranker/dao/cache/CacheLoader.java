@@ -5,9 +5,7 @@
 package pt.cmg.sweranker.dao.cache;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -26,7 +24,7 @@ import javax.persistence.TypedQuery;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.persistence.jpa.JpaCache;
 import pt.cmg.jakartautils.jpa.QueryUtils;
-import pt.cmg.sweranker.persistence.entities.Language;
+import pt.cmg.sweranker.persistence.entities.localisation.Language;
 import pt.cmg.sweranker.persistence.entities.localisation.TextContent;
 import pt.cmg.sweranker.persistence.entities.localisation.TranslatedText;
 import pt.cmg.sweranker.persistence.entities.schools.School;
@@ -55,6 +53,9 @@ public class CacheLoader {
     @Inject
     @ConfigProperty(name = "app.language", defaultValue = Language.DEFAULT_LANGUAGE_NAME)
     private Language language;
+
+    @Inject
+    private HazelcastCache hazelcastCache;
 
     @PostConstruct
     public void loadCacheAtStartup() {
@@ -119,14 +120,9 @@ public class CacheLoader {
 
         Set<Long> ids = schools.stream().map(School::getNameTextContentId).collect(Collectors.toSet());
 
-        Map<Long, String> textualValues = getTextValuesById(ids, language);
-
-        for (School school : schools) {
-            school.setName(textualValues.get(school.getNameTextContentId()));
-        }
-
         database.close();
 
+        loadTextsToHazelcastMap(ids);
     }
 
     /**
@@ -137,33 +133,44 @@ public class CacheLoader {
      * the ArrayRecord class from Eclipselink.
      * This way, it loads an ArrayRecord which I can then use to create an object
      */
-    private Map<Long, String> getTextValuesById(Collection<Long> textIds, Language language) {
+    private void loadTextsToHazelcastMap(Collection<Long> textIds) {
 
         if (textIds == null || textIds.isEmpty()) {
-            return Collections.emptyMap();
+            return;
         }
+
+        loadDefaultTextsToHazelcastMap(textIds);
+        loadTranslatedTextsToHazelcast(textIds);
+    }
+
+    private void loadDefaultTextsToHazelcastMap(Collection<Long> textIds) {
 
         EntityManager database = entityManagerFactory.createEntityManager();
 
-        Query query;
-
-        if (language == Language.DEFAULT_LANGUAGE) {
-            query = database.createNamedQuery(TextContent.QUERY_FIND_IN_IDS);
-            query.setParameter("ids", textIds);
-        } else {
-            query = database.createNamedQuery(TranslatedText.QUERY_FIND_IN_IDS);
-            query.setParameter("ids", textIds);
-        }
+        Query query = database.createNamedQuery(TextContent.QUERY_FIND_IN_IDS);
+        query.setParameter("ids", textIds);
 
         @SuppressWarnings("unchecked")
         List<Object[]> result = QueryUtils.getResultListFromQuery(query);
 
-        return result
-            .stream()
-            .collect(
-                Collectors.toMap(
-                    arrayRow -> (Long) arrayRow[0],
-                    arrayRow -> (String) arrayRow[1]));
+        result.forEach(arrayRow -> hazelcastCache.putDefaultText((Long) arrayRow[0], (String) arrayRow[1]));
+
+        database.close();
+
+    }
+
+    private void loadTranslatedTextsToHazelcast(Collection<Long> textIds) {
+
+        EntityManager database = entityManagerFactory.createEntityManager();
+
+        TypedQuery<TranslatedText> query = database.createNamedQuery(TranslatedText.QUERY_FIND_BY_IDS, TranslatedText.class);
+        query.setParameter("ids", textIds);
+
+        List<TranslatedText> result = QueryUtils.getResultListFromQuery(query);
+
+        result.forEach(translation -> hazelcastCache.putTranslatedText(translation.getId(), translation));
+
+        database.close();
 
     }
 

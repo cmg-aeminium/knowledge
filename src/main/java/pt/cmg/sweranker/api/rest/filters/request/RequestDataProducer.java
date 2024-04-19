@@ -8,7 +8,7 @@ import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.event.Observes;
 import javax.enterprise.inject.Produces;
-import pt.cmg.sweranker.persistence.entities.Language;
+import pt.cmg.sweranker.persistence.entities.localisation.Language;
 
 /**
  * This is both an Observer and a Producer.

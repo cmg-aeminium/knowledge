@@ -6,23 +6,32 @@ package pt.cmg.sweranker.api.rest.resources.courses.converters;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 import pt.cmg.sweranker.api.rest.common.converters.CountryConverter;
 import pt.cmg.sweranker.api.rest.resources.courses.dto.response.SchoolDTO;
+import pt.cmg.sweranker.dao.cache.HazelcastCache;
+import pt.cmg.sweranker.persistence.entities.localisation.Language;
 import pt.cmg.sweranker.persistence.entities.schools.School;
 
 /**
  * @author Carlos Gonçalves
  */
+@RequestScoped
 public class SchoolConverter {
 
-    public static List<SchoolDTO> toSchoolDTOs(List<School> schools) {
-        return schools.stream().map(SchoolConverter::toSchoolDTO).collect(Collectors.toList());
+    @Inject
+    private HazelcastCache dictionary;
+
+    public List<SchoolDTO> toSchoolDTOs(List<School> schools) {
+        return schools.stream().map(this::toSchoolDTO).collect(Collectors.toList());
     }
 
-    public static SchoolDTO toSchoolDTO(School school) {
+    public SchoolDTO toSchoolDTO(School school) {
         SchoolDTO dto = new SchoolDTO();
         dto.id = school.getId();
-        dto.name = school.getName();
+        dto.name = dictionary.getDefaultText(school.getNameTextContentId());
+        dto.name = dictionary.getTranslatedText(school.getNameTextContentId(), Language.EN_UK);
         dto.country = CountryConverter.toCountryDTO(school.getCountry());
 
         return dto;

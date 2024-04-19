@@ -10,7 +10,7 @@ import javax.inject.Inject;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
 import pt.cmg.sweranker.api.rest.SwerankerApplication;
-import pt.cmg.sweranker.persistence.entities.Language;
+import pt.cmg.sweranker.persistence.entities.localisation.Language;
 
 /**
  * This is a global filter that checks every HTTP request for a language and if it is not sent

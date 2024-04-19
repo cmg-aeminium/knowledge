@@ -5,6 +5,7 @@
 package pt.cmg.sweranker.api.rest.resources.courses;
 
 import java.util.List;
+import java.util.logging.Logger;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -19,9 +20,7 @@ import pt.cmg.sweranker.api.rest.filters.request.RequestContextData;
 import pt.cmg.sweranker.api.rest.filters.request.RequestData;
 import pt.cmg.sweranker.api.rest.resources.courses.converters.CourseConverter;
 import pt.cmg.sweranker.api.rest.resources.courses.converters.SchoolConverter;
-import pt.cmg.sweranker.dao.localisation.TextContentDAO;
 import pt.cmg.sweranker.dao.schools.SchoolDAO;
-import pt.cmg.sweranker.persistence.entities.localisation.TextContent;
 import pt.cmg.sweranker.persistence.entities.schools.School;
 
 /**
@@ -30,6 +29,8 @@ import pt.cmg.sweranker.persistence.entities.schools.School;
 @Path("schools")
 @Stateless
 public class SchoolResource {
+
+    private static final Logger LOGGER = Logger.getLogger(SchoolResource.class.getName());
 
     @Inject
     @RequestData
@@ -42,13 +43,13 @@ public class SchoolResource {
     private CourseConverter courseConverter;
 
     @Inject
-    private TextContentDAO textContentDAO;
+    private SchoolConverter schoolConverter;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll() {
         List<School> schools = schoolDAO.findAll();
-        return Response.ok(SchoolConverter.toSchoolDTOs(schools)).build();
+        return Response.ok(schoolConverter.toSchoolDTOs(schools)).build();
     }
 
     @GET
@@ -62,10 +63,7 @@ public class SchoolResource {
             return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1)).build();
         }
 
-        TextContent tc = textContentDAO.findById(school.getNameTextContentId());
-        school.setName(tc.getTextValue());
-
-        return Response.ok(SchoolConverter.toSchoolDTO(school)).build();
+        return Response.ok(schoolConverter.toSchoolDTO(school)).build();
     }
 
     @GET
