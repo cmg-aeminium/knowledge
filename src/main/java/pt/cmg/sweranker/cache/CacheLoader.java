@@ -2,7 +2,7 @@
  * Copyright (c) 2019 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.cmg.sweranker.dao.cache;
+package pt.cmg.sweranker.cache;
 
 import java.util.Collection;
 import java.util.List;

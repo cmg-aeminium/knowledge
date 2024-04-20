@@ -7,7 +7,7 @@ package pt.cmg.sweranker.api.rest.common.converters;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import pt.cmg.sweranker.api.rest.common.dto.response.CountryDTO;
-import pt.cmg.sweranker.dao.cache.HazelcastCache;
+import pt.cmg.sweranker.cache.HazelcastCache;
 import pt.cmg.sweranker.persistence.entities.localisation.Country;
 
 /**

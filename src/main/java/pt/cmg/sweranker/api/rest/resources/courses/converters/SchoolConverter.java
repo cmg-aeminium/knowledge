@@ -10,7 +10,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import pt.cmg.sweranker.api.rest.common.converters.CountryConverter;
 import pt.cmg.sweranker.api.rest.resources.courses.dto.response.SchoolDTO;
-import pt.cmg.sweranker.dao.cache.HazelcastCache;
+import pt.cmg.sweranker.cache.HazelcastCache;
 import pt.cmg.sweranker.persistence.entities.schools.School;
 
 /**
