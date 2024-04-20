@@ -19,7 +19,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "textcontents")
-@NamedQuery(name = TextContent.QUERY_FIND_IN_IDS, query = "SELECT t.id, t.textValue FROM TextContent t WHERE t.id IN :ids")
+@NamedQuery(name = TextContent.QUERY_FIND_IN_IDS, query = "SELECT t FROM TextContent t WHERE t.id IN :ids")
 public class TextContent implements Serializable {
 
     /**

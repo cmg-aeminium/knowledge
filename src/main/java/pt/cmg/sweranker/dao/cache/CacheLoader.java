@@ -19,11 +19,11 @@ import javax.persistence.Cache;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceUnit;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.persistence.jpa.JpaCache;
 import pt.cmg.jakartautils.jpa.QueryUtils;
+import pt.cmg.sweranker.persistence.entities.localisation.Country;
 import pt.cmg.sweranker.persistence.entities.localisation.Language;
 import pt.cmg.sweranker.persistence.entities.localisation.TextContent;
 import pt.cmg.sweranker.persistence.entities.localisation.TranslatedText;
@@ -108,6 +108,7 @@ public class CacheLoader {
     private void loadObjectCache() {
         LOGGER.log(Level.INFO, "Started loading Object cache");
         loadSchools();
+        loadCountries();
         LOGGER.log(Level.INFO, "Finished loading Object cache");
     }
 
@@ -122,18 +123,29 @@ public class CacheLoader {
 
         database.close();
 
-        loadTextsToHazelcastMap(ids);
+        loadTextsToHazelcastCache(ids);
+    }
+
+    public void loadCountries() {
+
+        EntityManager database = entityManagerFactory.createEntityManager();
+
+        TypedQuery<Country> query = database.createNamedQuery(Country.QUERY_FIND_ALL, Country.class);
+        var countries = query.getResultList();
+
+        Set<Long> ids = countries.stream().map(Country::getNameTextContentId).collect(Collectors.toSet());
+
+        database.close();
+
+        loadTextsToHazelcastCache(ids);
     }
 
     /**
-     * Returns the textual translations for the given IDs.<br>
-     * It returns map where the keys are the translated text ids and the values are the textual values for that language.
-     * 
-     * NOTE: this is a good example of how to load data from the database without turning it into an object, by taking advantage of
-     * the ArrayRecord class from Eclipselink.
-     * This way, it loads an ArrayRecord which I can then use to create an object
+     * Loads Texts to Hazelcast.
+     * This will store the translations on a cluster-shared cached data structure for fast access in all
+     * application instances.
      */
-    private void loadTextsToHazelcastMap(Collection<Long> textIds) {
+    private void loadTextsToHazelcastCache(Collection<Long> textIds) {
 
         if (textIds == null || textIds.isEmpty()) {
             return;
@@ -147,13 +159,12 @@ public class CacheLoader {
 
         EntityManager database = entityManagerFactory.createEntityManager();
 
-        Query query = database.createNamedQuery(TextContent.QUERY_FIND_IN_IDS);
+        TypedQuery<TextContent> query = database.createNamedQuery(TextContent.QUERY_FIND_IN_IDS, TextContent.class);
         query.setParameter("ids", textIds);
 
-        @SuppressWarnings("unchecked")
-        List<Object[]> result = QueryUtils.getResultListFromQuery(query);
+        List<TextContent> result = QueryUtils.getResultListFromQuery(query);
 
-        result.forEach(arrayRow -> hazelcastCache.putDefaultText((Long) arrayRow[0], (String) arrayRow[1]));
+        result.forEach(textContent -> hazelcastCache.putTranslation(textContent));
 
         database.close();
 
@@ -163,12 +174,12 @@ public class CacheLoader {
 
         EntityManager database = entityManagerFactory.createEntityManager();
 
-        TypedQuery<TranslatedText> query = database.createNamedQuery(TranslatedText.QUERY_FIND_BY_IDS, TranslatedText.class);
+        TypedQuery<TranslatedText> query = database.createNamedQuery(TranslatedText.QUERY_FIND_IN_IDS, TranslatedText.class);
         query.setParameter("ids", textIds);
 
         List<TranslatedText> result = QueryUtils.getResultListFromQuery(query);
 
-        result.forEach(translation -> hazelcastCache.putTranslatedText(translation.getId(), translation));
+        result.forEach(translation -> hazelcastCache.putTranslation(translation));
 
         database.close();
 

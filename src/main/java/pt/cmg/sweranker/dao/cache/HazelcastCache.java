@@ -6,13 +6,14 @@ package pt.cmg.sweranker.dao.cache;
 
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.map.IMap;
-import com.hazelcast.sql.SqlResult;
-import com.hazelcast.sql.SqlRow;
 import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import pt.cmg.sweranker.api.rest.filters.request.RequestContextData;
+import pt.cmg.sweranker.api.rest.filters.request.RequestData;
 import pt.cmg.sweranker.persistence.entities.localisation.Language;
+import pt.cmg.sweranker.persistence.entities.localisation.TextContent;
 import pt.cmg.sweranker.persistence.entities.localisation.TranslatedText;
 
 /**
@@ -23,40 +24,36 @@ public class HazelcastCache {
 
     private static final Logger LOGGER = Logger.getLogger(HazelcastCache.class.getName());
 
-    private static final String DEFAULT_LANG_MAP_NAME = "default_translations";
-    private static final String ENGLISH_MAP_NAME = "english_translations";
+    private static final String DEFAULT_LANG_MAP_NAME = "translations";
 
     @Inject
     private HazelcastInstance hazelcast;
 
-    private IMap<Long, String> defaultTexts;
-    private IMap<Long, TranslatedText> translatedTexts;
+    @Inject
+    @RequestData
+    private RequestContextData requestData;
+
+    private IMap<String, String> defaultTexts;
 
     @PostConstruct
     public void initTranslationMap() {
         defaultTexts = hazelcast.getMap(DEFAULT_LANG_MAP_NAME);
-        translatedTexts = hazelcast.getMap(ENGLISH_MAP_NAME);
     }
 
-    public void putDefaultText(Long id, String textContent) {
-        defaultTexts.putIfAbsent(id, textContent);
+    public void putTranslation(TextContent defaultLangText) {
+        putTranslation(defaultLangText.getId(), defaultLangText.getLanguage(), defaultLangText.getTextValue());
     }
 
-    public void putTranslatedText(Long id, TranslatedText textContent) {
-        translatedTexts.putIfAbsent(id, textContent);
+    public void putTranslation(TranslatedText translatedText) {
+        putTranslation(translatedText.getId(), translatedText.getLanguage(), translatedText.getTextValue());
     }
 
-    public String getDefaultText(Long id) {
-        return defaultTexts.get(id);
+    public void putTranslation(Long id, Language language, String textContent) {
+        defaultTexts.putIfAbsent(String.format("%s_%s", id, language), textContent);
     }
 
-    public String getTranslatedText(Long id, Language language) {
-        SqlResult result = hazelcast.getSql().execute("SELECT textValue FROM english_translations WHERE __key = 5616L");
-        for (SqlRow row : result) {
-            String name = row.getObject(0);
-        }
-
-        return "Sim";
+    public String getTranslatedText(Long id) {
+        return defaultTexts.get(String.format("%s_%s", id, requestData.getSelectedLanguage()));
     }
 
 }

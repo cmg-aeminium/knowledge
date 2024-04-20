@@ -11,7 +11,6 @@ import javax.inject.Inject;
 import pt.cmg.sweranker.api.rest.common.converters.CountryConverter;
 import pt.cmg.sweranker.api.rest.resources.courses.dto.response.SchoolDTO;
 import pt.cmg.sweranker.dao.cache.HazelcastCache;
-import pt.cmg.sweranker.persistence.entities.localisation.Language;
 import pt.cmg.sweranker.persistence.entities.schools.School;
 
 /**
@@ -21,7 +20,10 @@ import pt.cmg.sweranker.persistence.entities.schools.School;
 public class SchoolConverter {
 
     @Inject
-    private HazelcastCache dictionary;
+    private HazelcastCache translationCache;
+
+    @Inject
+    private CountryConverter countryConverter;
 
     public List<SchoolDTO> toSchoolDTOs(List<School> schools) {
         return schools.stream().map(this::toSchoolDTO).collect(Collectors.toList());
@@ -30,9 +32,8 @@ public class SchoolConverter {
     public SchoolDTO toSchoolDTO(School school) {
         SchoolDTO dto = new SchoolDTO();
         dto.id = school.getId();
-        dto.name = dictionary.getDefaultText(school.getNameTextContentId());
-        dto.name = dictionary.getTranslatedText(school.getNameTextContentId(), Language.EN_UK);
-        dto.country = CountryConverter.toCountryDTO(school.getCountry());
+        dto.name = translationCache.getTranslatedText(school.getNameTextContentId());
+        dto.country = countryConverter.toCountryDTO(school.getCountry());
 
         return dto;
     }

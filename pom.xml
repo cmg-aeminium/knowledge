@@ -337,13 +337,16 @@
                                     <value>${final.name}</value>
                                 </property>
                             </systemProperties>
-                            <customJars>
+                            
+                            <!-- If I need to use hazelcast SQL querying -->
+                            <!--customJars>
                                 <artifactItem>
                                     <groupId>com.hazelcast</groupId>
                                     <artifactId>hazelcast-sql</artifactId>
                                     <version>4.2.5</version>
                                 </artifactItem>
-                            </customJars>
+                            </customJars-->
+                            
                             <appendSystemProperties>true</appendSystemProperties>
                         </configuration>
                     </execution>

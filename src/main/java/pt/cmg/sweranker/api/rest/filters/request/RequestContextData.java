@@ -27,7 +27,7 @@ public class RequestContextData implements Serializable {
     private ClientApplicationData appData;
 
     public Language getSelectedLanguage() {
-        return selectedLanguage;
+        return selectedLanguage == null ? Language.DEFAULT_LANGUAGE : selectedLanguage;
     }
 
     public void setSelectedLanguage(Language selectedLanguage) {

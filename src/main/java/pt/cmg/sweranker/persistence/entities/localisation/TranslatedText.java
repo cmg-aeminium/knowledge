@@ -16,8 +16,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "translatedtexts")
-@NamedQuery(name = TranslatedText.QUERY_FIND_IN_IDS, query = "SELECT t.id, t.textValue FROM TranslatedText t WHERE t.id IN :ids")
-@NamedQuery(name = TranslatedText.QUERY_FIND_BY_IDS, query = "SELECT t FROM TranslatedText t WHERE t.id IN :ids")
+@NamedQuery(name = TranslatedText.QUERY_FIND_IN_IDS, query = "SELECT t FROM TranslatedText t WHERE t.id IN :ids")
 public class TranslatedText implements Serializable {
 
     /**
@@ -26,7 +25,6 @@ public class TranslatedText implements Serializable {
     private static final long serialVersionUID = -4273689659341357189L;
 
     public static final String QUERY_FIND_IN_IDS = "TranslatedText.findInIds";
-    public static final String QUERY_FIND_BY_IDS = "TranslatedText.findByIds";
 
     @Id
     private Long id;
