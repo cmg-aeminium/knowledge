@@ -11,3 +11,6 @@
 .classpath
 target
 bin
+
+# Ignore backup files
+*.bkp
