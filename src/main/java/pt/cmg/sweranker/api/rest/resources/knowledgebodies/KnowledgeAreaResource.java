@@ -33,11 +33,17 @@ public class KnowledgeAreaResource {
     @Inject
     private KnowledgeAreaDAO knowledgeAreaDAO;
 
+    @Inject
+    private KnowledgeAreaConverter kaConverter;
+
+    @Inject
+    private KnowledgeTopicConverter kaTopicConverter;
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll() {
         List<KnowledgeArea> knowledgeAreas = knowledgeAreaDAO.findAll();
-        return Response.ok(KnowledgeAreaConverter.toKnowledgeAreaDTOs(knowledgeAreas)).build();
+        return Response.ok(kaConverter.toKnowledgeAreaDTOs(knowledgeAreas)).build();
     }
 
     @GET
@@ -45,7 +51,7 @@ public class KnowledgeAreaResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getKnowledgeArea(@PathParam("id") Long id) {
         KnowledgeArea ka = knowledgeAreaDAO.findById(id);
-        return Response.ok(KnowledgeAreaConverter.toDetailedKnowledgeAreaDTO(ka)).build();
+        return Response.ok(kaConverter.toDetailedKnowledgeAreaDTO(ka)).build();
     }
 
     @GET
@@ -59,7 +65,7 @@ public class KnowledgeAreaResource {
             return Response.status(Status.BAD_REQUEST).build();
         }
 
-        return Response.ok(KnowledgeTopicConverter.toTopicDTOs(knowledgeArea.getKnowledgeTopics())).build();
+        return Response.ok(kaTopicConverter.toTopicDTOs(knowledgeArea.getKnowledgeTopics())).build();
     }
 
 }

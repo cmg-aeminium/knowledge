@@ -34,6 +34,7 @@ public class SchoolConverter {
         dto.id = school.getId();
         dto.name = translationCache.getTranslatedText(school.getNameTextContentId());
         dto.country = countryConverter.toCountryDTO(school.getCountry());
+        dto.createdAt = school.getCreatedAt();
 
         return dto;
     }

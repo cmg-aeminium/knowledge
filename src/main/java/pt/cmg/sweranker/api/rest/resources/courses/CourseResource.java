@@ -10,6 +10,7 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.validation.Valid;
 import javax.ws.rs.BeanParam;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -46,6 +47,7 @@ public class CourseResource {
     private CourseValidator courseValidator;
 
     @GET
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll(@Valid @BeanParam CourseSearchFilter filter) {
 
@@ -61,6 +63,7 @@ public class CourseResource {
 
     @GET
     @Path("{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response getCourseById(@PathParam("id") Long id) {
 

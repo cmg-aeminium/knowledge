@@ -4,6 +4,7 @@
  */
 package pt.cmg.sweranker.api.rest.resources.courses.dto.response;
 
+import java.time.LocalDateTime;
 import pt.cmg.sweranker.api.rest.common.dto.response.CountryDTO;
 
 /**
@@ -13,5 +14,6 @@ public class SchoolDTO {
     public Long id;
     public String name;
     public CountryDTO country;
+    public LocalDateTime createdAt;
 
 }

@@ -5,6 +5,7 @@
 package pt.cmg.sweranker.persistence.entities.schools;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
 import javax.persistence.Column;
@@ -19,7 +20,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import org.eclipse.persistence.annotations.Cache;
 import org.eclipse.persistence.annotations.CacheCoordinationType;
 import org.eclipse.persistence.annotations.CacheType;
@@ -62,11 +62,11 @@ public class School implements Serializable {
     @Column(name = "name")
     private Long nameTextContentId;
 
-    @Transient
-    private String name;
-
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "school")
     private List<Course> courses;
+
+    @Column(name = "createdat")
+    private LocalDateTime createdAt;
 
     public List<Course> getCourses() {
         return courses;
@@ -95,14 +95,6 @@ public class School implements Serializable {
         this.nameTextContentId = nameTextContentId;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
     public Country getCountry() {
         return country;
     }
@@ -111,9 +103,17 @@ public class School implements Serializable {
         this.country = country;
     }
 
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
     @Override
     public int hashCode() {
-        return Objects.hash(country, id, name);
+        return Objects.hash(id);
     }
 
     @Override
@@ -128,12 +128,7 @@ public class School implements Serializable {
             return false;
         }
         School other = (School) obj;
-        return Objects.equals(country, other.country) && Objects.equals(id, other.id) && Objects.equals(name, other.name);
-    }
-
-    @Override
-    public String toString() {
-        return "School [id=" + id + ", name=" + name + ", country=" + country + "]";
+        return Objects.equals(id, other.id);
     }
 
 }

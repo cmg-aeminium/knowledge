@@ -1,3 +1,9 @@
+-- BEGIN Users
+
+INSERT INTO Users (id, name, email, status, language) VALUES (1, 'Carlos' , 'carlosmoliveiragoncalves@gmail.com', 'ACTIVE', 'pt-PT');
+
+-- END Users
+
 -- BEGIN Countries
 
 -- Portuguese

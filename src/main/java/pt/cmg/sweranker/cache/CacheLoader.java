@@ -10,6 +10,7 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import javax.annotation.PostConstruct;
 import javax.ejb.Asynchronous;
 import javax.ejb.Singleton;
@@ -23,10 +24,16 @@ import javax.persistence.TypedQuery;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.persistence.jpa.JpaCache;
 import pt.cmg.jakartautils.jpa.QueryUtils;
+import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeArea;
+import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeBody;
+import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeTopic;
 import pt.cmg.sweranker.persistence.entities.localisation.Country;
 import pt.cmg.sweranker.persistence.entities.localisation.Language;
 import pt.cmg.sweranker.persistence.entities.localisation.TextContent;
 import pt.cmg.sweranker.persistence.entities.localisation.TranslatedText;
+import pt.cmg.sweranker.persistence.entities.schools.Course;
+import pt.cmg.sweranker.persistence.entities.schools.CourseClass;
+import pt.cmg.sweranker.persistence.entities.schools.CourseClassTopic;
 import pt.cmg.sweranker.persistence.entities.schools.School;
 
 /**
@@ -109,6 +116,12 @@ public class CacheLoader {
         LOGGER.log(Level.INFO, "Started loading Object cache");
         loadSchools();
         loadCountries();
+        loadCourses();
+        loadCourseClasses();
+        loadCourseClassTopics();
+        loadKnowledgeBodies();
+        loadKnowledgeAreas();
+        loadKnowledgeTopics();
         LOGGER.log(Level.INFO, "Finished loading Object cache");
     }
 
@@ -134,6 +147,108 @@ public class CacheLoader {
         var countries = query.getResultList();
 
         Set<Long> ids = countries.stream().map(Country::getNameTextContentId).collect(Collectors.toSet());
+
+        database.close();
+
+        loadTextsToHazelcastCache(ids);
+    }
+
+    public void loadCourses() {
+
+        EntityManager database = entityManagerFactory.createEntityManager();
+
+        TypedQuery<Course> query = database.createNamedQuery(Course.QUERY_FIND_ALL, Course.class);
+        var courses = query.getResultList();
+
+        Set<Long> ids = courses
+            .stream()
+            .flatMap(course -> Stream.of(course.getNameTextContentId(), course.getDescriptionContentId()))
+            .collect(Collectors.toSet());
+
+        database.close();
+
+        loadTextsToHazelcastCache(ids);
+    }
+
+    public void loadCourseClassTopics() {
+
+        EntityManager database = entityManagerFactory.createEntityManager();
+
+        TypedQuery<CourseClass> query = database.createNamedQuery(CourseClass.QUERY_FIND_ALL, CourseClass.class);
+        var courseClasses = query.getResultList();
+
+        Set<Long> ids = courseClasses
+            .stream()
+            .flatMap(crsClass -> Stream.of(crsClass.getNameTextContentId(), crsClass.getDescriptionContentId()))
+            .collect(Collectors.toSet());
+
+        database.close();
+
+        loadTextsToHazelcastCache(ids);
+    }
+
+    public void loadCourseClasses() {
+
+        EntityManager database = entityManagerFactory.createEntityManager();
+
+        TypedQuery<CourseClassTopic> query = database.createNamedQuery(CourseClassTopic.QUERY_FIND_ALL, CourseClassTopic.class);
+        var topics = query.getResultList();
+
+        Set<Long> ids = topics
+            .stream()
+            .map(CourseClassTopic::getDescriptionContentId)
+            .collect(Collectors.toSet());
+
+        database.close();
+
+        loadTextsToHazelcastCache(ids);
+    }
+
+    public void loadKnowledgeBodies() {
+
+        EntityManager database = entityManagerFactory.createEntityManager();
+
+        TypedQuery<KnowledgeBody> query = database.createNamedQuery(KnowledgeBody.QUERY_FIND_ALL, KnowledgeBody.class);
+        var kBodies = query.getResultList();
+
+        Set<Long> ids = kBodies
+            .stream()
+            .flatMap(body -> Stream.of(body.getNameTextContentId(), body.getDescriptionContentId()))
+            .collect(Collectors.toSet());
+
+        database.close();
+
+        loadTextsToHazelcastCache(ids);
+    }
+
+    public void loadKnowledgeAreas() {
+
+        EntityManager database = entityManagerFactory.createEntityManager();
+
+        TypedQuery<KnowledgeArea> query = database.createNamedQuery(KnowledgeArea.QUERY_FIND_ALL, KnowledgeArea.class);
+        var kAreas = query.getResultList();
+
+        Set<Long> ids = kAreas
+            .stream()
+            .flatMap(kArea -> Stream.of(kArea.getNameTextContentId(), kArea.getDescriptionContentId()))
+            .collect(Collectors.toSet());
+
+        database.close();
+
+        loadTextsToHazelcastCache(ids);
+    }
+
+    public void loadKnowledgeTopics() {
+
+        EntityManager database = entityManagerFactory.createEntityManager();
+
+        TypedQuery<KnowledgeTopic> query = database.createNamedQuery(KnowledgeTopic.QUERY_FIND_ALL, KnowledgeTopic.class);
+        var topics = query.getResultList();
+
+        Set<Long> ids = topics
+            .stream()
+            .flatMap(topic -> Stream.of(topic.getNameTextContentId(), topic.getDescriptionContentId()))
+            .collect(Collectors.toSet());
 
         database.close();
 

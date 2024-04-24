@@ -8,10 +8,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
-import pt.cmg.sweranker.api.rest.filters.request.RequestContextData;
-import pt.cmg.sweranker.api.rest.filters.request.RequestData;
 import pt.cmg.sweranker.api.rest.resources.courses.dto.request.CourseSearchFilter;
 import pt.cmg.sweranker.api.rest.resources.courses.dto.response.CourseDTO;
+import pt.cmg.sweranker.cache.HazelcastCache;
 import pt.cmg.sweranker.dao.schools.CourseDAO.DegreeFilterCriteria;
 import pt.cmg.sweranker.dao.schools.SchoolDAO;
 import pt.cmg.sweranker.persistence.entities.schools.Course;
@@ -24,8 +23,7 @@ import pt.cmg.sweranker.persistence.entities.schools.School;
 public class CourseConverter {
 
     @Inject
-    @RequestData
-    private RequestContextData requestData;
+    private HazelcastCache translationCache;
 
     @Inject
     private SchoolDAO schoolDAO;
@@ -46,8 +44,8 @@ public class CourseConverter {
         CourseDTO dto = new CourseDTO();
         dto.id = course.getId();
         dto.acronym = course.getAcronym();
-        dto.name = course.getName();
-        dto.description = course.getDescription();
+        dto.name = translationCache.getTranslatedText(course.getNameTextContentId());
+        dto.description = translationCache.getTranslatedText(course.getDescriptionContentId());
         dto.image = course.getImage();
         dto.school = schoolConverter.toSchoolDTO(course.getSchool());
         dto.year = course.getYear();

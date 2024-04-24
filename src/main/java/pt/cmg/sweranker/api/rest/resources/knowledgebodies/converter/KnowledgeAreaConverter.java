@@ -6,39 +6,49 @@ package pt.cmg.sweranker.api.rest.resources.knowledgebodies.converter;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 import pt.cmg.sweranker.api.rest.resources.knowledgebodies.dto.response.DetailedKnowledgeAreaDTO;
 import pt.cmg.sweranker.api.rest.resources.knowledgebodies.dto.response.KnowledgeAreaDTO;
+import pt.cmg.sweranker.cache.HazelcastCache;
 import pt.cmg.sweranker.persistence.entities.knowledgebodies.KnowledgeArea;
 
 /**
  * @author Carlos Manuel
  */
+@RequestScoped
 public class KnowledgeAreaConverter {
 
-    public static DetailedKnowledgeAreaDTO toDetailedKnowledgeAreaDTO(KnowledgeArea knowledgeArea) {
+    @Inject
+    private HazelcastCache translationCache;
+
+    @Inject
+    private KnowledgeBodyConverter knowledgeBodyConverter;
+
+    public DetailedKnowledgeAreaDTO toDetailedKnowledgeAreaDTO(KnowledgeArea knowledgeArea) {
 
         DetailedKnowledgeAreaDTO dto = new DetailedKnowledgeAreaDTO();
 
         dto.id = knowledgeArea.getId();
         dto.image = knowledgeArea.getImage();
-        dto.name = knowledgeArea.getName();
-        dto.description = knowledgeArea.getDescription();
-        dto.bodyOfKnowledge = KnowledgeBodyConverter.toKnowledgeBodyDTO(knowledgeArea.getBodyOfKnowledge());
+        dto.name = translationCache.getTranslatedText(knowledgeArea.getNameTextContentId());
+        dto.description = translationCache.getTranslatedText(knowledgeArea.getDescriptionContentId());
+        dto.bodyOfKnowledge = knowledgeBodyConverter.toKnowledgeBodyDTO(knowledgeArea.getBodyOfKnowledge());
 
         return dto;
     }
 
-    public static List<KnowledgeAreaDTO> toKnowledgeAreaDTOs(List<KnowledgeArea> kas) {
-        return kas.stream().map(KnowledgeAreaConverter::toKnowledgeAreaDTO).collect(Collectors.toList());
+    public List<KnowledgeAreaDTO> toKnowledgeAreaDTOs(List<KnowledgeArea> kas) {
+        return kas.stream().map(this::toKnowledgeAreaDTO).collect(Collectors.toList());
     }
 
-    public static KnowledgeAreaDTO toKnowledgeAreaDTO(KnowledgeArea knowledgeArea) {
+    public KnowledgeAreaDTO toKnowledgeAreaDTO(KnowledgeArea knowledgeArea) {
 
         KnowledgeAreaDTO dto = new KnowledgeAreaDTO();
 
         dto.id = knowledgeArea.getId();
         dto.image = knowledgeArea.getImage();
-        dto.name = knowledgeArea.getName();
+        dto.name = translationCache.getTranslatedText(knowledgeArea.getNameTextContentId());
 
         return dto;
     }

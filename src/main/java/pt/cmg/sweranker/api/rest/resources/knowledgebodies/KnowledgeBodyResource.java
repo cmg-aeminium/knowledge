@@ -28,11 +28,17 @@ public class KnowledgeBodyResource {
     @Inject
     private KnowledgeBodyDAO knowledgeBodyDAO;
 
+    @Inject
+    private KnowledgeBodyConverter knowledgeBodyConverter;;
+
+    @Inject
+    private KnowledgeAreaConverter kaConverter;
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll() {
         List<KnowledgeBody> knowledgeBodies = knowledgeBodyDAO.findAll();
-        return Response.ok(KnowledgeBodyConverter.toKnowledgeBodyDTOs(knowledgeBodies)).build();
+        return Response.ok(knowledgeBodyConverter.toKnowledgeBodyDTOs(knowledgeBodies)).build();
     }
 
     @GET
@@ -45,7 +51,7 @@ public class KnowledgeBodyResource {
             return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1)).build();
         }
 
-        return Response.ok(KnowledgeBodyConverter.toKnowledgeBodyDTO(bodyOfKnowledge)).build();
+        return Response.ok(knowledgeBodyConverter.toKnowledgeBodyDTO(bodyOfKnowledge)).build();
     }
 
     @GET
@@ -57,7 +63,7 @@ public class KnowledgeBodyResource {
         if (bodyOfKnowledge == null) {
             return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1)).build();
         }
-        return Response.ok(KnowledgeAreaConverter.toKnowledgeAreaDTOs(bodyOfKnowledge.getKnowledgeAreas())).build();
+        return Response.ok(kaConverter.toKnowledgeAreaDTOs(bodyOfKnowledge.getKnowledgeAreas())).build();
     }
 
 }
