@@ -117,3 +117,18 @@ CREATE TABLE Users (
     language language_type NOT NULL DEFAULT 'pt-PT',
     createdAt TIMESTAMP WITH TIME ZONE DEFAULT (current_timestamp AT TIME ZONE 'UTC')
 );
+
+
+CREATE SEQUENCE functionlog_id_seq INCREMENT 1;
+CREATE TABLE FunctionLogs (
+    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('functionlog_id_seq'),
+    functionName TEXT NOT NULL,
+    startedAt TIMESTAMP WITH TIME ZONE NOT NULL,
+    finishedAt TIMESTAMP WITH TIME ZONE NOT NULL,
+    executionTimeInMillis BIGINT NOT NULL,
+    wasSuccess boolean NOT NULL,
+    exception TEXT NULL,
+    stacktrace TEXT NULL
+);
+CREATE INDEX functionlog_functionname_idx ON FunctionLog(functionName);
+
