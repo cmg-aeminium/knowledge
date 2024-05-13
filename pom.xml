@@ -3,11 +3,11 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>pt.cmg</groupId>
-    <artifactId>sweranker</artifactId>
+    <groupId>pt.cmg.aeminium</groupId>
+    <artifactId>knowledge</artifactId>
     <version>1.0</version>
 
-    <name>sweranker</name>
+    <name>knowledge</name>
     <packaging>war</packaging>
 
     <developers>
@@ -96,7 +96,7 @@
         <!-- Payara Version -->
         <payara-micro-plugin-version>2.3</payara-micro-plugin-version>
 
-        <domain.dir>${user.home}/modules/sweranker/domain</domain.dir>
+        <domain.dir>${user.home}/modules/knowledge/domain</domain.dir>
 
         <!-- Maven plugin versions -->
         <ejb-plugin-version>3.0.1</ejb-plugin-version>
@@ -314,7 +314,7 @@
                                 </property>
                                 <property>
                                     <name>database.name</name>
-                                    <value>sweranker</value>
+                                    <value>aeminium</value>
                                 </property>
                                 <property>
                                     <name>jpa.cache.loadAtStartup</name>

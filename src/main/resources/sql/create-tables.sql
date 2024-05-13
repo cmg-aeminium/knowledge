@@ -1,4 +1,4 @@
-CREATE DATABASE sweranker
+CREATE DATABASE aeminium
     WITH 
     OWNER = postgres
     ENCODING = 'UTF8'
