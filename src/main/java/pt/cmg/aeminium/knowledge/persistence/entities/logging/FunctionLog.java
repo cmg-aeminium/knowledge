@@ -35,7 +35,7 @@ public class FunctionLog implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "FUNCTIONLOG_SEQ")
     @SequenceGenerator(name = "FUNCTIONLOG_SEQ",
-        sequenceName = "functionlog_id_seq",
+        sequenceName = "functionlogs_id_seq",
         initialValue = 1,
         allocationSize = 1)
     @Column(name = "id")

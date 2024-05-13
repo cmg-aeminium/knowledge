@@ -119,9 +119,9 @@ CREATE TABLE Users (
 );
 
 
-CREATE SEQUENCE functionlog_id_seq INCREMENT 1;
+CREATE SEQUENCE functionlogs_id_seq INCREMENT 1;
 CREATE TABLE FunctionLogs (
-    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('functionlog_id_seq'),
+    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('functionlogs_id_seq'),
     functionName TEXT NOT NULL,
     startedAt TIMESTAMP WITH TIME ZONE NOT NULL,
     finishedAt TIMESTAMP WITH TIME ZONE NOT NULL,
@@ -130,5 +130,5 @@ CREATE TABLE FunctionLogs (
     exception TEXT NULL,
     stacktrace TEXT NULL
 );
-CREATE INDEX functionlog_functionname_idx ON FunctionLog(functionName);
+CREATE INDEX functionlog_functionname_idx ON FunctionLogs(functionName);
 

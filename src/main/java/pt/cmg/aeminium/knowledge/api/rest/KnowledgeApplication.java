@@ -19,11 +19,11 @@ import pt.cmg.jakartautils.jsonb.JSONBConfigurator;
  * @author Carlos Gonçalves
  */
 @ApplicationPath("/v1")
-public class SwerankerApplication extends Application {
+public class KnowledgeApplication extends Application {
 
-    public static final String REQUEST_HEADER_LANGUAGE = "swr-language";
-    public static final String REQUEST_HEADER_APP_NAME = "swr-app";
-    public static final String REQUEST_HEADER_APP_VERSION = "swr-app-version";
+    public static final String REQUEST_HEADER_LANGUAGE = "aem-language";
+    public static final String REQUEST_HEADER_APP_NAME = "aem-app";
+    public static final String REQUEST_HEADER_APP_VERSION = "aem-app-version";
 
     public static final Language APP_DEFAULT_LANGUAGE = Language.DEFAULT_LANGUAGE;
 
