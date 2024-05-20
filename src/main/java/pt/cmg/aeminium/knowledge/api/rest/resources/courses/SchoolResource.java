@@ -60,7 +60,7 @@ public class SchoolResource {
         School school = schoolDAO.findById(id);
 
         if (school == null) {
-            return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1)).build();
+            return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1, "School does not exist")).build();
         }
 
         return Response.ok(schoolConverter.toSchoolDTO(school)).build();
@@ -73,7 +73,7 @@ public class SchoolResource {
         School school = schoolDAO.findById(id);
 
         if (school == null) {
-            return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1)).build();
+            return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1, "School does not exist")).build();
         }
 
         return Response.ok(courseConverter.toCourseDTOs(school.getCourses())).build();

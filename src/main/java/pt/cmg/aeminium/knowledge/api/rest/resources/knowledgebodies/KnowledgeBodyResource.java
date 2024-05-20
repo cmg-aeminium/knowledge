@@ -48,7 +48,7 @@ public class KnowledgeBodyResource {
         KnowledgeBody bodyOfKnowledge = knowledgeBodyDAO.findById(id);
 
         if (bodyOfKnowledge == null) {
-            return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1)).build();
+            return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1, "Body of Knowledge does not exist")).build();
         }
 
         return Response.ok(knowledgeBodyConverter.toKnowledgeBodyDTO(bodyOfKnowledge)).build();
@@ -61,7 +61,7 @@ public class KnowledgeBodyResource {
         KnowledgeBody bodyOfKnowledge = knowledgeBodyDAO.findById(id);
 
         if (bodyOfKnowledge == null) {
-            return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1)).build();
+            return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1, "Body of Knowledge does not exist")).build();
         }
         return Response.ok(kaConverter.toKnowledgeAreaDTOs(bodyOfKnowledge.getKnowledgeAreas())).build();
     }

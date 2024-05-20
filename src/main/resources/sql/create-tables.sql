@@ -119,6 +119,19 @@ CREATE TABLE Users (
 );
 
 
+CREATE SEQUENCE roles_id_seq INCREMENT 1;   
+CREATE TABLE Roles (
+    id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('roles_id_seq'),
+    name TEXT NULL,
+    createdAt TIMESTAMP WITH TIME ZONE DEFAULT (current_timestamp AT TIME ZONE 'UTC')
+);
+
+CREATE TABLE UserRoles (
+    userid BIGINT NOT NULL REFERENCES Users(id),
+    roleid BIGINT NOT NULL REFERENCES Roles(id),
+    PRIMARY KEY(user, role)
+);
+
 CREATE SEQUENCE functionlogs_id_seq INCREMENT 1;
 CREATE TABLE FunctionLogs (
     id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('functionlogs_id_seq'),

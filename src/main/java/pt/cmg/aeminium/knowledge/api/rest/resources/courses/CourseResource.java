@@ -70,7 +70,7 @@ public class CourseResource {
         Course course = courseDAO.findById(id);
 
         if (course == null) {
-            return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1)).build();
+            return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1, "Course does not exist")).build();
         }
 
         return Response.ok(degreeConverter.toCourseDTO(course)).build();

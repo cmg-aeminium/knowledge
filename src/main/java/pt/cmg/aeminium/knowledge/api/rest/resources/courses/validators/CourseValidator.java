@@ -27,7 +27,7 @@ public class CourseValidator {
 
         if (searchFilter.school != null) {
             if (schoolDAO.findById(searchFilter.school) == null) {
-                errors.add(new ErrorDTO(1));
+                errors.add(new ErrorDTO(1, "School does not exist"));
             }
         }
 
