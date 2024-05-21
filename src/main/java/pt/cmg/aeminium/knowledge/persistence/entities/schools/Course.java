@@ -5,6 +5,7 @@
 package pt.cmg.aeminium.knowledge.persistence.entities.schools;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -73,6 +74,13 @@ public class Course implements Serializable {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "course")
     private List<CourseClass> courseClasses;
 
+    @Column(name = "createdat")
+    private LocalDateTime createdAt;
+
+    public Course() {
+        this.createdAt = LocalDateTime.now();
+    }
+
     public Long getId() {
         return id;
     }
@@ -135,6 +143,10 @@ public class Course implements Serializable {
 
     public void setDescriptionContentId(Long descriptionContentId) {
         this.descriptionContentId = descriptionContentId;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 
 }

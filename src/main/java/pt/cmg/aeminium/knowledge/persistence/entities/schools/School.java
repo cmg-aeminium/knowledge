@@ -68,15 +68,16 @@ public class School implements Serializable {
     @Column(name = "createdat")
     private LocalDateTime createdAt;
 
+    public School() {
+        this.createdAt = LocalDateTime.now();
+    }
+
     public List<Course> getCourses() {
         return courses;
     }
 
     public void setCourses(List<Course> courses) {
         this.courses = courses;
-    }
-
-    public School() {
     }
 
     public Long getId() {
@@ -105,10 +106,6 @@ public class School implements Serializable {
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
     }
 
     @Override

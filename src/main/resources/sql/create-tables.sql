@@ -30,7 +30,7 @@ CREATE TABLE KnowledgeBodies (
 	image text NOT NULL,
 	name BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
 	description BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
-	createdAt TIMESTAMP WITH TIME ZONE DEFAULT (current_timestamp AT TIME ZONE 'UTC')
+	createdAt TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT (current_timestamp AT TIME ZONE 'UTC')
 );
 
 CREATE SEQUENCE knowledgeareas_id_seq INCREMENT 1;    
@@ -40,7 +40,7 @@ CREATE TABLE KnowledgeAreas (
 	knowledgebody BIGINT NOT NULL REFERENCES KnowledgeBodies(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
 	name BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
 	description BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
-	createdAt TIMESTAMP WITH TIME ZONE DEFAULT (current_timestamp AT TIME ZONE 'UTC')
+	createdAt TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT (current_timestamp AT TIME ZONE 'UTC')
 );
 
 CREATE SEQUENCE knowledgetopics_id_seq INCREMENT 1;    
@@ -63,7 +63,7 @@ CREATE TABLE Schools (
 	id SMALLINT NOT NULL PRIMARY KEY DEFAULT nextval('school_id_seq'),
 	name BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
 	country SMALLINT NOT NULL REFERENCES Countries(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
-	createdAt TIMESTAMP WITH TIME ZONE DEFAULT (current_timestamp AT TIME ZONE 'UTC')
+	createdAt TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT (current_timestamp AT TIME ZONE 'UTC')
 );
 
 CREATE SEQUENCE courses_id_seq INCREMENT 1; 
@@ -75,7 +75,7 @@ CREATE TABLE Courses (
 	year SMALLINT NOT NULL,
 	name BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
 	description BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
-	createdAt TIMESTAMP WITH TIME ZONE DEFAULT (current_timestamp AT TIME ZONE 'UTC')
+	createdAt TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT (current_timestamp AT TIME ZONE 'UTC')
 );
 
 CREATE SEQUENCE courseclasses_id_seq INCREMENT 1;   
@@ -88,7 +88,7 @@ CREATE TABLE CourseClasses (
 	name BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
 	description BIGINT NOT NULL REFERENCES TextContents(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
 	course BIGINT NOT NULL REFERENCES Courses(id) ON UPDATE NO ACTION ON DELETE NO ACTION,
-	createdAt TIMESTAMP WITH TIME ZONE DEFAULT (current_timestamp AT TIME ZONE 'UTC')
+	createdAt TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT (current_timestamp AT TIME ZONE 'UTC')
 );
 
 CREATE SEQUENCE courseclasstopic_id_seq INCREMENT 1;   
@@ -115,21 +115,27 @@ CREATE TABLE Users (
     password TEXT NULL,
     status user_status_type NOT NULL DEFAULT 'PENDING',
     language language_type NOT NULL DEFAULT 'pt-PT',
-    createdAt TIMESTAMP WITH TIME ZONE DEFAULT (current_timestamp AT TIME ZONE 'UTC')
+    createdAt TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT (current_timestamp AT TIME ZONE 'UTC')
 );
 
+CREATE TYPE user_roles_type AS ENUM (
+    'GOD',
+    'SCHOLAR',
+    'ANALYST'
+);
 
 CREATE SEQUENCE roles_id_seq INCREMENT 1;   
 CREATE TABLE Roles (
     id BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('roles_id_seq'),
-    name TEXT NULL,
-    createdAt TIMESTAMP WITH TIME ZONE DEFAULT (current_timestamp AT TIME ZONE 'UTC')
+    name user_roles_type NOT NULL,
+    createdAt TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT (current_timestamp AT TIME ZONE 'UTC')
 );
 
 CREATE TABLE UserRoles (
     userid BIGINT NOT NULL REFERENCES Users(id),
     roleid BIGINT NOT NULL REFERENCES Roles(id),
-    PRIMARY KEY(user, role)
+    associatedOn TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT (current_timestamp AT TIME ZONE 'UTC'),
+    PRIMARY KEY(userid, roleid)
 );
 
 CREATE SEQUENCE functionlogs_id_seq INCREMENT 1;

@@ -4,6 +4,16 @@ INSERT INTO Users (id, name, email, status, language) VALUES (1, 'Carlos' , 'car
 
 -- END Users
 
+-- BEGIN Roles
+
+INSERT INTO Roles (id, name) VALUES (1, 'GOD');
+INSERT INTO Roles (id, name) VALUES (2, 'SCHOLAR');
+INSERT INTO Roles (id, name) VALUES (3, 'ANALYST');
+
+INSERT INTO UserRoles (userid, roleid) VALUES (1, 1);
+
+-- END Roles
+
 -- BEGIN Countries
 
 -- Portuguese

@@ -13,6 +13,7 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.courses.CourseResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.SchoolResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.KnowledgeAreaResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.KnowledgeBodyResource;
+import pt.cmg.aeminium.knowledge.api.rest.resources.users.UserResource;
 import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Language;
 import pt.cmg.jakartautils.jsonb.JSONBConfigurator;
 
@@ -43,6 +44,7 @@ public class KnowledgeApplication extends Application {
         resources.add(KnowledgeAreaResource.class);
         resources.add(CourseResource.class);
         resources.add(SchoolResource.class);
+        resources.add(UserResource.class);
 
         resources.add(LanguageSetterRequestFilter.class);
         resources.add(ApplicationDataRequestFilter.class);

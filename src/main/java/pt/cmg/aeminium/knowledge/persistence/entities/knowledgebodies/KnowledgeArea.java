@@ -6,6 +6,7 @@
 package pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -60,6 +61,13 @@ public class KnowledgeArea implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "knowledgeArea", fetch = FetchType.LAZY)
     private List<KnowledgeTopic> knowledgeTopics;
 
+    @Column(name = "createdat")
+    private LocalDateTime createdAt;
+
+    public KnowledgeArea() {
+        this.createdAt = LocalDateTime.now();
+    }
+
     public Long getId() {
         return id;
     }
@@ -106,6 +114,18 @@ public class KnowledgeArea implements Serializable {
 
     public void setKnowledgeTopics(List<KnowledgeTopic> knowledgeTopics) {
         this.knowledgeTopics = knowledgeTopics;
+    }
+
+    public KnowledgeBody getKnowledgeBody() {
+        return knowledgeBody;
+    }
+
+    public void setKnowledgeBody(KnowledgeBody knowledgeBody) {
+        this.knowledgeBody = knowledgeBody;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 
 }

@@ -7,6 +7,7 @@ package pt.cmg.aeminium.knowledge.persistence.entities.identity;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import javax.persistence.Column;
@@ -16,10 +17,17 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.NamedQuery;
 import javax.persistence.QueryHint;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import org.eclipse.persistence.annotations.Cache;
+import org.eclipse.persistence.annotations.CacheCoordinationType;
+import org.eclipse.persistence.annotations.CacheType;
+import org.eclipse.persistence.config.CacheIsolationType;
 import org.eclipse.persistence.config.QueryHints;
 import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Language;
 
@@ -28,6 +36,7 @@ import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Language;
  */
 @Entity
 @Table(name = "users")
+@Cache(type = CacheType.FULL, isolation = CacheIsolationType.SHARED, alwaysRefresh = true, coordinationType = CacheCoordinationType.SEND_NEW_OBJECTS_WITH_CHANGES)
 @NamedQuery(name = User.QUERY_FIND_BY_EMAIL,
     query = "SELECT u FROM User u WHERE u.email = :email",
     hints = {
@@ -100,6 +109,17 @@ public class User implements Serializable {
     @Column(name = "createdat")
     private LocalDateTime createdAt;
 
+    @ManyToMany
+    @JoinTable(
+        name = "userroles",
+        joinColumns = @JoinColumn(name = "userid", referencedColumnName = "id"),
+        inverseJoinColumns = @JoinColumn(name = "roleid", referencedColumnName = "id"))
+    private List<Role> roles;
+
+    public User() {
+        this.createdAt = LocalDateTime.now();
+    }
+
     public Long getId() {
         return id;
     }
@@ -152,16 +172,20 @@ public class User implements Serializable {
         return createdAt;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
     public Language getLanguage() {
         return language;
     }
 
     public void setLanguage(Language language) {
         this.language = language;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
     }
 
     @Override
