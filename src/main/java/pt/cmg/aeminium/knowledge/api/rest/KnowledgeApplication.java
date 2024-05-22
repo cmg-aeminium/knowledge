@@ -14,8 +14,8 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.courses.SchoolResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.KnowledgeAreaResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.KnowledgeBodyResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.users.UserResource;
+import pt.cmg.aeminium.knowledge.configuration.jsonb.JsonbProvider;
 import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Language;
-import pt.cmg.jakartautils.jsonb.JSONBConfigurator;
 
 /**
  * @author Carlos Gonçalves
@@ -55,9 +55,10 @@ public class KnowledgeApplication extends Application {
     public Set<Object> getSingletons() {
         Set<Object> singletons = new HashSet<>();
 
-        ContextResolver<Jsonb> jsonbConfiguration = new JSONBConfigurator();
+        ContextResolver<Jsonb> jsonbConfiguration = new JsonbProvider();
 
         singletons.add(jsonbConfiguration);
+
         return singletons;
     }
 

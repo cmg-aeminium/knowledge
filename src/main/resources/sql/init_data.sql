@@ -1,6 +1,7 @@
 -- BEGIN Users
 
-INSERT INTO Users (id, name, email, status, language) VALUES (1, 'Carlos' , 'carlosmoliveiragoncalves@gmail.com', 'ACTIVE', 'pt-PT');
+INSERT INTO Users (id, name, email, status, language, salt, password) VALUES (1, 'Carlos' , 'carlosmoliveiragoncalves@gmail.com', 'ACTIVE', 'pt-PT', 'fb5c8759a99cc1668709103c29a32a868d011e7e3f297c97fdf2f392541c8695' , 'b5d429c6e651b39b43891e5c787c1a919b9bc1126f1b93f50d848a96cc2e52f1');
+SELECT SETVAL('users_id_seq', 1);
 
 -- END Users
 
@@ -9,6 +10,8 @@ INSERT INTO Users (id, name, email, status, language) VALUES (1, 'Carlos' , 'car
 INSERT INTO Roles (id, name) VALUES (1, 'GOD');
 INSERT INTO Roles (id, name) VALUES (2, 'SCHOLAR');
 INSERT INTO Roles (id, name) VALUES (3, 'ANALYST');
+
+SELECT SETVAL('users_id_seq', 3);
 
 INSERT INTO UserRoles (userid, roleid) VALUES (1, 1);
 
@@ -729,6 +732,8 @@ INSERT INTO Countries (id, alpha2code, name) VALUES (234, 'YE', 234);
 INSERT INTO Countries (id, alpha2code, name) VALUES (235, 'ZM', 235);
 INSERT INTO Countries (id, alpha2code, name) VALUES (236, 'ZW', 236);
 
+SELECT SETVAL('country_id_seq', 236);
+
 -- END Countries
 
 -- Schools          
@@ -737,23 +742,31 @@ INSERT INTO TextContents (id, language, textvalue) VALUES (5614, 'pt-PT', 'Unive
 INSERT INTO TextContents (id, language, textvalue) VALUES (5615, 'pt-PT', 'Instituto Superior Técnico');
 INSERT INTO TextContents (id, language, textvalue) VALUES (5616, 'pt-PT', 'Universidade de Aveiro');
 INSERT INTO TextContents (id, language, textvalue) VALUES (5617, 'pt-PT', 'Universidade do Minho');
+
 INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (5613, 'en-UK', 'University of Porto');
 INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (5614, 'en-UK', 'University of Coimbra');
 INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (5615, 'en-UK', 'IST');
 INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (5616, 'en-UK', 'University of Aveiro');
 INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (5617, 'en-UK', 'University of Minho');
+
 INSERT INTO Schools (id, name, country) VALUES (1, 5613, 166);
 INSERT INTO Schools (id, name, country) VALUES (2, 5614, 166);
 INSERT INTO Schools (id, name, country) VALUES (3, 5615, 166);
 INSERT INTO Schools (id, name, country) VALUES (4, 5616, 166);
 INSERT INTO Schools (id, name, country) VALUES (5, 5617, 166);
 
+SELECT SETVAL('school_id_seq', 5);
+
 -- Bodies of Knowledge
 INSERT INTO TextContents (id, language, textvalue) VALUES (237, 'pt-PT', 'SWEBOK v3');
 INSERT INTO TextContents (id, language, textvalue) VALUES (238, 'pt-PT', 'Corpo de Conhecimento de Engenharia de Software pelo IEEE versão 3');
+
 INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (237, 'en-UK', 'SWEBOK v3');
 INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (238, 'en-UK', 'Software Engineering Book of Knowledge by IEEE version 3');
+
 INSERT INTO KnowledgeBodies (id, year,image, name, description) VALUES (1, 2017, 'http://www.images.com/swebok.jpg', 237 , 238);
+
+SELECT SETVAL('knowledgebodies_id_seq', 1);
 
 -- BEGIN Knowledge Areas
 
@@ -844,6 +857,8 @@ INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES 
 INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (14, 1, 252, 268, 'http://www.images.com/ka_mathematical_foundations');
 INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (15, 1, 253, 269, 'http://www.images.com/ka_engineering_foundations');
 INSERT INTO KnowledgeAreas(id, knowledgebody, name, description, image ) VALUES (16, 1, 254, 270, 'http://www.images.com/ka_other');
+
+SELECT SETVAL('knowledgeareas_id_seq', 16);
 
 -- END Knowledge Areas
 
@@ -1366,6 +1381,8 @@ INSERT INTO KnowledgeTopics(id, knowledgeArea, name, description) VALUES (100, 1
 INSERT INTO KnowledgeTopics(id, knowledgeArea, name, description) VALUES (101, 15 ,371 , 473);
 INSERT INTO KnowledgeTopics(id, knowledgeArea, name, description) VALUES (102, 16 ,372 , 474);
 
+SELECT SETVAL('knowledgetopics_id_seq', 102);
+
 -- END Knowledge Topics
 
 
@@ -1403,6 +1420,8 @@ INSERT INTO Courses(id, acronym, image, school, year, name, description) VALUES 
 INSERT INTO Courses(id, acronym, image, school, year, name, description) VALUES (3, 'LEIC + MEIC', 'http://images.com/meic_ist.jpeg' , 3, 2017, 477, 482);
 INSERT INTO Courses(id, acronym, image, school, year, name, description) VALUES (4, 'LEI + MEI', 'http://images.com/mei_uav.jpeg'    , 4, 2017, 478, 483);
 INSERT INTO Courses(id, acronym, image, school, year, name, description) VALUES (5, 'MIEI', 'http://images.com/miei_um.jpeg'         , 5, 2017, 479, 484);
+
+SELECT SETVAL('courses_id_seq', 5);
 
 -- END Courses
 
@@ -3360,6 +3379,8 @@ INSERT INTO CourseClasses(id, year, semester, ects , isOptional, course, name, d
 INSERT INTO CourseClasses(id, year, semester, ects , isOptional, course, name, description) VALUES (386, 4, 2, 10 , FALSE, 5, 870, 1258);
 INSERT INTO CourseClasses(id, year, semester, ects , isOptional, course, name, description) VALUES (387, 5, 1, 15 , FALSE, 5, 871, 1259);
 INSERT INTO CourseClasses(id, year, semester, ects , isOptional, course, name, description) VALUES (388, 5, 1, 45 , FALSE, 5, 872, 1260);
+
+SELECT SETVAL('courseclasses_id_seq', 388);
 
 -- END CourseClasses
 
@@ -7720,6 +7741,8 @@ INSERT INTO TextContents(id, language, textValue) VALUES (5610, 'pt-PT', 'Identi
 INSERT INTO TextContents(id, language, textValue) VALUES (5611, 'pt-PT', 'Desenvolver competências para realizar trabalho de investigação individual em Engenharia Informática');
 INSERT INTO TextContents(id, language, textValue) VALUES (5612, 'pt-PT', 'Escrever, apresentar e defender publicamente uma prova escrita, promovendo a capacidade de síntese e comunicação oral e escrita');
 
+ALTER SEQUENCE textcontents_id_seq START WITH 5613;
+
 -- English descriptions
 
 INSERT INTO TranslatedTexts(id, language, textValue) VALUES (1261, 'en-UK', 'Propositional logic');
@@ -12075,6 +12098,7 @@ INSERT INTO TranslatedTexts(id, language, textValue) VALUES (5610, 'en-UK', 'Ide
 INSERT INTO TranslatedTexts(id, language, textValue) VALUES (5611, 'en-UK', 'Develop skills to carry out individual research work in Software Engineering');
 INSERT INTO TranslatedTexts(id, language, textValue) VALUES (5612, 'en-UK', 'Write, present and publicly defend a written dissertation, promoting the ability to synthesize and communicate orally and in writing');
 
+
 INSERT INTO CourseClassTopics(id, courseClass, ordering, description) VALUES (1   , 1,   1 , 1261);
 INSERT INTO CourseClassTopics(id, courseClass, ordering, description) VALUES (2   , 1,   2 , 1262);
 INSERT INTO CourseClassTopics(id, courseClass, ordering, description) VALUES (3   , 1,   3 , 1263);
@@ -16427,5 +16451,10 @@ INSERT INTO CourseClassTopics(id, courseClass, ordering, description) VALUES (43
 INSERT INTO CourseClassTopics(id, courseClass, ordering, description) VALUES (4350, 388, 1 , 5610);
 INSERT INTO CourseClassTopics(id, courseClass, ordering, description) VALUES (4351, 388, 2 , 5611);
 INSERT INTO CourseClassTopics(id, courseClass, ordering, description) VALUES (4352, 388, 3 , 5612);
+
+SELECT SETVAL('courseclasstopic_id_seq', 4352);
+
+-- Note that the latest value comes from the Schools table, as it was inserted after all translations
+SELECT SETVAL('textcontents_id_seq', 5617);
 
 -- END CourseClassTopics
