@@ -118,6 +118,7 @@
         <payara-version>5.2022.5</payara-version>
 
         <!-- Library versions -->
+        <jjwt-version>0.12.5</jjwt-version>
         <postresql-version>42.6.0</postresql-version>
 
     </properties>
@@ -337,7 +338,7 @@
                                     <value>${final.name}</value>
                                 </property>
                             </systemProperties>
-                            
+
                             <!-- If I need to use hazelcast SQL querying -->
                             <!--customJars>
                                 <artifactItem>
@@ -346,7 +347,7 @@
                                     <version>4.2.5</version>
                                 </artifactItem>
                             </customJars-->
-                            
+
                             <appendSystemProperties>true</appendSystemProperties>
                         </configuration>
                     </execution>
@@ -418,6 +419,11 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
+            <groupId>org.eclipse.microprofile.jwt</groupId>
+            <artifactId>microprofile-jwt-auth-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.core</artifactId>
             <scope>provided</scope>
@@ -450,6 +456,25 @@
             <artifactId>jakartautils</artifactId>
             <version>1.0.0</version>
         </dependency>
+        
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>${jjwt-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>${jjwt-version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId> <!-- or jjwt-gson if Gson is preferred -->
+            <version>${jjwt-version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
     </dependencies>
 
 </project>

@@ -2,17 +2,20 @@ package pt.cmg.aeminium.knowledge.api.rest;
 
 import java.util.HashSet;
 import java.util.Set;
+import javax.enterprise.context.ApplicationScoped;
 import javax.json.bind.Jsonb;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import javax.ws.rs.ext.ContextResolver;
 import org.apache.commons.lang3.StringUtils;
+import org.eclipse.microprofile.auth.LoginConfig;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.ApplicationDataRequestFilter;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.LanguageSetterRequestFilter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.CourseResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.SchoolResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.KnowledgeAreaResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.KnowledgeBodyResource;
+import pt.cmg.aeminium.knowledge.api.rest.resources.login.LoginResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.users.UserResource;
 import pt.cmg.aeminium.knowledge.configuration.jsonb.JsonbProvider;
 import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Language;
@@ -20,6 +23,8 @@ import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Language;
 /**
  * @author Carlos Gonçalves
  */
+@ApplicationScoped
+@LoginConfig(authMethod = "MP-JWT")
 @ApplicationPath("/v1")
 public class KnowledgeApplication extends Application {
 
@@ -45,6 +50,7 @@ public class KnowledgeApplication extends Application {
         resources.add(CourseResource.class);
         resources.add(SchoolResource.class);
         resources.add(UserResource.class);
+        resources.add(LoginResource.class);
 
         resources.add(LanguageSetterRequestFilter.class);
         resources.add(ApplicationDataRequestFilter.class);
