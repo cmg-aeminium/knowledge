@@ -39,6 +39,13 @@ public class TranslatedText implements Serializable {
     public TranslatedText() {
     }
 
+    public TranslatedText(Long id, Language language, String textValue) {
+        super();
+        this.id = id;
+        this.language = language;
+        this.textValue = textValue;
+    }
+
     public Long getId() {
         return id;
     }

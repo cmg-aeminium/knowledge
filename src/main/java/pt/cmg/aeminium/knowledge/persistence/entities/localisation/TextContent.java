@@ -50,6 +50,12 @@ public class TextContent implements Serializable {
     public TextContent() {
     }
 
+    public TextContent(Language language, String textValue) {
+        super();
+        this.language = language;
+        this.textValue = textValue;
+    }
+
     public Long getId() {
         return id;
     }

@@ -34,6 +34,10 @@ import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Country;
 @Cache(type = CacheType.FULL, isolation = CacheIsolationType.SHARED, alwaysRefresh = true, coordinationType = CacheCoordinationType.SEND_NEW_OBJECTS_WITH_CHANGES)
 @NamedQuery(name = School.QUERY_FIND_ALL, query = "SELECT s from School s")
 @NamedQuery(name = School.QUERY_FIND_IN_IDS, query = "SELECT s from School s WHERE s.id IN :ids")
+@NamedQuery(name = School.QUERY_FIND_BY_NAME,
+    query = "SELECT s from School s WHERE s.nameTextContentId = (SELECT tc.id FROM TextContent tc WHERE tc.textValue = :name)")
+@NamedQuery(name = School.QUERY_FIND_BY_TRANSLATED_NAME,
+    query = "SELECT s from School s WHERE s.nameTextContentId = (SELECT tc.id FROM TranslatedText tc WHERE tc.language = :language AND tc.textValue = :name)")
 public class School implements Serializable {
 
     /**
@@ -43,6 +47,8 @@ public class School implements Serializable {
 
     public static final String QUERY_FIND_ALL = "School.findAll";
     public static final String QUERY_FIND_IN_IDS = "School.findInIds";
+    public static final String QUERY_FIND_BY_NAME = "School.findByName";
+    public static final String QUERY_FIND_BY_TRANSLATED_NAME = "School.findByTranslatedName";
 
     @Id
     @SequenceGenerator(

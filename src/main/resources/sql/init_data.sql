@@ -749,11 +749,11 @@ INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (5615, 'en-UK', 'IS
 INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (5616, 'en-UK', 'University of Aveiro');
 INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (5617, 'en-UK', 'University of Minho');
 
-INSERT INTO Schools (id, name, country) VALUES (1, 5613, 166);
-INSERT INTO Schools (id, name, country) VALUES (2, 5614, 166);
-INSERT INTO Schools (id, name, country) VALUES (3, 5615, 166);
-INSERT INTO Schools (id, name, country) VALUES (4, 5616, 166);
-INSERT INTO Schools (id, name, country) VALUES (5, 5617, 166);
+INSERT INTO Schools (id, name, country, createdBy) VALUES (1, 5613, 166, 1);
+INSERT INTO Schools (id, name, country, createdBy) VALUES (2, 5614, 166, 1);
+INSERT INTO Schools (id, name, country, createdBy) VALUES (3, 5615, 166, 1);
+INSERT INTO Schools (id, name, country, createdBy) VALUES (4, 5616, 166, 1);
+INSERT INTO Schools (id, name, country, createdBy) VALUES (5, 5617, 166, 1);
 
 SELECT SETVAL('school_id_seq', 5);
 
@@ -764,7 +764,7 @@ INSERT INTO TextContents (id, language, textvalue) VALUES (238, 'pt-PT', 'Corpo 
 INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (237, 'en-UK', 'SWEBOK v3');
 INSERT INTO TranslatedTexts (id, language, textvalue) VALUES (238, 'en-UK', 'Software Engineering Book of Knowledge by IEEE version 3');
 
-INSERT INTO KnowledgeBodies (id, year,image, name, description) VALUES (1, 2017, 'http://www.images.com/swebok.jpg', 237 , 238);
+INSERT INTO KnowledgeBodies (id, year,image, name, description, createdBy) VALUES (1, 2017, 'http://www.images.com/swebok.jpg', 237 , 238, 1);
 
 SELECT SETVAL('knowledgebodies_id_seq', 1);
 
@@ -1415,11 +1415,11 @@ INSERT INTO TranslatedTexts(id, language, textValue) VALUES (483, 'en-UK', 'The 
 INSERT INTO TranslatedTexts(id, language, textValue) VALUES (484, 'en-UK', 'The Integrated Master''s Degree in Computer Engineering (MiEI) is an integrated course of the first and second cycles of higher education, taught at the University of Minho, with a duration of 5 academic years, 10 academic semesters, 40 weeks of full-time study per year and a total of 300 ECTS. The MiEI aims to prepare computer engineers, capable of all the phases currently recognized in the rigorous process of analysis, design and implementation of computer solutions. Its graduates should acquire during the course great theoretical and practical experience in the analysis of software systems, in the specification of the requirements of these systems, in the techniques of prototype construction and in all phases of their installation, in the management of computer projects, in the testing, installation and maintenance of computer applications, and, consequently, of the systems or networks that support them. The MiEI has as its basic objective to provide its students during the course with the expertise and knowledge (theoretical and practical) necessary for: - The analysis and specification of requirements of software systems to be implemented; - The application of prototype construction techniques; - The design, conception, development, testing and maintenance of computer applications; - The implementation of computer communication networks and support infrastructures; - The management and implementation of computer projects, including the design and implementation of computer systems. As future engineers, they should also always be concerned with rigor, both in the execution and management of the project, evaluating its quality, costs and economic impact, as well as in the concerns of implementing their products in the target organizations.');
 
 
-INSERT INTO Courses(id, acronym, image, school, year, name, description) VALUES (1, 'MIEIC', 'http://images.com/mieic_up.jpeg'       , 1, 2017, 475, 480);
-INSERT INTO Courses(id, acronym, image, school, year, name, description) VALUES (2, 'LEI + MEI', 'http://images.com/miei_um.jpeg'    , 2, 2017, 476, 481);
-INSERT INTO Courses(id, acronym, image, school, year, name, description) VALUES (3, 'LEIC + MEIC', 'http://images.com/meic_ist.jpeg' , 3, 2017, 477, 482);
-INSERT INTO Courses(id, acronym, image, school, year, name, description) VALUES (4, 'LEI + MEI', 'http://images.com/mei_uav.jpeg'    , 4, 2017, 478, 483);
-INSERT INTO Courses(id, acronym, image, school, year, name, description) VALUES (5, 'MIEI', 'http://images.com/miei_um.jpeg'         , 5, 2017, 479, 484);
+INSERT INTO Courses(id, acronym, image, school, year, name, description, createdBy) VALUES (1, 'MIEIC', 'http://images.com/mieic_up.jpeg'       , 1, 2017, 475, 480, 1);
+INSERT INTO Courses(id, acronym, image, school, year, name, description, createdBy) VALUES (2, 'LEI + MEI', 'http://images.com/miei_um.jpeg'    , 2, 2017, 476, 481, 1);
+INSERT INTO Courses(id, acronym, image, school, year, name, description, createdBy) VALUES (3, 'LEIC + MEIC', 'http://images.com/meic_ist.jpeg' , 3, 2017, 477, 482, 1);
+INSERT INTO Courses(id, acronym, image, school, year, name, description, createdBy) VALUES (4, 'LEI + MEI', 'http://images.com/mei_uav.jpeg'    , 4, 2017, 478, 483, 1);
+INSERT INTO Courses(id, acronym, image, school, year, name, description, createdBy) VALUES (5, 'MIEI', 'http://images.com/miei_um.jpeg'         , 5, 2017, 479, 484, 1);
 
 SELECT SETVAL('courses_id_seq', 5);
 
