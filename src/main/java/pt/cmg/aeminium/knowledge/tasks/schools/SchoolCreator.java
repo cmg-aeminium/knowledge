@@ -7,7 +7,10 @@ package pt.cmg.aeminium.knowledge.tasks.schools;
 import java.util.Iterator;
 import javax.ejb.Singleton;
 import javax.inject.Inject;
+import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
+import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
+import pt.cmg.aeminium.knowledge.dao.identity.UserDAO;
 import pt.cmg.aeminium.knowledge.dao.localisation.CountryDAO;
 import pt.cmg.aeminium.knowledge.dao.localisation.TextContentDAO;
 import pt.cmg.aeminium.knowledge.dao.localisation.TranslatedTextDAO;
@@ -25,6 +28,10 @@ import pt.cmg.aeminium.knowledge.tasks.schools.CreateSchoolDTO.TranslatedName;
 public class SchoolCreator {
 
     @Inject
+    @RequestData
+    private RequestContextData requestData;
+
+    @Inject
     private SchoolDAO schoolDAO;
 
     @Inject
@@ -38,6 +45,9 @@ public class SchoolCreator {
 
     @Inject
     private HazelcastCache textCache;
+
+    @Inject
+    private UserDAO userDAO;
 
     public School createSchool(CreateSchoolDTO newSchool) {
 
@@ -71,6 +81,9 @@ public class SchoolCreator {
 
         school.setCountry(countryDAO.findById(newSchool.country));
         school.setNameTextContentId(defaultText.getId());
+
+        // cached call
+        school.setCreatedBy(userDAO.findById(requestData.getUserId()));
 
         schoolDAO.create(school);
 

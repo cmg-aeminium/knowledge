@@ -24,6 +24,7 @@ import org.eclipse.persistence.annotations.Cache;
 import org.eclipse.persistence.annotations.CacheCoordinationType;
 import org.eclipse.persistence.annotations.CacheType;
 import org.eclipse.persistence.config.CacheIsolationType;
+import pt.cmg.aeminium.knowledge.persistence.entities.identity.User;
 import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Country;
 
 /**
@@ -74,6 +75,10 @@ public class School implements Serializable {
     @Column(name = "createdat")
     private LocalDateTime createdAt;
 
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "createdby", referencedColumnName = "id")
+    private User createdBy;
+
     public School() {
         this.createdAt = LocalDateTime.now();
     }
@@ -112,6 +117,14 @@ public class School implements Serializable {
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
+    }
+
+    public User getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(User createdBy) {
+        this.createdBy = createdBy;
     }
 
     @Override

@@ -11,6 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.eclipse.microprofile.auth.LoginConfig;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.ApplicationDataRequestFilter;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.LanguageSetterRequestFilter;
+import pt.cmg.aeminium.knowledge.api.rest.filters.request.UserLoaderRequestFilter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.CourseResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.SchoolResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.KnowledgeAreaResource;
@@ -54,6 +55,7 @@ public class KnowledgeApplication extends Application {
 
         resources.add(LanguageSetterRequestFilter.class);
         resources.add(ApplicationDataRequestFilter.class);
+        resources.add(UserLoaderRequestFilter.class);
         return resources;
     }
 
