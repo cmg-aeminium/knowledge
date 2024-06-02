@@ -6,22 +6,18 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request;
 
 import java.util.HashSet;
 import java.util.Objects;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Language;
 
 /**
- * @author Carlos Gonçaalves
+ * @author Carlos Gonçalves
  */
-public class CreateSchoolDTO {
+public class EditSchoolDTO {
 
-    @NotNull(message = "Country cannot be null")
     public Long country;
 
-    @NotEmpty(message = "No names were written")
-    public HashSet<TranslatedName> names;
+    public HashSet<TranslationEdit> names;
 
-    public static class TranslatedName {
+    public static class TranslationEdit {
         public Language language;
         public String value;
 
@@ -41,10 +37,9 @@ public class CreateSchoolDTO {
             if (getClass() != obj.getClass()) {
                 return false;
             }
-            TranslatedName other = (TranslatedName) obj;
+            TranslationEdit other = (TranslationEdit) obj;
             return language == other.language;
         }
 
     }
-
 }

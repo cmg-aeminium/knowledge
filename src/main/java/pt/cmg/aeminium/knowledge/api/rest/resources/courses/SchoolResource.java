@@ -13,6 +13,7 @@ import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -22,10 +23,11 @@ import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.SchoolConverter;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateSchoolDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditSchoolDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.validators.SchoolValidator;
 import pt.cmg.aeminium.knowledge.dao.schools.SchoolDAO;
 import pt.cmg.aeminium.knowledge.persistence.entities.schools.School;
-import pt.cmg.aeminium.knowledge.tasks.schools.CreateSchoolDTO;
 import pt.cmg.aeminium.knowledge.tasks.schools.SchoolCreator;
 import pt.cmg.jakartautils.errors.ErrorDTO;
 
@@ -69,6 +71,23 @@ public class SchoolResource {
         }
 
         School newSchool = schoolCreator.createSchool(newSchoolDTO);
+
+        return Response.ok(schoolConverter.toSchoolDTO(newSchool)).build();
+    }
+
+    @PUT
+    @Path("{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @RolesAllowed({"GOD", "SCHOLAR"})
+    public Response editSchool(@PathParam("id") Long id, EditSchoolDTO schoolEditionDTO) {
+
+        var validationErrors = schoolValidator.isEditionValid(schoolEditionDTO, id);
+        if (validationErrors.isPresent()) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(validationErrors.get()).build();
+        }
+
+        School newSchool = schoolCreator.editSchool(schoolEditionDTO, id);
 
         return Response.ok(schoolConverter.toSchoolDTO(newSchool)).build();
     }

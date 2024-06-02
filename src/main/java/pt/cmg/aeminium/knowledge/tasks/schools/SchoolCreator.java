@@ -9,6 +9,9 @@ import javax.ejb.Singleton;
 import javax.inject.Inject;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateSchoolDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateSchoolDTO.TranslatedName;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditSchoolDTO;
 import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
 import pt.cmg.aeminium.knowledge.dao.identity.UserDAO;
 import pt.cmg.aeminium.knowledge.dao.localisation.CountryDAO;
@@ -19,7 +22,6 @@ import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Language;
 import pt.cmg.aeminium.knowledge.persistence.entities.localisation.TextContent;
 import pt.cmg.aeminium.knowledge.persistence.entities.localisation.TranslatedText;
 import pt.cmg.aeminium.knowledge.persistence.entities.schools.School;
-import pt.cmg.aeminium.knowledge.tasks.schools.CreateSchoolDTO.TranslatedName;
 
 /**
  * @author Carlos Gonçalves
@@ -88,6 +90,29 @@ public class SchoolCreator {
         schoolDAO.create(school);
 
         return school;
+    }
+
+    public School editSchool(EditSchoolDTO schoolEdition, Long schoolId) {
+
+        School schoolToEdit = schoolDAO.findById(schoolId);
+
+        for (var text : schoolEdition.names) {
+
+            if (text.language == Language.DEFAULT_LANGUAGE) {
+                TextContent textContent = textContentDAO.findById(schoolToEdit.getNameTextContentId());
+                textContent.setTextValue(text.value);
+                textCache.replaceTranslation(textContent);
+            } else {
+                TranslatedText textContent = translatedTextDAO.findById(schoolToEdit.getNameTextContentId());
+                textContent.setTextValue(text.value);
+                textCache.replaceTranslation(textContent);
+            }
+
+        }
+
+        schoolToEdit.setCountry(countryDAO.findById(schoolEdition.country));
+
+        return schoolToEdit;
     }
 
 }
