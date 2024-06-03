@@ -56,6 +56,13 @@ public class TextContent implements Serializable {
         this.textValue = textValue;
     }
 
+    public static TextContent createEmptyTextContent() {
+        TextContent instance = new TextContent();
+        instance.setLanguage(Language.DEFAULT_LANGUAGE);
+        instance.setTextValue("???");
+        return instance;
+    }
+
     public Long getId() {
         return id;
     }
