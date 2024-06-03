@@ -77,7 +77,7 @@ public class SchoolValidator {
 
         for (var entry : schoolEditionDTO.names) {
 
-            if (!textCache.containsText(schoolToEdit.getId(), entry.language)) {
+            if (!textCache.containsText(schoolToEdit.getNameTextContentId(), entry.language)) {
                 errors.add(new ErrorDTO(3, "No text exists for the given language: " + entry.language.getName()));
             }
 

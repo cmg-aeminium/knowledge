@@ -4,16 +4,22 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CourseSearchFilter;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseClassDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseClassDetailDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseClassDetailDTO.CourseClassTopicDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseClassDetailDTO.MinimalCourseDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseDTO;
 import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
+import pt.cmg.aeminium.knowledge.dao.schools.CourseDAO.CourseFilterCriteria;
 import pt.cmg.aeminium.knowledge.dao.schools.SchoolDAO;
-import pt.cmg.aeminium.knowledge.dao.schools.CourseDAO.DegreeFilterCriteria;
 import pt.cmg.aeminium.knowledge.persistence.entities.schools.Course;
+import pt.cmg.aeminium.knowledge.persistence.entities.schools.CourseClass;
 import pt.cmg.aeminium.knowledge.persistence.entities.schools.School;
 
 /**
@@ -31,9 +37,9 @@ public class CourseConverter {
     @Inject
     private SchoolConverter schoolConverter;
 
-    public DegreeFilterCriteria toDegreeFilterCriteria(CourseSearchFilter searchFilter) {
+    public CourseFilterCriteria toDegreeFilterCriteria(CourseSearchFilter searchFilter) {
         School school = schoolDAO.findById(searchFilter.school);
-        return new DegreeFilterCriteria(school, searchFilter.year, searchFilter.name, searchFilter.acronym);
+        return new CourseFilterCriteria(school, searchFilter.year, searchFilter.name, searchFilter.acronym);
     }
 
     public List<CourseDTO> toCourseDTOs(List<Course> degrees) {
@@ -49,6 +55,57 @@ public class CourseConverter {
         dto.image = course.getImage();
         dto.school = schoolConverter.toSchoolDTO(course.getSchool());
         dto.year = course.getYear();
+
+        return dto;
+    }
+
+    public List<CourseClassDTO> toCourseClassesDTO(List<CourseClass> classes) {
+        return classes.stream().map(this::toCourseClassesDTO).collect(Collectors.toList());
+    }
+
+    public CourseClassDTO toCourseClassesDTO(CourseClass courseClass) {
+        CourseClassDTO dto = new CourseClassDTO();
+
+        dto.id = courseClass.getId();
+        dto.year = courseClass.getYear();
+        dto.name = translationCache.getTranslatedText(courseClass.getNameTextContentId());
+        dto.description = translationCache.getTranslatedText(courseClass.getDescriptionContentId());
+        dto.ects = courseClass.getEcts();
+        dto.isOptional = courseClass.isOptional();
+        dto.createdAt = courseClass.getCreatedAt();
+
+        return dto;
+    }
+
+    public CourseClassDetailDTO toCourseClassDTO(CourseClass courseClass) {
+        CourseClassDetailDTO dto = new CourseClassDetailDTO();
+
+        dto.id = courseClass.getId();
+        dto.year = courseClass.getYear();
+        dto.name = translationCache.getTranslatedText(courseClass.getNameTextContentId());
+        dto.description = translationCache.getTranslatedText(courseClass.getDescriptionContentId());
+        dto.ects = courseClass.getEcts();
+        dto.isOptional = courseClass.isOptional();
+        dto.createdAt = courseClass.getCreatedAt();
+
+        MinimalCourseDTO courseDTO = new MinimalCourseDTO();
+        courseDTO.id = courseClass.getCourse().getId();
+        courseDTO.name = translationCache.getTranslatedText(courseClass.getCourse().getNameTextContentId());
+
+        dto.course = courseDTO;
+
+        List<CourseClassTopicDTO> topics = new ArrayList<>();
+        for (var topic : courseClass.getCourseClassTopics()) {
+
+            CourseClassTopicDTO topicDTO = new CourseClassTopicDTO();
+            topicDTO.id = topic.getId();
+            topicDTO.description = translationCache.getTranslatedText(topic.getDescriptionContentId());
+            topicDTO.order = topic.getOrder();
+
+            topics.add(topicDTO);
+        }
+
+        dto.topics = topics;
 
         return dto;
     }

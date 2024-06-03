@@ -40,7 +40,7 @@ public class CourseClassTopic implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "COURSE_CLASS_TOPICS_SEQUENCE")
     @SequenceGenerator(name = "COURSE_CLASS_TOPICS_SEQUENCE",
-        sequenceName = "courseclasses_id_seq",
+        sequenceName = "courseclasstopic_id_seq",
         initialValue = 1,
         allocationSize = 1)
     @Column(name = "id")

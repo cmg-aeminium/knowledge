@@ -10,11 +10,14 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import org.eclipse.persistence.annotations.Cache;
 import org.eclipse.persistence.annotations.CacheCoordinationType;
@@ -38,6 +41,12 @@ public class CourseClass implements Serializable {
     public static final String QUERY_FIND_ALL = "CourseClass.findAll";
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "COURSE_CLASSES_SEQUENCE")
+    @SequenceGenerator(name = "COURSE_CLASSES_SEQUENCE",
+        sequenceName = "courseclasses_id_seq",
+        initialValue = 1,
+        allocationSize = 1)
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "year", nullable = false)
@@ -47,7 +56,7 @@ public class CourseClass implements Serializable {
     private Integer semester;
 
     @Column(name = "ects", nullable = false)
-    private Integer ects;
+    private Double ects;
 
     @Column(name = "isoptional", nullable = false)
     private boolean isOptional;
@@ -96,11 +105,11 @@ public class CourseClass implements Serializable {
         this.semester = semester;
     }
 
-    public Integer getEcts() {
+    public Double getEcts() {
         return ects;
     }
 
-    public void setEcts(Integer ects) {
+    public void setEcts(Double ects) {
         this.ects = ects;
     }
 

@@ -33,7 +33,7 @@ public class TranslationEditor {
 
     public TextContent createTranslatedTexts(Collection<LocalisedTextDTO> translations) {
 
-        if (translations == null) {
+        if (translations == null || translations.isEmpty()) {
             TextContent originalText = TextContent.createEmptyTextContent();
             textContentDAO.create(originalText);
             return originalText;
@@ -72,7 +72,7 @@ public class TranslationEditor {
 
     public void updateTraslatedTexts(Long translationId, Collection<LocalisedTextDTO> translations) {
 
-        if (translations == null) {
+        if (translations == null || translations.isEmpty()) {
             return;
         }
 

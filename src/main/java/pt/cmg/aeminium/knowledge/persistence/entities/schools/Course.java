@@ -7,6 +7,7 @@ package pt.cmg.aeminium.knowledge.persistence.entities.schools;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -23,6 +24,7 @@ import org.eclipse.persistence.annotations.Cache;
 import org.eclipse.persistence.annotations.CacheCoordinationType;
 import org.eclipse.persistence.annotations.CacheType;
 import org.eclipse.persistence.config.CacheIsolationType;
+import pt.cmg.aeminium.knowledge.persistence.entities.identity.User;
 
 /**
  * @author Carlos Gonçalves
@@ -31,6 +33,10 @@ import org.eclipse.persistence.config.CacheIsolationType;
 @Table(name = "Courses")
 @Cache(type = CacheType.FULL, isolation = CacheIsolationType.SHARED, alwaysRefresh = true, coordinationType = CacheCoordinationType.SEND_NEW_OBJECTS_WITH_CHANGES)
 @NamedQuery(name = Course.QUERY_FIND_ALL, query = "SELECT c from Course c")
+@NamedQuery(name = Course.QUERY_FIND_BY_NAME,
+    query = "SELECT c from Course c WHERE c.nameTextContentId = (SELECT tc.id FROM TextContent tc WHERE tc.textValue = :name)")
+@NamedQuery(name = Course.QUERY_FIND_BY_TRANSLATED_NAME,
+    query = "SELECT c from Course c WHERE c.nameTextContentId = (SELECT tc.id FROM TranslatedText tc WHERE tc.language = :language AND tc.textValue = :name)")
 public class Course implements Serializable {
 
     /**
@@ -39,6 +45,8 @@ public class Course implements Serializable {
     private static final long serialVersionUID = 4430445702440386925L;
 
     public static final String QUERY_FIND_ALL = "Course.findAll";
+    public static final String QUERY_FIND_BY_NAME = "Course.findByName";
+    public static final String QUERY_FIND_BY_TRANSLATED_NAME = "Course.findByTranslatedName";
 
     @Id
     @SequenceGenerator(
@@ -76,6 +84,10 @@ public class Course implements Serializable {
 
     @Column(name = "createdat")
     private LocalDateTime createdAt;
+
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "createdby", referencedColumnName = "id")
+    private User createdBy;
 
     public Course() {
         this.createdAt = LocalDateTime.now();
@@ -147,6 +159,34 @@ public class Course implements Serializable {
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
+    }
+
+    public User getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(User createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        Course other = (Course) obj;
+        return Objects.equals(id, other.id);
     }
 
 }
