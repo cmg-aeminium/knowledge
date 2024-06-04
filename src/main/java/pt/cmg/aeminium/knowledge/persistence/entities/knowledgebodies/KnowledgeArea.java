@@ -8,6 +8,7 @@ package pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Objects;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -116,6 +117,10 @@ public class KnowledgeArea implements Serializable {
         this.knowledgeTopics = knowledgeTopics;
     }
 
+    public void addTopic(KnowledgeTopic knowledgeTopic) {
+        this.knowledgeTopics.add(knowledgeTopic);
+    }
+
     public KnowledgeBody getKnowledgeBody() {
         return knowledgeBody;
     }
@@ -126,6 +131,26 @@ public class KnowledgeArea implements Serializable {
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        KnowledgeArea other = (KnowledgeArea) obj;
+        return Objects.equals(id, other.id);
     }
 
 }

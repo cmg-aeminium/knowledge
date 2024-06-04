@@ -4,14 +4,22 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response;
 
+import java.util.List;
+
 /**
  * @author Carlos Gonçalves
  */
-public class DetailedKnowledgeAreaDTO {
+public class KnowledgeAreaDetailDTO {
 
     public Long id;
     public String image;
     public String name;
     public String description;
-    public KnowledgeBodyDTO bodyOfKnowledge;
+
+    public List<KATopicDTO> topics;
+
+    public static class KATopicDTO {
+        public Long id;
+        public String name;
+    }
 }

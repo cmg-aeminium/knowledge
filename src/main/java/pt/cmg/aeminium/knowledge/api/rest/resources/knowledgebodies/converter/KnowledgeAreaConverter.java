@@ -8,7 +8,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
-import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.DetailedKnowledgeAreaDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeAreaDetailDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeAreaDetailDTO.KATopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeAreaDTO;
 import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
 import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeArea;
@@ -25,15 +26,20 @@ public class KnowledgeAreaConverter {
     @Inject
     private KnowledgeBodyConverter knowledgeBodyConverter;
 
-    public DetailedKnowledgeAreaDTO toDetailedKnowledgeAreaDTO(KnowledgeArea knowledgeArea) {
+    public KnowledgeAreaDetailDTO toDetailedKnowledgeAreaDTO(KnowledgeArea knowledgeArea) {
 
-        DetailedKnowledgeAreaDTO dto = new DetailedKnowledgeAreaDTO();
+        KnowledgeAreaDetailDTO dto = new KnowledgeAreaDetailDTO();
 
         dto.id = knowledgeArea.getId();
         dto.image = knowledgeArea.getImage();
         dto.name = translationCache.getTranslatedText(knowledgeArea.getNameTextContentId());
         dto.description = translationCache.getTranslatedText(knowledgeArea.getDescriptionContentId());
-        dto.bodyOfKnowledge = knowledgeBodyConverter.toKnowledgeBodyDTO(knowledgeArea.getBodyOfKnowledge());
+
+        for (var topic : knowledgeArea.getKnowledgeTopics()) {
+            KATopicDTO topicDTO = new KATopicDTO();
+            topicDTO.id = topic.getId();
+            topicDTO.name = translationCache.getTranslatedText(topic.getNameTextContentId());
+        }
 
         return dto;
     }

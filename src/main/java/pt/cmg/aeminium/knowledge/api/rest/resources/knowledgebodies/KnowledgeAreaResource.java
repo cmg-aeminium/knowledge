@@ -5,8 +5,14 @@
 package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies;
 
 import java.util.List;
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
+import javax.validation.Valid;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -17,8 +23,15 @@ import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converter.KnowledgeAreaConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converter.KnowledgeTopicConverter;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.CreateKnowledgeAreaDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.CreateKnowledgeTopicDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.EditKnowledgeTopicDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.validators.KnowledgeAreaValidator;
 import pt.cmg.aeminium.knowledge.dao.knowledgeareas.KnowledgeAreaDAO;
 import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeArea;
+import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeTopic;
+import pt.cmg.aeminium.knowledge.tasks.knowledgebodies.KnowledgeBodyCreator;
+import pt.cmg.jakartautils.errors.ErrorDTO;
 
 /**
  * @author Carlos Gonçalves
@@ -39,6 +52,12 @@ public class KnowledgeAreaResource {
     @Inject
     private KnowledgeTopicConverter kaTopicConverter;
 
+    @Inject
+    private KnowledgeAreaValidator knowledgeAreaValidator;
+
+    @Inject
+    private KnowledgeBodyCreator knowledgeBodyCreator;
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll() {
@@ -54,6 +73,23 @@ public class KnowledgeAreaResource {
         return Response.ok(kaConverter.toDetailedKnowledgeAreaDTO(ka)).build();
     }
 
+    @POST
+    @Path("")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @RolesAllowed({"GOD", "SCHOLAR"})
+    public Response createKnowledgeArea(@Valid CreateKnowledgeAreaDTO newKnowledgeAreaDTO) {
+
+        var validationErrors = knowledgeAreaValidator.isKACreationValid(newKnowledgeAreaDTO);
+        if (validationErrors.isPresent()) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(validationErrors.get()).build();
+        }
+
+        KnowledgeArea newKnowledgeArea = knowledgeBodyCreator.createKnowledgeArea(newKnowledgeAreaDTO);
+
+        return Response.ok(kaConverter.toDetailedKnowledgeAreaDTO(newKnowledgeArea)).build();
+    }
+
     @GET
     @Path("{id}/topics")
     @Produces(MediaType.APPLICATION_JSON)
@@ -62,10 +98,51 @@ public class KnowledgeAreaResource {
         var knowledgeArea = knowledgeAreaDAO.findById(knowledgeAreaId);
 
         if (knowledgeArea == null) {
-            return Response.status(Status.BAD_REQUEST).build();
+            return Response.status(Status.BAD_REQUEST).entity(new ErrorDTO(1, "Knowledge Area does not exist")).build();
         }
 
         return Response.ok(kaTopicConverter.toTopicDTOs(knowledgeArea.getKnowledgeTopics())).build();
+    }
+
+    @POST
+    @Path("/{id}/topics")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response createKnowledgeTopics(@PathParam("id") Long id, @Valid CreateKnowledgeTopicDTO topicDTO) {
+
+        var knowledgeArea = knowledgeAreaDAO.findById(id);
+        if (knowledgeArea == null) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1, "Knowledge Area does not exist")).build();
+        }
+
+        KnowledgeTopic newTopic = knowledgeBodyCreator.createTopic(topicDTO, id);
+
+        return Response.ok(kaTopicConverter.toDetailedTopicDTO(newTopic)).build();
+    }
+
+    @PUT
+    @Path("/{id}/topics/{topicId}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response editCourseClassTopic(@PathParam("id") Long id, @PathParam("topicId") Long topicId, EditKnowledgeTopicDTO editTopicDTO) {
+
+        var validationErrors = knowledgeAreaValidator.isTopicEditionValid(id, topicId, editTopicDTO);
+        if (validationErrors.isPresent()) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(validationErrors.get()).build();
+        }
+
+        KnowledgeTopic editedTopic = knowledgeBodyCreator.editTopic(editTopicDTO, topicId);
+
+        return Response.ok(kaTopicConverter.toDetailedTopicDTO(editedTopic)).build();
+    }
+
+    @DELETE
+    @Path("/{id}/topics/{topicId}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response deleteKnowledgeTopics(@PathParam("id") Long id, @PathParam("topicId") Long topicId) {
+        knowledgeBodyCreator.deleteTopic(topicId);
+        return Response.ok().build();
     }
 
 }

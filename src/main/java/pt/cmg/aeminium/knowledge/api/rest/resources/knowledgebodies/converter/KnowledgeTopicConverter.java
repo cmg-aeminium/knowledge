@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeTopicDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeTopicDetailDTO;
 import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
 import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeTopic;
 
@@ -21,16 +22,27 @@ public class KnowledgeTopicConverter {
     @Inject
     private HazelcastCache translationCache;
 
+    public List<KnowledgeTopicDetailDTO> toDetailedTopicDTOs(List<KnowledgeTopic> topics) {
+        return topics.stream().map(this::toDetailedTopicDTO).collect(Collectors.toList());
+    }
+
+    public KnowledgeTopicDetailDTO toDetailedTopicDTO(KnowledgeTopic topic) {
+
+        KnowledgeTopicDetailDTO dto = new KnowledgeTopicDetailDTO();
+        dto.id = topic.getId();
+        dto.name = translationCache.getTranslatedText(topic.getNameTextContentId());
+        dto.description = translationCache.getTranslatedText(topic.getDescriptionContentId());
+        return dto;
+    }
+
     public List<KnowledgeTopicDTO> toTopicDTOs(List<KnowledgeTopic> topics) {
         return topics.stream().map(this::toTopicDTO).collect(Collectors.toList());
     }
 
     public KnowledgeTopicDTO toTopicDTO(KnowledgeTopic topic) {
-
         KnowledgeTopicDTO dto = new KnowledgeTopicDTO();
         dto.id = topic.getId();
         dto.name = translationCache.getTranslatedText(topic.getNameTextContentId());
-        dto.description = translationCache.getTranslatedText(topic.getDescriptionContentId());
         return dto;
     }
 

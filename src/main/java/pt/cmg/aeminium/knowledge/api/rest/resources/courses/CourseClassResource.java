@@ -139,7 +139,7 @@ public class CourseClassResource {
         return Response.ok(courseClassConverter.toCourseClasseTopicDTO(newTopic)).build();
     }
 
-    @POST
+    @PUT
     @Path("/{id}/topics/{topicId}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)

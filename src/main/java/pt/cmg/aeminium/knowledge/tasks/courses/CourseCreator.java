@@ -142,20 +142,19 @@ public class CourseCreator {
         newClass.setCourseClassTopics(topics);
 
         return newClass;
-
     }
 
-    public CourseClass editClass(EditCourseClassDTO newClassDTO, Long classId) {
+    public CourseClass editClass(EditCourseClassDTO editClassDTO, Long classId) {
 
         CourseClass classToEdit = courseClassDAO.findById(classId);
 
-        translationEditor.updateTraslatedTexts(classToEdit.getNameTextContentId(), newClassDTO.names);
-        translationEditor.updateTraslatedTexts(classToEdit.getDescriptionContentId(), newClassDTO.descriptions);
+        translationEditor.updateTraslatedTexts(classToEdit.getNameTextContentId(), editClassDTO.names);
+        translationEditor.updateTraslatedTexts(classToEdit.getDescriptionContentId(), editClassDTO.descriptions);
 
-        classToEdit.setYear(newClassDTO.year);
-        classToEdit.setSemester(newClassDTO.semester);
-        classToEdit.setEcts(newClassDTO.ects);
-        classToEdit.setOptional(newClassDTO.isOptional);
+        classToEdit.setYear(editClassDTO.year);
+        classToEdit.setSemester(editClassDTO.semester);
+        classToEdit.setEcts(editClassDTO.ects);
+        classToEdit.setOptional(editClassDTO.isOptional);
 
         return classToEdit;
 
@@ -181,17 +180,19 @@ public class CourseCreator {
 
     }
 
-    public CourseClassTopic editTopic(EditCourseClassTopicDTO newTopicDTO, Long topicId) {
+    public CourseClassTopic editTopic(EditCourseClassTopicDTO editTopicDTO, Long topicId) {
 
         CourseClassTopic topicToEdit = courseClassTopicDAO.findById(topicId);
 
-        translationEditor.updateTraslatedTexts(topicToEdit.getDescriptionContentId(), newTopicDTO.descriptions);
-        if (newTopicDTO.order != null) {
-            topicToEdit.setOrder(newTopicDTO.order);
+        if (editTopicDTO.descriptions != null && !editTopicDTO.descriptions.isEmpty()) {
+            translationEditor.updateTraslatedTexts(topicToEdit.getDescriptionContentId(), editTopicDTO.descriptions);
+        }
+
+        if (editTopicDTO.order != null) {
+            topicToEdit.setOrder(editTopicDTO.order);
         }
 
         return topicToEdit;
-
     }
 
     public void deleteTopic(Long topicId) {

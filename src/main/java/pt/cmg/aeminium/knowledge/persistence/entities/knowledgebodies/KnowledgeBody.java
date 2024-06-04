@@ -7,6 +7,7 @@ package pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Objects;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,14 +15,17 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import org.eclipse.persistence.annotations.Cache;
 import org.eclipse.persistence.annotations.CacheCoordinationType;
 import org.eclipse.persistence.annotations.CacheType;
 import org.eclipse.persistence.config.CacheIsolationType;
+import pt.cmg.aeminium.knowledge.persistence.entities.identity.User;
 
 /**
  * @author Carlos Gonçalves
@@ -65,6 +69,10 @@ public class KnowledgeBody implements Serializable {
 
     @Column(name = "createdat")
     private LocalDateTime createdAt;
+
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "createdby", referencedColumnName = "id")
+    private User createdBy;
 
     public KnowledgeBody() {
         this.createdAt = LocalDateTime.now();
@@ -118,8 +126,40 @@ public class KnowledgeBody implements Serializable {
         this.knowledgeAreas = knowledgeAreas;
     }
 
+    public void addKnowledgeArea(KnowledgeArea knowledgeArea) {
+        this.knowledgeAreas.add(knowledgeArea);
+    }
+
     public LocalDateTime getCreatedAt() {
         return createdAt;
+    }
+
+    public User getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(User createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        KnowledgeBody other = (KnowledgeBody) obj;
+        return Objects.equals(id, other.id);
     }
 
 }

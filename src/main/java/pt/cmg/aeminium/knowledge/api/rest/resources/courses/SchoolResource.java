@@ -5,7 +5,6 @@
 package pt.cmg.aeminium.knowledge.api.rest.resources.courses;
 
 import java.util.List;
-import java.util.logging.Logger;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -37,8 +36,6 @@ import pt.cmg.jakartautils.errors.ErrorDTO;
 @Path("schools")
 @Stateless
 public class SchoolResource {
-
-    private static final Logger LOGGER = Logger.getLogger(SchoolResource.class.getName());
 
     @Inject
     @RequestData

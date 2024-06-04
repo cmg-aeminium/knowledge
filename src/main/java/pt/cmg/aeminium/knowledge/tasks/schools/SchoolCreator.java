@@ -51,7 +51,7 @@ public class SchoolCreator {
         // cached call
         school.setCreatedBy(userDAO.findById(requestData.getUserId()));
 
-        schoolDAO.create(school);
+        schoolDAO.create(school, true);
 
         return school;
     }
