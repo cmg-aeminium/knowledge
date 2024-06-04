@@ -62,7 +62,9 @@ public class SchoolCreator {
 
         translationEditor.updateTraslatedTexts(schoolToEdit.getNameTextContentId(), schoolEdition.names);
 
-        schoolToEdit.setCountry(countryDAO.findById(schoolEdition.country));
+        if (schoolEdition.country != null) {
+            schoolToEdit.setCountry(countryDAO.findById(schoolEdition.country));
+        }
 
         return schoolToEdit;
     }

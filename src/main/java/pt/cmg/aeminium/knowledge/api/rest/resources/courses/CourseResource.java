@@ -22,6 +22,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseClassConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CourseSearchFilter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassDTO;
@@ -55,6 +56,9 @@ public class CourseResource {
 
     @Inject
     private CourseConverter courseConverter;
+
+    @Inject
+    private CourseClassConverter courseClassConverter;
 
     @Inject
     private CourseValidator courseValidator;
@@ -137,7 +141,7 @@ public class CourseResource {
             return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1, "Course does not exist")).build();
         }
 
-        return Response.ok(courseConverter.toCourseClassesDTO(course.getCourseClasses())).build();
+        return Response.ok(courseClassConverter.toCourseClassesDTO(course.getCourseClasses())).build();
     }
 
     @GET
@@ -160,7 +164,7 @@ public class CourseResource {
             return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(3, "This class does not belong to this degree")).build();
         }
 
-        return Response.ok(courseConverter.toCourseClassesDTO(courseClass)).build();
+        return Response.ok(courseClassConverter.toCourseClassDTO(courseClass)).build();
     }
 
     @POST
@@ -177,7 +181,7 @@ public class CourseResource {
 
         CourseClass newClass = courseCreator.createClass(newClassDTO, id);
 
-        return Response.ok(courseConverter.toCourseClassDTO(newClass)).build();
+        return Response.ok(courseClassConverter.toCourseClassDetailedDTO(newClass)).build();
     }
 
     @PUT
@@ -187,13 +191,13 @@ public class CourseResource {
     @RolesAllowed({"GOD", "SCHOLAR"})
     public Response editCourseClass(@PathParam("id") Long courseId, @PathParam("classId") Long classId, EditCourseClassDTO editCourseClassDTO) {
 
-        var validationErrors = courseValidator.isClassEditionValid(courseId, classId, editCourseClassDTO);
+        var validationErrors = courseValidator.isCourseClassEditionValid(courseId, classId, editCourseClassDTO);
         if (validationErrors.isPresent()) {
             return Response.status(Response.Status.BAD_REQUEST).entity(validationErrors.get()).build();
         }
 
         CourseClass editedClass = courseCreator.editClass(editCourseClassDTO, classId);
 
-        return Response.ok(courseConverter.toCourseClassDTO(editedClass)).build();
+        return Response.ok(courseClassConverter.toCourseClassDetailedDTO(editedClass)).build();
     }
 }

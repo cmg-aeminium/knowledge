@@ -19,16 +19,11 @@ public class CourseClassDetailDTO {
     public boolean isOptional;
     public LocalDateTime createdAt;
     public List<ClassTopicDTO> topics;
-    public MinimalCourseDTO course;
 
     public static class ClassTopicDTO {
         public Long id;
         public String description;
         public Integer order;
-    }
-    public static class MinimalCourseDTO {
-        public Long id;
-        public String name;
     }
 
 }

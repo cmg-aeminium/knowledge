@@ -4,22 +4,27 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.resources.courses;
 
+import java.util.List;
 import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.validation.Valid;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseConverter;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseClassConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassTopicDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.validators.CourseValidator;
 import pt.cmg.aeminium.knowledge.dao.schools.CourseClassDAO;
 import pt.cmg.aeminium.knowledge.persistence.entities.schools.CourseClass;
@@ -38,7 +43,7 @@ public class CourseClassResource {
     private CourseClassDAO courseClassDAO;
 
     @Inject
-    private CourseConverter courseConverter;
+    private CourseClassConverter courseClassConverter;
 
     @Inject
     private CourseValidator courseValidator;
@@ -47,10 +52,20 @@ public class CourseClassResource {
     private CourseCreator courseCreator;
 
     @GET
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAllCourseClasses() {
+
+        List<CourseClass> courseClasses = courseClassDAO.findAll();
+
+        return Response.ok(courseClassConverter.toCourseClassesDTO(courseClasses)).build();
+    }
+
+    @GET
     @Path("{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getCourseById(@PathParam("id") Long id) {
+    public Response getClassById(@PathParam("id") Long id) {
 
         CourseClass course = courseClassDAO.findById(id);
 
@@ -58,7 +73,7 @@ public class CourseClassResource {
             return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1, "Course Class does not exist")).build();
         }
 
-        return Response.ok(courseConverter.toCourseClassDTO(course)).build();
+        return Response.ok(courseClassConverter.toCourseClassDetailedDTO(course)).build();
     }
 
     @POST
@@ -74,7 +89,24 @@ public class CourseClassResource {
 
         CourseClass newClass = courseCreator.createClass(newClassDTO);
 
-        return Response.ok(courseConverter.toCourseClassDTO(newClass)).build();
+        return Response.ok(courseClassConverter.toCourseClassDetailedDTO(newClass)).build();
+    }
+
+    @PUT
+    @Path("{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @RolesAllowed({"GOD", "SCHOLAR"})
+    public Response editCourseClass(@PathParam("id") Long id, @Valid EditCourseClassDTO newClassDTO) {
+
+        var validationErrors = courseValidator.isClassEditionValid(id, newClassDTO);
+        if (validationErrors.isPresent()) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(validationErrors.get()).build();
+        }
+
+        CourseClass newClass = courseCreator.editClass(newClassDTO, id);
+
+        return Response.ok(courseClassConverter.toCourseClassDTO(newClass)).build();
     }
 
     @GET
@@ -88,7 +120,7 @@ public class CourseClassResource {
             return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1, "Course Class does not exist")).build();
         }
 
-        return Response.ok(courseConverter.toCourseClasseTopicDTOs(courseClass.getCourseClassTopics())).build();
+        return Response.ok(courseClassConverter.toCourseClasseTopicDTOs(courseClass.getCourseClassTopics())).build();
     }
 
     @POST
@@ -104,6 +136,31 @@ public class CourseClassResource {
 
         CourseClassTopic newTopic = courseCreator.createTopic(topicDTO, id);
 
-        return Response.ok(courseConverter.toCourseClasseTopicDTO(newTopic)).build();
+        return Response.ok(courseClassConverter.toCourseClasseTopicDTO(newTopic)).build();
+    }
+
+    @POST
+    @Path("/{id}/topics/{topicId}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response editCourseClassTopic(@PathParam("id") Long id, @PathParam("topicId") Long topicId, EditCourseClassTopicDTO editTopicDTO) {
+
+        var validationErrors = courseValidator.isTopicEditionValid(id, topicId, editTopicDTO);
+        if (validationErrors.isPresent()) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(validationErrors.get()).build();
+        }
+
+        CourseClassTopic newTopic = courseCreator.editTopic(editTopicDTO, topicId);
+
+        return Response.ok(courseClassConverter.toCourseClasseTopicDTO(newTopic)).build();
+    }
+
+    @DELETE
+    @Path("/{id}/topics/{topicId}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response deleteCourseClassTopic(@PathParam("id") Long id, @PathParam("topicId") Long topicId) {
+        courseCreator.deleteTopic(topicId);
+        return Response.ok().build();
     }
 }

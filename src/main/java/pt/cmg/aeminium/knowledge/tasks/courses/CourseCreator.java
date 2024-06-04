@@ -15,6 +15,7 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCo
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseDTO;
 import pt.cmg.aeminium.knowledge.dao.identity.UserDAO;
 import pt.cmg.aeminium.knowledge.dao.schools.CourseClassDAO;
@@ -57,12 +58,12 @@ public class CourseCreator {
 
     public Course createCourse(CreateCourseDTO newCourse) {
 
-        TextContent defaultSchoolName = translationEditor.createTranslatedTexts(newCourse.names);
+        TextContent defaultCourseName = translationEditor.createTranslatedTexts(newCourse.names);
         TextContent defaultCourseDescription = translationEditor.createTranslatedTexts(newCourse.descriptions);
 
         Course course = new Course();
 
-        course.setNameTextContentId(defaultSchoolName.getId());
+        course.setNameTextContentId(defaultCourseName.getId());
         course.setDescriptionContentId(defaultCourseDescription.getId());
         course.setAcronym(newCourse.acronym);
         course.setImage(newCourse.image);
@@ -109,8 +110,9 @@ public class CourseCreator {
         TextContent defaultClassDescription = translationEditor.createTranslatedTexts(newClassDTO.descriptions);
 
         CourseClass newClass = new CourseClass();
+        Course course = courseDAO.findById(courseId);
 
-        newClass.setCourse(courseDAO.findById(courseId));
+        newClass.setCourse(course);
         newClass.setYear(newClassDTO.year);
         newClass.setSemester(newClassDTO.semester);
         newClass.setEcts(newClassDTO.ects);
@@ -119,6 +121,8 @@ public class CourseCreator {
         newClass.setDescriptionContentId(defaultClassDescription.getId());
 
         courseClassDAO.create(newClass, true);
+
+        course.addCourseClass(newClass);
 
         List<CourseClassTopic> topics = new ArrayList<>();
         for (var topicDTO : newClassDTO.topics) {
@@ -143,19 +147,17 @@ public class CourseCreator {
 
     public CourseClass editClass(EditCourseClassDTO newClassDTO, Long classId) {
 
-        TextContent defaultClassName = translationEditor.createTranslatedTexts(newClassDTO.names);
-        TextContent defaultClassDescription = translationEditor.createTranslatedTexts(newClassDTO.descriptions);
+        CourseClass classToEdit = courseClassDAO.findById(classId);
 
-        CourseClass newClass = courseClassDAO.findById(classId);
+        translationEditor.updateTraslatedTexts(classToEdit.getNameTextContentId(), newClassDTO.names);
+        translationEditor.updateTraslatedTexts(classToEdit.getDescriptionContentId(), newClassDTO.descriptions);
 
-        newClass.setYear(newClassDTO.year);
-        newClass.setSemester(newClassDTO.semester);
-        newClass.setEcts(newClassDTO.ects);
-        newClass.setOptional(newClassDTO.isOptional);
-        newClass.setNameTextContentId(defaultClassName.getId());
-        newClass.setDescriptionContentId(defaultClassDescription.getId());
+        classToEdit.setYear(newClassDTO.year);
+        classToEdit.setSemester(newClassDTO.semester);
+        classToEdit.setEcts(newClassDTO.ects);
+        classToEdit.setOptional(newClassDTO.isOptional);
 
-        return newClass;
+        return classToEdit;
 
     }
 
@@ -177,6 +179,27 @@ public class CourseCreator {
 
         return newTopic;
 
+    }
+
+    public CourseClassTopic editTopic(EditCourseClassTopicDTO newTopicDTO, Long topicId) {
+
+        CourseClassTopic topicToEdit = courseClassTopicDAO.findById(topicId);
+
+        translationEditor.updateTraslatedTexts(topicToEdit.getDescriptionContentId(), newTopicDTO.descriptions);
+        if (newTopicDTO.order != null) {
+            topicToEdit.setOrder(newTopicDTO.order);
+        }
+
+        return topicToEdit;
+
+    }
+
+    public void deleteTopic(Long topicId) {
+        CourseClassTopic topicToDelete = courseClassTopicDAO.findById(topicId);
+
+        if (topicToDelete != null) {
+            courseClassTopicDAO.remove(topicToDelete);
+        }
     }
 
 }

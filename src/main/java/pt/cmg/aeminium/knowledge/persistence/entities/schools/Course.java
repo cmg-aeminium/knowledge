@@ -141,6 +141,10 @@ public class Course implements Serializable {
         this.courseClasses = courseClasses;
     }
 
+    public void addCourseClass(CourseClass courseClass) {
+        this.courseClasses.add(courseClass);
+    }
+
     public Long getNameTextContentId() {
         return nameTextContentId;
     }
