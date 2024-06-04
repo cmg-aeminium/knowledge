@@ -31,9 +31,11 @@ public class CreateCourseClassDTO {
     @NotEmpty(message = "No descriptions were written")
     public HashSet<LocalisedTextDTO> descriptions;
 
-    public List<CourseClassTopicDTO> topics;
+    public List<CreateClassTopicDTO> topics;
 
-    public static class CourseClassTopicDTO {
+    public Long course;
+
+    public static class CreateClassTopicDTO {
 
         @NotNull
         public Integer order;

@@ -12,7 +12,9 @@ import org.apache.commons.lang3.StringUtils;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseDTO;
 import pt.cmg.aeminium.knowledge.dao.identity.UserDAO;
 import pt.cmg.aeminium.knowledge.dao.schools.CourseClassDAO;
@@ -97,6 +99,10 @@ public class CourseCreator {
         return courseToEdit;
     }
 
+    public CourseClass createClass(CreateCourseClassDTO newClassDTO) {
+        return createClass(newClassDTO, newClassDTO.course);
+    }
+
     public CourseClass createClass(CreateCourseClassDTO newClassDTO, Long courseId) {
 
         TextContent defaultClassName = translationEditor.createTranslatedTexts(newClassDTO.names);
@@ -132,6 +138,44 @@ public class CourseCreator {
         newClass.setCourseClassTopics(topics);
 
         return newClass;
+
+    }
+
+    public CourseClass editClass(EditCourseClassDTO newClassDTO, Long classId) {
+
+        TextContent defaultClassName = translationEditor.createTranslatedTexts(newClassDTO.names);
+        TextContent defaultClassDescription = translationEditor.createTranslatedTexts(newClassDTO.descriptions);
+
+        CourseClass newClass = courseClassDAO.findById(classId);
+
+        newClass.setYear(newClassDTO.year);
+        newClass.setSemester(newClassDTO.semester);
+        newClass.setEcts(newClassDTO.ects);
+        newClass.setOptional(newClassDTO.isOptional);
+        newClass.setNameTextContentId(defaultClassName.getId());
+        newClass.setDescriptionContentId(defaultClassDescription.getId());
+
+        return newClass;
+
+    }
+
+    public CourseClassTopic createTopic(CreateCourseClassTopicDTO newTopicDTO, Long classId) {
+
+        TextContent defaultTopicDescription = translationEditor.createTranslatedTexts(newTopicDTO.descriptions);
+
+        CourseClassTopic newTopic = new CourseClassTopic();
+
+        CourseClass courseClass = courseClassDAO.findById(classId);
+
+        newTopic.setCourseClass(courseClass);
+        newTopic.setOrder(newTopicDTO.order);
+        newTopic.setDescriptionContentId(defaultTopicDescription.getId());
+
+        courseClassTopicDAO.create(newTopic, true);
+
+        courseClass.addTopic(newTopic);
+
+        return newTopic;
 
     }
 

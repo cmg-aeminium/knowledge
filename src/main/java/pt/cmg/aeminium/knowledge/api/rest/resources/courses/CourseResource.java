@@ -26,6 +26,7 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseCon
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CourseSearchFilter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.validators.CourseValidator;
 import pt.cmg.aeminium.knowledge.dao.schools.CourseClassDAO;
@@ -97,7 +98,7 @@ public class CourseResource {
     @RolesAllowed({"GOD", "SCHOLAR"})
     public Response createCourse(@Valid CreateCourseDTO newCourseDTO) {
 
-        var validationErrors = courseValidator.isCreationValid(newCourseDTO);
+        var validationErrors = courseValidator.isCourseCreationValid(newCourseDTO);
         if (validationErrors.isPresent()) {
             return Response.status(Response.Status.BAD_REQUEST).entity(validationErrors.get()).build();
         }
@@ -114,14 +115,14 @@ public class CourseResource {
     @RolesAllowed({"GOD", "SCHOLAR"})
     public Response editCourse(@PathParam("id") Long id, EditCourseDTO courseEditionDTO) {
 
-        var validationErrors = courseValidator.isEditionValid(courseEditionDTO, id);
+        var validationErrors = courseValidator.isCourseEditionValid(courseEditionDTO, id);
         if (validationErrors.isPresent()) {
             return Response.status(Response.Status.BAD_REQUEST).entity(validationErrors.get()).build();
         }
 
-        Course newSchool = courseCreator.editCourse(courseEditionDTO, id);
+        Course newCourse = courseCreator.editCourse(courseEditionDTO, id);
 
-        return Response.ok(courseConverter.toCourseDTO(newSchool)).build();
+        return Response.ok(courseConverter.toCourseDTO(newCourse)).build();
     }
 
     @GET
@@ -177,5 +178,22 @@ public class CourseResource {
         CourseClass newClass = courseCreator.createClass(newClassDTO, id);
 
         return Response.ok(courseConverter.toCourseClassDTO(newClass)).build();
+    }
+
+    @PUT
+    @Path("{id}/classes/{classId}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @RolesAllowed({"GOD", "SCHOLAR"})
+    public Response editCourseClass(@PathParam("id") Long courseId, @PathParam("classId") Long classId, EditCourseClassDTO editCourseClassDTO) {
+
+        var validationErrors = courseValidator.isClassEditionValid(courseId, classId, editCourseClassDTO);
+        if (validationErrors.isPresent()) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(validationErrors.get()).build();
+        }
+
+        CourseClass editedClass = courseCreator.editClass(editCourseClassDTO, classId);
+
+        return Response.ok(courseConverter.toCourseClassDTO(editedClass)).build();
     }
 }

@@ -18,10 +18,10 @@ public class CourseClassDetailDTO {
     public Double ects;
     public boolean isOptional;
     public LocalDateTime createdAt;
-    public List<CourseClassTopicDTO> topics;
+    public List<ClassTopicDTO> topics;
     public MinimalCourseDTO course;
 
-    public static class CourseClassTopicDTO {
+    public static class ClassTopicDTO {
         public Long id;
         public String description;
         public Integer order;

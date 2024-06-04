@@ -5,17 +5,16 @@
 package pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request;
 
 import java.util.HashSet;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import pt.cmg.aeminium.knowledge.tasks.localisation.LocalisedTextDTO;
 
 /**
  * @author Carlos Gonçalves
  */
-public class CreateCourseClassTopicDTO {
-    @NotNull(message = "No order given to topic")
-    public Integer order;
-
-    @NotEmpty(message = "No topic descriptions were written")
+public class EditCourseClassDTO {
+    public Integer year;
+    public Integer semester;
+    public Double ects;
+    public boolean isOptional; // NOTE: implicitly not null and default value = false as per JDK
+    public HashSet<LocalisedTextDTO> names;
     public HashSet<LocalisedTextDTO> descriptions;
 }

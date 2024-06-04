@@ -14,13 +14,16 @@ import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CourseSearchFilter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseDTO;
 import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
 import pt.cmg.aeminium.knowledge.dao.identity.UserDAO;
+import pt.cmg.aeminium.knowledge.dao.schools.CourseClassDAO;
 import pt.cmg.aeminium.knowledge.dao.schools.CourseDAO;
 import pt.cmg.aeminium.knowledge.dao.schools.SchoolDAO;
 import pt.cmg.aeminium.knowledge.persistence.entities.identity.User;
 import pt.cmg.aeminium.knowledge.persistence.entities.schools.Course;
+import pt.cmg.aeminium.knowledge.persistence.entities.schools.CourseClass;
 import pt.cmg.jakartautils.errors.ErrorDTO;
 
 /**
@@ -40,6 +43,9 @@ public class CourseValidator {
     private CourseDAO courseDAO;
 
     @Inject
+    private CourseClassDAO courseClassDAO;
+
+    @Inject
     private UserDAO userDAO;
 
     @Inject
@@ -57,7 +63,7 @@ public class CourseValidator {
         return errors.isEmpty() ? Optional.empty() : Optional.of(errors);
     }
 
-    public Optional<List<ErrorDTO>> isCreationValid(CreateCourseDTO newCourse) {
+    public Optional<List<ErrorDTO>> isCourseCreationValid(CreateCourseDTO newCourse) {
         List<ErrorDTO> errors = new ArrayList<>();
 
         if (newCourse.school != null) {
@@ -77,7 +83,7 @@ public class CourseValidator {
         return errors.isEmpty() ? Optional.empty() : Optional.of(errors);
     }
 
-    public Optional<List<ErrorDTO>> isEditionValid(EditCourseDTO courseEditionDTO, Long courseId) {
+    public Optional<List<ErrorDTO>> isCourseEditionValid(EditCourseDTO courseEditionDTO, Long courseId) {
         List<ErrorDTO> errors = new ArrayList<>();
 
         Course courseToEdit = courseDAO.findById(courseId);
@@ -122,6 +128,10 @@ public class CourseValidator {
         return errors.isEmpty() ? Optional.empty() : Optional.of(errors);
     }
 
+    public Optional<List<ErrorDTO>> isClassCreationValid(CreateCourseClassDTO newClass) {
+        return isClassCreationValid(newClass, newClass.course);
+    }
+
     public Optional<List<ErrorDTO>> isClassCreationValid(CreateCourseClassDTO newClass, Long courseId) {
 
         Course course = courseDAO.findById(courseId);
@@ -131,6 +141,25 @@ public class CourseValidator {
 
         if (userDAO.findById(requestData.getUserId()) != course.getCreatedBy()) {
             return Optional.of(List.of(new ErrorDTO(2, "Class creator is not the same as the course creator")));
+        }
+
+        return Optional.empty();
+    }
+
+    public Optional<List<ErrorDTO>> isClassEditionValid(Long courseId, Long classId, EditCourseClassDTO courseEditionDTO) {
+
+        CourseClass courseClass = courseClassDAO.findById(classId);
+        if (courseClass == null) {
+            return Optional.of(List.of(new ErrorDTO(1, "Course Class does not exist")));
+        }
+
+        if (!courseClass.getCourse().getId().equals(courseId)) {
+            return Optional.of(List.of(new ErrorDTO(2, "Course Class does not belong to given degree")));
+        }
+
+        Course course = courseDAO.findById(courseId);
+        if (!course.getCreatedBy().getId().equals(requestData.getUserId())) {
+            return Optional.of(List.of(new ErrorDTO(3, "Class not created by user")));
         }
 
         return Optional.empty();
