@@ -16,25 +16,25 @@ import pt.cmg.aeminium.knowledge.tasks.localisation.LocalisedTextDTO;
  */
 public class CreateKnowledgeAreaDTO {
 
-    @NotNull(message = "Image cannot be null")
+    @NotNull(message = "1001-Image cannot be null")
     public String image;
 
     public Long knowledgeBody;
 
-    @NotEmpty(message = "No names were written")
+    @NotEmpty(message = "1002-No names were written")
     public HashSet<LocalisedTextDTO> names;
 
-    @NotEmpty(message = "No descriptions were written")
+    @NotEmpty(message = "1003-No descriptions were written")
     public HashSet<LocalisedTextDTO> descriptions;
 
     public List<@Valid CreateKATopicDTO> topics;
 
     public static class CreateKATopicDTO {
 
-        @NotEmpty(message = "No topic names were written")
+        @NotEmpty(message = "1004-No topic names were written")
         public HashSet<LocalisedTextDTO> names;
 
-        @NotEmpty(message = "No topic descriptions were written")
+        @NotEmpty(message = "1005-No topic descriptions were written")
         public HashSet<LocalisedTextDTO> descriptions;
     }
 }

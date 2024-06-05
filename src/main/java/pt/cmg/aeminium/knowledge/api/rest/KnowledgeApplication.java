@@ -21,6 +21,7 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.login.LoginResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.users.UserResource;
 import pt.cmg.aeminium.knowledge.configuration.jsonb.JsonbProvider;
 import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Language;
+import pt.cmg.jakartautils.errors.ConstraintViolationExceptionMapper;
 
 /**
  * @author Carlos Gonçalves
@@ -68,6 +69,7 @@ public class KnowledgeApplication extends Application {
         ContextResolver<Jsonb> jsonbConfiguration = new JsonbProvider();
 
         singletons.add(jsonbConfiguration);
+        singletons.add(new ConstraintViolationExceptionMapper());
 
         return singletons;
     }

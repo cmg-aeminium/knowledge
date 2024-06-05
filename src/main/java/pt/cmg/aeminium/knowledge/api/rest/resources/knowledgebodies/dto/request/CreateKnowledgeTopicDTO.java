@@ -12,9 +12,9 @@ import pt.cmg.aeminium.knowledge.tasks.localisation.LocalisedTextDTO;
  * @author Carlos Gonçalves
  */
 public class CreateKnowledgeTopicDTO {
-    @NotEmpty(message = "No topic names were written")
+    @NotEmpty(message = "1001-No topic names were written")
     public HashSet<LocalisedTextDTO> names;
 
-    @NotEmpty(message = "No topic descriptions were written")
+    @NotEmpty(message = "1002-No topic descriptions were written")
     public HashSet<LocalisedTextDTO> descriptions;
 }

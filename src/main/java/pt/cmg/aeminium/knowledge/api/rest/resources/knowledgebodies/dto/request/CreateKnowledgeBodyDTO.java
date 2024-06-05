@@ -14,15 +14,15 @@ import pt.cmg.aeminium.knowledge.tasks.localisation.LocalisedTextDTO;
  */
 public class CreateKnowledgeBodyDTO {
 
-    @NotNull(message = "Image cannot be null")
+    @NotNull(message = "1001 - Image cannot be null")
     public String image;
 
-    @NotNull(message = "Year cannot be null")
+    @NotNull(message = "1002-Year cannot be null")
     public Integer year;
 
-    @NotEmpty(message = "No names were written")
+    @NotEmpty(message = "1003-No names were written")
     public HashSet<LocalisedTextDTO> names;
 
-    @NotEmpty(message = "No names were written")
+    @NotEmpty(message = "1004-No descriptions were written")
     public HashSet<LocalisedTextDTO> descriptions;
 }

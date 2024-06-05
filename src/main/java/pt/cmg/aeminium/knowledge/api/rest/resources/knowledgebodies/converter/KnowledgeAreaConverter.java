@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeAreaDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeAreaDetailDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeAreaDetailDTO.KATopicDTO;
-import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeAreaDTO;
 import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
 import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeArea;
 
@@ -22,9 +22,6 @@ public class KnowledgeAreaConverter {
 
     @Inject
     private HazelcastCache translationCache;
-
-    @Inject
-    private KnowledgeBodyConverter knowledgeBodyConverter;
 
     public KnowledgeAreaDetailDTO toDetailedKnowledgeAreaDTO(KnowledgeArea knowledgeArea) {
 

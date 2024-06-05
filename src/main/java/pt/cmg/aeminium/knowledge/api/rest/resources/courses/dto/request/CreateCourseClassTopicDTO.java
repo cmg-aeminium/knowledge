@@ -13,9 +13,9 @@ import pt.cmg.aeminium.knowledge.tasks.localisation.LocalisedTextDTO;
  * @author Carlos Gonçalves
  */
 public class CreateCourseClassTopicDTO {
-    @NotNull(message = "No order given to topic")
+    @NotNull(message = "1001 - No order given to topic")
     public Integer order;
 
-    @NotEmpty(message = "No topic descriptions were written")
+    @NotEmpty(message = "1002 - No topic descriptions were written")
     public HashSet<LocalisedTextDTO> descriptions;
 }

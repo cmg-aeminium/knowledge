@@ -15,7 +15,7 @@ import pt.cmg.aeminium.knowledge.tasks.localisation.LocalisedTextDTO;
  */
 public class CreateCourseClassDTO {
 
-    @NotNull(message = "Year cannot be null")
+    @NotNull(message = "1001 - Year cannot be null")
     public Integer year;
 
     public Integer semester;
@@ -25,10 +25,10 @@ public class CreateCourseClassDTO {
     // NOTE: implicitly not null and default value = false as per JDK
     public boolean isOptional;
 
-    @NotEmpty(message = "No names were written")
+    @NotEmpty(message = "1002 - No names were written")
     public HashSet<LocalisedTextDTO> names;
 
-    @NotEmpty(message = "No descriptions were written")
+    @NotEmpty(message = "1003 - No descriptions were written")
     public HashSet<LocalisedTextDTO> descriptions;
 
     public List<CreateClassTopicDTO> topics;
@@ -37,10 +37,10 @@ public class CreateCourseClassDTO {
 
     public static class CreateClassTopicDTO {
 
-        @NotNull
+        @NotNull(message = "1004 - Order cannot be null")
         public Integer order;
 
-        @NotEmpty(message = "No topic descriptions were written")
+        @NotEmpty(message = "1005 - No topic descriptions were written")
         public HashSet<LocalisedTextDTO> descriptions;
     }
 

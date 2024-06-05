@@ -14,10 +14,10 @@ import pt.cmg.aeminium.knowledge.tasks.localisation.LocalisedTextDTO;
  */
 public class CreateSchoolDTO {
 
-    @NotNull(message = "Country cannot be null")
+    @NotNull(message = "1001-Country cannot be null")
     public Long country;
 
-    @NotEmpty(message = "No names were written")
+    @NotEmpty(message = "1002-No names were written")
     public HashSet<LocalisedTextDTO> names;
 
 }
