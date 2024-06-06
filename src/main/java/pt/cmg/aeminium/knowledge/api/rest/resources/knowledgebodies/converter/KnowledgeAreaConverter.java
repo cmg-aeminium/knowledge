@@ -4,6 +4,7 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converter;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.enterprise.context.RequestScoped;
@@ -32,10 +33,13 @@ public class KnowledgeAreaConverter {
         dto.name = translationCache.getTranslatedText(knowledgeArea.getNameTextContentId());
         dto.description = translationCache.getTranslatedText(knowledgeArea.getDescriptionContentId());
 
+        dto.topics = new ArrayList<>();
         for (var topic : knowledgeArea.getKnowledgeTopics()) {
             KATopicDTO topicDTO = new KATopicDTO();
             topicDTO.id = topic.getId();
             topicDTO.name = translationCache.getTranslatedText(topic.getNameTextContentId());
+
+            dto.topics.add(topicDTO);
         }
 
         return dto;

@@ -44,7 +44,7 @@ public class KnowledgeAreaValidator {
 
     public Optional<List<ErrorDTO>> isKACreationValid(CreateKnowledgeAreaDTO kAreaDTO, Long knowledgeBodyId) {
 
-        if (kAreaDTO.knowledgeBody == null) {
+        if (knowledgeBodyId == null) {
             return Optional.of(List.of(new ErrorDTO(1, "Knowledge Body cannot be null")));
         }
 

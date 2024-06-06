@@ -5,6 +5,7 @@
 package pt.cmg.aeminium.knowledge.persistence.entities.schools;
 
 import java.io.Serializable;
+import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -86,6 +87,26 @@ public class CourseClassTopic implements Serializable {
 
     public void setDescriptionContentId(Long descriptionContentId) {
         this.descriptionContentId = descriptionContentId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        CourseClassTopic other = (CourseClassTopic) obj;
+        return Objects.equals(id, other.id);
     }
 
 }

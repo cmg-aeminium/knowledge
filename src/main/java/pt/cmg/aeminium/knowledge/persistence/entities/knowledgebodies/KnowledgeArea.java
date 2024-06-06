@@ -40,7 +40,7 @@ public class KnowledgeArea implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "KNOWLEDGEAREA_SEQUENCE")
     @SequenceGenerator(name = "KNOWLEDGEAREA_SEQUENCE",
-        sequenceName = "knowledgearea_id_seq",
+        sequenceName = "knowledgeareas_id_seq",
         initialValue = 1,
         allocationSize = 1)
     @Column(name = "id")
@@ -119,6 +119,10 @@ public class KnowledgeArea implements Serializable {
 
     public void addTopic(KnowledgeTopic knowledgeTopic) {
         this.knowledgeTopics.add(knowledgeTopic);
+    }
+
+    public void removeTopic(KnowledgeTopic knowledgeTopic) {
+        this.knowledgeTopics.remove(knowledgeTopic);
     }
 
     public KnowledgeBody getKnowledgeBody() {

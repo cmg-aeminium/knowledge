@@ -74,7 +74,6 @@ public class KnowledgeAreaResource {
     }
 
     @POST
-    @Path("")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @RolesAllowed({"GOD", "SCHOLAR"})
@@ -108,6 +107,7 @@ public class KnowledgeAreaResource {
     @Path("/{id}/topics")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
+    @RolesAllowed({"GOD", "SCHOLAR"})
     public Response createKnowledgeTopics(@PathParam("id") Long id, @Valid CreateKnowledgeTopicDTO topicDTO) {
 
         var knowledgeArea = knowledgeAreaDAO.findById(id);
@@ -124,6 +124,7 @@ public class KnowledgeAreaResource {
     @Path("/{id}/topics/{topicId}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
+    @RolesAllowed({"GOD", "SCHOLAR"})
     public Response editCourseClassTopic(@PathParam("id") Long id, @PathParam("topicId") Long topicId, EditKnowledgeTopicDTO editTopicDTO) {
 
         var validationErrors = knowledgeAreaValidator.isTopicEditionValid(id, topicId, editTopicDTO);
@@ -140,6 +141,7 @@ public class KnowledgeAreaResource {
     @Path("/{id}/topics/{topicId}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
+    @RolesAllowed({"GOD", "SCHOLAR"})
     public Response deleteKnowledgeTopics(@PathParam("id") Long id, @PathParam("topicId") Long topicId) {
         knowledgeBodyCreator.deleteTopic(topicId);
         return Response.ok().build();

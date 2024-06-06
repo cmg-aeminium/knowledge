@@ -197,9 +197,11 @@ public class CourseCreator {
 
     public void deleteTopic(Long topicId) {
         CourseClassTopic topicToDelete = courseClassTopicDAO.findById(topicId);
+        CourseClass courseClass = topicToDelete.getCourseClass();
 
         if (topicToDelete != null) {
             courseClassTopicDAO.remove(topicToDelete);
+            courseClass.removeTopic(topicToDelete);
         }
     }
 

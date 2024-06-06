@@ -7,6 +7,7 @@ package pt.cmg.aeminium.knowledge.persistence.entities.schools;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -139,7 +140,10 @@ public class CourseClass implements Serializable {
 
     public void addTopic(CourseClassTopic topic) {
         this.courseClassTopics.add(topic);
-        setCourseClassTopics(courseClassTopics);
+    }
+
+    public void removeTopic(CourseClassTopic topic) {
+        this.courseClassTopics.remove(topic);
     }
 
     public Long getNameTextContentId() {
@@ -160,6 +164,26 @@ public class CourseClass implements Serializable {
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        CourseClass other = (CourseClass) obj;
+        return Objects.equals(id, other.id);
     }
 
 }

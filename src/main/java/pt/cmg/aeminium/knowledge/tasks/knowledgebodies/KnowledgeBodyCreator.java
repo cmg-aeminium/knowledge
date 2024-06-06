@@ -100,6 +100,7 @@ public class KnowledgeBodyCreator {
 
                 KnowledgeTopic topic = new KnowledgeTopic();
 
+                topic.setKnowledgeArea(newKnowledgeArea);
                 topic.setNameTextContentId(defaultTopicName.getId());
                 topic.setDescriptionContentId(defaultTopicDescription.getId());
 
@@ -152,9 +153,11 @@ public class KnowledgeBodyCreator {
 
     public void deleteTopic(Long topicId) {
         KnowledgeTopic topicToDelete = kTopicDAO.findById(topicId);
+        KnowledgeArea kArea = topicToDelete.getKnowledgeArea();
 
         if (topicToDelete != null) {
             kTopicDAO.remove(topicToDelete);
+            kArea.removeTopic(topicToDelete);
         }
     }
 
