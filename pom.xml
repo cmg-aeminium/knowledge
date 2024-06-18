@@ -391,8 +391,8 @@
                 <version>5.33.0</version>
                 <configuration>
                     <activeRecipes>
-                        <recipe>org.openrewrite.java.migrate.jakarta.JavaxMigrationToJakarta</recipe>
-                        <!--recipe>org.openrewrite.java.migrate.jakarta.JakartaEE10</recipe-->
+                        <!--recipe>org.openrewrite.java.migrate.jakarta.JavaxMigrationToJakarta</recipe-->
+                        <recipe>org.openrewrite.java.migrate.jakarta.JakartaEE10</recipe>
                     </activeRecipes>
                 </configuration>
                 <dependencies>
