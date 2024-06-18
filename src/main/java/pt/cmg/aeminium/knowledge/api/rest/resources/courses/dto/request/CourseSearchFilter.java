@@ -4,7 +4,7 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request;
 
-import javax.ws.rs.QueryParam;
+import jakarta.ws.rs.QueryParam;
 
 /**
  * @author Carlos Gonçalves

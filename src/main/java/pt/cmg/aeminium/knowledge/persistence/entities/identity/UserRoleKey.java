@@ -6,8 +6,8 @@ package pt.cmg.aeminium.knowledge.persistence.entities.identity;
 
 import java.io.Serializable;
 import java.util.Objects;
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
 
 /**
  * @author Carlos Gonçalves

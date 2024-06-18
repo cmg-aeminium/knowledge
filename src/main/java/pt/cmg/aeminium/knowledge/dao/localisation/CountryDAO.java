@@ -4,7 +4,7 @@
  */
 package pt.cmg.aeminium.knowledge.dao.localisation;
 
-import javax.ejb.Stateless;
+import jakarta.ejb.Stateless;
 import pt.cmg.aeminium.knowledge.dao.JPACrudDAO;
 import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Country;
 

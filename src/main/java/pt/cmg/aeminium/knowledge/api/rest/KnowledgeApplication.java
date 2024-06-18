@@ -2,11 +2,11 @@ package pt.cmg.aeminium.knowledge.api.rest;
 
 import java.util.HashSet;
 import java.util.Set;
-import javax.enterprise.context.ApplicationScoped;
-import javax.json.bind.Jsonb;
-import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Application;
-import javax.ws.rs.ext.ContextResolver;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.json.bind.Jsonb;
+import jakarta.ws.rs.ApplicationPath;
+import jakarta.ws.rs.core.Application;
+import jakarta.ws.rs.ext.ContextResolver;
 import org.apache.commons.lang3.StringUtils;
 import org.eclipse.microprofile.auth.LoginConfig;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.ApplicationDataRequestFilter;

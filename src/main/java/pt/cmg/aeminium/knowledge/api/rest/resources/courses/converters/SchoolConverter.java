@@ -6,8 +6,8 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import javax.enterprise.context.RequestScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.inject.Inject;
 import pt.cmg.aeminium.knowledge.api.rest.common.converters.CountryConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.SchoolDTO;
 import pt.cmg.aeminium.knowledge.cache.HazelcastCache;

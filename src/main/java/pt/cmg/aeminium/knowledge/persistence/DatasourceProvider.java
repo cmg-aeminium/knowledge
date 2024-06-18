@@ -1,7 +1,7 @@
 package pt.cmg.aeminium.knowledge.persistence;
 
-import javax.annotation.sql.DataSourceDefinition;
-import javax.ejb.Singleton;
+import jakarta.annotation.sql.DataSourceDefinition;
+import jakarta.ejb.Singleton;
 
 /**
  * @author Carlos Gonçalves

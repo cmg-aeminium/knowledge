@@ -4,8 +4,8 @@
  */
 package pt.cmg.aeminium.knowledge.health;
 
-import javax.ejb.EJB;
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.ejb.EJB;
+import jakarta.enterprise.context.ApplicationScoped;
 import org.eclipse.microprofile.health.HealthCheck;
 import org.eclipse.microprofile.health.HealthCheckResponse;
 import org.eclipse.microprofile.health.Readiness;

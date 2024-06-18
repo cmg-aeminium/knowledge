@@ -4,7 +4,7 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.validators;
 
-import javax.ejb.Stateless;
+import jakarta.ejb.Stateless;
 
 /**
  * @author Carlos Gonçalves
