@@ -6,8 +6,8 @@ package pt.cmg.aeminium.knowledge.tasks.courses;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.ejb.Singleton;
-import javax.inject.Inject;
+import jakarta.ejb.Singleton;
+import jakarta.inject.Inject;
 import org.apache.commons.lang3.StringUtils;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;

@@ -1,6 +1,6 @@
 package pt.cmg.aeminium.knowledge.dao.knowledgeareas;
 
-import javax.ejb.Stateless;
+import jakarta.ejb.Stateless;
 import pt.cmg.aeminium.knowledge.dao.JPACrudDAO;
 import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeArea;
 

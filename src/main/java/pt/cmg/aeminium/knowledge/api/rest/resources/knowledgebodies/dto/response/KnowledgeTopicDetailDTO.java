@@ -4,8 +4,8 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response;
 
-import javax.json.bind.annotation.JsonbPropertyOrder;
-import javax.json.bind.config.PropertyOrderStrategy;
+import jakarta.json.bind.annotation.JsonbPropertyOrder;
+import jakarta.json.bind.config.PropertyOrderStrategy;
 
 /**
  * @author Carlos Gonçalves

@@ -5,8 +5,8 @@
 package pt.cmg.aeminium.knowledge.dao.identity;
 
 import java.util.List;
-import javax.ejb.Stateless;
-import javax.persistence.TypedQuery;
+import jakarta.ejb.Stateless;
+import jakarta.persistence.TypedQuery;
 import org.apache.commons.lang3.StringUtils;
 import pt.cmg.aeminium.knowledge.dao.JPACrudDAO;
 import pt.cmg.aeminium.knowledge.persistence.entities.identity.User;

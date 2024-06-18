@@ -6,9 +6,9 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request
 
 import java.util.HashSet;
 import java.util.List;
-import javax.validation.Valid;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import pt.cmg.aeminium.knowledge.tasks.localisation.LocalisedTextDTO;
 
 /**

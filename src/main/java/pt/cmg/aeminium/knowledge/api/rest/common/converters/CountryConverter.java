@@ -4,8 +4,8 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.common.converters;
 
-import javax.enterprise.context.RequestScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.inject.Inject;
 import pt.cmg.aeminium.knowledge.api.rest.common.dto.response.CountryDTO;
 import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
 import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Country;
