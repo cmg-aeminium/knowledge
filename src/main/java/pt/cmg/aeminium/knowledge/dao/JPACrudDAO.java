@@ -63,8 +63,8 @@ public abstract class JPACrudDAO<T> {
     public void edit(T entity) {
         if (entity != null) {
             // If this happens to be an Injected entity, then saving requires an extra step. This is rare, but most User types are injected via authentication, so...
-            if (entity instanceof TargetInstanceProxy<?>) {
-                getEntityManager().merge(((TargetInstanceProxy<?>) entity).weld_getTargetInstance());
+            if (entity instanceof TargetInstanceProxy<?> proxy) {
+                getEntityManager().merge(proxy.weld_getTargetInstance());
             } else {
                 getEntityManager().merge(entity);
             }

@@ -164,7 +164,7 @@ public class FunctionLog implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("FunctionLog [id=%s, functionName=%s, executionTimeInMillis=%s, wasSuccess=%s]", id, functionName, executionTimeInMillis, wasSuccess);
+        return "FunctionLog [id=%s, functionName=%s, executionTimeInMillis=%s, wasSuccess=%s]".formatted(id, functionName, executionTimeInMillis, wasSuccess);
     }
 
 }
