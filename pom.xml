@@ -91,35 +91,39 @@
         <final.name>${project.artifactId}</final.name>
 
         <!--JAVA version -->
-        <java-version>11</java-version>
+        <java-version>17</java-version>
 
         <!-- Payara Version -->
+        <payara-version>6.2024.6</payara-version>
         <payara-micro-plugin-version>2.3</payara-micro-plugin-version>
 
         <domain.dir>${user.home}/modules/knowledge/domain</domain.dir>
 
         <!-- Maven plugin versions -->
+        <maven-required-version>3.9.7</maven-required-version>
+        
         <ejb-plugin-version>3.0.1</ejb-plugin-version>
-        <war-plugin-version>3.2.3</war-plugin-version>
-        <clean-plugin-version>3.1.0</clean-plugin-version>
-        <compiler-plugin-version>3.8.1</compiler-plugin-version>
-        <deploy-plugin-version>3.0.0-M1</deploy-plugin-version>
-        <install-plugin-version>3.0.0-M1</install-plugin-version>
-        <resources-plugin-version>3.1.0</resources-plugin-version>
-        <surefire-plugin-version>3.0.0-M3</surefire-plugin-version>
+        
+        <antrun-plugin-version>3.1.0</antrun-plugin-version>
+        <clean-plugin-version>3.3.2</clean-plugin-version>
+        <compiler-plugin-version>3.13.0</compiler-plugin-version>
+        <enforcer-plugin-version>3.5.0</enforcer-plugin-version>
+        <failsafe-plugin-version>3.3.0</failsafe-plugin-version>
+        <install-plugin-version>3.1.2</install-plugin-version>
+        <jar-plugin-version>3.4.1</jar-plugin-version>
+        <resources-plugin-version>3.3.1</resources-plugin-version>
+        <rewrite-plugin-version>5.33.0</rewrite-plugin-version>
+        <rewrite-java-version>2.17.0</rewrite-java-version>
+        <surefire-plugin-version>3.3.0</surefire-plugin-version>
         <surefire-reporting-plugin-version>3.0.0-M4</surefire-reporting-plugin-version>
-        <failsafe-plugin-version>3.0.0-M4</failsafe-plugin-version>
-        <jar-plugin-version>3.2.0</jar-plugin-version>
-        <versions-plugin-version>2.7</versions-plugin-version>
-        <enforcer-plugin-version>3.0.0-M3</enforcer-plugin-version>
-        <maven-required-version>3.8.1</maven-required-version>
-
-        <!-- JAVA EE API, SPEC and IMPLEMENTATION versions -->
-        <payara-version>6.2024.5</payara-version>
-
+        <versions-plugin-version>2.16.2</versions-plugin-version>
+        <war-plugin-version>3.4.0</war-plugin-version>
+        
         <!-- Library versions -->
+        <commons-lang3-version>3.14.0</commons-lang3-version>
+        <commons-validator-version>1.9.0</commons-validator-version>
         <jjwt-version>0.12.5</jjwt-version>
-        <postresql-version>42.6.0</postresql-version>
+        <postresql-version>42.7.3</postresql-version>
 
     </properties>
 
@@ -143,12 +147,6 @@
                         <release>${java-version}</release>
                         <encoding>${project.build.sourceEncoding}</encoding>
                     </configuration>
-                </plugin>
-
-                <!--  Maven Deploy plugin, to deploy built artifacts to a remote repository, not that we use it but at least this version is controlled -->
-                <plugin>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>${deploy-plugin-version}</version>
                 </plugin>
 
                 <!-- Maven Install plugin, install the build artifacts into the LOCAL repository -->
@@ -358,6 +356,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-antrun-plugin</artifactId>
+                <version>${antrun-plugin-version}</version>
                 <executions>
                     <execution>
                         <id>clean-app-directory</id>
@@ -388,18 +387,19 @@
             <plugin>
                 <groupId>org.openrewrite.maven</groupId>
                 <artifactId>rewrite-maven-plugin</artifactId>
-                <version>5.33.0</version>
+                <version>${rewrite-plugin-version}</version>
                 <configuration>
                     <activeRecipes>
                         <!--recipe>org.openrewrite.java.migrate.jakarta.JavaxMigrationToJakarta</recipe-->
-                        <recipe>org.openrewrite.java.migrate.jakarta.JakartaEE10</recipe>
+                        <!--recipe>org.openrewrite.java.migrate.jakarta.JakartaEE10</recipe-->
+                        <recipe>org.openrewrite.java.migrate.UpgradeToJava17</recipe>
                     </activeRecipes>
                 </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-migrate-java</artifactId>
-                        <version>2.17.0</version>
+                        <version>${rewrite-java-version}}</version>
                     </dependency>
                 </dependencies>
             </plugin>
@@ -421,6 +421,8 @@
     </dependencyManagement>
 
     <dependencies>
+    
+        <!-- Platform -->
         <dependency>
             <groupId>jakarta.platform</groupId>
             <artifactId>jakarta.jakartaee-api</artifactId>
@@ -432,16 +434,8 @@
             <type>pom</type>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.eclipse.microprofile.health</groupId>
-            <artifactId>microprofile-health-api</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.microprofile.jwt</groupId>
-            <artifactId>microprofile-jwt-auth-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
+        
+        <!-- Implementation specific - bundled with runtime -->
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.core</artifactId>
@@ -449,12 +443,17 @@
         </dependency>
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+            <artifactId>org.eclipse.persistence.jpa</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.weld</groupId>
-            <artifactId>weld-osgi-bundle</artifactId> <!-- Loaded this osgi artifact because it is provided by app server -->
+            <artifactId>weld-osgi-bundle</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast</artifactId>
             <scope>provided</scope>
         </dependency>
 
@@ -465,17 +464,22 @@
         </dependency>
 
         <dependency>
-            <groupId>com.hazelcast</groupId>
-            <artifactId>hazelcast</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
             <groupId>pt.cmg</groupId>
             <artifactId>jakartautils</artifactId>
             <version>2.0.0</version>
         </dependency>
 
+        <!-- Third-party -->
+        <dependency>
+            <groupId>commons-validator</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>${commons-validator-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3-version}</version>
+        </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
