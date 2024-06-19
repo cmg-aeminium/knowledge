@@ -94,7 +94,7 @@
         <java-version>17</java-version>
 
         <!-- Payara Version -->
-        <payara-version>6.2024.5</payara-version>
+        <payara-version>6.2024.6</payara-version>
         <payara-micro-plugin-version>2.3</payara-micro-plugin-version>
 
         <domain.dir>${user.home}/modules/knowledge/domain</domain.dir>
