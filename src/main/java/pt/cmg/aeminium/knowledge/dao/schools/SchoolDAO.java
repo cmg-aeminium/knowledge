@@ -39,7 +39,7 @@ public class SchoolDAO extends JPACrudDAO<School> {
         }
 
         List<School> results = QueryUtils.getResultListFromQuery(query);
-        return results.isEmpty() ? null : results.get(0);
+        return results.isEmpty() ? null : results.getFirst();
     }
 
 }

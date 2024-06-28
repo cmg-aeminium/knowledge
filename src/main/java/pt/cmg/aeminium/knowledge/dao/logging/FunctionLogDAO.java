@@ -29,7 +29,7 @@ public class FunctionLogDAO extends JPACrudDAO<FunctionLog> {
         query.setParameter(1, className);
 
         List<FunctionLog> resultList = QueryUtils.getResultListFromQuery(query);
-        return resultList.isEmpty() ? null : resultList.get(0);
+        return resultList.isEmpty() ? null : resultList.getFirst();
     }
 
 }

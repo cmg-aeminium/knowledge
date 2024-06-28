@@ -31,6 +31,6 @@ public class UserDAO extends JPACrudDAO<User> {
         query.setParameter("email", email);
 
         List<User> resultList = QueryUtils.getResultListFromQuery(query);
-        return resultList.isEmpty() ? null : resultList.get(0);
+        return resultList.isEmpty() ? null : resultList.getFirst();
     }
 }

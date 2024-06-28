@@ -117,7 +117,7 @@ public class CourseDAO extends JPACrudDAO<Course> {
         }
 
         List<Course> results = QueryUtils.getResultListFromQuery(query);
-        return results.isEmpty() ? null : results.get(0);
+        return results.isEmpty() ? null : results.getFirst();
     }
 
 }
