@@ -3,7 +3,7 @@
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
 package pt.cmg.aeminium.knowledge.tasks.jwt;
-import jakarta.annotation.PostConstruct;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -17,11 +17,12 @@ import java.time.temporal.ChronoUnit;
 import java.util.Base64;
 import java.util.Date;
 import java.util.logging.Logger;
-import jakarta.ejb.Singleton;
-import jakarta.inject.Inject;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import io.jsonwebtoken.Jwts;
-import pt.cmg.aeminium.knowledge.persistence.entities.identity.User;
+import jakarta.annotation.PostConstruct;
+import jakarta.ejb.Singleton;
+import jakarta.inject.Inject;
+import pt.cmg.aeminium.datamodel.users.entities.identity.User;
 
 /**
  * @author Carlos Gonçalves

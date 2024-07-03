@@ -9,13 +9,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
+import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClass;
+import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClassTopic;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseClassDetailDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseClassDetailDTO.ClassTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseClassTopicDTO;
 import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
-import pt.cmg.aeminium.knowledge.persistence.entities.schools.CourseClass;
-import pt.cmg.aeminium.knowledge.persistence.entities.schools.CourseClassTopic;
 
 /**
  * @author Carlos Gonçalves

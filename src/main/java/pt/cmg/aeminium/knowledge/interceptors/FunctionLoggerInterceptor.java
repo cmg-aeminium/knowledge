@@ -4,15 +4,15 @@
  */
 package pt.cmg.aeminium.knowledge.interceptors;
 
-import jakarta.annotation.Priority;
 import java.time.LocalDateTime;
 import java.util.logging.Logger;
+import jakarta.annotation.Priority;
 import jakarta.inject.Inject;
 import jakarta.interceptor.AroundInvoke;
 import jakarta.interceptor.Interceptor;
 import jakarta.interceptor.InvocationContext;
-import pt.cmg.aeminium.knowledge.dao.logging.FunctionLogDAO;
-import pt.cmg.aeminium.knowledge.persistence.entities.logging.FunctionLog;
+import pt.cmg.aeminium.datamodel.common.dao.logging.FunctionLogDAO;
+import pt.cmg.aeminium.datamodel.common.entities.logging.FunctionLog;
 import pt.cmg.jakartautils.text.TextFormatter;
 import pt.cmg.jakartautils.time.DateTimeUtil;
 

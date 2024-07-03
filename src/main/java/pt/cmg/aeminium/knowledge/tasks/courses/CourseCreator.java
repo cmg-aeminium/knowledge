@@ -6,9 +6,18 @@ package pt.cmg.aeminium.knowledge.tasks.courses;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.commons.lang3.StringUtils;
 import jakarta.ejb.Singleton;
 import jakarta.inject.Inject;
-import org.apache.commons.lang3.StringUtils;
+import pt.cmg.aeminium.datamodel.common.entities.localisation.TextContent;
+import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.CourseClassDAO;
+import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.CourseClassTopicDAO;
+import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.CourseDAO;
+import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.SchoolDAO;
+import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.Course;
+import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClass;
+import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClassTopic;
+import pt.cmg.aeminium.datamodel.users.dao.identity.UserDAO;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassDTO;
@@ -17,15 +26,6 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCo
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseDTO;
-import pt.cmg.aeminium.knowledge.dao.identity.UserDAO;
-import pt.cmg.aeminium.knowledge.dao.schools.CourseClassDAO;
-import pt.cmg.aeminium.knowledge.dao.schools.CourseClassTopicDAO;
-import pt.cmg.aeminium.knowledge.dao.schools.CourseDAO;
-import pt.cmg.aeminium.knowledge.dao.schools.SchoolDAO;
-import pt.cmg.aeminium.knowledge.persistence.entities.localisation.TextContent;
-import pt.cmg.aeminium.knowledge.persistence.entities.schools.Course;
-import pt.cmg.aeminium.knowledge.persistence.entities.schools.CourseClass;
-import pt.cmg.aeminium.knowledge.persistence.entities.schools.CourseClassTopic;
 import pt.cmg.aeminium.knowledge.tasks.localisation.TranslationEditor;
 
 /**

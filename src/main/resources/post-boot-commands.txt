@@ -1,2 +1,7 @@
-# Always neat to have JVM options being print at boot
-generate-jvm-report
+# Creates a custom JDBC connection pool for database access
+delete-jdbc-resource jdbc/aem-knowledge-data
+delete-jdbc-connection-pool knowledgePool
+
+create-jdbc-connection-pool --datasourceclassname org.postgresql.ds.PGPoolingDataSource --restype javax.sql.DataSource --validationmethod=auto-commit --steadypoolsize=${database.minpoolsize} --maxpoolsize=${database.maxpoolsize} --wrapjdbcobjects=true --property "User=${database.user}:Password=${database.password}:Url='jdbc:postgresql://${database.host}:${database.port}/${database.name}':stringtype=unspecified:reWriteBatchedInserts=true" knowledgePool
+
+create-jdbc-resource --connectionpoolid knowledgePool jdbc/aem-knowledge-data

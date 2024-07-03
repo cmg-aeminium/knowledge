@@ -8,7 +8,7 @@ import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.enterprise.event.Observes;
 import jakarta.enterprise.inject.Produces;
-import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Language;
+import pt.cmg.aeminium.datamodel.common.entities.localisation.Language;
 
 /**
  * This is both an Observer and a Producer.

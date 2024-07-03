@@ -4,7 +4,6 @@
  */
 package pt.cmg.aeminium.knowledge.cache;
 
-import jakarta.annotation.PostConstruct;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
@@ -12,6 +11,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import org.eclipse.microprofile.config.inject.ConfigProperty;
+import org.eclipse.persistence.jpa.JpaCache;
+import jakarta.annotation.PostConstruct;
 import jakarta.ejb.Asynchronous;
 import jakarta.ejb.Singleton;
 import jakarta.ejb.Startup;
@@ -21,19 +23,17 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.PersistenceUnit;
 import jakarta.persistence.TypedQuery;
-import org.eclipse.microprofile.config.inject.ConfigProperty;
-import org.eclipse.persistence.jpa.JpaCache;
-import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeArea;
-import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeBody;
-import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeTopic;
-import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Country;
-import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Language;
-import pt.cmg.aeminium.knowledge.persistence.entities.localisation.TextContent;
-import pt.cmg.aeminium.knowledge.persistence.entities.localisation.TranslatedText;
-import pt.cmg.aeminium.knowledge.persistence.entities.schools.Course;
-import pt.cmg.aeminium.knowledge.persistence.entities.schools.CourseClass;
-import pt.cmg.aeminium.knowledge.persistence.entities.schools.CourseClassTopic;
-import pt.cmg.aeminium.knowledge.persistence.entities.schools.School;
+import pt.cmg.aeminium.datamodel.common.entities.localisation.Country;
+import pt.cmg.aeminium.datamodel.common.entities.localisation.Language;
+import pt.cmg.aeminium.datamodel.common.entities.localisation.TextContent;
+import pt.cmg.aeminium.datamodel.common.entities.localisation.TranslatedText;
+import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.Course;
+import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClass;
+import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClassTopic;
+import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.School;
+import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeArea;
+import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeBody;
+import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeTopic;
 import pt.cmg.jakartautils.jpa.QueryUtils;
 
 /**
@@ -45,7 +45,7 @@ public class CacheLoader {
 
     private static final Logger LOGGER = Logger.getLogger(CacheLoader.class.getName());
 
-    @PersistenceUnit(unitName = "knowledge-data")
+    @PersistenceUnit(unitName = "aem-data")
     private EntityManagerFactory entityManagerFactory;
 
     // This variable can be injected into the environment to control whether it should run or not

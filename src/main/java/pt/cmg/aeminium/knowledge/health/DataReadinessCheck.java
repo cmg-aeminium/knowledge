@@ -1,15 +1,15 @@
 /**
- * Copyright (c) 2020  Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
+ * Copyright (c) 2020 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
 package pt.cmg.aeminium.knowledge.health;
 
-import jakarta.ejb.EJB;
-import jakarta.enterprise.context.ApplicationScoped;
 import org.eclipse.microprofile.health.HealthCheck;
 import org.eclipse.microprofile.health.HealthCheckResponse;
 import org.eclipse.microprofile.health.Readiness;
-import pt.cmg.aeminium.knowledge.dao.knowledgeareas.KnowledgeAreaDAO;
+import jakarta.ejb.EJB;
+import jakarta.enterprise.context.ApplicationScoped;
+import pt.cmg.aeminium.datamodel.knowledge.dao.knowledgeareas.KnowledgeAreaDAO;
 
 /**
  * @author Carlos Gonçalves

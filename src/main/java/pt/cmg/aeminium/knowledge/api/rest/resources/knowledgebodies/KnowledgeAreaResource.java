@@ -4,8 +4,8 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies;
 
-import jakarta.annotation.security.RolesAllowed;
 import java.util.List;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.Consumes;
@@ -19,6 +19,9 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.Status;
+import pt.cmg.aeminium.datamodel.knowledge.dao.knowledgeareas.KnowledgeAreaDAO;
+import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeArea;
+import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeTopic;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converter.KnowledgeAreaConverter;
@@ -27,9 +30,6 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.CreateKnowledgeTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.EditKnowledgeTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.validators.KnowledgeAreaValidator;
-import pt.cmg.aeminium.knowledge.dao.knowledgeareas.KnowledgeAreaDAO;
-import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeArea;
-import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeTopic;
 import pt.cmg.aeminium.knowledge.tasks.knowledgebodies.KnowledgeBodyCreator;
 import pt.cmg.jakartautils.errors.ErrorDTO;
 

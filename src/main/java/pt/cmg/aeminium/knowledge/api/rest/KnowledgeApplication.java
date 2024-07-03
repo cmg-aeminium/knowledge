@@ -2,13 +2,14 @@ package pt.cmg.aeminium.knowledge.api.rest;
 
 import java.util.HashSet;
 import java.util.Set;
+import org.apache.commons.lang3.StringUtils;
+import org.eclipse.microprofile.auth.LoginConfig;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.json.bind.Jsonb;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
 import jakarta.ws.rs.ext.ContextResolver;
-import org.apache.commons.lang3.StringUtils;
-import org.eclipse.microprofile.auth.LoginConfig;
+import pt.cmg.aeminium.datamodel.common.entities.localisation.Language;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.ApplicationDataRequestFilter;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.LanguageSetterRequestFilter;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.UserLoaderRequestFilter;
@@ -17,10 +18,7 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.courses.CourseResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.SchoolResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.KnowledgeAreaResource;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.KnowledgeBodyResource;
-import pt.cmg.aeminium.knowledge.api.rest.resources.login.LoginResource;
-import pt.cmg.aeminium.knowledge.api.rest.resources.users.UserResource;
 import pt.cmg.aeminium.knowledge.configuration.jsonb.JsonbProvider;
-import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Language;
 import pt.cmg.jakartautils.errors.ConstraintViolationExceptionMapper;
 
 /**
@@ -53,8 +51,6 @@ public class KnowledgeApplication extends Application {
         resources.add(CourseResource.class);
         resources.add(CourseClassResource.class);
         resources.add(SchoolResource.class);
-        resources.add(UserResource.class);
-        resources.add(LoginResource.class);
 
         resources.add(LanguageSetterRequestFilter.class);
         resources.add(ApplicationDataRequestFilter.class);
