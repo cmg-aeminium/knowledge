@@ -20,9 +20,9 @@ import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
  * @author Carlos Gonçalves
  */
 @ApplicationScoped
-public class HazelcastCache {
+public class TextTranslationCache {
 
-    private static final Logger LOGGER = Logger.getLogger(HazelcastCache.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(TextTranslationCache.class.getName());
 
     private static final String DEFAULT_LANG_MAP_NAME = "translations";
 

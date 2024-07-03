@@ -41,9 +41,9 @@ import pt.cmg.jakartautils.jpa.QueryUtils;
  */
 @Singleton
 @Startup
-public class CacheLoader {
+public class ObjectCacheLoader {
 
-    private static final Logger LOGGER = Logger.getLogger(CacheLoader.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(ObjectCacheLoader.class.getName());
 
     @PersistenceUnit(unitName = "aem-data")
     private EntityManagerFactory entityManagerFactory;
@@ -62,7 +62,7 @@ public class CacheLoader {
     private Language language;
 
     @Inject
-    private HazelcastCache hazelcastCache;
+    private TextTranslationCache translationsCache;
 
     @PostConstruct
     public void loadCacheAtStartup() {
@@ -279,7 +279,7 @@ public class CacheLoader {
 
         List<TextContent> result = QueryUtils.getResultListFromQuery(query);
 
-        result.forEach(textContent -> hazelcastCache.putTranslation(textContent));
+        result.forEach(textContent -> translationsCache.putTranslation(textContent));
 
         database.close();
 
@@ -294,7 +294,7 @@ public class CacheLoader {
 
         List<TranslatedText> result = QueryUtils.getResultListFromQuery(query);
 
-        result.forEach(translation -> hazelcastCache.putTranslation(translation));
+        result.forEach(translation -> translationsCache.putTranslation(translation));
 
         database.close();
 
