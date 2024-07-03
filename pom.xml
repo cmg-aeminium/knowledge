@@ -127,6 +127,9 @@
         
         <!-- First party dependencies -->
         <aem-jakarta-utils-version>3.0.0</aem-jakarta-utils-version>
+        <aem-datamodel-common-version>1.0.0</aem-datamodel-common-version>
+        <aem-datamodel-users-version>1.0.0</aem-datamodel-users-version>
+        <aem-datamodel-knowledge-version>1.0.0</aem-datamodel-knowledge-version>
 
     </properties>
 
@@ -175,18 +178,15 @@
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                         <attachClasses>true</attachClasses>
                         <classesClassifier>classes</classesClassifier>
-
+                        
+                        <!-- This way I can refer the JPA jars without changing their version on persistence.xml -->
+                        <outputFileNameMapping>@{artifactId}@.@{extension}@</outputFileNameMapping>
+                        
                         <archive>
                             <addMavenDescriptor>false</addMavenDescriptor>
                         </archive>
 
                     </configuration>
-                </plugin>
-
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>${jar-plugin-version}</version>
                 </plugin>
 
                 <!-- Surefire plugin used for testing -->
@@ -319,8 +319,8 @@
                                     <value>aeminium</value>
                                 </property>
                                 <property>
-                                    <name>jpa.cache.loadAtStartup</name>
-                                    <value>true</value>
+                                    <name>database.port</name>
+                                    <value>5432</value>
                                 </property>
                                 <property>
                                     <name>payaramicro.minHttpThreads</name>
@@ -331,8 +331,20 @@
                                     <value>10</value>
                                 </property>
                                 <property>
+                                    <name>database.minpoolsize</name>
+                                    <value>1</value>
+                                </property>
+                                <property>
+                                    <name>database.maxpoolsize</name>
+                                    <value>10</value>
+                                </property>
+                                <property>
                                     <name>datasource.javaclass</name>
                                     <value>org.postgresql.ds.PGPoolingDataSource</value>
+                                </property>
+                                <property>
+                                    <name>jpa.cache.loadAtStartup</name>
+                                    <value>true</value>
                                 </property>
                                 <property>
                                     <name>hazelcast.memberName</name>
@@ -472,6 +484,23 @@
             <artifactId>jakartautils</artifactId>
             <version>${aem-jakarta-utils-version}</version>
         </dependency>
+        <dependency>
+            <groupId>pt.cmg.aeminium</groupId>
+            <artifactId>datamodel-common</artifactId>
+            <version>${aem-datamodel-common-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pt.cmg.aeminium</groupId>
+            <artifactId>datamodel-users</artifactId>
+            <version>${aem-datamodel-users-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pt.cmg.aeminium</groupId>
+            <artifactId>datamodel-knowledge</artifactId>
+            <version>${aem-datamodel-knowledge-version}</version>
+        </dependency>
+        
+
 
         <!-- Third-party -->
         <dependency>

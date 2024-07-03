@@ -5,7 +5,7 @@
 package pt.cmg.aeminium.knowledge.api.rest.filters.request;
 
 import java.io.Serializable;
-import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Language;
+import pt.cmg.aeminium.datamodel.common.entities.localisation.Language;
 
 /**
  * This object will hold Request data that is filled in every request.

@@ -5,14 +5,14 @@
 package pt.cmg.aeminium.knowledge.api.rest.filters.request;
 
 import java.io.IOException;
+import org.eclipse.microprofile.jwt.JsonWebToken;
 import jakarta.enterprise.event.Event;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.container.ContainerRequestContext;
 import jakarta.ws.rs.container.ContainerRequestFilter;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.Status;
-import org.eclipse.microprofile.jwt.JsonWebToken;
-import pt.cmg.aeminium.knowledge.dao.identity.UserDAO;
+import pt.cmg.aeminium.datamodel.users.dao.identity.UserDAO;
 
 /**
  * @author Carlos Gonçalves

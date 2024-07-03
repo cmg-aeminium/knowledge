@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
+import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeArea;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeAreaDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeAreaDetailDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeAreaDetailDTO.KATopicDTO;
-import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
-import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeArea;
+import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 
 /**
  * @author Carlos Manuel
@@ -22,7 +22,7 @@ import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeA
 public class KnowledgeAreaConverter {
 
     @Inject
-    private HazelcastCache translationCache;
+    private TextTranslationCache translationCache;
 
     public KnowledgeAreaDetailDTO toDetailedKnowledgeAreaDTO(KnowledgeArea knowledgeArea) {
 

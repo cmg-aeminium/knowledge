@@ -4,8 +4,8 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.resources.courses;
 
-import jakarta.annotation.security.RolesAllowed;
 import java.util.List;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.ejb.EJB;
 import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
@@ -20,15 +20,15 @@ import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.CourseClassDAO;
+import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClass;
+import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClassTopic;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseClassConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.validators.CourseValidator;
-import pt.cmg.aeminium.knowledge.dao.schools.CourseClassDAO;
-import pt.cmg.aeminium.knowledge.persistence.entities.schools.CourseClass;
-import pt.cmg.aeminium.knowledge.persistence.entities.schools.CourseClassTopic;
 import pt.cmg.aeminium.knowledge.tasks.courses.CourseCreator;
 import pt.cmg.jakartautils.errors.ErrorDTO;
 

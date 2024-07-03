@@ -8,10 +8,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
+import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeTopic;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeTopicDetailDTO;
-import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
-import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeTopic;
+import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 
 /**
  * @author Carlos Gonçalves
@@ -20,7 +20,7 @@ import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeT
 public class KnowledgeTopicConverter {
 
     @Inject
-    private HazelcastCache translationCache;
+    private TextTranslationCache translationCache;
 
     public List<KnowledgeTopicDetailDTO> toDetailedTopicDTOs(List<KnowledgeTopic> topics) {
         return topics.stream().map(this::toDetailedTopicDTO).collect(Collectors.toList());

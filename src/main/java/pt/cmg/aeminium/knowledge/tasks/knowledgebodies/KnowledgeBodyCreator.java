@@ -8,20 +8,20 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.ejb.Singleton;
 import jakarta.inject.Inject;
+import pt.cmg.aeminium.datamodel.common.entities.localisation.TextContent;
+import pt.cmg.aeminium.datamodel.knowledge.dao.knowledgeareas.KnowledgeAreaDAO;
+import pt.cmg.aeminium.datamodel.knowledge.dao.knowledgeareas.KnowledgeBodyDAO;
+import pt.cmg.aeminium.datamodel.knowledge.dao.knowledgeareas.KnowledgeTopicDAO;
+import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeArea;
+import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeBody;
+import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeTopic;
+import pt.cmg.aeminium.datamodel.users.dao.identity.UserDAO;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.CreateKnowledgeAreaDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.CreateKnowledgeBodyDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.CreateKnowledgeTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.EditKnowledgeTopicDTO;
-import pt.cmg.aeminium.knowledge.dao.identity.UserDAO;
-import pt.cmg.aeminium.knowledge.dao.knowledgeareas.KnowledgeAreaDAO;
-import pt.cmg.aeminium.knowledge.dao.knowledgeareas.KnowledgeBodyDAO;
-import pt.cmg.aeminium.knowledge.dao.knowledgeareas.KnowledgeTopicDAO;
-import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeArea;
-import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeBody;
-import pt.cmg.aeminium.knowledge.persistence.entities.knowledgebodies.KnowledgeTopic;
-import pt.cmg.aeminium.knowledge.persistence.entities.localisation.TextContent;
 import pt.cmg.aeminium.knowledge.tasks.localisation.TranslationEditor;
 
 /**

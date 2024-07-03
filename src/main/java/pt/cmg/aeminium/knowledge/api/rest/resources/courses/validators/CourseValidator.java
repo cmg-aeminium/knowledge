@@ -9,6 +9,15 @@ import java.util.List;
 import java.util.Optional;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
+import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.CourseClassDAO;
+import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.CourseClassTopicDAO;
+import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.CourseDAO;
+import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.SchoolDAO;
+import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.Course;
+import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClass;
+import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClassTopic;
+import pt.cmg.aeminium.datamodel.users.dao.identity.UserDAO;
+import pt.cmg.aeminium.datamodel.users.entities.identity.User;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CourseSearchFilter;
@@ -17,16 +26,7 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCo
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseDTO;
-import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
-import pt.cmg.aeminium.knowledge.dao.identity.UserDAO;
-import pt.cmg.aeminium.knowledge.dao.schools.CourseClassDAO;
-import pt.cmg.aeminium.knowledge.dao.schools.CourseClassTopicDAO;
-import pt.cmg.aeminium.knowledge.dao.schools.CourseDAO;
-import pt.cmg.aeminium.knowledge.dao.schools.SchoolDAO;
-import pt.cmg.aeminium.knowledge.persistence.entities.identity.User;
-import pt.cmg.aeminium.knowledge.persistence.entities.schools.Course;
-import pt.cmg.aeminium.knowledge.persistence.entities.schools.CourseClass;
-import pt.cmg.aeminium.knowledge.persistence.entities.schools.CourseClassTopic;
+import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 import pt.cmg.jakartautils.errors.ErrorDTO;
 
 /**
@@ -55,7 +55,7 @@ public class CourseValidator {
     private UserDAO userDAO;
 
     @Inject
-    private HazelcastCache textCache;
+    private TextTranslationCache textCache;
 
     public Optional<List<ErrorDTO>> isSearchFilterValid(CourseSearchFilter searchFilter) {
         List<ErrorDTO> errors = new ArrayList<>();

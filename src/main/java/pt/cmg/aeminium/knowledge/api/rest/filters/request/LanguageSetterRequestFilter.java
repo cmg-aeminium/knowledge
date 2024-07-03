@@ -9,8 +9,8 @@ import jakarta.enterprise.event.Event;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.container.ContainerRequestContext;
 import jakarta.ws.rs.container.ContainerRequestFilter;
+import pt.cmg.aeminium.datamodel.common.entities.localisation.Language;
 import pt.cmg.aeminium.knowledge.api.rest.KnowledgeApplication;
-import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Language;
 
 /**
  * This is a global filter that checks every HTTP request for a language and if it is not sent

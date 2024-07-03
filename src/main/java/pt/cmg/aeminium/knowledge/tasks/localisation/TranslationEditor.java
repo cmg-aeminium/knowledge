@@ -9,12 +9,12 @@ import java.util.HashSet;
 import java.util.Set;
 import jakarta.ejb.Singleton;
 import jakarta.inject.Inject;
-import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
-import pt.cmg.aeminium.knowledge.dao.localisation.TextContentDAO;
-import pt.cmg.aeminium.knowledge.dao.localisation.TranslatedTextDAO;
-import pt.cmg.aeminium.knowledge.persistence.entities.localisation.Language;
-import pt.cmg.aeminium.knowledge.persistence.entities.localisation.TextContent;
-import pt.cmg.aeminium.knowledge.persistence.entities.localisation.TranslatedText;
+import pt.cmg.aeminium.datamodel.common.dao.localisation.TextContentDAO;
+import pt.cmg.aeminium.datamodel.common.dao.localisation.TranslatedTextDAO;
+import pt.cmg.aeminium.datamodel.common.entities.localisation.Language;
+import pt.cmg.aeminium.datamodel.common.entities.localisation.TextContent;
+import pt.cmg.aeminium.datamodel.common.entities.localisation.TranslatedText;
+import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 
 /**
  * @author Carlos Gonçalves
@@ -29,7 +29,7 @@ public class TranslationEditor {
     private TranslatedTextDAO translatedTextDAO;
 
     @Inject
-    private HazelcastCache textCache;
+    private TextTranslationCache textCache;
 
     public TextContent createTranslatedTexts(Collection<LocalisedTextDTO> translations) {
 

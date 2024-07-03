@@ -9,16 +9,16 @@ import java.util.List;
 import java.util.Optional;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
+import pt.cmg.aeminium.datamodel.common.dao.localisation.CountryDAO;
+import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.SchoolDAO;
+import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.School;
+import pt.cmg.aeminium.datamodel.users.dao.identity.UserDAO;
+import pt.cmg.aeminium.datamodel.users.entities.identity.User;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateSchoolDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditSchoolDTO;
-import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
-import pt.cmg.aeminium.knowledge.dao.identity.UserDAO;
-import pt.cmg.aeminium.knowledge.dao.localisation.CountryDAO;
-import pt.cmg.aeminium.knowledge.dao.schools.SchoolDAO;
-import pt.cmg.aeminium.knowledge.persistence.entities.identity.User;
-import pt.cmg.aeminium.knowledge.persistence.entities.schools.School;
+import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 import pt.cmg.jakartautils.errors.ErrorDTO;
 
 /**
@@ -41,7 +41,7 @@ public class SchoolValidator {
     private UserDAO userDAO;
 
     @Inject
-    private HazelcastCache textCache;
+    private TextTranslationCache textCache;
 
     public Optional<List<ErrorDTO>> isCreationValid(CreateSchoolDTO newSchoolDTO) {
         List<ErrorDTO> errors = new ArrayList<>();
