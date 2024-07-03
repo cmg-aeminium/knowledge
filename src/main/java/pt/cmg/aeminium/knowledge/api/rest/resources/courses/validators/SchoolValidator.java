@@ -18,7 +18,7 @@ import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateSchoolDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditSchoolDTO;
-import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
+import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 import pt.cmg.jakartautils.errors.ErrorDTO;
 
 /**
@@ -41,7 +41,7 @@ public class SchoolValidator {
     private UserDAO userDAO;
 
     @Inject
-    private HazelcastCache textCache;
+    private TextTranslationCache textCache;
 
     public Optional<List<ErrorDTO>> isCreationValid(CreateSchoolDTO newSchoolDTO) {
         List<ErrorDTO> errors = new ArrayList<>();

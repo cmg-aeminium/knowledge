@@ -8,7 +8,7 @@ import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import pt.cmg.aeminium.datamodel.common.entities.localisation.Country;
 import pt.cmg.aeminium.knowledge.api.rest.common.dto.response.CountryDTO;
-import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
+import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 
 /**
  * @author Carlos Gonçalves
@@ -17,7 +17,7 @@ import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
 public class CountryConverter {
 
     @Inject
-    private HazelcastCache translationCache;
+    private TextTranslationCache translationCache;
 
     public CountryDTO toCountryDTO(Country country) {
         CountryDTO dto = new CountryDTO();

@@ -11,7 +11,7 @@ import jakarta.inject.Inject;
 import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.School;
 import pt.cmg.aeminium.knowledge.api.rest.common.converters.CountryConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.SchoolDTO;
-import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
+import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 
 /**
  * @author Carlos Gonçalves
@@ -20,7 +20,7 @@ import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
 public class SchoolConverter {
 
     @Inject
-    private HazelcastCache translationCache;
+    private TextTranslationCache translationCache;
 
     @Inject
     private CountryConverter countryConverter;

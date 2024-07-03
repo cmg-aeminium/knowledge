@@ -14,7 +14,7 @@ import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.Course;
 import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.School;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CourseSearchFilter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseDTO;
-import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
+import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 
 /**
  * @author Carlos Gonçalves
@@ -23,7 +23,7 @@ import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
 public class CourseConverter {
 
     @Inject
-    private HazelcastCache translationCache;
+    private TextTranslationCache translationCache;
 
     @Inject
     private SchoolDAO schoolDAO;

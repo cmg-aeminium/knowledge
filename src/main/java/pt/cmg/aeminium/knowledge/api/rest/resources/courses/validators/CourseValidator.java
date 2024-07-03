@@ -26,7 +26,7 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCo
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseDTO;
-import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
+import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 import pt.cmg.jakartautils.errors.ErrorDTO;
 
 /**
@@ -55,7 +55,7 @@ public class CourseValidator {
     private UserDAO userDAO;
 
     @Inject
-    private HazelcastCache textCache;
+    private TextTranslationCache textCache;
 
     public Optional<List<ErrorDTO>> isSearchFilterValid(CourseSearchFilter searchFilter) {
         List<ErrorDTO> errors = new ArrayList<>();

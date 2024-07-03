@@ -10,7 +10,7 @@ import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeBody;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeBodyDTO;
-import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
+import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 
 /**
  * @author Carlos Gonçalves
@@ -19,7 +19,7 @@ import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
 public class KnowledgeBodyConverter {
 
     @Inject
-    private HazelcastCache translationCache;
+    private TextTranslationCache translationCache;
 
     public List<KnowledgeBodyDTO> toKnowledgeBodyDTOs(List<KnowledgeBody> knowledgeBodies) {
         return knowledgeBodies.stream().map(this::toKnowledgeBodyDTO).collect(Collectors.toList());

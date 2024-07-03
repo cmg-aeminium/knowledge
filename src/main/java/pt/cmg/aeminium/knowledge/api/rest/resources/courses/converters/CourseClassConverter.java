@@ -15,7 +15,7 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseC
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseClassDetailDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseClassDetailDTO.ClassTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseClassTopicDTO;
-import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
+import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 
 /**
  * @author Carlos Gonçalves
@@ -24,7 +24,7 @@ import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
 public class CourseClassConverter {
 
     @Inject
-    private HazelcastCache translationCache;
+    private TextTranslationCache translationCache;
 
     public List<CourseClassDTO> toCourseClassesDTO(List<CourseClass> classes) {
         return classes.stream().map(this::toCourseClassDTO).collect(Collectors.toList());

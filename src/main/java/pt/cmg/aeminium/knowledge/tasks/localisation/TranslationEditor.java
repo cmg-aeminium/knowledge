@@ -14,7 +14,7 @@ import pt.cmg.aeminium.datamodel.common.dao.localisation.TranslatedTextDAO;
 import pt.cmg.aeminium.datamodel.common.entities.localisation.Language;
 import pt.cmg.aeminium.datamodel.common.entities.localisation.TextContent;
 import pt.cmg.aeminium.datamodel.common.entities.localisation.TranslatedText;
-import pt.cmg.aeminium.knowledge.cache.HazelcastCache;
+import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 
 /**
  * @author Carlos Gonçalves
@@ -29,7 +29,7 @@ public class TranslationEditor {
     private TranslatedTextDAO translatedTextDAO;
 
     @Inject
-    private HazelcastCache textCache;
+    private TextTranslationCache textCache;
 
     public TextContent createTranslatedTexts(Collection<LocalisedTextDTO> translations) {
 
