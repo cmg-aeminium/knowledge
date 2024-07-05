@@ -472,6 +472,13 @@
             <artifactId>hazelcast</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.glassfish.exousia</groupId>
+            <artifactId>exousia</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        
+
 
         <dependency>
             <groupId>org.postgresql</groupId>
