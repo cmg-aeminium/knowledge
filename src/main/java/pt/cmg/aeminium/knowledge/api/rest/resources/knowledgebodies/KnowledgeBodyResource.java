@@ -2,8 +2,10 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies;
 
 import java.util.List;
 import jakarta.annotation.security.RolesAllowed;
-import jakarta.ejb.Stateless;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
+import jakarta.transaction.Transactional.TxType;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
@@ -27,7 +29,7 @@ import pt.cmg.aeminium.knowledge.tasks.knowledgebodies.KnowledgeBodyCreator;
 import pt.cmg.jakartautils.errors.ErrorDTO;
 
 @Path("knowledgebodies")
-@Stateless
+@RequestScoped
 public class KnowledgeBodyResource {
 
     @Inject
@@ -76,6 +78,7 @@ public class KnowledgeBodyResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @RolesAllowed({"GOD", "SCHOLAR"})
+    @Transactional(value = TxType.REQUIRED)
     public Response createKnowledgeBody(@Valid CreateKnowledgeBodyDTO newBOKDTO) {
 
         KnowledgeBody newKnowledgeBody = knowledgeBodyCreator.createKnowledgeBody(newBOKDTO);
@@ -100,6 +103,7 @@ public class KnowledgeBodyResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @RolesAllowed({"GOD", "SCHOLAR"})
+    @Transactional(value = TxType.REQUIRED)
     public Response createKnowledgeArea(@PathParam("id") Long id, @Valid CreateKnowledgeAreaDTO newKnowledgeAreaDTO) {
 
         var validationErrors = knowledgeAreaValidator.isKACreationValid(newKnowledgeAreaDTO, id);

@@ -7,8 +7,10 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.courses;
 import java.util.List;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.ejb.EJB;
-import jakarta.ejb.Stateless;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
+import jakarta.transaction.Transactional.TxType;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.BeanParam;
 import jakarta.ws.rs.Consumes;
@@ -41,7 +43,7 @@ import pt.cmg.jakartautils.errors.ErrorDTO;
  * @author Carlos Gonçalves
  */
 @Path("courses")
-@Stateless
+@RequestScoped
 public class CourseResource {
 
     @Inject
@@ -100,6 +102,7 @@ public class CourseResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @RolesAllowed({"GOD", "SCHOLAR"})
+    @Transactional(value = TxType.REQUIRED)
     public Response createCourse(@Valid CreateCourseDTO newCourseDTO) {
 
         var validationErrors = courseValidator.isCourseCreationValid(newCourseDTO);
@@ -117,6 +120,7 @@ public class CourseResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @RolesAllowed({"GOD", "SCHOLAR"})
+    @Transactional(value = TxType.REQUIRED)
     public Response editCourse(@PathParam("id") Long id, EditCourseDTO courseEditionDTO) {
 
         var validationErrors = courseValidator.isCourseEditionValid(courseEditionDTO, id);
@@ -172,6 +176,7 @@ public class CourseResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @RolesAllowed({"GOD", "SCHOLAR"})
+    @Transactional(value = TxType.REQUIRED)
     public Response createCourseClass(@PathParam("id") Long id, @Valid CreateCourseClassDTO newClassDTO) {
 
         var validationErrors = courseValidator.isClassCreationValid(newClassDTO, id);
@@ -189,6 +194,7 @@ public class CourseResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @RolesAllowed({"GOD", "SCHOLAR"})
+    @Transactional(value = TxType.REQUIRED)
     public Response editCourseClass(@PathParam("id") Long courseId, @PathParam("classId") Long classId, EditCourseClassDTO editCourseClassDTO) {
 
         var validationErrors = courseValidator.isCourseClassEditionValid(courseId, classId, editCourseClassDTO);

@@ -7,8 +7,10 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.courses;
 import java.util.List;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.ejb.EJB;
-import jakarta.ejb.Stateless;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
+import jakarta.transaction.Transactional.TxType;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
@@ -34,7 +36,7 @@ import pt.cmg.jakartautils.errors.ErrorDTO;
  * @author Carlos Gonçalves
  */
 @Path("schools")
-@Stateless
+@RequestScoped
 public class SchoolResource {
 
     @Inject
@@ -60,6 +62,7 @@ public class SchoolResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @RolesAllowed({"GOD", "SCHOLAR"})
+    @Transactional(value = TxType.REQUIRED)
     public Response createSchool(CreateSchoolDTO newSchoolDTO) {
 
         var validationErrors = schoolValidator.isCreationValid(newSchoolDTO);
@@ -77,6 +80,7 @@ public class SchoolResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @RolesAllowed({"GOD", "SCHOLAR"})
+    @Transactional(value = TxType.REQUIRED)
     public Response editSchool(@PathParam("id") Long id, EditSchoolDTO schoolEditionDTO) {
 
         var validationErrors = schoolValidator.isEditionValid(schoolEditionDTO, id);

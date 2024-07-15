@@ -7,8 +7,10 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.courses;
 import java.util.List;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.ejb.EJB;
-import jakarta.ejb.Stateless;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
+import jakarta.transaction.Transactional.TxType;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
@@ -36,7 +38,7 @@ import pt.cmg.jakartautils.errors.ErrorDTO;
  * @author Carlos Gonçalves
  */
 @Path("courseclasses")
-@Stateless
+@RequestScoped
 public class CourseClassResource {
 
     @EJB
@@ -80,6 +82,7 @@ public class CourseClassResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @RolesAllowed({"GOD", "SCHOLAR"})
+    @Transactional(value = TxType.REQUIRED)
     public Response createCourseClass(@Valid CreateCourseClassDTO newClassDTO) {
 
         var validationErrors = courseValidator.isClassCreationValid(newClassDTO);
@@ -97,6 +100,7 @@ public class CourseClassResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @RolesAllowed({"GOD", "SCHOLAR"})
+    @Transactional(value = TxType.REQUIRED)
     public Response editCourseClass(@PathParam("id") Long id, @Valid EditCourseClassDTO newClassDTO) {
 
         var validationErrors = courseValidator.isClassEditionValid(id, newClassDTO);
@@ -127,6 +131,7 @@ public class CourseClassResource {
     @Path("/{id}/topics")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
+    @Transactional(value = TxType.REQUIRED)
     public Response createCourseClassTopics(@PathParam("id") Long id, @Valid CreateCourseClassTopicDTO topicDTO) {
 
         CourseClass courseClass = courseClassDAO.findById(id);
@@ -143,6 +148,7 @@ public class CourseClassResource {
     @Path("/{id}/topics/{topicId}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
+    @Transactional(value = TxType.REQUIRED)
     public Response editCourseClassTopic(@PathParam("id") Long id, @PathParam("topicId") Long topicId, EditCourseClassTopicDTO editTopicDTO) {
 
         var validationErrors = courseValidator.isTopicEditionValid(id, topicId, editTopicDTO);
@@ -159,6 +165,7 @@ public class CourseClassResource {
     @Path("/{id}/topics/{topicId}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
+    @Transactional(value = TxType.REQUIRED)
     public Response deleteCourseClassTopic(@PathParam("id") Long id, @PathParam("topicId") Long topicId) {
         courseCreator.deleteTopic(topicId);
         return Response.ok().build();

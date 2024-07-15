@@ -6,7 +6,10 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies;
 
 import java.util.List;
 import jakarta.annotation.security.RolesAllowed;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
+import jakarta.transaction.Transactional.TxType;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
@@ -36,6 +39,7 @@ import pt.cmg.jakartautils.errors.ErrorDTO;
 /**
  * @author Carlos Gonçalves
  */
+@RequestScoped
 @Path("knowledgeareas")
 public class KnowledgeAreaResource {
 
@@ -77,6 +81,7 @@ public class KnowledgeAreaResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @RolesAllowed({"GOD", "SCHOLAR"})
+    @Transactional(value = TxType.REQUIRED)
     public Response createKnowledgeArea(@Valid CreateKnowledgeAreaDTO newKnowledgeAreaDTO) {
 
         var validationErrors = knowledgeAreaValidator.isKACreationValid(newKnowledgeAreaDTO);
@@ -108,6 +113,7 @@ public class KnowledgeAreaResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed({"GOD", "SCHOLAR"})
+    @Transactional(value = TxType.REQUIRED)
     public Response createKnowledgeTopics(@PathParam("id") Long id, @Valid CreateKnowledgeTopicDTO topicDTO) {
 
         var knowledgeArea = knowledgeAreaDAO.findById(id);
@@ -125,6 +131,7 @@ public class KnowledgeAreaResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed({"GOD", "SCHOLAR"})
+    @Transactional(value = TxType.REQUIRED)
     public Response editCourseClassTopic(@PathParam("id") Long id, @PathParam("topicId") Long topicId, EditKnowledgeTopicDTO editTopicDTO) {
 
         var validationErrors = knowledgeAreaValidator.isTopicEditionValid(id, topicId, editTopicDTO);
@@ -142,6 +149,7 @@ public class KnowledgeAreaResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed({"GOD", "SCHOLAR"})
+    @Transactional(value = TxType.REQUIRED)
     public Response deleteKnowledgeTopics(@PathParam("id") Long id, @PathParam("topicId") Long topicId) {
         knowledgeBodyCreator.deleteTopic(topicId);
         return Response.ok().build();

@@ -5,9 +5,9 @@
 
     <groupId>pt.cmg.aeminium</groupId>
     <artifactId>knowledge</artifactId>
-    <version>1.0</version>
+    <version>1.0.0</version>
 
-    <name>knowledge</name>
+    <name>aem-knowledge</name>
     <packaging>war</packaging>
 
     <developers>
@@ -87,9 +87,6 @@
         <!--  General properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <!-- Application properties -->
-        <final.name>${project.artifactId}</final.name>
-
         <!--JAVA version -->
         <java-version>21</java-version>
 
@@ -102,11 +99,10 @@
         <!-- Maven plugin versions -->
         <maven-required-version>3.9.7</maven-required-version>
         
-        <ejb-plugin-version>3.0.1</ejb-plugin-version>
-        
         <antrun-plugin-version>3.1.0</antrun-plugin-version>
         <clean-plugin-version>3.3.2</clean-plugin-version>
         <compiler-plugin-version>3.13.0</compiler-plugin-version>
+        <dependency-plugin-version>3.7.1</dependency-plugin-version>
         <enforcer-plugin-version>3.5.0</enforcer-plugin-version>
         <failsafe-plugin-version>3.3.0</failsafe-plugin-version>
         <install-plugin-version>3.1.2</install-plugin-version>
@@ -121,8 +117,6 @@
         
         <!-- Library versions -->
         <commons-lang3-version>3.14.0</commons-lang3-version>
-        <commons-validator-version>1.9.0</commons-validator-version>
-        <jjwt-version>0.12.6</jjwt-version>
         <postresql-version>42.7.3</postresql-version>
         
         <!-- First party dependencies -->
@@ -134,7 +128,9 @@
     </properties>
 
     <build>
-
+        
+        <finalName>${project.name}</finalName>
+        
         <pluginManagement>
             <plugins>
 
@@ -245,6 +241,12 @@
                         </javaCommandLineOptions>
                     </configuration>
                 </plugin>
+                
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>${dependency-plugin-version}</version>
+                </plugin>
 
             </plugins>
         </pluginManagement>
@@ -348,7 +350,7 @@
                                 </property>
                                 <property>
                                     <name>hazelcast.memberName</name>
-                                    <value>${final.name}</value>
+                                    <value>${project.name}</value>
                                 </property>
                             </systemProperties>
 
@@ -454,17 +456,7 @@
         <!-- Implementation specific - bundled with runtime -->
         <dependency>
             <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.core</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
             <artifactId>org.eclipse.persistence.jpa</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.weld</groupId>
-            <artifactId>weld-osgi-bundle</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -472,20 +464,8 @@
             <artifactId>hazelcast</artifactId>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.glassfish.exousia</groupId>
-            <artifactId>exousia</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        
 
-
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>${postresql-version}</version>
-        </dependency>
-
+        <!-- 1st party dependencies -->
         <dependency>
             <groupId>pt.cmg</groupId>
             <artifactId>jakartautils</artifactId>
@@ -508,34 +488,19 @@
         </dependency>
         
 
+        <!-- Special: database driver -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postresql-version}</version>
+        </dependency>
+
 
         <!-- Third-party -->
-        <dependency>
-            <groupId>commons-validator</groupId>
-            <artifactId>commons-validator</artifactId>
-            <version>${commons-validator-version}</version>
-        </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>${commons-lang3-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-api</artifactId>
-            <version>${jjwt-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-impl</artifactId>
-            <version>${jjwt-version}</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt-jackson</artifactId> <!-- or jjwt-gson if Gson is preferred -->
-            <version>${jjwt-version}</version>
-            <scope>runtime</scope>
         </dependency>
 
     </dependencies>
