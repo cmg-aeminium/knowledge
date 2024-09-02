@@ -315,7 +315,6 @@
                         
                             <!-- Uncomment below to name the context root path from ROOT to whatever I want -->
                             <!--autoDeployContextRoot>${project.artifactId}</autoDeployContextRoot-->
-                            <systemProperties></systemProperties>
 
                             <!-- If I need to use hazelcast SQL querying -->
                             <!--customJars>
