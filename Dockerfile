@@ -19,13 +19,11 @@ ENV PATH=$JAVA_HOME/bin:$PATH
 # Copy project files
 ADD target/aem-knowledge-microbundle.jar /usr/local/app
 
-WORKDIR /usr/local/app
-
 # Note that WORKDIR is passed to Java programs as the value for the user.dir system property, which is important for relative path resolution
 WORKDIR /usr/local/app
 
 # JVM_OPTIONS can be used to add specific behaviour to the JVM
-ENV JVM_OPTIONS="-Xms1G -Xmx1G"
+ENV JVM_OPTIONS="-Xms128m -Xmx256m"
 
 # Hazelcast: 6900 , HTTP Port: 8080
 EXPOSE 6900 8080    
