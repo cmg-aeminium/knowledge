@@ -30,11 +30,11 @@ public class SchoolConverter {
     }
 
     public SchoolDTO toSchoolDTO(School school) {
-        SchoolDTO dto = new SchoolDTO();
-        dto.id = school.getId();
-        dto.name = translationCache.getTranslatedText(school.getNameTextContentId());
-        dto.country = countryConverter.toCountryDTO(school.getCountry());
-        dto.createdAt = school.getCreatedAt();
+        SchoolDTO dto = new SchoolDTO(
+            school.getId(),
+            translationCache.getTranslatedText(school.getNameTextContentId()),
+            countryConverter.toCountryDTO(school.getCountry()),
+            school.getCreatedAt());
 
         return dto;
     }

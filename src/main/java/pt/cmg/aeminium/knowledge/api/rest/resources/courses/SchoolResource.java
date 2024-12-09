@@ -11,6 +11,8 @@ import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.transaction.Transactional.TxType;
+import jakarta.validation.Valid;
+import jakarta.ws.rs.BeanParam;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
@@ -21,6 +23,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.SchoolDAO;
+import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.SchoolDAO.SchoolFilter;
 import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.School;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
@@ -28,6 +31,7 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseCon
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.SchoolConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateSchoolDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditSchoolDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.SchoolSearchFilterDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.validators.SchoolValidator;
 import pt.cmg.aeminium.knowledge.tasks.schools.SchoolCreator;
 import pt.cmg.jakartautils.errors.ErrorDTO;
@@ -95,15 +99,21 @@ public class SchoolResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAll() {
-        List<School> schools = schoolDAO.findAll();
+    public Response getAllFiltered(@Valid @BeanParam SchoolSearchFilterDTO filter) {
+
+        var validationErrors = schoolValidator.isSearchValid(filter);
+        if (validationErrors.isPresent()) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(validationErrors.get()).build();
+        }
+
+        List<School> schools = schoolDAO.findByFiltered(new SchoolFilter(filter.countryIds, filter.size, filter.offset));
         return Response.ok(schoolConverter.toSchoolDTOs(schools)).build();
     }
 
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getSchoolById(@PathParam("id") Long id) {
+    public Response getById(@PathParam("id") Long id) {
 
         School school = schoolDAO.findById(id);
 

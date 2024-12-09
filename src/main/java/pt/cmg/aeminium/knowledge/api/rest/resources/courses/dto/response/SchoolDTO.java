@@ -10,10 +10,8 @@ import pt.cmg.aeminium.knowledge.api.rest.common.dto.response.CountryDTO;
 /**
  * @author Carlos Gonçalves
  */
-public class SchoolDTO {
-    public Long id;
-    public String name;
-    public CountryDTO country;
-    public LocalDateTime createdAt;
-
-}
+public record SchoolDTO(
+    Long id,
+    String name,
+    CountryDTO country,
+    LocalDateTime createdAt) {}

@@ -10,6 +10,7 @@ import java.util.Optional;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import pt.cmg.aeminium.datamodel.common.dao.localisation.CountryDAO;
+import pt.cmg.aeminium.datamodel.common.entities.localisation.Country;
 import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.SchoolDAO;
 import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.School;
 import pt.cmg.aeminium.datamodel.users.dao.identity.UserDAO;
@@ -18,6 +19,7 @@ import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateSchoolDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditSchoolDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.SchoolSearchFilterDTO;
 import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 import pt.cmg.jakartautils.errors.ErrorDTO;
 
@@ -85,6 +87,20 @@ public class SchoolValidator {
 
         if (countryDAO.findById(schoolEditionDTO.country) == null) {
             errors.add(new ErrorDTO(4, "Given country does not exist " + schoolEditionDTO.country));
+        }
+
+        return errors.isEmpty() ? Optional.empty() : Optional.of(errors);
+    }
+
+    public Optional<List<ErrorDTO>> isSearchValid(SchoolSearchFilterDTO searchDTO) {
+        List<ErrorDTO> errors = new ArrayList<>();
+
+        for (var id : searchDTO.countryIds) {
+            Country country = countryDAO.findById(id);
+
+            if (country == null) {
+                errors.add(new ErrorDTO(1, "Invalid Country id: " + id));
+            }
         }
 
         return errors.isEmpty() ? Optional.empty() : Optional.of(errors);
