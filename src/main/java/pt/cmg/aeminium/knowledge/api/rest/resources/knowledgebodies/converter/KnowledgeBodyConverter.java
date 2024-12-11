@@ -6,7 +6,7 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converter;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeBody;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeBodyDTO;
@@ -15,7 +15,7 @@ import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 /**
  * @author Carlos Gonçalves
  */
-@RequestScoped
+@Dependent
 public class KnowledgeBodyConverter {
 
     @Inject
@@ -26,13 +26,12 @@ public class KnowledgeBodyConverter {
     }
 
     public KnowledgeBodyDTO toKnowledgeBodyDTO(KnowledgeBody knowledgeBody) {
-        KnowledgeBodyDTO dto = new KnowledgeBodyDTO();
-        dto.id = knowledgeBody.getId();
-        dto.year = knowledgeBody.getYear();
-        dto.image = knowledgeBody.getImage();
-        dto.name = translationCache.getTranslatedText(knowledgeBody.getNameTextContentId());
-        dto.description = translationCache.getTranslatedText(knowledgeBody.getDescriptionContentId());
-        return dto;
+        return new KnowledgeBodyDTO(
+            knowledgeBody.getId(),
+            translationCache.getTranslatedText(knowledgeBody.getNameTextContentId()),
+            translationCache.getTranslatedText(knowledgeBody.getDescriptionContentId()),
+            knowledgeBody.getYear(),
+            knowledgeBody.getImage());
     }
 
 }

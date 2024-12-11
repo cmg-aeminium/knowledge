@@ -4,7 +4,7 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.common.converters;
 
-import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import pt.cmg.aeminium.datamodel.common.entities.localisation.Country;
 import pt.cmg.aeminium.knowledge.api.rest.common.dto.response.CountryDTO;
@@ -13,18 +13,16 @@ import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 /**
  * @author Carlos Gonçalves
  */
-@RequestScoped
+@ApplicationScoped
 public class CountryConverter {
 
     @Inject
     private TextTranslationCache translationCache;
 
     public CountryDTO toCountryDTO(Country country) {
-        CountryDTO dto = new CountryDTO();
-        dto.id = country.getId();
-        dto.alpha2code = country.getAlpha2Code();
-        dto.name = translationCache.getTranslatedText(country.getNameTextContentId());
-        return dto;
+        return new CountryDTO(country.getId(),
+            country.getAlpha2Code(),
+            translationCache.getTranslatedText(country.getNameTextContentId()));
     }
 
 }

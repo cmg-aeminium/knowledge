@@ -10,20 +10,19 @@ import java.util.List;
 /**
  * @author Carlos Gonçalves
  */
-public class CourseClassDetailDTO {
-    public Long id;
-    public Integer year;
-    public String name;
-    public String description;
-    public Double ects;
-    public boolean isOptional;
-    public LocalDateTime createdAt;
-    public List<ClassTopicDTO> topics;
+public record CourseClassDetailDTO(
+    Long id,
+    Integer year,
+    String name,
+    String description,
+    Double ects,
+    boolean isOptional,
+    LocalDateTime createdAt,
+    List<ClassTopicDTO> topics) {
 
-    public static class ClassTopicDTO {
-        public Long id;
-        public String description;
-        public Integer order;
+    public record ClassTopicDTO(
+        Long id,
+        String description,
+        Integer order) {
     }
-
 }

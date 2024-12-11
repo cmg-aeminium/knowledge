@@ -7,7 +7,7 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.courses.validators;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 import pt.cmg.aeminium.datamodel.common.dao.localisation.CountryDAO;
 import pt.cmg.aeminium.datamodel.common.entities.localisation.Country;
@@ -26,7 +26,7 @@ import pt.cmg.jakartautils.errors.ErrorDTO;
 /**
  * @author Carlos Gonçalves
  */
-@RequestScoped
+@Dependent
 public class SchoolValidator {
 
     @Inject

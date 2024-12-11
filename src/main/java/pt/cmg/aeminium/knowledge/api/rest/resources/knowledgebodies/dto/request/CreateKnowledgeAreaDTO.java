@@ -19,22 +19,23 @@ public class CreateKnowledgeAreaDTO {
     @NotNull(message = "1001-Image cannot be null")
     public String image;
 
+    @NotNull(message = "1002-Knowledge body cannot be null")
     public Long knowledgeBody;
 
-    @NotEmpty(message = "1002-No names were written")
+    @NotEmpty(message = "1003-No names were written")
     public HashSet<LocalisedTextDTO> names;
 
-    @NotEmpty(message = "1003-No descriptions were written")
+    @NotEmpty(message = "1004-No descriptions were written")
     public HashSet<LocalisedTextDTO> descriptions;
 
     public List<@Valid CreateKATopicDTO> topics;
 
     public static class CreateKATopicDTO {
 
-        @NotEmpty(message = "1004-No topic names were written")
+        @NotEmpty(message = "1005-No topic names were written")
         public HashSet<LocalisedTextDTO> names;
 
-        @NotEmpty(message = "1005-No topic descriptions were written")
+        @NotEmpty(message = "1006-No topic descriptions were written")
         public HashSet<LocalisedTextDTO> descriptions;
     }
 }

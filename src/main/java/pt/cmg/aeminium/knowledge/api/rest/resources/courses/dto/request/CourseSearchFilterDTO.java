@@ -4,12 +4,13 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request;
 
+import jakarta.ws.rs.DefaultValue;
 import jakarta.ws.rs.QueryParam;
 
 /**
  * @author Carlos Gonçalves
  */
-public class CourseSearchFilter {
+public class CourseSearchFilterDTO {
 
     @QueryParam("school")
     public Long school;
@@ -22,5 +23,13 @@ public class CourseSearchFilter {
 
     @QueryParam("acronym")
     public String acronym;
+
+    @QueryParam("size")
+    @DefaultValue("30")
+    public Long size;
+
+    @QueryParam("offset")
+    @DefaultValue("0")
+    public Long offset;
 
 }

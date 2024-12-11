@@ -7,9 +7,9 @@ package pt.cmg.aeminium.knowledge.health;
 import org.eclipse.microprofile.health.HealthCheck;
 import org.eclipse.microprofile.health.HealthCheckResponse;
 import org.eclipse.microprofile.health.Readiness;
-import jakarta.ejb.EJB;
 import jakarta.enterprise.context.ApplicationScoped;
-import pt.cmg.aeminium.datamodel.knowledge.dao.knowledgeareas.KnowledgeAreaDAO;
+import jakarta.inject.Inject;
+import pt.cmg.aeminium.knowledge.cache.ObjectCacheLoader;
 
 /**
  * @author Carlos Gonçalves
@@ -18,16 +18,16 @@ import pt.cmg.aeminium.datamodel.knowledge.dao.knowledgeareas.KnowledgeAreaDAO;
 @ApplicationScoped
 public class DataReadinessCheck implements HealthCheck {
 
-    @EJB
-    private KnowledgeAreaDAO knowledgeAreaDAO;
+    @Inject
+    private ObjectCacheLoader objectCache;
 
     @Override
     public HealthCheckResponse call() {
-        if (knowledgeAreaDAO.count() == 16L) {
-            return HealthCheckResponse.up("All Knowledge Areas loaded");
+        if (objectCache.isCacheReady()) {
+            return HealthCheckResponse.up("knowledge");
         }
 
-        return HealthCheckResponse.down("Missing Knowleadge Areas");
+        return HealthCheckResponse.down("knowledge");
     }
 
 }

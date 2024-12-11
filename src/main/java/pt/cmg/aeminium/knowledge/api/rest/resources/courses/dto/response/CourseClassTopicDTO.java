@@ -7,8 +7,8 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response;
 /**
  * @author Carlos Gonçalves
  */
-public class CourseClassTopicDTO {
-    public Long id;
-    public String description;
-    public Integer order;
+public record CourseClassTopicDTO(
+    Long id,
+    String description,
+    Integer order) {
 }

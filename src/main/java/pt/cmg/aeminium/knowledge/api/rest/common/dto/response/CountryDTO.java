@@ -7,8 +7,8 @@ package pt.cmg.aeminium.knowledge.api.rest.common.dto.response;
 /**
  * @author Carlos Gonçalves
  */
-public class CountryDTO {
-    public long id;
-    public String alpha2code;
-    public String name;
+public record CountryDTO(
+    long id,
+    String alpha2code,
+    String name) {
 }

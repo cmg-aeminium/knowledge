@@ -4,10 +4,9 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converter;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeArea;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response.KnowledgeAreaDTO;
@@ -18,7 +17,7 @@ import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 /**
  * @author Carlos Manuel
  */
-@RequestScoped
+@Dependent
 public class KnowledgeAreaConverter {
 
     @Inject
@@ -26,23 +25,19 @@ public class KnowledgeAreaConverter {
 
     public KnowledgeAreaDetailDTO toDetailedKnowledgeAreaDTO(KnowledgeArea knowledgeArea) {
 
-        KnowledgeAreaDetailDTO dto = new KnowledgeAreaDetailDTO();
+        List<KATopicDTO> topics = knowledgeArea.getKnowledgeTopics()
+            .stream()
+            .map(topic -> new KATopicDTO(
+                topic.getId(),
+                translationCache.getTranslatedText(topic.getNameTextContentId())))
+            .toList();
 
-        dto.id = knowledgeArea.getId();
-        dto.image = knowledgeArea.getImage();
-        dto.name = translationCache.getTranslatedText(knowledgeArea.getNameTextContentId());
-        dto.description = translationCache.getTranslatedText(knowledgeArea.getDescriptionContentId());
-
-        dto.topics = new ArrayList<>();
-        for (var topic : knowledgeArea.getKnowledgeTopics()) {
-            KATopicDTO topicDTO = new KATopicDTO();
-            topicDTO.id = topic.getId();
-            topicDTO.name = translationCache.getTranslatedText(topic.getNameTextContentId());
-
-            dto.topics.add(topicDTO);
-        }
-
-        return dto;
+        return new KnowledgeAreaDetailDTO(
+            knowledgeArea.getId(),
+            knowledgeArea.getImage(),
+            translationCache.getTranslatedText(knowledgeArea.getNameTextContentId()),
+            translationCache.getTranslatedText(knowledgeArea.getDescriptionContentId()),
+            topics);
     }
 
     public List<KnowledgeAreaDTO> toKnowledgeAreaDTOs(List<KnowledgeArea> kas) {
@@ -51,13 +46,10 @@ public class KnowledgeAreaConverter {
 
     public KnowledgeAreaDTO toKnowledgeAreaDTO(KnowledgeArea knowledgeArea) {
 
-        KnowledgeAreaDTO dto = new KnowledgeAreaDTO();
+        return new KnowledgeAreaDTO(knowledgeArea.getId(),
+            knowledgeArea.getImage(),
+            translationCache.getTranslatedText(knowledgeArea.getNameTextContentId()));
 
-        dto.id = knowledgeArea.getId();
-        dto.image = knowledgeArea.getImage();
-        dto.name = translationCache.getTranslatedText(knowledgeArea.getNameTextContentId());
-
-        return dto;
     }
 
 }

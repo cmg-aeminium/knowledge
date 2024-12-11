@@ -5,21 +5,21 @@
 package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response;
 
 import java.util.List;
+import jakarta.json.bind.annotation.JsonbPropertyOrder;
 
 /**
  * @author Carlos Gonçalves
  */
-public class KnowledgeAreaDetailDTO {
+@JsonbPropertyOrder({"id", "name", "image", "description", "topics"})
+public record KnowledgeAreaDetailDTO(
+    Long id,
+    String image,
+    String name,
+    String description,
+    List<KATopicDTO> topics) {
 
-    public Long id;
-    public String image;
-    public String name;
-    public String description;
-
-    public List<KATopicDTO> topics;
-
-    public static class KATopicDTO {
-        public Long id;
-        public String name;
+    public record KATopicDTO(
+        Long id,
+        String name) {
     }
 }

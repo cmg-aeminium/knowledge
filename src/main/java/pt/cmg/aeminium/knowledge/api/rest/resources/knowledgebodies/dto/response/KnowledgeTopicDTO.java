@@ -4,10 +4,11 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response;
 
+import jakarta.json.bind.annotation.JsonbPropertyOrder;
+
 /**
  * @author Carlos Gonçalves
  */
-public class KnowledgeTopicDTO {
-    public Long id;
-    public String name;
+@JsonbPropertyOrder({"id", "name"})
+public record KnowledgeTopicDTO(Long id, String name) {
 }

@@ -7,7 +7,7 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.courses.validators;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.CourseClassDAO;
 import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.CourseClassTopicDAO;
@@ -20,7 +20,7 @@ import pt.cmg.aeminium.datamodel.users.dao.identity.UserDAO;
 import pt.cmg.aeminium.datamodel.users.entities.identity.User;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
-import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CourseSearchFilter;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CourseSearchFilterDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassDTO;
@@ -32,7 +32,7 @@ import pt.cmg.jakartautils.errors.ErrorDTO;
 /**
  * @author Carlos Gonçalves
  */
-@RequestScoped
+@Dependent
 public class CourseValidator {
 
     @Inject
@@ -57,7 +57,7 @@ public class CourseValidator {
     @Inject
     private TextTranslationCache textCache;
 
-    public Optional<List<ErrorDTO>> isSearchFilterValid(CourseSearchFilter searchFilter) {
+    public Optional<List<ErrorDTO>> isSearchFilterValid(CourseSearchFilterDTO searchFilter) {
         List<ErrorDTO> errors = new ArrayList<>();
 
         if (searchFilter.school != null) {

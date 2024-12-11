@@ -4,11 +4,11 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.response;
 
+import jakarta.json.bind.annotation.JsonbPropertyOrder;
+
 /**
  * @author Carlos Gonçalves
  */
-public class KnowledgeAreaDTO {
-    public Long id;
-    public String image;
-    public String name;
+@JsonbPropertyOrder({"id", "name", "image"})
+public record KnowledgeAreaDTO(Long id, String image, String name) {
 }

@@ -2,27 +2,34 @@
  * Copyright (c) 2024 Carlos Gonçalves (https://www.linkedin.com/in/carlosmogoncalves/)
  * Likely open-source, so copy at will, bugs will be yours as well.
  */
-package pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request;
+package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request;
 
-import java.util.Set;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Min;
 import jakarta.ws.rs.DefaultValue;
 import jakarta.ws.rs.QueryParam;
 
 /**
  * @author Carlos Gonçalves
  */
-public class SchoolSearchFilterDTO {
+public class SearchKnowledgeBodyDTO {
 
-    @QueryParam("country")
-    public Set<@NotNull(message = "1001 - Country cannot be null") Long> countryIds;
+    @QueryParam("year")
+    public Integer year;
+
+    @QueryParam("createdBy")
+    public Long createdBy;
+
+    @QueryParam("name")
+    public String name;
 
     @QueryParam("size")
     @DefaultValue("30")
+    @Min(value = 0)
     public Long size;
 
     @QueryParam("offset")
     @DefaultValue("0")
+    @Min(value = 0)
     public Long offset;
 
 }

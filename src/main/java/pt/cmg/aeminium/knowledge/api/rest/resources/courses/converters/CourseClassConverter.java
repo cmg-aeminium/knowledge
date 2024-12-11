@@ -7,7 +7,7 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClass;
 import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClassTopic;
@@ -20,7 +20,7 @@ import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 /**
  * @author Carlos Gonçalves
  */
-@RequestScoped
+@Dependent
 public class CourseClassConverter {
 
     @Inject
@@ -31,17 +31,14 @@ public class CourseClassConverter {
     }
 
     public CourseClassDTO toCourseClassDTO(CourseClass courseClass) {
-        CourseClassDTO dto = new CourseClassDTO();
-
-        dto.id = courseClass.getId();
-        dto.year = courseClass.getYear();
-        dto.name = translationCache.getTranslatedText(courseClass.getNameTextContentId());
-        dto.description = translationCache.getTranslatedText(courseClass.getDescriptionContentId());
-        dto.ects = courseClass.getEcts();
-        dto.isOptional = courseClass.isOptional();
-        dto.createdAt = courseClass.getCreatedAt();
-
-        return dto;
+        return new CourseClassDTO(
+            courseClass.getId(),
+            courseClass.getYear(),
+            translationCache.getTranslatedText(courseClass.getNameTextContentId()),
+            translationCache.getTranslatedText(courseClass.getDescriptionContentId()),
+            courseClass.getEcts(),
+            courseClass.isOptional(),
+            courseClass.getCreatedAt());
     }
 
     public List<CourseClassTopicDTO> toCourseClasseTopicDTOs(List<CourseClassTopic> topics) {
@@ -54,40 +51,36 @@ public class CourseClassConverter {
             return null;
         }
 
-        CourseClassTopicDTO dto = new CourseClassTopicDTO();
+        return new CourseClassTopicDTO(
+            topic.getId(),
+            translationCache.getTranslatedText(topic.getDescriptionContentId()),
+            topic.getOrder());
 
-        dto.id = topic.getId();
-        dto.description = translationCache.getTranslatedText(topic.getDescriptionContentId());
-        dto.order = topic.getOrder();
-
-        return dto;
     }
 
     public CourseClassDetailDTO toCourseClassDetailedDTO(CourseClass courseClass) {
-        CourseClassDetailDTO dto = new CourseClassDetailDTO();
-
-        dto.id = courseClass.getId();
-        dto.year = courseClass.getYear();
-        dto.name = translationCache.getTranslatedText(courseClass.getNameTextContentId());
-        dto.description = translationCache.getTranslatedText(courseClass.getDescriptionContentId());
-        dto.ects = courseClass.getEcts();
-        dto.isOptional = courseClass.isOptional();
-        dto.createdAt = courseClass.getCreatedAt();
 
         List<ClassTopicDTO> topics = new ArrayList<>();
         for (var topic : courseClass.getCourseClassTopics()) {
 
-            ClassTopicDTO topicDTO = new ClassTopicDTO();
-            topicDTO.id = topic.getId();
-            topicDTO.description = translationCache.getTranslatedText(topic.getDescriptionContentId());
-            topicDTO.order = topic.getOrder();
+            ClassTopicDTO topicDTO = new ClassTopicDTO(
+                topic.getId(),
+                translationCache.getTranslatedText(topic.getDescriptionContentId()),
+                topic.getOrder());
 
             topics.add(topicDTO);
         }
 
-        dto.topics = topics;
+        return new CourseClassDetailDTO(
+            courseClass.getId(),
+            courseClass.getYear(),
+            translationCache.getTranslatedText(courseClass.getNameTextContentId()),
+            translationCache.getTranslatedText(courseClass.getDescriptionContentId()),
+            courseClass.getEcts(),
+            courseClass.isOptional(),
+            courseClass.getCreatedAt(),
+            topics);
 
-        return dto;
     }
 
 }

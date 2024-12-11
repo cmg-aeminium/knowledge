@@ -74,6 +74,11 @@ public class KnowledgeAreaResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getKnowledgeArea(@PathParam("id") Long id) {
         KnowledgeArea ka = knowledgeAreaDAO.findById(id);
+
+        if (ka == null) {
+            return Response.status(Status.BAD_REQUEST).entity(new ErrorDTO(1, "Knowledge Area does not exist")).build();
+        }
+
         return Response.ok(kaConverter.toDetailedKnowledgeAreaDTO(ka)).build();
     }
 

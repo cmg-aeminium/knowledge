@@ -24,13 +24,14 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.CourseClassDAO;
 import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.CourseDAO;
+import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.CourseDAO.CourseFilterCriteria;
 import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.Course;
 import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClass;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseClassConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseConverter;
-import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CourseSearchFilter;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CourseSearchFilterDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassDTO;
@@ -71,14 +72,21 @@ public class CourseResource {
     @GET
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAll(@Valid @BeanParam CourseSearchFilter filter) {
+    public Response getFiltered(@Valid @BeanParam CourseSearchFilterDTO filter) {
 
         var validationErrors = courseValidator.isSearchFilterValid(filter);
         if (validationErrors.isPresent()) {
             return Response.status(Response.Status.BAD_REQUEST).entity(validationErrors.get()).build();
         }
 
-        List<Course> degrees = courseDAO.findFiltered(courseConverter.toDegreeFilterCriteria(filter));
+        List<Course> degrees = courseDAO.findFiltered(new CourseFilterCriteria(
+            filter.school,
+            filter.year,
+            requestData.getSelectedLanguage(),
+            filter.name,
+            filter.acronym,
+            filter.size,
+            filter.offset));
 
         return Response.ok(courseConverter.toCourseDTOs(degrees)).build();
     }

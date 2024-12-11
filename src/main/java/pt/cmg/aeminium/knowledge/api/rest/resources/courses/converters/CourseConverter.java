@@ -5,52 +5,38 @@
 package pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters;
 
 import java.util.List;
-import java.util.stream.Collectors;
-import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
-import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.CourseDAO.CourseFilterCriteria;
-import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.SchoolDAO;
 import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.Course;
-import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.School;
-import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CourseSearchFilter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseDTO;
 import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 
 /**
  * @author Carlos Gonçalves
  */
-@RequestScoped
+@Dependent
 public class CourseConverter {
 
     @Inject
     private TextTranslationCache translationCache;
 
     @Inject
-    private SchoolDAO schoolDAO;
-
-    @Inject
     private SchoolConverter schoolConverter;
 
-    public CourseFilterCriteria toDegreeFilterCriteria(CourseSearchFilter searchFilter) {
-        School school = schoolDAO.findById(searchFilter.school);
-        return new CourseFilterCriteria(school, searchFilter.year, searchFilter.name, searchFilter.acronym);
-    }
-
     public List<CourseDTO> toCourseDTOs(List<Course> degrees) {
-        return degrees.stream().map(this::toCourseDTO).collect(Collectors.toList());
+        return degrees.stream().map(this::toCourseDTO).toList();
     }
 
     public CourseDTO toCourseDTO(Course course) {
-        CourseDTO dto = new CourseDTO();
-        dto.id = course.getId();
-        dto.acronym = course.getAcronym();
-        dto.name = translationCache.getTranslatedText(course.getNameTextContentId());
-        dto.description = translationCache.getTranslatedText(course.getDescriptionContentId());
-        dto.image = course.getImage();
-        dto.school = schoolConverter.toSchoolDTO(course.getSchool());
-        dto.year = course.getYear();
+        return new CourseDTO(
+            course.getId(),
+            course.getAcronym(),
+            schoolConverter.toSchoolDTO(course.getSchool()),
+            translationCache.getTranslatedText(course.getNameTextContentId()),
+            translationCache.getTranslatedText(course.getDescriptionContentId()),
+            course.getYear(),
+            course.getImage());
 
-        return dto;
     }
 
 }

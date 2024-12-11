@@ -13,10 +13,12 @@ import pt.cmg.aeminium.datamodel.knowledge.dao.knowledgeareas.KnowledgeTopicDAO;
 import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeBody;
 import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeTopic;
 import pt.cmg.aeminium.datamodel.users.dao.identity.UserDAO;
+import pt.cmg.aeminium.datamodel.users.entities.identity.User;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.CreateKnowledgeAreaDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.EditKnowledgeTopicDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.SearchKnowledgeBodyDTO;
 import pt.cmg.jakartautils.errors.ErrorDTO;
 
 /**
@@ -69,6 +71,18 @@ public class KnowledgeAreaValidator {
 
         if (!kaTopic.getKnowledgeArea().getId().equals(classId)) {
             return Optional.of(List.of(new ErrorDTO(2, "Knowledge Topic does not belong to given Knowledge Area")));
+        }
+
+        return Optional.empty();
+    }
+
+    public Optional<List<ErrorDTO>> isSearchValid(SearchKnowledgeBodyDTO filter) {
+
+        if (filter.createdBy != null) {
+            User createdBy = userDAO.findById(filter.createdBy);
+            if (createdBy == null) {
+                return Optional.of(List.of(new ErrorDTO(1, "User with id " + filter.createdBy + " does not exist")));
+            }
         }
 
         return Optional.empty();

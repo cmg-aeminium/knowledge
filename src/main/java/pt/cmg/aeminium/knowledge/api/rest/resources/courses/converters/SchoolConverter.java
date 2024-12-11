@@ -6,7 +6,7 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.School;
 import pt.cmg.aeminium.knowledge.api.rest.common.converters.CountryConverter;
@@ -16,7 +16,7 @@ import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 /**
  * @author Carlos Gonçalves
  */
-@RequestScoped
+@Dependent
 public class SchoolConverter {
 
     @Inject

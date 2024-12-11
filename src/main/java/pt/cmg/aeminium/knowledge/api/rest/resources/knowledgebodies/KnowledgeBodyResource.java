@@ -7,6 +7,7 @@ import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.transaction.Transactional.TxType;
 import jakarta.validation.Valid;
+import jakarta.ws.rs.BeanParam;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
@@ -16,6 +17,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import pt.cmg.aeminium.datamodel.knowledge.dao.knowledgeareas.KnowledgeBodyDAO;
+import pt.cmg.aeminium.datamodel.knowledge.dao.knowledgeareas.KnowledgeBodyDAO.KnowledgeBodyFilterCriteria;
 import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeArea;
 import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeBody;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
@@ -24,6 +26,7 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converter.Kn
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converter.KnowledgeBodyConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.CreateKnowledgeAreaDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.CreateKnowledgeBodyDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.SearchKnowledgeBodyDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.validators.KnowledgeAreaValidator;
 import pt.cmg.aeminium.knowledge.tasks.knowledgebodies.KnowledgeBodyCreator;
 import pt.cmg.jakartautils.errors.ErrorDTO;
@@ -56,8 +59,21 @@ public class KnowledgeBodyResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAll() {
-        List<KnowledgeBody> knowledgeBodies = knowledgeBodyDAO.findAll();
+    public Response getAll(@Valid @BeanParam SearchKnowledgeBodyDTO filter) {
+
+        var validationErrors = knowledgeAreaValidator.isSearchValid(filter);
+        if (validationErrors.isPresent()) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(validationErrors.get()).build();
+        }
+
+        List<KnowledgeBody> knowledgeBodies = knowledgeBodyDAO
+            .findFiltered(new KnowledgeBodyFilterCriteria(filter.year,
+                filter.name,
+                requestData.getSelectedLanguage(),
+                filter.createdBy,
+                filter.size,
+                filter.offset));
+
         return Response.ok(knowledgeBodyConverter.toKnowledgeBodyDTOs(knowledgeBodies)).build();
     }
 

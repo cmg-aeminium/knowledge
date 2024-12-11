@@ -7,12 +7,12 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response;
 /**
  * @author Carlos Gonçalves
  */
-public class CourseDTO {
-    public Long id;
-    public String acronym;
-    public SchoolDTO school;
-    public String name;
-    public String description;
-    public Integer year;
-    public String image;
+public record CourseDTO(
+    Long id,
+    String acronym,
+    SchoolDTO school,
+    String name,
+    String description,
+    Integer year,
+    String image) {
 }

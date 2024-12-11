@@ -9,12 +9,12 @@ import java.time.LocalDateTime;
 /**
  * @author Carlos Gonçalves
  */
-public class CourseClassDTO {
-    public Long id;
-    public Integer year;
-    public String name;
-    public String description;
-    public Double ects;
-    public boolean isOptional;
-    public LocalDateTime createdAt;
+public record CourseClassDTO(
+    Long id,
+    Integer year,
+    String name,
+    String description,
+    Double ects,
+    boolean isOptional,
+    LocalDateTime createdAt) {
 }
