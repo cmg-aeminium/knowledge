@@ -12,7 +12,7 @@ import jakarta.ws.rs.QueryParam;
 /**
  * @author Carlos Gonçalves
  */
-public class SchoolSearchFilterDTO {
+public class SearchSchoolFilterDTO {
 
     @QueryParam("country")
     public Set<@NotNull(message = "1001 - Country cannot be null") Long> countryIds;

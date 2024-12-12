@@ -12,6 +12,7 @@ import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.transaction.Transactional.TxType;
 import jakarta.validation.Valid;
+import jakarta.ws.rs.BeanParam;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
@@ -23,13 +24,17 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.CourseClassDAO;
+import pt.cmg.aeminium.datamodel.knowledge.dao.curricula.CourseClassDAO.CourseClassFilterCriteria;
 import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClass;
 import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClassTopic;
+import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
+import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseClassConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassTopicDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.SearchCourseClassFilterDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.validators.CourseValidator;
 import pt.cmg.aeminium.knowledge.tasks.courses.CourseCreator;
 import pt.cmg.jakartautils.errors.ErrorDTO;
@@ -40,6 +45,10 @@ import pt.cmg.jakartautils.errors.ErrorDTO;
 @Path("courseclasses")
 @RequestScoped
 public class CourseClassResource {
+
+    @Inject
+    @RequestData
+    private RequestContextData requestData;
 
     @EJB
     private CourseClassDAO courseClassDAO;
@@ -56,9 +65,23 @@ public class CourseClassResource {
     @GET
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAllCourseClasses() {
+    public Response getAllClassesFiltered(@Valid @BeanParam SearchCourseClassFilterDTO filter) {
 
-        List<CourseClass> courseClasses = courseClassDAO.findAll();
+        var validationErrors = courseValidator.isCourseClassSearchFilterValid(filter);
+        if (validationErrors.isPresent()) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(validationErrors.get()).build();
+        }
+
+        List<CourseClass> courseClasses = courseClassDAO.findFiltered(
+            new CourseClassFilterCriteria(filter.year,
+                filter.semester,
+                filter.isOptional,
+                filter.name,
+                requestData.getSelectedLanguage(),
+                filter.course,
+                filter.school,
+                filter.size,
+                filter.offset));
 
         return Response.ok(courseClassConverter.toCourseClassesDTO(courseClasses)).build();
     }

@@ -31,7 +31,7 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseCon
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.SchoolConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateSchoolDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditSchoolDTO;
-import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.SchoolSearchFilterDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.SearchSchoolFilterDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.validators.SchoolValidator;
 import pt.cmg.aeminium.knowledge.tasks.schools.SchoolCreator;
 import pt.cmg.jakartautils.errors.ErrorDTO;
@@ -99,7 +99,7 @@ public class SchoolResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAllFiltered(@Valid @BeanParam SchoolSearchFilterDTO filter) {
+    public Response getAllFiltered(@Valid @BeanParam SearchSchoolFilterDTO filter) {
 
         var validationErrors = schoolValidator.isSearchValid(filter);
         if (validationErrors.isPresent()) {

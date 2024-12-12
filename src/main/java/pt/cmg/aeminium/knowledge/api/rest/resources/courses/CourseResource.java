@@ -31,7 +31,7 @@ import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseClassConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseConverter;
-import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CourseSearchFilterDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.SearchCourseFilterDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassDTO;
@@ -72,7 +72,7 @@ public class CourseResource {
     @GET
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getFiltered(@Valid @BeanParam CourseSearchFilterDTO filter) {
+    public Response getFiltered(@Valid @BeanParam SearchCourseFilterDTO filter) {
 
         var validationErrors = courseValidator.isSearchFilterValid(filter);
         if (validationErrors.isPresent()) {

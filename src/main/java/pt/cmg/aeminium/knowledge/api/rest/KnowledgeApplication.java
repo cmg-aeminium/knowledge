@@ -51,16 +51,4 @@ public class KnowledgeApplication extends Application {
         return resources;
     }
 
-    // @Override
-    // public Set<Object> getSingletons() {
-    // Set<Object> singletons = new HashSet<>();
-    //
-    // ContextResolver<Jsonb> jsonbConfiguration = new JsonbProvider();
-    //
-    // singletons.add(jsonbConfiguration);
-    // singletons.add(new ConstraintViolationExceptionMapper());
-    //
-    // return singletons;
-    // }
-
 }

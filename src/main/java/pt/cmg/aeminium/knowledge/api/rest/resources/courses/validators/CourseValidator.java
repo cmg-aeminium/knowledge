@@ -20,12 +20,13 @@ import pt.cmg.aeminium.datamodel.users.dao.identity.UserDAO;
 import pt.cmg.aeminium.datamodel.users.entities.identity.User;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
-import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CourseSearchFilterDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.SearchCourseFilterDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.SearchCourseClassFilterDTO;
 import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 import pt.cmg.jakartautils.errors.ErrorDTO;
 
@@ -57,7 +58,7 @@ public class CourseValidator {
     @Inject
     private TextTranslationCache textCache;
 
-    public Optional<List<ErrorDTO>> isSearchFilterValid(CourseSearchFilterDTO searchFilter) {
+    public Optional<List<ErrorDTO>> isSearchFilterValid(SearchCourseFilterDTO searchFilter) {
         List<ErrorDTO> errors = new ArrayList<>();
 
         if (searchFilter.school != null) {
@@ -201,6 +202,24 @@ public class CourseValidator {
         }
 
         return Optional.empty();
+    }
+
+    public Optional<List<ErrorDTO>> isCourseClassSearchFilterValid(SearchCourseClassFilterDTO filter) {
+        List<ErrorDTO> errors = new ArrayList<>();
+
+        if (filter.course != null) {
+            if (courseDAO.findById(filter.course) == null) {
+                errors.add(new ErrorDTO(1, "Course does not exist: " + filter.course));
+            }
+        }
+
+        if (filter.school != null) {
+            if (schoolDAO.findById(filter.school) == null) {
+                errors.add(new ErrorDTO(2, "School does not exist: " + filter.school));
+            }
+        }
+
+        return errors.isEmpty() ? Optional.empty() : Optional.of(errors);
     }
 
 }

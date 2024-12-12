@@ -11,6 +11,7 @@ import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.transaction.Transactional.TxType;
 import jakarta.validation.Valid;
+import jakarta.ws.rs.BeanParam;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
@@ -23,15 +24,17 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.Status;
 import pt.cmg.aeminium.datamodel.knowledge.dao.knowledgeareas.KnowledgeAreaDAO;
+import pt.cmg.aeminium.datamodel.knowledge.dao.knowledgeareas.KnowledgeAreaDAO.KnowledgeAreaFilterCriteria;
 import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeArea;
 import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeTopic;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
-import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converter.KnowledgeAreaConverter;
-import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converter.KnowledgeTopicConverter;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converters.KnowledgeAreaConverter;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converters.KnowledgeTopicConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.CreateKnowledgeAreaDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.CreateKnowledgeTopicDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.EditKnowledgeTopicDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.SearchKnowledgeAreaDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.validators.KnowledgeAreaValidator;
 import pt.cmg.aeminium.knowledge.tasks.knowledgebodies.KnowledgeBodyCreator;
 import pt.cmg.jakartautils.errors.ErrorDTO;
@@ -64,8 +67,20 @@ public class KnowledgeAreaResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAll() {
-        List<KnowledgeArea> knowledgeAreas = knowledgeAreaDAO.findAll();
+    public Response getFiltered(@Valid @BeanParam SearchKnowledgeAreaDTO filter) {
+
+        var validationErrors = knowledgeAreaValidator.isSearchValid(filter);
+        if (validationErrors.isPresent()) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(validationErrors.get()).build();
+        }
+
+        List<KnowledgeArea> knowledgeAreas = knowledgeAreaDAO.findFiltered(
+            new KnowledgeAreaFilterCriteria(filter.name,
+                requestData.getSelectedLanguage(),
+                filter.knowledgeBodyId,
+                filter.size,
+                filter.offset));
+
         return Response.ok(kaConverter.toKnowledgeAreaDTOs(knowledgeAreas)).build();
     }
 

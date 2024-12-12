@@ -4,9 +4,12 @@
  */
 package pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response;
 
+import jakarta.json.bind.annotation.JsonbPropertyOrder;
+
 /**
  * @author Carlos Gonçalves
  */
+@JsonbPropertyOrder({"id", "name", "acronym", "year", "image", "description"})
 public record CourseDTO(
     Long id,
     String acronym,

@@ -6,25 +6,24 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.validators;
 
 import java.util.List;
 import java.util.Optional;
-import jakarta.ejb.Stateless;
+import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 import pt.cmg.aeminium.datamodel.knowledge.dao.knowledgeareas.KnowledgeBodyDAO;
 import pt.cmg.aeminium.datamodel.knowledge.dao.knowledgeareas.KnowledgeTopicDAO;
 import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeBody;
 import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeTopic;
 import pt.cmg.aeminium.datamodel.users.dao.identity.UserDAO;
-import pt.cmg.aeminium.datamodel.users.entities.identity.User;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.CreateKnowledgeAreaDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.EditKnowledgeTopicDTO;
-import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.SearchKnowledgeBodyDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.SearchKnowledgeAreaDTO;
 import pt.cmg.jakartautils.errors.ErrorDTO;
 
 /**
  * @author Carlos Gonçalves
  */
-@Stateless
+@Dependent
 public class KnowledgeAreaValidator {
 
     @Inject
@@ -76,12 +75,12 @@ public class KnowledgeAreaValidator {
         return Optional.empty();
     }
 
-    public Optional<List<ErrorDTO>> isSearchValid(SearchKnowledgeBodyDTO filter) {
+    public Optional<List<ErrorDTO>> isSearchValid(SearchKnowledgeAreaDTO filter) {
 
-        if (filter.createdBy != null) {
-            User createdBy = userDAO.findById(filter.createdBy);
-            if (createdBy == null) {
-                return Optional.of(List.of(new ErrorDTO(1, "User with id " + filter.createdBy + " does not exist")));
+        if (filter.knowledgeBodyId != null) {
+            KnowledgeBody knowledgeBody = knowledgeBodyDAO.findById(filter.knowledgeBodyId);
+            if (knowledgeBody == null) {
+                return Optional.of(List.of(new ErrorDTO(1, "Knowledge Body with id " + filter.knowledgeBodyId + " does not exist")));
             }
         }
 

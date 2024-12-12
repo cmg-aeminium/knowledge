@@ -10,7 +10,7 @@ import jakarta.ws.rs.QueryParam;
 /**
  * @author Carlos Gonçalves
  */
-public class CourseSearchFilterDTO {
+public class SearchCourseFilterDTO {
 
     @QueryParam("school")
     public Long school;

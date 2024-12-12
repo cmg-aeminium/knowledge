@@ -6,7 +6,6 @@ package pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.CourseClass;
@@ -27,7 +26,7 @@ public class CourseClassConverter {
     private TextTranslationCache translationCache;
 
     public List<CourseClassDTO> toCourseClassesDTO(List<CourseClass> classes) {
-        return classes.stream().map(this::toCourseClassDTO).collect(Collectors.toList());
+        return classes.stream().map(this::toCourseClassDTO).toList();
     }
 
     public CourseClassDTO toCourseClassDTO(CourseClass courseClass) {
@@ -35,6 +34,7 @@ public class CourseClassConverter {
             courseClass.getId(),
             courseClass.getYear(),
             translationCache.getTranslatedText(courseClass.getNameTextContentId()),
+            new CourseClassDTO.CourseDTO(courseClass.getCourse().getId(), translationCache.getTranslatedText(courseClass.getCourse().getNameTextContentId())),
             translationCache.getTranslatedText(courseClass.getDescriptionContentId()),
             courseClass.getEcts(),
             courseClass.isOptional(),
@@ -42,7 +42,7 @@ public class CourseClassConverter {
     }
 
     public List<CourseClassTopicDTO> toCourseClasseTopicDTOs(List<CourseClassTopic> topics) {
-        return topics.stream().map(this::toCourseClasseTopicDTO).collect(Collectors.toList());
+        return topics.stream().map(this::toCourseClasseTopicDTO).toList();
     }
 
     public CourseClassTopicDTO toCourseClasseTopicDTO(CourseClassTopic topic) {

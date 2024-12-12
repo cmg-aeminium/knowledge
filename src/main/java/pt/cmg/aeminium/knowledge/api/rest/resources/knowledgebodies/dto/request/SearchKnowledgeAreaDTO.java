@@ -11,13 +11,10 @@ import jakarta.ws.rs.QueryParam;
 /**
  * @author Carlos Gonçalves
  */
-public class SearchKnowledgeBodyDTO {
+public class SearchKnowledgeAreaDTO {
 
-    @QueryParam("year")
-    public Integer year;
-
-    @QueryParam("createdBy")
-    public Long createdBy;
+    @QueryParam("knowledgeBody")
+    public Long knowledgeBodyId;
 
     @QueryParam("name")
     public String name;
@@ -31,5 +28,4 @@ public class SearchKnowledgeBodyDTO {
     @DefaultValue("0")
     @Min(value = 0, message = "1002-Offset value must be positive")
     public Long offset;
-
 }

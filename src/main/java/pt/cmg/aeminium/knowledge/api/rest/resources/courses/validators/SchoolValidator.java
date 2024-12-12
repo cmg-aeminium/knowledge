@@ -19,7 +19,7 @@ import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateSchoolDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditSchoolDTO;
-import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.SchoolSearchFilterDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.SearchSchoolFilterDTO;
 import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 import pt.cmg.jakartautils.errors.ErrorDTO;
 
@@ -92,7 +92,7 @@ public class SchoolValidator {
         return errors.isEmpty() ? Optional.empty() : Optional.of(errors);
     }
 
-    public Optional<List<ErrorDTO>> isSearchValid(SchoolSearchFilterDTO searchDTO) {
+    public Optional<List<ErrorDTO>> isSearchValid(SearchSchoolFilterDTO searchDTO) {
         List<ErrorDTO> errors = new ArrayList<>();
 
         for (var id : searchDTO.countryIds) {

@@ -22,12 +22,13 @@ import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeAre
 import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeBody;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
-import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converter.KnowledgeAreaConverter;
-import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converter.KnowledgeBodyConverter;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converters.KnowledgeAreaConverter;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.converters.KnowledgeBodyConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.CreateKnowledgeAreaDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.CreateKnowledgeBodyDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.SearchKnowledgeBodyDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.validators.KnowledgeAreaValidator;
+import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.validators.KnowledgeBodyValidator;
 import pt.cmg.aeminium.knowledge.tasks.knowledgebodies.KnowledgeBodyCreator;
 import pt.cmg.jakartautils.errors.ErrorDTO;
 
@@ -57,11 +58,14 @@ public class KnowledgeBodyResource {
     @Inject
     private KnowledgeAreaValidator knowledgeAreaValidator;
 
+    @Inject
+    private KnowledgeBodyValidator knowledgeBodyValidator;
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll(@Valid @BeanParam SearchKnowledgeBodyDTO filter) {
 
-        var validationErrors = knowledgeAreaValidator.isSearchValid(filter);
+        var validationErrors = knowledgeBodyValidator.isSearchValid(filter);
         if (validationErrors.isPresent()) {
             return Response.status(Response.Status.BAD_REQUEST).entity(validationErrors.get()).build();
         }

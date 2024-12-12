@@ -35,6 +35,7 @@ import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeAre
 import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeBody;
 import pt.cmg.aeminium.datamodel.knowledge.entities.knowledgebodies.KnowledgeTopic;
 import pt.cmg.jakartautils.jpa.QueryUtils;
+import pt.cmg.jakartautils.text.TextFormatter;
 
 /**
  * @author Carlos Gonçalves
@@ -131,8 +132,8 @@ public class ObjectCacheLoader {
         loadSchools();
         loadCountries();
         loadCourses();
-        loadCourseClasses();
         loadCourseClassTopics();
+        loadCourseClasses();
         loadKnowledgeBodies();
         loadKnowledgeAreas();
         loadKnowledgeTopics();
@@ -151,6 +152,8 @@ public class ObjectCacheLoader {
         database.close();
 
         loadTextsToHazelcastCache(ids);
+
+        LOGGER.info(TextFormatter.formatMessage("Loaded {0} School objects and text translations to cache", schools.size()));
     }
 
     public void loadCountries() {
@@ -165,6 +168,8 @@ public class ObjectCacheLoader {
         database.close();
 
         loadTextsToHazelcastCache(ids);
+
+        LOGGER.info(TextFormatter.formatMessage("Loaded {0} Country objects and text translations to cache", countries.size()));
     }
 
     public void loadCourses() {
@@ -182,9 +187,11 @@ public class ObjectCacheLoader {
         database.close();
 
         loadTextsToHazelcastCache(ids);
+
+        LOGGER.info(TextFormatter.formatMessage("Loaded {0} Course objects and text translations to cache", courses.size()));
     }
 
-    public void loadCourseClassTopics() {
+    public void loadCourseClasses() {
 
         EntityManager database = entityManagerFactory.createEntityManager();
 
@@ -199,9 +206,11 @@ public class ObjectCacheLoader {
         database.close();
 
         loadTextsToHazelcastCache(ids);
+
+        LOGGER.info(TextFormatter.formatMessage("Loaded {0} Course Classes objects and text translations to cache", courseClasses.size()));
     }
 
-    public void loadCourseClasses() {
+    public void loadCourseClassTopics() {
 
         EntityManager database = entityManagerFactory.createEntityManager();
 
@@ -216,6 +225,8 @@ public class ObjectCacheLoader {
         database.close();
 
         loadTextsToHazelcastCache(ids);
+
+        LOGGER.info(TextFormatter.formatMessage("Loaded {0} Course Class Topics objects and text translations to cache", topics.size()));
     }
 
     public void loadKnowledgeBodies() {
@@ -233,6 +244,8 @@ public class ObjectCacheLoader {
         database.close();
 
         loadTextsToHazelcastCache(ids);
+
+        LOGGER.info(TextFormatter.formatMessage("Loaded {0} Knowledge Bodies objects and text translations to cache", kBodies.size()));
     }
 
     public void loadKnowledgeAreas() {
@@ -250,6 +263,8 @@ public class ObjectCacheLoader {
         database.close();
 
         loadTextsToHazelcastCache(ids);
+
+        LOGGER.info(TextFormatter.formatMessage("Loaded {0} Knowledge Areas objects and text translations to cache", kAreas.size()));
     }
 
     public void loadKnowledgeTopics() {
@@ -267,6 +282,8 @@ public class ObjectCacheLoader {
         database.close();
 
         loadTextsToHazelcastCache(ids);
+
+        LOGGER.info(TextFormatter.formatMessage("Loaded {0} Knowledge Topics objects and text translations to cache", topics.size()));
     }
 
     /**

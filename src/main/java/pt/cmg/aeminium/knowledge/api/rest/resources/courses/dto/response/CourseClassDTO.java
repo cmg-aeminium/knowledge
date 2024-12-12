@@ -5,16 +5,25 @@
 package pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response;
 
 import java.time.LocalDateTime;
+import jakarta.json.bind.annotation.JsonbPropertyOrder;
 
 /**
  * @author Carlos Gonçalves
  */
+@JsonbPropertyOrder({"id", "name", "year", "ects", "isOptional", "createdAt", "description"})
 public record CourseClassDTO(
     Long id,
     Integer year,
     String name,
+    CourseDTO course,
     String description,
     Double ects,
     boolean isOptional,
     LocalDateTime createdAt) {
+
+    @JsonbPropertyOrder({"id", "name"})
+    public record CourseDTO(
+        Long id,
+        String name) {
+    }
 }
