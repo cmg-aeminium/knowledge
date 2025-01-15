@@ -33,6 +33,7 @@ public class CourseClassConverter {
         return new CourseClassDTO(
             courseClass.getId(),
             courseClass.getYear(),
+            courseClass.getSemester(),
             translationCache.getTranslatedText(courseClass.getNameTextContentId()),
             new CourseClassDTO.CourseDTO(courseClass.getCourse().getId(), translationCache.getTranslatedText(courseClass.getCourse().getNameTextContentId())),
             translationCache.getTranslatedText(courseClass.getDescriptionContentId()),
@@ -74,6 +75,7 @@ public class CourseClassConverter {
         return new CourseClassDetailDTO(
             courseClass.getId(),
             courseClass.getYear(),
+            courseClass.getSemester(),
             translationCache.getTranslatedText(courseClass.getNameTextContentId()),
             translationCache.getTranslatedText(courseClass.getDescriptionContentId()),
             courseClass.getEcts(),

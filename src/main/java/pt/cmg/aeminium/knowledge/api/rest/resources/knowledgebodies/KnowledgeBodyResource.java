@@ -1,6 +1,7 @@
 package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies;
 
 import java.util.List;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
@@ -34,6 +35,7 @@ import pt.cmg.jakartautils.errors.ErrorDTO;
 
 @Path("knowledgebodies")
 @RequestScoped
+@Tag(name = "Knowledge Bodies", description = "Endpoints related operations with Knowledge Bodies")
 public class KnowledgeBodyResource {
 
     @Inject

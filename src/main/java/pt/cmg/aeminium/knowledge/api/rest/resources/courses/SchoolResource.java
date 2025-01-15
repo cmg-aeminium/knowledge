@@ -5,6 +5,7 @@
 package pt.cmg.aeminium.knowledge.api.rest.resources.courses;
 
 import java.util.List;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.ejb.EJB;
 import jakarta.enterprise.context.RequestScoped;
@@ -41,6 +42,7 @@ import pt.cmg.jakartautils.errors.ErrorDTO;
  */
 @Path("schools")
 @RequestScoped
+@Tag(name = "Schools", description = "Endpoints related operations with Schools")
 public class SchoolResource {
 
     @Inject

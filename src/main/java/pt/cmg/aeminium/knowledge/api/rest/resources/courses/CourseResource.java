@@ -5,6 +5,7 @@
 package pt.cmg.aeminium.knowledge.api.rest.resources.courses;
 
 import java.util.List;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.ejb.EJB;
 import jakarta.enterprise.context.RequestScoped;
@@ -31,11 +32,11 @@ import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestContextData;
 import pt.cmg.aeminium.knowledge.api.rest.filters.request.RequestData;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseClassConverter;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.converters.CourseConverter;
-import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.SearchCourseFilterDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.CreateCourseDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseClassDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.EditCourseDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.SearchCourseFilterDTO;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.validators.CourseValidator;
 import pt.cmg.aeminium.knowledge.tasks.courses.CourseCreator;
 import pt.cmg.jakartautils.errors.ErrorDTO;
@@ -45,6 +46,7 @@ import pt.cmg.jakartautils.errors.ErrorDTO;
  */
 @Path("courses")
 @RequestScoped
+@Tag(name = "Courses", description = "Endpoints related operations with Courses")
 public class CourseResource {
 
     @Inject
