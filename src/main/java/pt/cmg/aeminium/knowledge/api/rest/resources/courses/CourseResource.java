@@ -5,7 +5,6 @@
 package pt.cmg.aeminium.knowledge.api.rest.resources.courses;
 
 import java.util.List;
-import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.ejb.EJB;
 import jakarta.enterprise.context.RequestScoped;
@@ -16,8 +15,8 @@ import jakarta.validation.Valid;
 import jakarta.ws.rs.BeanParam;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
+import jakarta.ws.rs.PATCH;
 import jakarta.ws.rs.POST;
-import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
@@ -40,13 +39,13 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.SearchCo
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.validators.CourseValidator;
 import pt.cmg.aeminium.knowledge.tasks.courses.CourseCreator;
 import pt.cmg.jakartautils.errors.ErrorDTO;
+import pt.cmg.jakartautils.pagination.PaginatedDTO;
 
 /**
  * @author Carlos Gonçalves
  */
 @Path("courses")
 @RequestScoped
-@Tag(name = "Courses", description = "Endpoints related operations with Courses")
 public class CourseResource {
 
     @Inject
@@ -90,7 +89,16 @@ public class CourseResource {
             filter.size,
             filter.offset));
 
-        return Response.ok(courseConverter.toCourseDTOs(degrees)).build();
+        int totalFiltered = courseDAO.countFiltered(new CourseFilterCriteria(
+            filter.school,
+            filter.year,
+            requestData.getSelectedLanguage(),
+            filter.name,
+            filter.acronym,
+            filter.size,
+            filter.offset));
+
+        return Response.ok(new PaginatedDTO<>(totalFiltered, courseConverter.toCourseDTOs(degrees))).build();
     }
 
     @GET
@@ -125,7 +133,7 @@ public class CourseResource {
         return Response.ok(courseConverter.toCourseDTO(newCourse)).build();
     }
 
-    @PUT
+    @PATCH
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
@@ -162,7 +170,7 @@ public class CourseResource {
     @Path("{id}/classes/{classId}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getCourseClassTopics(@PathParam("id") Long id, @PathParam("classId") Long classId) {
+    public Response getCourseClassById(@PathParam("id") Long id, @PathParam("classId") Long classId) {
 
         Course course = courseDAO.findById(id);
         if (course == null) {
@@ -199,7 +207,7 @@ public class CourseResource {
         return Response.ok(courseClassConverter.toCourseClassDetailedDTO(newClass)).build();
     }
 
-    @PUT
+    @PATCH
     @Path("{id}/classes/{classId}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)

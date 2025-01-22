@@ -5,7 +5,6 @@
 package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies;
 
 import java.util.List;
-import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
@@ -16,8 +15,8 @@ import jakarta.ws.rs.BeanParam;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
+import jakarta.ws.rs.PATCH;
 import jakarta.ws.rs.POST;
-import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
@@ -39,13 +38,13 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.dto.request.
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.validators.KnowledgeAreaValidator;
 import pt.cmg.aeminium.knowledge.tasks.knowledgebodies.KnowledgeBodyCreator;
 import pt.cmg.jakartautils.errors.ErrorDTO;
+import pt.cmg.jakartautils.pagination.PaginatedDTO;
 
 /**
  * @author Carlos Gonçalves
  */
 @RequestScoped
 @Path("knowledgeareas")
-@Tag(name = "Knowledge Areas", description = "Endpoints related operations with Knowledge Areas")
 public class KnowledgeAreaResource {
 
     @Inject
@@ -83,7 +82,13 @@ public class KnowledgeAreaResource {
                 filter.size,
                 filter.offset));
 
-        return Response.ok(kaConverter.toKnowledgeAreaDTOs(knowledgeAreas)).build();
+        int totalFiltered = knowledgeAreaDAO.countFiltered(new KnowledgeAreaFilterCriteria(filter.name,
+            requestData.getSelectedLanguage(),
+            filter.knowledgeBodyId,
+            filter.size,
+            filter.offset));
+
+        return Response.ok(new PaginatedDTO<>(totalFiltered, kaConverter.toKnowledgeAreaDTOs(knowledgeAreas))).build();
     }
 
     @GET
@@ -148,7 +153,7 @@ public class KnowledgeAreaResource {
         return Response.ok(kaTopicConverter.toDetailedTopicDTO(newTopic)).build();
     }
 
-    @PUT
+    @PATCH
     @Path("/{id}/topics/{topicId}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -174,7 +179,7 @@ public class KnowledgeAreaResource {
     @Transactional(value = TxType.REQUIRED)
     public Response deleteKnowledgeTopics(@PathParam("id") Long id, @PathParam("topicId") Long topicId) {
         knowledgeBodyCreator.deleteTopic(topicId);
-        return Response.ok().build();
+        return Response.noContent().build();
     }
 
 }

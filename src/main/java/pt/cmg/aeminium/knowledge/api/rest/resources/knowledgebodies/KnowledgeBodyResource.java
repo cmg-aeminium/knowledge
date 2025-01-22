@@ -1,7 +1,6 @@
 package pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies;
 
 import java.util.List;
-import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
@@ -32,10 +31,10 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.validators.K
 import pt.cmg.aeminium.knowledge.api.rest.resources.knowledgebodies.validators.KnowledgeBodyValidator;
 import pt.cmg.aeminium.knowledge.tasks.knowledgebodies.KnowledgeBodyCreator;
 import pt.cmg.jakartautils.errors.ErrorDTO;
+import pt.cmg.jakartautils.pagination.PaginatedDTO;
 
 @Path("knowledgebodies")
 @RequestScoped
-@Tag(name = "Knowledge Bodies", description = "Endpoints related operations with Knowledge Bodies")
 public class KnowledgeBodyResource {
 
     @Inject
@@ -80,7 +79,14 @@ public class KnowledgeBodyResource {
                 filter.size,
                 filter.offset));
 
-        return Response.ok(knowledgeBodyConverter.toKnowledgeBodyDTOs(knowledgeBodies)).build();
+        int totalFiltered = knowledgeBodyDAO.countFiltered(new KnowledgeBodyFilterCriteria(filter.year,
+            filter.name,
+            requestData.getSelectedLanguage(),
+            filter.createdBy,
+            filter.size,
+            filter.offset));
+
+        return Response.ok(new PaginatedDTO<>(totalFiltered, knowledgeBodyConverter.toKnowledgeBodyDTOs(knowledgeBodies))).build();
     }
 
     @GET

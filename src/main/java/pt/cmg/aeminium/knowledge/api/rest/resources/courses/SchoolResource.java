@@ -5,7 +5,6 @@
 package pt.cmg.aeminium.knowledge.api.rest.resources.courses;
 
 import java.util.List;
-import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.ejb.EJB;
 import jakarta.enterprise.context.RequestScoped;
@@ -36,13 +35,13 @@ import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.request.SearchSc
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.validators.SchoolValidator;
 import pt.cmg.aeminium.knowledge.tasks.schools.SchoolCreator;
 import pt.cmg.jakartautils.errors.ErrorDTO;
+import pt.cmg.jakartautils.pagination.PaginatedDTO;
 
 /**
  * @author Carlos Gonçalves
  */
 @Path("schools")
 @RequestScoped
-@Tag(name = "Schools", description = "Endpoints related operations with Schools")
 public class SchoolResource {
 
     @Inject
@@ -109,7 +108,9 @@ public class SchoolResource {
         }
 
         List<School> schools = schoolDAO.findByFiltered(new SchoolFilter(filter.countryIds, filter.size, filter.offset));
-        return Response.ok(schoolConverter.toSchoolDTOs(schools)).build();
+        int filterCount = schoolDAO.countFiltered(new SchoolFilter(filter.countryIds, filter.size, filter.offset));
+
+        return Response.ok(new PaginatedDTO<>(filterCount, schoolConverter.toSchoolDTOs(schools))).build();
     }
 
     @GET
