@@ -35,11 +35,7 @@ public class CourseClassConverter {
             courseClass.getYear(),
             courseClass.getSemester(),
             translationCache.getTranslatedText(courseClass.getNameTextContentId()),
-            new CourseClassDTO.CourseDTO(courseClass.getCourse().getId(), translationCache.getTranslatedText(courseClass.getCourse().getNameTextContentId())),
-            translationCache.getTranslatedText(courseClass.getDescriptionContentId()),
-            courseClass.getEcts(),
-            courseClass.isOptional(),
-            courseClass.getCreatedAt());
+            courseClass.getEcts());
     }
 
     public List<CourseClassTopicDTO> toCourseClasseTopicDTOs(List<CourseClassTopic> topics) {

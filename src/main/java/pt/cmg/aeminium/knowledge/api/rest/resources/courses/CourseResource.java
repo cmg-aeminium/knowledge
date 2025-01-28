@@ -113,7 +113,7 @@ public class CourseResource {
             return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(1, "Course does not exist")).build();
         }
 
-        return Response.ok(courseConverter.toCourseDTO(course)).build();
+        return Response.ok(courseConverter.toCourseDetailedDTO(course)).build();
     }
 
     @POST
@@ -130,7 +130,7 @@ public class CourseResource {
 
         Course newCourse = courseCreator.createCourse(newCourseDTO);
 
-        return Response.ok(courseConverter.toCourseDTO(newCourse)).build();
+        return Response.ok(courseConverter.toCourseDetailedDTO(newCourse)).build();
     }
 
     @PATCH
@@ -148,7 +148,7 @@ public class CourseResource {
 
         Course newCourse = courseCreator.editCourse(courseEditionDTO, id);
 
-        return Response.ok(courseConverter.toCourseDTO(newCourse)).build();
+        return Response.ok(courseConverter.toCourseDetailedDTO(newCourse)).build();
     }
 
     @GET
@@ -186,7 +186,7 @@ public class CourseResource {
             return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorDTO(3, "This class does not belong to this degree")).build();
         }
 
-        return Response.ok(courseClassConverter.toCourseClassDTO(courseClass)).build();
+        return Response.ok(courseClassConverter.toCourseClassDetailedDTO(courseClass)).build();
     }
 
     @POST

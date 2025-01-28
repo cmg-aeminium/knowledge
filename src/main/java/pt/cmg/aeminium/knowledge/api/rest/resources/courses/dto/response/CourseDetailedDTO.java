@@ -9,10 +9,13 @@ import jakarta.json.bind.annotation.JsonbPropertyOrder;
 /**
  * @author Carlos Gonçalves
  */
-@JsonbPropertyOrder({"id", "name", "acronym", "year"})
-public record CourseDTO(
+@JsonbPropertyOrder({"id", "name", "acronym", "year", "image", "description"})
+public record CourseDetailedDTO(
     Long id,
     String acronym,
+    SchoolDTO school,
     String name,
-    Integer year) {
+    String description,
+    Integer year,
+    String image) {
 }

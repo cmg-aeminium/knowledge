@@ -9,6 +9,7 @@ import jakarta.enterprise.context.Dependent;
 import jakarta.inject.Inject;
 import pt.cmg.aeminium.datamodel.knowledge.entities.curricula.Course;
 import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseDTO;
+import pt.cmg.aeminium.knowledge.api.rest.resources.courses.dto.response.CourseDetailedDTO;
 import pt.cmg.aeminium.knowledge.cache.TextTranslationCache;
 
 /**
@@ -27,8 +28,8 @@ public class CourseConverter {
         return degrees.stream().map(this::toCourseDTO).toList();
     }
 
-    public CourseDTO toCourseDTO(Course course) {
-        return new CourseDTO(
+    public CourseDetailedDTO toCourseDetailedDTO(Course course) {
+        return new CourseDetailedDTO(
             course.getId(),
             course.getAcronym(),
             schoolConverter.toSchoolDTO(course.getSchool()),
@@ -36,6 +37,15 @@ public class CourseConverter {
             translationCache.getTranslatedText(course.getDescriptionContentId()),
             course.getYear(),
             course.getImage());
+
+    }
+
+    public CourseDTO toCourseDTO(Course course) {
+        return new CourseDTO(
+            course.getId(),
+            course.getAcronym(),
+            translationCache.getTranslatedText(course.getNameTextContentId()),
+            course.getYear());
 
     }
 
